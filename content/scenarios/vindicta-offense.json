@@ -1,0 +1,2617 @@
+[
+  {
+    "id": "vin-off-001",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "laning",
+    "souls": 800,
+    "owned": [],
+    "enemies": [
+      { "hero": "hero_orion", "note": { "ru": "Твой соперник на линии: тоже бьёт издалека." } }
+    ],
+    "situation": { "ru": "Начало матча, первая покупка. На линии против тебя Grey Talon, который тоже любит стрелять издалека: почти все размены идут на средней и большой дистанции. Assassinate ещё не открыт, у тебя 800 душ." },
+    "question": { "ru": "Что купить первым?" },
+    "problemTags": ["you-lack-damage", "enemy-long-range"],
+    "options": [
+      {
+        "item": "upgrade_high_velocity_mag",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Дешёвый оружейный T1: +8% урона оружия и +45% к скорости пули. Быстрая пуля проще попадает по двигающейся цели на дистанции. Предмет не тупиковый: дальше он улучшается в Opening Rounds, Sharpshooter или Armor Piercer, и его стоимость засчитается." }
+      },
+      {
+        "item": "upgrade_improved_spirit",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "+10 Spirit Power усилит Stake и Crow Familiar, но в разменах на дистанции основной урон у тебя от винтовки." },
+        "betterWhen": { "ru": "Если ты сразу идёшь в сборку через способности и ульту, как твои Full Ult и Hybrid: Extra Spirit потом улучшается в Improved Spirit или Surge of Power." }
+      },
+      {
+        "item": "upgrade_extra_charge",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Даёт заряд и Spirit Power только способностям с зарядами. У Vindicta заряды есть только у Assassinate, а он ещё не открыт: сейчас предмет почти ничего не делает." },
+        "betterWhen": { "ru": "Сразу после того, как откроешь Assassinate." }
+      },
+      {
+        "item": "upgrade_close_range",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "Бонус урона работает только ближе 15 м к цели, а ты разменываешься издалека." },
+        "betterWhen": { "ru": "Это предмет для героев ближнего боя: Vindicta он почти никогда не нужен." }
+      }
+    ],
+    "principle": { "ru": "Первые души - в дешёвый оружейный предмет, который потом улучшится, а не пропадёт." },
+    "mechanics": [
+      { "text": { "ru": "High-Velocity Rounds: оружие T1 за 800, +8% урона оружия и +45% к скорости пули. Улучшается в Opening Rounds, Sharpshooter, Armor Piercer и Express Shot." }, "status": "data" },
+      { "text": { "ru": "Extra Charge даёт +1 заряд и +7 Spirit Power только способностям с зарядами. У Vindicta заряды есть только у Assassinate (2 заряда)." }, "status": "data" },
+      { "text": { "ru": "Close Quarters даёт +20% урона оружия только ближе 15 м к цели." }, "status": "data" },
+      { "text": { "ru": "High-Velocity Rounds встречается в 96% матчей Vindicta на высоком рейтинге, средняя минута покупки - 3-я. Это частота, а не доказательство силы." }, "status": "stat" }
+    ],
+    "difficulty": 1,
+    "tags": ["vindicta", "offense", "laning", "my-build"],
+    "dims": ["build", "effect"],
+    "sources": ["item:upgrade_high_velocity_mag", "item:upgrade_improved_spirit", "item:upgrade_extra_charge", "item:upgrade_close_range", "ability:citadel_ability_hornet_snipe", "hero:hero_orion", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-002",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "laning",
+    "souls": 900,
+    "owned": ["upgrade_high_velocity_mag"],
+    "enemies": [
+      { "hero": "hero_wraith", "note": { "ru": "Соперник на линии, размены короткие." } }
+    ],
+    "situation": { "ru": "5-я минута лайнинга. У тебя High-Velocity Rounds и 900 душ. Размены с Wraith короткие: вы обмениваетесь парой очередей и расходитесь, и оба почти всегда остаётесь выше половины здоровья. Хочется, чтобы каждая такая очередь била сильнее." },
+    "question": { "ru": "Что купить на 900 душ?" },
+    "problemTags": ["you-lack-damage", "you-low-souls"],
+    "options": [
+      {
+        "item": "upgrade_pristine_emblem",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Улучшение High-Velocity Rounds: компонент поглощается, ты платишь только 800 и не занимаешь новый слот. Даёт +25% урона оружия по целям выше 50% здоровья, а в коротких разменах на линии враг почти всегда выше половины. Скорость пули тоже растёт." }
+      },
+      {
+        "item": "upgrade_rapid_rounds",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+9% скорострельности за 800 - честная прибавка, но это отдельный слот, и бонуса по здоровым целям нет." },
+        "betterWhen": { "ru": "Если Opening Rounds уже куплен и ты идёшь к Swift Striker." }
+      },
+      {
+        "item": "upgrade_headshot_booster",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Следующий хедшот по герою наносит бонусный урон, но не чаще раза в 9 с. Это отдельный слот, а улучшается предмет только в Headhunter, которого нет в твоей сборке." },
+        "betterWhen": { "ru": "Если ты уверенно открываешь каждый размен выстрелом в голову и не планируешь Opening Rounds." }
+      },
+      {
+        "item": "upgrade_long_range",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "+40% урона дальше 15 м - сильный бонус, но он стоит 1600, а у тебя 900. Ждать значит пропустить усиление на линии." },
+        "betterWhen": { "ru": "Когда накопишь 1600 и Opening Rounds уже будет: это следующий шаг к Sharpshooter." }
+      }
+    ],
+    "principle": { "ru": "Улучшить имеющийся компонент дешевле, чем покупать новый предмет, и слот остаётся свободным." },
+    "mechanics": [
+      { "text": { "ru": "При покупке улучшения компонент поглощается, а его стоимость засчитывается: Opening Rounds из High-Velocity Rounds стоит 1600 - 800 = 800." }, "status": "data" },
+      { "text": { "ru": "Opening Rounds: +25% урона оружия по врагам выше 50% здоровья, +8% урона оружия, +60% скорости пули, +7 Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Long Range: +40% урона оружия дальше 15 м от цели, стоит 1600." }, "status": "data" },
+      { "text": { "ru": "Opening Rounds в среднем покупают на 4-й минуте." }, "status": "stat" }
+    ],
+    "difficulty": 1,
+    "tags": ["vindicta", "offense", "laning", "my-build", "economy"],
+    "dims": ["build", "effect"],
+    "sources": ["item:upgrade_pristine_emblem", "item:upgrade_high_velocity_mag", "item:upgrade_rapid_rounds", "item:upgrade_headshot_booster", "item:upgrade_long_range", "hero:hero_wraith", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-003",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "laning",
+    "souls": 1000,
+    "owned": ["upgrade_pristine_emblem"],
+    "enemies": [
+      { "hero": "hero_lash", "note": { "ru": "Часто уходит с линии на низком здоровье." } }
+    ],
+    "situation": { "ru": "Конец лайнинга, 7-я минута. Ты только что открыл Assassinate. Lash раз за разом уходит с линии на низком здоровье: первый выстрел ульты ты попадаешь, но второго не хватает, а дальше она уходит на долгую перезарядку. У тебя Opening Rounds и 1000 душ." },
+    "symptoms": [{ "ru": "Раненый враг уходит, пока ульта на перезарядке." }],
+    "question": { "ru": "Что купить, чтобы чаще стрелять из Assassinate?" },
+    "problemTags": ["you-cant-catch", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_extra_charge",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "+1 заряд и +7 Spirit Power способностям с зарядами. У Vindicta это только Assassinate: появляется третий выстрел подряд. Позже предмет улучшается в Rapid Recharge, и его стоимость засчитается." }
+      },
+      {
+        "item": "upgrade_improved_spirit",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+10 Spirit Power идёт всем способностям, но лишнего выстрела из Assassinate не даёт." },
+        "betterWhen": { "ru": "Если ты идёшь в сборку через способности и позже улучшишь его в Surge of Power." }
+      },
+      {
+        "item": "upgrade_rapid_rounds",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Ускоряет винтовку, но проблема в количестве выстрелов ульты, а не в скорострельности." },
+        "betterWhen": { "ru": "Если ты проигрываешь размены оружием, а не упускаешь убегающих врагов." }
+      },
+      {
+        "item": "upgrade_magic_tempo",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Сокращает перезарядку назначенной способности на 18%, но стоит 1600, а у тебя 1000. Лишнего заряда он не даёт." },
+        "betterWhen": { "ru": "Если хочешь чаще применять Crow Familiar или Stake и у тебя есть 1600 душ." }
+      }
+    ],
+    "principle": { "ru": "Открыл Assassinate - бери Extra Charge: это единственная способность Vindicta с зарядами." },
+    "mechanics": [
+      { "text": { "ru": "Extra Charge: +1 заряд и +7 Spirit Power способностям с зарядами, стоит 800, улучшается в Rapid Recharge." }, "status": "data" },
+      { "text": { "ru": "Assassinate: 2 заряда, перезарядка 55 с. У остальных способностей Vindicta зарядов нет." }, "status": "data" },
+      { "text": { "ru": "Compress Cooldown: imbue-предмет T2 за 1600, -18% перезарядки назначенной способности." }, "status": "data" },
+      { "text": { "ru": "Extra Charge встречается почти в каждом матче Vindicta, средняя минута покупки - 7-я." }, "status": "stat" }
+    ],
+    "tree": {
+      "problem": { "ru": "Не хватает выстрелов Assassinate, чтобы добить убегающего врага." },
+      "solutions": [{ "ru": "Больше зарядов ульты" }, { "ru": "Меньше перезарядка способности" }, { "ru": "Больше урона винтовкой до ульты" }],
+      "constraints": [{ "ru": "1000 душ: доступны только предметы T1" }, { "ru": "Ульта только что открыта" }],
+      "choice": { "ru": "Extra Charge: третий заряд Assassinate за 800 и начало пути к Rapid Recharge." },
+      "consequences": [{ "ru": "Позже улучшишь его в Rapid Recharge, стоимость засчитается." }, { "ru": "Заряды полезны, только если ты их тратишь: не держи ульту полной." }]
+    },
+    "difficulty": 1,
+    "tags": ["vindicta", "offense", "laning", "assassinate", "my-build"],
+    "dims": ["build", "mechanics"],
+    "sources": ["item:upgrade_extra_charge", "item:upgrade_improved_spirit", "item:upgrade_rapid_rounds", "item:upgrade_magic_tempo", "ability:citadel_ability_hornet_snipe", "hero:hero_lash", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-004",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3300,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_long_range", "upgrade_reduce_debuff_duration"],
+    "enemies": [
+      { "hero": "hero_orion" },
+      { "hero": "hero_magician" },
+      { "hero": "hero_chrono" }
+    ],
+    "situation": { "ru": "20-я минута. Командные бои идут на большой дистанции: ты стреляешь по врагам с 25-35 м, ближе они почти не подходят. У тебя 3300 душ, и ты хочешь, чтобы каждое попадание издалека било сильнее." },
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["you-lack-damage", "enemy-long-range"],
+    "options": [
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 92,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Long Range: компонент поглощается, поэтому ты платишь 1600 и не занимаешь новый слот. Бонус дальше 15 м растёт с +40% до +60%, сверху +10% урона оружия, +60% к скорости пули и +20% к дистанции до спада урона. Останется ещё 1700 душ на T2." }
+      },
+      {
+        "item": "upgrade_burst_fire",
+        "score": 68,
+        "verdict": "good",
+        "why": { "ru": "Сильный T3: каждое попадание по герою даёт +32% скорострельности и скорость на 4,5 с. Но он стоит полные 3200, занимает новый слот, и после него почти не останется душ." },
+        "betterWhen": { "ru": "Если бои идут на средней дистанции и бонус дальше 15 м срабатывает не всегда." }
+      },
+      {
+        "item": "upgrade_titan_round",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Без Extended Magazine стоит полные 1600. +14% урона и вдвое больше патронов, но проблемы с патронами у тебя нет." },
+        "betterWhen": { "ru": "Если в долгих перестрелках ты часто перезаряжаешься." }
+      },
+      {
+        "item": "upgrade_close_quarter_combat",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "+50% урона только ближе 15 м к цели: ровно противоположно тому, как идут бои." },
+        "betterWhen": { "ru": "Только для героя ближнего боя или если враги весь матч навязывают драку вплотную." }
+      }
+    ],
+    "principle": { "ru": "Бои идут издалека - сначала улучши Long Range до Sharpshooter: это самое дешёвое крупное усиление дальнего урона." },
+    "mechanics": [
+      { "text": { "ru": "Sharpshooter собирается из Long Range и High-Velocity Rounds: имеющиеся компоненты поглощаются и засчитываются в цену." }, "status": "data" },
+      { "text": { "ru": "Long Range: +40% урона оружия дальше 15 м. Sharpshooter: +60% урона дальше 15 м, +10% урона оружия, +60% скорости пули, +20% дистанции до спада урона, -0,7 м скорости передвижения." }, "status": "data" },
+      { "text": { "ru": "Спад урона винтовки Vindicta идёт от 20 до 64 м, поэтому бонус к дистанции до спада полезен именно ей." }, "status": "data" },
+      { "text": { "ru": "Автор билда пишет, что бонус дальности Sharpshooter работает и для урона винтовки во время Flight. В данных это не подтверждено." }, "status": "unverified" },
+      { "text": { "ru": "Sharpshooter встречается в 90% матчей Vindicta, средняя минута покупки - 20-я. Это частота, а не доказательство силы." }, "status": "stat" }
+    ],
+    "tree": {
+      "problem": { "ru": "Бои идут на 25-35 м, нужно больше урона с каждого попадания издалека." },
+      "solutions": [{ "ru": "Усилить бонус дальнего боя" }, { "ru": "Поднять скорострельность" }, { "ru": "Купить запас патронов" }],
+      "constraints": [{ "ru": "3300 душ" }, { "ru": "Long Range уже куплен и может стать компонентом" }],
+      "choice": { "ru": "Sharpshooter: самое дешёвое крупное усиление именно дальнего урона, без нового слота." },
+      "consequences": [{ "ru": "Минус 0,7 м к скорости передвижения: занимай позицию заранее." }, { "ru": "Оставшиеся души можно вложить в следующий предмет ядра." }]
+    },
+    "difficulty": 1,
+    "tags": ["vindicta", "offense", "long-range", "my-build", "economy"],
+    "dims": ["build", "effect"],
+    "sources": ["item:upgrade_sharpshooter", "item:upgrade_long_range", "item:upgrade_burst_fire", "item:upgrade_titan_round", "item:upgrade_close_quarter_combat", "hero:hero_hornet", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-005",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7200,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_aprounds", "upgrade_counterspell"],
+    "enemies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_warden" },
+      { "hero": "hero_dynamo" },
+      { "hero": "hero_mirage" }
+    ],
+    "situation": { "ru": "35-я минута. Все слоты заняты, у тебя 7200 душ. Матч решают командные бои у баз, на фарм почти нет времени. Ты хочешь купить Spellslinger, но для него нужно освободить слот." },
+    "question": { "ru": "Что продать?" },
+    "problemTags": ["you-slots-full", "teamfight"],
+    "options": [
+      {
+        "item": "upgrade_trophy_collector",
+        "score": 92,
+        "verdict": "best",
+        "why": { "ru": "Его работа - экономика: стаки за убийства и помощи дают доход душ, спринт и дальность способностей. В конце матча новый T4 сильнее влияет на исход боя, чем доход. В твоём билде он первый в порядке продажи." }
+      },
+      {
+        "item": "upgrade_reduce_debuff_duration",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Защита от урона по времени и дебаффов. Если враги их вешают, без неё ты умрёшь раньше, чем реализуешь новый урон." },
+        "betterWhen": { "ru": "Если у врагов почти нет дебаффов и урона по времени." }
+      },
+      {
+        "item": "upgrade_counterspell",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Парирование способностей спасает от ключевого контроля и бурста. Продав его, ты рискуешь умирать в самом начале боя." },
+        "betterWhen": { "ru": "Если опасных способностей, которые стоит парировать, у врагов нет или ты не успеваешь парировать." }
+      },
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "Главный источник твоего урона на дистанции. Продавать его ради другого урона - шаг назад." },
+        "betterWhen": { "ru": "Почти никогда: только если весь матч тебе навязывают ближний бой." }
+      },
+      {
+        "item": "upgrade_burst_fire",
+        "score": 10,
+        "verdict": "bad",
+        "why": { "ru": "Скорострельность за каждое попадание по герою - ядро урона сборки." },
+        "betterWhen": { "ru": "Только если ты меняешь его на предмет с той же ролью, который в этом матче явно сильнее." }
+      }
+    ],
+    "principle": { "ru": "В конце матча первым продавай предмет экономики: Trophy Collector уже отработал своё." },
+    "mechanics": [
+      { "text": { "ru": "Trophy Collector: стаки за убийства и помощи (до 16) дают спринт, дальность способностей и пассивный доход душ; минус -15% урона оружия по NPC." }, "status": "data" },
+      { "text": { "ru": "Spellslinger: оружие T4 за 6400." }, "status": "data" },
+      { "text": { "ru": "В твоём билде (копия Ace's Vindicta Carry) порядок продажи: Trophy Collector, затем Rapid Recharge, Quicksilver Reload, Opening Rounds, Swift Striker." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под T4, а все слоты заняты." },
+      "solutions": [{ "ru": "Продать предмет экономики" }, { "ru": "Продать защиту" }, { "ru": "Продать предмет урона" }],
+      "constraints": [{ "ru": "Поздняя игра: доход душ уже мало что решает" }, { "ru": "Защита нужна в тех же боях, ради которых берёшь урон" }],
+      "choice": { "ru": "Trophy Collector: его задача - доход, и он её уже выполнил." },
+      "consequences": [{ "ru": "Ты теряешь спринт и дальность способностей от стаков." }, { "ru": "Следующие кандидаты по билду: Rapid Recharge, Quicksilver Reload, Opening Rounds, Swift Striker." }]
+    },
+    "difficulty": 1,
+    "tags": ["vindicta", "offense", "sell", "economy", "trophy", "slots", "my-build"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_trophy_collector", "item:upgrade_enchanted_holsters", "item:upgrade_reduce_debuff_duration", "item:upgrade_counterspell", "item:upgrade_sharpshooter", "item:upgrade_burst_fire", "build:24", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-006",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 1900,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_clip_size"],
+    "enemies": [
+      { "hero": "hero_atlas" },
+      { "hero": "hero_viscous" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "14-я минута. Короткие размены ты выигрываешь, но в затяжных перестрелках с Abrams и Viscous патроны кончаются раньше, чем цель падает, и почти три секунды уходят на перезарядку посреди боя. Враг за это время уходит или лечится." },
+    "symptoms": [{ "ru": "Короткие размены ты выигрываешь, длинные проигрываешь." }, { "ru": "Цель уходит живой, пока ты перезаряжаешься." }],
+    "question": { "ru": "В чём проблема и что купить на 1900 душ?" },
+    "problemTags": ["you-out-of-ammo", "enemy-tanky"],
+    "diagnosis": {
+      "prompt": { "ru": "Почему ты проигрываешь длинные перестрелки?" },
+      "options": [
+        {
+          "id": "ammo",
+          "text": { "ru": "Магазина не хватает на всю перестрелку: часть боя ты не стреляешь." },
+          "correct": true,
+          "why": { "ru": "У винтовки Vindicta 19 патронов и перезарядка 2,9 с. Swift Striker ускорил стрельбу, поэтому магазин пустеет ещё быстрее, а против толстых целей бой длиннее одного магазина." }
+        },
+        {
+          "id": "range",
+          "text": { "ru": "Цели стоят ближе 15 м, и бонусы дальнего боя не работают." },
+          "correct": false,
+          "why": { "ru": "Бонусов дальнего боя у тебя пока нет, а короткие размены ты выигрываешь на той же дистанции." }
+        },
+        {
+          "id": "resist",
+          "text": { "ru": "Враги собрали много сопротивления пулям." },
+          "correct": false,
+          "why": { "ru": "Тогда ты проигрывал бы и короткие размены. Проблема во времени без стрельбы, а не в силе попаданий." }
+        },
+        {
+          "id": "opening",
+          "text": { "ru": "Opening Rounds не работает по раненым целям." },
+          "correct": false,
+          "why": { "ru": "Бонус действительно пропадает, когда у цели меньше 50% здоровья, но это не объясняет, почему ты часть боя вообще не стреляешь." }
+        }
+      ]
+    },
+    "options": [
+      {
+        "item": "upgrade_titan_round",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Extended Magazine: компонент засчитывается, ты платишь 800, новый слот не нужен. +100% к запасу патронов и +14% урона оружия: на долгую перестрелку хватает одного магазина." }
+      },
+      {
+        "item": "upgrade_active_reload",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "+20% патронов, а точное нажатие во время перезарядки мгновенно её завершает и даёт скорострельность, вампиризм и скорость. Помогает, но требует тайминга и занимает новый слот." },
+        "betterWhen": { "ru": "Если ты уверенно попадаешь в окно активной перезарядки и магазин у тебя уже большой." }
+      },
+      {
+        "item": "upgrade_rechargingbullets",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+20% патронов и +10% урона, плюс заряд Assassinate, если нанесёшь 200 урона оружием за 3,5 с. Патронов прибавляет меньше, чем Titanic Magazine, и нужен новый слот." },
+        "betterWhen": { "ru": "Если ты играешь через ульту, как в своём Hybrid, и хочешь чаще возвращать заряды Assassinate." }
+      },
+      {
+        "item": "upgrade_rapid_rounds",
+        "score": 20,
+        "verdict": "weak",
+        "why": { "ru": "Ещё больше скорострельности - магазин будет кончаться ещё быстрее." },
+        "betterWhen": { "ru": "Если перезарядка не мешает, а не хватает урона в коротких разменах." }
+      }
+    ],
+    "principle": { "ru": "Проигрываешь только длинные перестрелки - сначала проверь магазин, потом урон." },
+    "mechanics": [
+      { "text": { "ru": "Винтовка Vindicta: 19 патронов в магазине, перезарядка 2,9 с." }, "status": "data" },
+      { "text": { "ru": "Titanic Magazine: +100% к запасу патронов и +14% урона оружия; собирается из Extended Magazine." }, "status": "data" },
+      { "text": { "ru": "Swift Striker: +20% скорострельности." }, "status": "data" },
+      { "text": { "ru": "Quicksilver Reload при применении назначенной способности перезаряжает 100% патронов, но заряжается 18 с, поэтому в длинном бою его не хватает." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Магазин кончается раньше, чем цель падает, и часть боя ты не стреляешь." },
+      "solutions": [{ "ru": "Увеличить магазин" }, { "ru": "Быстрее завершать перезарядку" }, { "ru": "Перезаряжаться способностью" }],
+      "constraints": [{ "ru": "1900 душ" }, { "ru": "Extended Magazine уже есть и может стать компонентом" }],
+      "choice": { "ru": "Titanic Magazine: вдвое больше патронов за 800, без нового слота." },
+      "consequences": [{ "ru": "Длинные перестрелки ты проводишь без пауз." }, { "ru": "Вложения в Weapon тоже растут." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "ammo", "diagnose", "my-build"],
+    "dims": ["mechanics", "build"],
+    "sources": ["item:upgrade_titan_round", "item:upgrade_clip_size", "item:upgrade_active_reload", "item:upgrade_rechargingbullets", "item:upgrade_rapid_rounds", "item:upgrade_quick_silver", "hero:hero_hornet", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-007",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 2500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_extra_charge", "upgrade_trophy_collector"],
+    "enemies": [
+      { "hero": "hero_inferno" },
+      { "hero": "hero_wraith" },
+      { "hero": "hero_lash" }
+    ],
+    "situation": { "ru": "11-я минута, пора брать первый крупный предмет. В спиритические предметы вложено 2400 душ: Quicksilver Reload и Extra Charge. Свободно 2500. Ты часто добиваешь врагов из Assassinate и хочешь заметный скачок силы перед первыми командными боями." },
+    "question": { "ru": "Что взять первым крупным предметом?" },
+    "problemTags": ["you-lack-damage", "teamfight"],
+    "options": [
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Extra Charge за 2400: +2 заряда, -14% перезарядки и +14 Spirit Power способностям с зарядами (у тебя это Assassinate), а заряды восстанавливаются на 30% быстрее. Вложения в Spirit доходят до 4800, и бонус категории прыгает с +15 до +38 Spirit Power." }
+      },
+      {
+        "item": "upgrade_long_range",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "+40% урона оружия дальше 15 м - прямое усиление винтовки, но вложения в Spirit остаются на 2400, а ульта не усиливается." },
+        "betterWhen": { "ru": "Если ты играешь чистым стрелком и почти не добиваешь ультой." }
+      },
+      {
+        "item": "upgrade_blitz_bullets",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Без Rapid Rounds стоит полные 1600. +20% скорострельности - нормальный рост урона, но без скачка порога и без пользы для Assassinate." },
+        "betterWhen": { "ru": "Если Rapid Rounds уже куплен и нужно закрыть Weapon 4.8k." }
+      },
+      {
+        "item": "upgrade_magic_burst",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Небольшой бонусный урон способностям раз в 14 с. Вкладывает в Spirit всего 800, до порога 4800 не хватит." },
+        "betterWhen": { "ru": "На ранней линии, если ты много разменивался способностями, а не на 11-й минуте." }
+      }
+    ],
+    "principle": { "ru": "Если одно улучшение доводит категорию до 4800, бери его: скачок бонуса больше, чем у отдельного предмета." },
+    "mechanics": [
+      { "text": { "ru": "Пороги вложений в Spirit: 1600 даёт +11, 2400 даёт +15, 3200 даёт +19, 4800 даёт +38 Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Rapid Recharge: +2 заряда, -14% перезарядки и +14 Spirit Power способностям с зарядами, заряды восстанавливаются на 30% быстрее. Собирается из Extra Charge." }, "status": "data" },
+      { "text": { "ru": "У Vindicta заряды есть только у Assassinate (2 заряда, перезарядка 55 с)." }, "status": "data" },
+      { "text": { "ru": "В твоём билде эта группа называется «Spirit 4.8k», а у Rapid Recharge пометка автора «4.8k Spike»." }, "status": "expert" },
+      { "text": { "ru": "Rapid Recharge встречается в 96% матчей Vindicta, средняя минута покупки - 11-я." }, "status": "stat" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен первый крупный предмет и скачок силы перед командными боями." },
+      "solutions": [{ "ru": "Довести Spirit до порога 4800" }, { "ru": "Усилить винтовку на дистанции" }, { "ru": "Поднять скорострельность" }],
+      "constraints": [{ "ru": "2500 душ" }, { "ru": "Extra Charge уже куплен и станет компонентом" }, { "ru": "В Spirit сейчас 2400" }],
+      "choice": { "ru": "Rapid Recharge: усиливает Assassinate и закрывает порог Spirit 4800." },
+      "consequences": [{ "ru": "Следующая цель - Weapon 4.8k: Swift Striker и Long Range." }, { "ru": "Заряды полезны, только если ты их тратишь: не держи ульту полной." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "economy", "thresholds", "assassinate", "my-build"],
+    "dims": ["mechanics", "build"],
+    "sources": ["item:upgrade_rapid_recharge", "item:upgrade_extra_charge", "item:upgrade_quick_silver", "item:upgrade_long_range", "item:upgrade_blitz_bullets", "item:upgrade_magic_burst", "ability:citadel_ability_hornet_snipe", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-008",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 1700,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets"],
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_viscous" }
+    ],
+    "situation": { "ru": "13-я минута. В оружейные предметы вложено 3200 душ: Opening Rounds и Swift Striker. Свободно 1700. Ты держишь врагов на расстоянии: стреляешь с 20 м и дальше и почти никого не подпускаешь ближе." },
+    "question": { "ru": "Какой предмет за 1700 даст больше всего урона?" },
+    "problemTags": ["you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_long_range",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Оружейный T2, поэтому вложения в Weapon доходят до 4800, и бонус категории прыгает с +18% до +46% урона оружия. Сам предмет даёт ещё +40% урона дальше 15 м - ровно твоя дистанция - и потом улучшается в Sharpshooter." }
+      },
+      {
+        "item": "upgrade_titan_round",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Тоже оружейный T2 и тоже доводит Weapon до 4800, плюс +14% урона и вдвое больше патронов. Но без Extended Magazine стоит полную цену и не ведёт к Sharpshooter." },
+        "betterWhen": { "ru": "Если в долгих перестрелках тебе не хватает магазина." }
+      },
+      {
+        "item": "upgrade_vampire",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+10% урона оружия и вампиризм пулями, но это Vitality: вложения в Weapon не растут." },
+        "betterWhen": { "ru": "Если тебя дожимают в разменах и нужна живучесть через урон." }
+      },
+      {
+        "item": "upgrade_cardio_calibrator",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Скорость и сопротивление замедлениям, но это Vitality, а Sprint Boots уже ушли в Trophy Collector, так что цена полная." },
+        "betterWhen": { "ru": "Если тебя постоянно ловят замедлениями и ты не успеваешь отойти на свою дистанцию." }
+      }
+    ],
+    "principle": { "ru": "Weapon 4800 - главный скачок оружейного бонуса: закрывай его предметом, который подходит тебе по дистанции." },
+    "mechanics": [
+      { "text": { "ru": "Пороги вложений в Weapon: 3200 даёт +18%, 4800 даёт +46% урона оружия." }, "status": "data" },
+      { "text": { "ru": "Long Range: +40% урона оружия дальше 15 м от цели, улучшается в Sharpshooter." }, "status": "data" },
+      { "text": { "ru": "Bullet Lifesteal и Enduring Speed - предметы Vitality." }, "status": "data" },
+      { "text": { "ru": "В твоём билде эта группа называется «Weapon 4.8k»: Opening Rounds, Swift Striker и Long Range вместе дают ровно 4800." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен максимум урона за 1700 душ." },
+      "solutions": [{ "ru": "Довести Weapon до 4800" }, { "ru": "Купить вампиризм" }, { "ru": "Купить мобильность" }],
+      "constraints": [{ "ru": "1700 душ: один T2" }, { "ru": "В Weapon сейчас 3200" }, { "ru": "Бои идут дальше 15 м" }],
+      "choice": { "ru": "Long Range: и порог 4800, и бонус дальнего боя, и путь к Sharpshooter." },
+      "consequences": [{ "ru": "Следующий шаг - улучшить Long Range в Sharpshooter." }, { "ru": "Против ныряющих врагов бонус дальше 15 м будет срабатывать реже." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "economy", "thresholds", "long-range", "my-build"],
+    "dims": ["mechanics", "build"],
+    "sources": ["item:upgrade_long_range", "item:upgrade_titan_round", "item:upgrade_vampire", "item:upgrade_cardio_calibrator", "item:upgrade_pristine_emblem", "item:upgrade_blitz_bullets", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-009",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "laning",
+    "souls": 1000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_extra_charge", "upgrade_sprint_booster"],
+    "allies": [
+      { "hero": "hero_atlas", "note": { "ru": "Часто начинает драки." } }
+    ],
+    "enemies": [
+      { "hero": "hero_lash" },
+      { "hero": "hero_wraith" }
+    ],
+    "situation": { "ru": "9-я минута. Твоя команда много дерётся: за последние минуты у тебя одно убийство и несколько помощей в стычках у центра карты. Sprint Boots уже куплены, у тебя 1000 душ, а душ всё равно не хватает на всё, что хочется." },
+    "question": { "ru": "Что купить сейчас?" },
+    "problemTags": ["you-low-souls", "teamfight"],
+    "options": [
+      {
+        "item": "upgrade_trophy_collector",
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Sprint Boots за 800. Каждое убийство или помощь даёт стак (до 16): пассивный доход душ, спринт и дальность способностей. Стаки сохраняются после смерти, поэтому чем раньше купишь его в драчливой игре, тем больше он принесёт. Автор билда пишет, что без него Vindicta слишком бедная." }
+      },
+      {
+        "item": "upgrade_rapid_rounds",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "+9% скорострельности - урон сейчас, но не экономика на весь матч." },
+        "betterWhen": { "ru": "Если ты стоишь на линии один и помощей почти не получаешь: тогда стаки копятся медленно." }
+      },
+      {
+        "item": "upgrade_cardio_calibrator",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Тоже улучшение Sprint Boots за 800: скорость и сопротивление замедлениям, но душ не приносит." },
+        "betterWhen": { "ru": "Если тебя постоянно ловят замедлениями, а убийства и помощи редки." }
+      },
+      {
+        "item": "upgrade_health_stimpak",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Лечение для линии, но оно сбивается от урона героев и не решает нехватку душ." },
+        "betterWhen": { "ru": "Если тебя дожимают на линии и ты часто уходишь на базу." }
+      }
+    ],
+    "principle": { "ru": "Trophy Collector окупается убийствами и помощами: бери его рано, если команда много дерётся." },
+    "mechanics": [
+      { "text": { "ru": "Trophy Collector: каждое убийство или помощь даёт стак (до 16): спринт, дальность способностей и пассивный доход душ. Стаки сохраняются после смерти." }, "status": "data" },
+      { "text": { "ru": "Минус Trophy Collector: -15% урона оружия по NPC." }, "status": "data" },
+      { "text": { "ru": "Trophy Collector собирается из Sprint Boots: имеющиеся Sprint Boots засчитываются в цену." }, "status": "data" },
+      { "text": { "ru": "Заметка автора билда к Trophy Collector: «Vin is too poor without this item»." }, "status": "expert" },
+      { "text": { "ru": "Trophy Collector встречается в 30% матчей Vindicta, средняя минута покупки - 9-я, винрейт 50,2%. Это корреляция, а не причина." }, "status": "stat" }
+    ],
+    "tree": {
+      "problem": { "ru": "Душ не хватает, а команда много дерётся." },
+      "solutions": [{ "ru": "Предмет экономики от убийств и помощей" }, { "ru": "Урон сейчас" }, { "ru": "Мобильность или лечение" }],
+      "constraints": [{ "ru": "1000 душ" }, { "ru": "Sprint Boots уже есть" }, { "ru": "Ты регулярно получаешь помощи" }],
+      "choice": { "ru": "Trophy Collector: превращает частые драки в доход на весь матч." },
+      "consequences": [{ "ru": "Крипов фармишь чуть медленнее из-за -15% урона по NPC." }, { "ru": "Ближе к концу матча это первый кандидат на продажу." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "economy", "trophy", "laning", "my-build"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_trophy_collector", "item:upgrade_sprint_booster", "item:upgrade_rapid_rounds", "item:upgrade_cardio_calibrator", "item:upgrade_health_stimpak", "hero:hero_atlas", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-010",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire"],
+    "allies": [
+      { "hero": "hero_haze", "note": { "ru": "Оружейный кэрри." } },
+      { "hero": "hero_wraith", "note": { "ru": "Оружейный кэрри." } },
+      { "hero": "hero_dynamo" }
+    ],
+    "enemies": [
+      { "hero": "hero_atlas" },
+      { "hero": "hero_viscous" },
+      { "hero": "hero_inferno" },
+      { "hero": "hero_tengu" }
+    ],
+    "situation": { "ru": "24-я минута. В твоей команде ещё два оружейных кэрри: Haze и Wraith. Бои идут группой: вы втроём стреляете в одну цель, пока Dynamo держит врагов. У тебя 3500 душ на предмет в слот Pick 1." },
+    "question": { "ru": "Какой предмет даст команде больше урона?" },
+    "problemTags": ["teamfight", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_dps_aura",
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "Активка даёт +26% скорострельности и скорость передвижения тебе и союзникам в радиусе 35 м на 7 с, пассивно - +17% сопротивления пулям союзникам рядом. С двумя другими стрелками один предмет усиливает троих. Автор оригинального билда советует его именно когда в команде 1-2 других кэрри." }
+      },
+      {
+        "item": "upgrade_blood_tribute",
+        "score": 68,
+        "verdict": "good",
+        "why": { "ru": "Переключатель на +35% скорострельности и сопротивление дебаффам, но только для тебя и ценой постоянной потери здоровья." },
+        "betterWhen": { "ru": "Если ты единственный оружейный кэрри в команде." }
+      },
+      {
+        "item": "upgrade_bullet_armor_reduction_aura",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Снижает сопротивление пулям и скорострельность врагов рядом, но в радиусе 15 м, а ты держишься дальше." },
+        "betterWhen": { "ru": "Для союзника ближнего боя в той же команде, а не для тебя." }
+      },
+      {
+        "item": "upgrade_aprounds",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Стоит 6400, сейчас недоступен." },
+        "betterWhen": { "ru": "Позже, если враги начнут складывать сопротивление пулям: этот вариант стоит в слоте Pick 1 в твоей копии билда." }
+      }
+    ],
+    "principle": { "ru": "Несколько стрелков в команде - групповой бафф скорострельности ценнее личного." },
+    "mechanics": [
+      { "text": { "ru": "Heroic Aura: активка +26% скорострельности и +2,25 м скорости тебе и союзникам в радиусе 35 м на 7 с, перезарядка 22 с; пассивно +17% сопротивления пулям союзникам рядом." }, "status": "data" },
+      { "text": { "ru": "Blood Tribute: пока включён, +35% скорострельности, +35% сопротивления дебаффам и +2 м скорости, но постоянно сжигает здоровье." }, "status": "data" },
+      { "text": { "ru": "Hunter's Aura действует на врагов в радиусе 15 м." }, "status": "data" },
+      { "text": { "ru": "Заметка автора оригинального билда к Heroic Aura: «If your team have 1-2 other carry». В твоей копии слот Pick 1 занят Armor Piercer." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен максимум урона команды в групповых боях." },
+      "solutions": [{ "ru": "Командный бафф скорострельности" }, { "ru": "Личный бафф скорострельности" }, { "ru": "Ослабление врагов рядом" }],
+      "constraints": [{ "ru": "3500 душ: доступен T3" }, { "ru": "В команде ещё два оружейных кэрри" }, { "ru": "Ты стоишь далеко от врагов" }],
+      "choice": { "ru": "Heroic Aura: один предмет усиливает трёх стрелков сразу." },
+      "consequences": [{ "ru": "Активку жми в начале общего залпа, пока союзники в радиусе 35 м." }, { "ru": "Если стрелки союзников погибнут, ценность ауры упадёт." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "pick-1", "teamfight", "my-build"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_dps_aura", "item:upgrade_blood_tribute", "item:upgrade_bullet_armor_reduction_aura", "item:upgrade_aprounds", "hero:hero_haze", "hero:hero_wraith", "build:616630", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-011",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3400,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_health_stimpak", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_long_range", "upgrade_reduce_debuff_duration", "upgrade_clip_size"],
+    "enemies": [
+      { "hero": "hero_lash" },
+      { "hero": "hero_mirage" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "18-я минута, ты впереди по душам, на Trophy Collector уже 12 стаков. Вражеские Walker ещё стоят, поэтому дополнительных слотов нет, и все слоты заняты. У тебя 3400 душ на Burst Fire, и для него нужен свободный слот." },
+    "question": { "ru": "Что продать ради Burst Fire?" },
+    "problemTags": ["you-slots-full", "you-ahead"],
+    "options": [
+      {
+        "item": "upgrade_health_stimpak",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Самый дешёвый предмет сборки, в билде он отмечен как необязательный. Его лечение сбивается от урона героев, а в середине игры бои идут постоянно, и он почти не успевает сработать." }
+      },
+      {
+        "item": "upgrade_clip_size",
+        "score": 60,
+        "verdict": "good",
+        "why": { "ru": "Тоже дешёвый, но это компонент Titanic Magazine из ядра билда: продав его, потом заплатишь за Titanic Magazine полную цену." },
+        "betterWhen": { "ru": "Если Titanic Magazine ты в этом матче не планируешь." }
+      },
+      {
+        "item": "upgrade_trophy_collector",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Он первый в порядке продажи, но в середине матча с 12 стаками он приносит души каждую минуту, а стаки не пропадают даже после смерти. Продать его сейчас - отказаться от этого дохода на всю оставшуюся игру." },
+        "betterWhen": { "ru": "Ближе к концу матча, когда слот нужен под T4, или если стаков мало." }
+      },
+      {
+        "item": "upgrade_reduce_debuff_duration",
+        "score": 20,
+        "verdict": "weak",
+        "why": { "ru": "Защита от дебаффов и урона по времени: без неё тебя проще убить в тех самых боях, ради которых ты берёшь Burst Fire." },
+        "betterWhen": { "ru": "Если у врагов почти нет дебаффов и урона по времени." }
+      }
+    ],
+    "principle": { "ru": "Предмет экономики продают, когда он перестал окупаться, а не строго по списку." },
+    "mechanics": [
+      { "text": { "ru": "Стаки Trophy Collector (до 16) дают пассивный доход душ и сохраняются после смерти." }, "status": "data" },
+      { "text": { "ru": "Healing Rite: регенерация на 20 с, сбивается, если ты получаешь урон от вражеских героев или объектов." }, "status": "data" },
+      { "text": { "ru": "Extended Magazine - компонент Titanic Magazine; дополнительные слоты открываются за уничтожение вражеских Walker." }, "status": "data" },
+      { "text": { "ru": "В билде Healing Rite стоит в категории Optional." }, "status": "expert" },
+      { "text": { "ru": "Уменьшает ли продажа бонус вложений в категорию, в данных не указано. Если уменьшает, после продажи Healing Rite в Vitality остаётся 4800, и порог сохраняется." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под Burst Fire, а все слоты заняты." },
+      "solutions": [{ "ru": "Продать слабый ситуативный предмет" }, { "ru": "Продать компонент будущего предмета" }, { "ru": "Продать предмет экономики" }],
+      "constraints": [{ "ru": "Середина игры: Trophy Collector с 12 стаками ещё приносит души" }, { "ru": "Дебаффы врагов никуда не делись" }],
+      "choice": { "ru": "Healing Rite: он почти не работает в постоянных боях и стоит меньше всего." },
+      "consequences": [{ "ru": "Восстанавливаться между боями придётся иначе: отходить или ждать регенерации вне боя." }, { "ru": "Trophy Collector продашь позже, когда слот понадобится под T4." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "sell", "economy", "trophy", "slots", "my-build"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_health_stimpak", "item:upgrade_clip_size", "item:upgrade_trophy_collector", "item:upgrade_reduce_debuff_duration", "item:upgrade_burst_fire", "item:upgrade_titan_round", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-012",
+    "kind": "imbue",
+    "hero": "hero_hornet",
+    "phase": "laning",
+    "souls": 900,
+    "owned": ["upgrade_pristine_emblem", "upgrade_extra_charge", "upgrade_quick_silver"],
+    "enemies": [
+      { "hero": "hero_wraith" }
+    ],
+    "situation": { "ru": "9-я минута, ты только что купил Quicksilver Reload и выбираешь, на какую способность его назначить. Каждый размен ты начинаешь с Crow Familiar, потом стреляешь из винтовки. Flight используешь, чтобы занять позицию, а Stake - когда враг прыгает на тебя." },
+    "question": { "ru": "На какую способность назначить Quicksilver Reload?" },
+    "problemTags": ["you-lack-damage", "you-out-of-ammo"],
+    "options": [
+      {
+        "ability": "citadel_ability_hornet_sting",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Crow Familiar открывает каждый размен, а Quicksilver Reload при применении способности полностью перезаряжает магазин, даёт +10% скорострельности и добавляет накопленный спиритический урон. Итог: полный магазин в начале каждой атаки. Так назначен этот предмет и в твоём билде." }
+      },
+      {
+        "ability": "citadel_ability_hornet_chain",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Stake тоже наносит урон, но ты применяешь его реже и чаще в защите: бонус будет приходить не в начале твоей атаки." },
+        "betterWhen": { "ru": "Если ты сам начинаешь бой со Stake, например ловишь убегающих." }
+      },
+      {
+        "ability": "citadel_ability_hornet_snipe",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Ульта стреляет редко, а перезарядка магазина нужна именно в перестрелке из винтовки." },
+        "betterWhen": { "ru": "Почти никогда для этого предмета: на Assassinate в твоих сборках через ульту назначают Surge of Power." }
+      },
+      {
+        "ability": "citadel_ability_hornet_leap",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Flight перезаряжается 42 с и служит для позиции: бонус будет приходить редко." },
+        "betterWhen": { "ru": "Если ты почти весь бой стреляешь из полёта и начинаешь каждый бой с Flight." }
+      }
+    ],
+    "principle": { "ru": "Предмет, срабатывающий при применении, назначай на способность, с которой начинаешь каждый бой и которая быстро перезаряжается." },
+    "mechanics": [
+      { "text": { "ru": "Quicksilver Reload (imbue_active): назначенная способность заряжается 18 с; при её применении 100% патронов перезаряжаются, даётся +10% скорострельности и бонусный спиритический урон." }, "status": "data" },
+      { "text": { "ru": "Перезарядки: Crow Familiar 32 с (T2: -16 с), Stake 40 с (T2: -22 с), Flight 42 с, Assassinate 55 с." }, "status": "data" },
+      { "text": { "ru": "В билде Quicksilver Reload назначен на Crow Familiar с пометкой автора «Mini Mystic Burst and Rapid with free reload»." }, "status": "expert" }
+    ],
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "imbue", "crow", "laning", "my-build"],
+    "dims": ["synergy", "build"],
+    "sources": ["item:upgrade_quick_silver", "ability:citadel_ability_hornet_sting", "ability:citadel_ability_hornet_chain", "ability:citadel_ability_hornet_leap", "ability:citadel_ability_hornet_snipe", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-013",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_vampire"],
+    "enemies": [
+      { "hero": "hero_vampirebat", "note": { "ru": "Главная угроза: в ульте выпускает летучих мышей со спиритическим уроном и Silence." } },
+      { "hero": "hero_lash" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "28-я минута. Mina врывается в бой с ультой, и дуэль с ней ты проигрываешь: под её летучими мышами ты не можешь применять способности, а здоровье быстро тает. У тебя Bullet Lifesteal и 6600 душ." },
+    "symptoms": [{ "ru": "Под ультой Mina ты остаёшься без способностей и проигрываешь дуэль." }],
+    "question": { "ru": "Что купить, чтобы выигрывать эту дуэль?" },
+    "problemTags": ["enemy-silence", "enemy-spirit-dps", "you-die-fast"],
+    "options": [
+      {
+        "item": "upgrade_surging_power",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Bullet Lifesteal за 4800: активка на 5 с даёт 75% вампиризма пулями, +34% скорострельности и 75% патронов сверх магазина. В дуэли это урон и лечение одновременно. Автор билда пишет, что он позволяет выигрывать дуэль с Mina в её ульте, и советует его вместо Leech." }
+      },
+      {
+        "item": "upgrade_fury_trance",
+        "score": 68,
+        "verdict": "good",
+        "why": { "ru": "Тоже улучшение Bullet Lifesteal, и всего за 1600: +40% сопротивления спириту и +32% скорострельности на 6,5 с. Но он сам накладывает на тебя Silence и отключает стамину: в бою ты без способностей и рывков." },
+        "betterWhen": { "ru": "Если главный урон Mina по тебе спиритический и душ на T4 не хватает: в билде он стоит в разделе Survival с пометкой «Mina»." }
+      },
+      {
+        "item": "upgrade_damage_recycler",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Постоянный вампиризм пулями и спиритом без активки. Стабильнее, но без всплеска урона в момент дуэли." },
+        "betterWhen": { "ru": "Если враги режут тебе лечение: Leech ослабляет эффекты анти-хила." }
+      },
+      {
+        "item": "upgrade_tech_overflow",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Без Spirit Lifesteal стоит полные 6400 и требует новый слот. Его бонусы набираются стрельбой по героям и в короткой дуэли могут не успеть." },
+        "betterWhen": { "ru": "Если Spirit Lifesteal уже куплен и бои затяжные." }
+      }
+    ],
+    "principle": { "ru": "Против дуэлянта с сильной ультой бери предмет, который в нужные секунды даёт и урон, и лечение." },
+    "mechanics": [
+      { "text": { "ru": "Vampiric Burst: активка на 5 с, перезарядка 30 с: 75% вампиризма пулями, +34% скорострельности, 75% патронов, не ограниченных размером магазина. Собирается из Bullet Lifesteal." }, "status": "data" },
+      { "text": { "ru": "Fury Trance: активка на 6,5 с даёт скорострельность, +40% сопротивления спириту и скорость, но накладывает на тебя Silence и отключает стамину. Собирается из Bullet Lifesteal." }, "status": "data" },
+      { "text": { "ru": "Nox Nostra (ульта Mina) выпускает летучих мышей, которые наносят спиритический урон и накладывают Silence." }, "status": "data" },
+      { "text": { "ru": "Leech ослабляет эффекты срезания лечения, наложенные врагами." }, "status": "data" },
+      { "text": { "ru": "Заметка автора билда к Vampiric Burst: «Lets you duel Mina in their ult and other situations, highly recommend over leech»." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Проигрываешь дуэль с Mina, пока она в ульте." },
+      "solutions": [{ "ru": "Всплеск урона и лечения в нужный момент" }, { "ru": "Сопротивление спириту" }, { "ru": "Постоянный вампиризм" }],
+      "constraints": [{ "ru": "6600 душ" }, { "ru": "Bullet Lifesteal уже есть и станет компонентом" }, { "ru": "Под ультой Mina способности недоступны" }],
+      "choice": { "ru": "Vampiric Burst: 5 секунд урона, лечения и патронов ровно на время дуэли." },
+      "consequences": [{ "ru": "Активку береги под ульту Mina, а не трать на крипов." }, { "ru": "Fury Trance после этого обойдётся в полную цену: Bullet Lifesteal уйдёт в Vampiric Burst." }]
+    },
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "duel", "my-build"],
+    "dims": ["counter", "build"],
+    "sources": ["item:upgrade_surging_power", "item:upgrade_fury_trance", "item:upgrade_damage_recycler", "item:upgrade_tech_overflow", "item:upgrade_vampire", "hero:hero_vampirebat", "ability:ability_vampirebat_batswarm", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-014",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire"],
+    "allies": [
+      { "hero": "hero_dynamo" },
+      { "hero": "hero_kelvin" },
+      { "hero": "hero_viscous" },
+      { "hero": "hero_doorman" }
+    ],
+    "enemies": [
+      { "hero": "hero_inferno" },
+      { "hero": "hero_werewolf" },
+      { "hero": "hero_viper" },
+      { "hero": "hero_chrono" }
+    ],
+    "situation": { "ru": "23-я минута. Ты единственный оружейный кэрри в команде: Dynamo, Kelvin, Viscous и The Doorman держат и контролируют врагов, но урона почти не наносят. Враги часто замедляют тебя: Napalm от Infernus, Entangling Bola от Silver. У тебя 3600 душ на предмет в слот Pick 1." },
+    "symptoms": [{ "ru": "Весь урон по врагам в боях идёт от тебя." }, { "ru": "Тебя часто замедляют, и ты не успеваешь сменить позицию." }],
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["team-lacks-damage", "enemy-slow"],
+    "options": [
+      {
+        "item": "upgrade_blood_tribute",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Переключатель: пока он включён, ты теряешь здоровье, но получаешь +35% скорострельности, +35% сопротивления дебаффам и +2 м скорости. Весь урон команды идёт через тебя, а сопротивление дебаффам укорачивает замедления. Автор оригинального билда подписал его «Personal Dps»." }
+      },
+      {
+        "item": "upgrade_dps_aura",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "+26% скорострельности на 7 с тебе и союзникам, но союзники почти не стреляют, и большая часть ценности ауры пропадает." },
+        "betterWhen": { "ru": "Если в команде есть ещё 1-2 оружейных кэрри." }
+      },
+      {
+        "item": "upgrade_titan_round",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Без Extended Magazine стоит 1600: +14% урона и много патронов, но меньше прироста урона, чем у T3, и ничего против замедлений." },
+        "betterWhen": { "ru": "Если главная проблема - перезарядка посреди боя." }
+      },
+      {
+        "item": "upgrade_cardio_calibrator",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "+25% сопротивления замедлениям и скорость, но урона не добавляет, а команде нужен именно твой урон." },
+        "betterWhen": { "ru": "Если ты умираешь из-за замедлений, а не недодаёшь урон." }
+      }
+    ],
+    "principle": { "ru": "Ты единственный стрелок - бери личный урон; стрелков несколько - командный бафф." },
+    "mechanics": [
+      { "text": { "ru": "Blood Tribute (оружие T3, переключатель): пока включён, сжигает здоровье и даёт +35% скорострельности, +35% сопротивления дебаффам и +2 м скорости; постоянно +8% сопротивления дебаффам и +8% сопротивления спириту." }, "status": "data" },
+      { "text": { "ru": "Heroic Aura усиливает скорострельность тебе и союзникам в радиусе 35 м." }, "status": "data" },
+      { "text": { "ru": "Napalm у Infernus и Entangling Bola у Silver накладывают замедление." }, "status": "data" },
+      { "text": { "ru": "Blood Tribute сжигает здоровье: включай его в бою и выключай вне боя; вампиризм пуль помогает окупать потерю." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Команде не хватает урона, а тебя часто замедляют." },
+      "solutions": [{ "ru": "Личный бафф скорострельности" }, { "ru": "Командный бафф" }, { "ru": "Сопротивление замедлениям" }],
+      "constraints": [{ "ru": "3600 душ: доступен T3" }, { "ru": "Союзники почти не стреляют" }],
+      "choice": { "ru": "Blood Tribute: личный урон плюс сопротивление дебаффам против замедлений." },
+      "consequences": [{ "ru": "Следи за здоровьем: переключатель постоянно его сжигает." }, { "ru": "Если в команде появится второй стрелок, Heroic Aura станет конкурентом." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "pick-1", "my-build"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_blood_tribute", "item:upgrade_dps_aura", "item:upgrade_titan_round", "item:upgrade_cardio_calibrator", "hero:hero_inferno", "hero:hero_werewolf", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-015",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6800,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power"],
+    "enemies": [
+      { "hero": "hero_atlas", "items": ["upgrade_improved_bullet_armor"] },
+      { "hero": "hero_dynamo", "items": ["upgrade_dps_aura"] },
+      { "hero": "hero_kelvin", "note": { "ru": "Улучшение T1 Ice Path даёт ему +35% сопротивления пулям на дорожке." } },
+      { "hero": "hero_warden" },
+      { "hero": "hero_viscous" }
+    ],
+    "situation": { "ru": "30-я минута. Враги складывают сопротивление пулям: у Abrams Bullet Resilience, Dynamo носит Heroic Aura, которая даёт союзникам рядом сопротивление пулям, а Kelvin получает его на Ice Path. Твои попадания по их передней линии снимают мало, хотя урона оружия у тебя много. Свободно 6800 душ и есть слот." },
+    "symptoms": [{ "ru": "Попадания по передней линии врагов снимают заметно меньше, чем по остальным." }],
+    "question": { "ru": "Какой T4 урона выбрать в слот Pick 1?" },
+    "problemTags": ["enemy-tanky", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_aprounds",
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "У 60% пуль шанс стать неотразимыми: они пробивают врагов насквозь и игнорируют сопротивление пулям. Против команды, которая складывает сопротивление из предметов, аур и способностей, это прямой ответ. Именно его ты поставил в слот Pick 1 в своей копии билда." }
+      },
+      {
+        "item": "upgrade_banshee_slugs",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Хедшот снимает с цели 16% сопротивления пулям и спириту и режет её лечение на 40%. Помогает всей команде, но требует попаданий в голову и лишь уменьшает сопротивление, а не игнорирует его." },
+        "betterWhen": { "ru": "Если ты стабильно попадаешь в голову, а враги ещё и лечатся." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+85% урона оружия, но сопротивление пулям режет и этот урон, а -13% здоровья делают тебя уязвимее." },
+        "betterWhen": { "ru": "Если у врагов мало сопротивления пулям и ты редко умираешь." }
+      },
+      {
+        "item": "upgrade_ricochet",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "+18% скорострельности и отскоки по соседним врагам, но каждая пуля всё так же упирается в сопротивление." },
+        "betterWhen": { "ru": "Если враги стоят плотной группой и сопротивления у них немного." }
+      }
+    ],
+    "principle": { "ru": "Против сложенного сопротивления пулям урон, который его игнорирует, ценнее урона, который на него умножается." },
+    "mechanics": [
+      { "text": { "ru": "Armor Piercer: с шансом 60% пуля становится неотразимой, пробивает врагов насквозь и игнорирует их сопротивление пулям; плюс +60% скорости пули и +8% урона оружия." }, "status": "data" },
+      { "text": { "ru": "Bullet Resilience: +35% сопротивления пулям, ниже 50% здоровья ещё +15%. Heroic Aura пассивно даёт союзникам рядом +17% сопротивления пулям." }, "status": "data" },
+      { "text": { "ru": "Crippling Headshot: хедшот даёт -16% сопротивления пулям, -16% сопротивления спириту и -40% входящего лечения на 12 с." }, "status": "data" },
+      { "text": { "ru": "Как Armor Piercer взаимодействует с уже срезанным сопротивлением (например, от Crow Familiar), в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги складывают сопротивление пулям, и урон по передней линии проседает." },
+      "solutions": [{ "ru": "Игнорировать сопротивление" }, { "ru": "Снижать сопротивление" }, { "ru": "Поднимать сырой урон" }],
+      "constraints": [{ "ru": "6800 душ: доступен один T4" }, { "ru": "Сопротивление у врагов из нескольких источников сразу" }],
+      "choice": { "ru": "Armor Piercer: большая часть пуль просто не замечает сопротивление." },
+      "consequences": [{ "ru": "Если враги ещё и лечатся, позже понадобится анти-хил." }, { "ru": "Против команды без сопротивления этот слот лучше отдать другому T4." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "pick-1", "bullet-resist", "my-build"],
+    "dims": ["counter", "build"],
+    "sources": ["item:upgrade_aprounds", "item:upgrade_banshee_slugs", "item:upgrade_glass_cannon", "item:upgrade_ricochet", "item:upgrade_improved_bullet_armor", "item:upgrade_dps_aura", "hero:hero_kelvin", "ability:ability_icepath", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-016",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_long_range", "upgrade_reduce_debuff_duration"],
+    "enemies": [
+      { "hero": "hero_atlas" },
+      { "hero": "hero_familiar", "note": { "ru": "Прыгает на раненого союзника с Tag Along." } },
+      { "hero": "hero_dynamo" },
+      { "hero": "hero_ghost" }
+    ],
+    "situation": { "ru": "19-я минута. Ты стреляешь по Abrams с дистанции и доводишь его до трети здоровья, но через несколько секунд он снова почти полный: Rem прыгает на него с Tag Along, Dynamo включает Rejuvenating Aurora. Crow Familiar с улучшением на срез лечения ты кидаешь в начале боя. Стреляешь ты с земли, Flight используешь только чтобы занять позицию." },
+    "symptoms": [{ "ru": "Раненая цель восстанавливается за несколько секунд." }, { "ru": "Срез лечения от Crow Familiar не спасает в длинном бою." }],
+    "question": { "ru": "Почему враги переживают твой урон и что купить?" },
+    "problemTags": ["enemy-healing", "you-lack-damage"],
+    "diagnosis": {
+      "prompt": { "ru": "Что главное мешает добить цель?" },
+      "options": [
+        {
+          "id": "uptime",
+          "text": { "ru": "Срез лечения от Crow Familiar - эффект способности с перезарядкой, а враги лечатся весь бой из нескольких источников." },
+          "correct": true,
+          "why": { "ru": "Crow Familiar с T1 режет входящее лечение на 35%, но это эффект одной способности: между её применениями он не висит на цели постоянно (точная длительность в данных не указана). Rem и Dynamo лечат всё время." }
+        },
+        {
+          "id": "resist",
+          "text": { "ru": "У Abrams много сопротивления пулям." },
+          "correct": false,
+          "why": { "ru": "Ты доводишь его до трети здоровья, значит урон проходит. Проблема в том, что здоровье возвращается." }
+        },
+        {
+          "id": "range",
+          "text": { "ru": "Ты стреляешь ближе 15 м." },
+          "correct": false,
+          "why": { "ru": "Ты бьёшь с дистанции, и Long Range работает." }
+        },
+        {
+          "id": "spirit",
+          "text": { "ru": "Не хватает Spirit Power для Crow Familiar." },
+          "correct": false,
+          "why": { "ru": "Spirit Power может прибавить урона Crow Familiar, но не сделает срез лечения постоянным." }
+        }
+      ]
+    },
+    "options": [
+      {
+        "item": "upgrade_toxic_bullets",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Пули накапливают кровотечение (процент от максимума здоровья) и режут входящее лечение на 40%. Ты стреляешь почти без остановки, поэтому эффект держится весь бой, а не только после Crow Familiar." }
+      },
+      {
+        "item": "upgrade_healbane",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Твой спиритический урон режет лечение на 35% на 8 с. Дешевле, но с земли спиритический урон у тебя идёт в основном от Crow Familiar, Stake и Assassinate, то есть тоже окнами." },
+        "betterWhen": { "ru": "Если душ мало или ты много стреляешь из Flight: по описанию его пули наносят спиритический урон (сработает ли от них Healbane, в данных прямо не сказано)." }
+      },
+      {
+        "item": "upgrade_burst_fire",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Больше урона в секунду помогает перебить лечение, но не убирает его." },
+        "betterWhen": { "ru": "Если лечение у врагов слабое и Crow Familiar его хватает." }
+      },
+      {
+        "item": "upgrade_banshee_slugs",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Режет лечение на 40% и снимает сопротивления, но стоит 6400." },
+        "betterWhen": { "ru": "Позже в игре, когда накопишь на T4 и стабильно попадаешь в голову." }
+      }
+    ],
+    "principle": { "ru": "Анти-хил от способности с перезарядкой - это окно. Против постоянного лечения нужен анти-хил, который висит, пока ты стреляешь." },
+    "mechanics": [
+      { "text": { "ru": "Crow Familiar T1: -35% входящего лечения у цели. Перезарядка Crow Familiar 32 с (T2: -16 с)." }, "status": "data" },
+      { "text": { "ru": "Toxic Bullets: пули накапливают кровотечение от максимума здоровья и -40% входящего лечения." }, "status": "data" },
+      { "text": { "ru": "Healbane: спиритический урон режет лечение на 35% на 8 с; если враг умирает под эффектом, ты получаешь большое лечение." }, "status": "data" },
+      { "text": { "ru": "Tag Along у Rem и Rejuvenating Aurora у Dynamo лечат союзников." }, "status": "data" },
+      { "text": { "ru": "Как складываются срезы лечения от разных источников (Crow Familiar, Toxic Bullets, Healbane), в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги отхиливаются быстрее, чем ты их добиваешь." },
+      "solutions": [{ "ru": "Постоянный анти-хил пулями" }, { "ru": "Анти-хил от спиритического урона" }, { "ru": "Больше урона в секунду" }],
+      "constraints": [{ "ru": "3500 душ: доступен T3" }, { "ru": "Ты стреляешь с земли, спиритический урон идёт окнами" }, { "ru": "Лечение из нескольких источников" }],
+      "choice": { "ru": "Toxic Bullets: анти-хил держится, пока ты стреляешь." },
+      "consequences": [{ "ru": "Crow Familiar остаётся для бурста и среза сопротивления пулям." }, { "ru": "Позже можно добавить Crippling Headshot, если поздняя игра затянется." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "anti-heal", "crow", "diagnose"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_toxic_bullets", "item:upgrade_healbane", "item:upgrade_burst_fire", "item:upgrade_banshee_slugs", "ability:citadel_ability_hornet_sting", "ability:citadel_ability_hornet_leap", "hero:hero_familiar", "hero:hero_dynamo"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-017",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3400,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration"],
+    "enemies": [
+      { "hero": "hero_lash" },
+      { "hero": "hero_yamato" },
+      { "hero": "hero_wraith" },
+      { "hero": "hero_inferno" }
+    ],
+    "situation": { "ru": "21-я минута. Враги понемногу лечатся способностями: Lash восстанавливает часть урона ударом Flog, Yamato лечится, когда попадает Crimson Slash по героям. Отдельного хилера у них нет. Ты убиваешь короткими всплесками: Crow Familiar с улучшением на срез лечения, очередь из винтовки, добивание из Assassinate. У тебя 3400 душ." },
+    "question": { "ru": "Что купить следующим?" },
+    "problemTags": ["enemy-healing", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_burst_fire",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Каждое попадание по герою даёт +32% скорострельности и скорость на 4,5 с: всплеск урона становится короче, и у лечения меньше времени сработать. Небольшое лечение от способностей Crow Familiar с T1 уже режет в начале твоего окна убийства." }
+      },
+      {
+        "item": "upgrade_titan_round",
+        "score": 60,
+        "verdict": "good",
+        "why": { "ru": "Без Extended Magazine стоит 1600: дешёвый рост урона и запас патронов, останутся души." },
+        "betterWhen": { "ru": "Если ты часто перезаряжаешься посреди боя." }
+      },
+      {
+        "item": "upgrade_toxic_bullets",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Постоянный анти-хил пулями, но лечение у врагов слабое и привязано к их способностям: 3200 душ дадут больше, если уйдут в урон." },
+        "betterWhen": { "ru": "Если у врагов появится хилер или сильный вампиризм." }
+      },
+      {
+        "item": "upgrade_healbane",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Дёшево режет лечение, но частично дублирует Crow Familiar, а как складываются разные срезы лечения, в данных не указано." },
+        "betterWhen": { "ru": "Против постоянного лечения от союзников-хилеров, если душ мало." }
+      }
+    ],
+    "principle": { "ru": "Против небольшого лечения от способностей не покупай отдельный анти-хил: Crow Familiar T1 уже режет его, а урон закончит бой быстрее." },
+    "mechanics": [
+      { "text": { "ru": "Flog у Lash лечит на часть нанесённого урона; Crimson Slash у Yamato лечит, если попадает по героям." }, "status": "data" },
+      { "text": { "ru": "Crow Familiar T1: -35% входящего лечения у цели." }, "status": "data" },
+      { "text": { "ru": "Burst Fire: +10% скорострельности; при попадании пулей по герою на 4,5 с +32% скорострельности и +1,25 м скорости, перезарядка эффекта 9 с." }, "status": "data" },
+      { "text": { "ru": "Как складываются срезы лечения от разных источников, в данных не указано." }, "status": "unverified" }
+    ],
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "anti-heal", "crow", "my-build"],
+    "dims": ["counter", "situation"],
+    "sources": ["item:upgrade_burst_fire", "item:upgrade_titan_round", "item:upgrade_toxic_bullets", "item:upgrade_healbane", "ability:citadel_ability_hornet_sting", "hero:hero_lash", "hero:hero_yamato", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-018",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6900,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_magic_storm", "upgrade_magic_shield", "upgrade_sharpshooter", "upgrade_rechargingbullets", "upgrade_vampire", "upgrade_vex_barrier", "upgrade_counterspell", "upgrade_tech_purge", "upgrade_metal_skin"],
+    "enemies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_lash" },
+      { "hero": "hero_inferno" },
+      { "hero": "hero_dynamo" }
+    ],
+    "situation": { "ru": "29-я минута, ты играешь гибридную сборку. Все слоты заняты, у тебя 6900 душ. Хочется больше урона в каждой перестрелке, но продавать защиту нельзя: Haze и Lash постоянно ныряют на тебя, Infernus поджигает." },
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["you-slots-full", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_ethereal_bullets",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Quicksilver Reload за 4800: компонент поглощается, поэтому новый слот не нужен и продавать ничего не придётся. Применение Crow Familiar даёт перезарядку и больше скорострельности, а до следующей перезарядки пули наносят дополнительный спиритический урон от твоего Spirit Power. Он первым стоит в поздней части твоего Hybrid." }
+      },
+      {
+        "item": "upgrade_surging_power",
+        "score": 70,
+        "verdict": "good",
+        "why": { "ru": "Тоже улучшение без нового слота, из Bullet Lifesteal: всплеск вампиризма, скорострельности и патронов на 5 с. Отлично против ныряющих, но постоянного прироста урона даёт меньше." },
+        "betterWhen": { "ru": "Если ты проигрываешь дуэли и нужна живучесть в момент нырка." }
+      },
+      {
+        "item": "upgrade_tech_overflow",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Сильный T4 урона и вампиризма, но Spirit Lifesteal нет, значит нужен новый слот, и придётся продать защиту." },
+        "betterWhen": { "ru": "Когда появится свободный слот или если Spirit Lifesteal уже куплен." }
+      },
+      {
+        "item": "upgrade_critshot",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Хороший урон, но нужен новый слот: продавать придётся защиту, а враги ныряют." },
+        "betterWhen": { "ru": "Если слот свободен и тебя редко достают." }
+      }
+    ],
+    "principle": { "ru": "Когда слоты заняты, сначала смотри на улучшения того, что уже есть: им не нужен новый слот." },
+    "mechanics": [
+      { "text": { "ru": "Mercurial Magnum собирается из Quicksilver Reload: назначенная способность заряжается 14 с; при её применении перезарядка 100% патронов, +22% скорострельности, а до следующей перезарядки пули наносят бонусный спиритический урон от Spirit Power. Ещё +20% патронов и +7 Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Vampiric Burst собирается из Bullet Lifesteal; Spiritual Overflow - из Spirit Lifesteal." }, "status": "data" },
+      { "text": { "ru": "Компонент поглощается при улучшении: такое улучшение не требует свободного слота." }, "status": "data" },
+      { "text": { "ru": "В твоём Hybrid поздняя часть начинается с Mercurial Magnum, назначенного на Crow Familiar." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужно больше урона, но все слоты заняты, а защиту продавать нельзя." },
+      "solutions": [{ "ru": "Улучшить имеющийся компонент" }, { "ru": "Продать защиту ради нового T4" }],
+      "constraints": [{ "ru": "6900 душ" }, { "ru": "Ныряющие враги: защита нужна" }, { "ru": "Есть два компонента T4: Quicksilver Reload и Bullet Lifesteal" }],
+      "choice": { "ru": "Mercurial Magnum: прирост урона в каждой перестрелке без продажи." },
+      "consequences": [{ "ru": "Следующим улучшением можно сделать Vampiric Burst из Bullet Lifesteal." }, { "ru": "Назначение на Crow Familiar сохраняется как у Quicksilver Reload." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "slots", "hybrid", "my-build"],
+    "dims": ["build", "synergy"],
+    "sources": ["item:upgrade_ethereal_bullets", "item:upgrade_quick_silver", "item:upgrade_surging_power", "item:upgrade_tech_overflow", "item:upgrade_critshot", "ability:citadel_ability_hornet_sting", "build:14"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-019",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_counterspell", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_aprounds", "upgrade_critshot"],
+    "enemies": [
+      { "hero": "hero_warden" },
+      { "hero": "hero_mirage" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "38-я минута, все слоты заняты, Trophy Collector ты уже продал. Почти все убийства ты делаешь из винтовки, а Assassinate используешь только чтобы добить, и у него почти всегда висят полные заряды. У тебя 7500 душ на ещё один T4 урона." },
+    "symptoms": [{ "ru": "Заряды ульты почти всегда полные." }],
+    "question": { "ru": "Что продать?" },
+    "problemTags": ["you-slots-full"],
+    "options": [
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Его ценность - лишние заряды, перезарядка и Spirit Power для Assassinate, а заряды у тебя и так простаивают. Он следующий в порядке продажи твоего билда после Trophy Collector." }
+      },
+      {
+        "item": "upgrade_quick_silver",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "Тоже кандидат: его бонус срабатывает только при применении Crow Familiar. Но перезарядка магазина и скорострельность всё ещё помогают винтовке, которой ты убиваешь." },
+        "betterWhen": { "ru": "Если ты активно добиваешь из Assassinate и все заряды тратятся в каждом бою." }
+      },
+      {
+        "item": "upgrade_pristine_emblem",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "+25% урона по целям выше 50% здоровья: в длинных боях с толстыми врагами это всё ещё заметно." },
+        "betterWhen": { "ru": "Если почти все твои цели уже ранены к моменту, когда ты стреляешь." }
+      },
+      {
+        "item": "upgrade_blitz_bullets",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "+20% скорострельности без условий - прямой урон винтовки, которой ты убиваешь." },
+        "betterWhen": { "ru": "Если скорострельности у тебя с избытком от других предметов, а не хватает урона за выстрел." }
+      },
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "Главный источник урона на дистанции." },
+        "betterWhen": { "ru": "Почти никогда." }
+      }
+    ],
+    "principle": { "ru": "Продавай то, что простаивает: если заряды Assassinate всегда полные, Rapid Recharge не работает." },
+    "mechanics": [
+      { "text": { "ru": "Rapid Recharge: +2 заряда, -14% перезарядки и +14 Spirit Power способностям с зарядами, заряды восстанавливаются на 30% быстрее." }, "status": "data" },
+      { "text": { "ru": "Quicksilver Reload срабатывает при применении назначенной способности (в билде - Crow Familiar)." }, "status": "data" },
+      { "text": { "ru": "Порядок продажи в твоём билде: Trophy Collector, Rapid Recharge, Quicksilver Reload, Opening Rounds, Swift Striker." }, "status": "expert" },
+      { "text": { "ru": "Уменьшает ли продажа бонус вложений в категорию, в данных не указано. Если уменьшает, Spirit опустится ниже 4800, но гибриду это важнее, чем стрелку." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под T4, Trophy Collector уже продан." },
+      "solutions": [{ "ru": "Продать предмет, который простаивает" }, { "ru": "Продать слабый бонус к урону" }],
+      "constraints": [{ "ru": "Ты убиваешь в основном винтовкой" }, { "ru": "Заряды Assassinate почти всегда полные" }],
+      "choice": { "ru": "Rapid Recharge: его заряды ты не используешь." },
+      "consequences": [{ "ru": "У Assassinate останется 2 заряда и обычная перезарядка." }, { "ru": "Если снова начнёшь добивать ультой, этот слот был бы ценнее." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "sell", "assassinate", "slots", "my-build"],
+    "dims": ["build", "mechanics"],
+    "sources": ["item:upgrade_rapid_recharge", "item:upgrade_quick_silver", "item:upgrade_pristine_emblem", "item:upgrade_blitz_bullets", "item:upgrade_sharpshooter", "ability:citadel_ability_hornet_snipe", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-020",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_ethereal_bullets", "upgrade_rapid_recharge", "upgrade_magic_storm", "upgrade_magic_shield", "upgrade_sharpshooter", "upgrade_rechargingbullets", "upgrade_surging_power", "upgrade_vex_barrier", "upgrade_tech_overflow", "upgrade_counterspell", "upgrade_reduce_debuff_duration"],
+    "enemies": [
+      { "hero": "hero_haze", "note": { "ru": "Сильно впереди, убивает пулями." } },
+      { "hero": "hero_viper" },
+      { "hero": "hero_mirage" },
+      { "hero": "hero_dynamo" }
+    ],
+    "situation": { "ru": "31-я минута, гибридная сборка, все слоты заняты. Haze сильно впереди и убивает тебя пулями за пару секунд, особенно в ульте. После её нырков у тебя почти никогда не бывает больше 65% здоровья. Ты хочешь купить Metal Skin (у тебя 7000 душ) и решаешь, что продать." },
+    "symptoms": [{ "ru": "После каждого нырка Haze у тебя меньше 65% здоровья." }],
+    "question": { "ru": "Что продать ради Metal Skin?" },
+    "problemTags": ["you-slots-full", "enemy-gun-dps", "you-die-fast"],
+    "options": [
+      {
+        "item": "upgrade_magic_shield",
+        "score": 82,
+        "verdict": "best",
+        "why": { "ru": "Его бонус к Spirit Power и перезарядке работает только выше 65% здоровья, а против Haze ты почти всегда ниже. Его +18% сопротивления спириту не защищают от пуль. В твоём Hybrid он прямо указан как кандидат на замену защитным предметом." }
+      },
+      {
+        "item": "upgrade_pristine_emblem",
+        "score": 66,
+        "verdict": "good",
+        "why": { "ru": "Тоже указан в Hybrid как кандидат на замену. Но +25% урона по целям выше 50% здоровья помогает начать убийство, которое ты добиваешь Assassinate." },
+        "betterWhen": { "ru": "Если главный урон врагов спиритический и сопротивление спириту от Enchanter's Emblem тебе нужно." }
+      },
+      {
+        "item": "upgrade_vex_barrier",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Барьер при контроле - тоже защита, и против Haze он работает: её Sleep Dagger усыпляет, а сон входит в его триггеры." },
+        "betterWhen": { "ru": "Если у врагов нет контроля и угроза только пули." }
+      },
+      {
+        "item": "upgrade_magic_storm",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Spirit Power для Assassinate и скорость после выстрела - часть ядра гибрида." },
+        "betterWhen": { "ru": "Если Assassinate ты почти не используешь." }
+      },
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 15,
+        "verdict": "bad",
+        "why": { "ru": "Ядро гибрида: заряды и перезарядка Assassinate, которым ты добиваешь." },
+        "betterWhen": { "ru": "Только если ты перестал играть через ульту." }
+      }
+    ],
+    "principle": { "ru": "Продавай предмет, чьё условие в этом матче не выполняется: бонус «выше 65% здоровья» не работает, если тебя постоянно ранят." },
+    "mechanics": [
+      { "text": { "ru": "Enchanter's Emblem: +18% сопротивления спириту; выше 65% здоровья +15 Spirit Power и +5% сокращения перезарядки." }, "status": "data" },
+      { "text": { "ru": "Metal Skin: активка даёт иммунитет к пулям на 5 с, постоянно +12% сопротивления пулям." }, "status": "data" },
+      { "text": { "ru": "Reactive Barrier даёт барьер, когда тебя оглушают, сковывают, обездвиживают, усыпляют или накладывают Silence. Sleep Dagger у Haze усыпляет цель." }, "status": "data" },
+      { "text": { "ru": "В твоём Hybrid защитные предметы советуется ставить вместо Opening Rounds или Enchanter's Emblem, когда закончатся слоты." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под Metal Skin против Haze, все слоты заняты." },
+      "solutions": [{ "ru": "Продать предмет с невыполнимым условием" }, { "ru": "Продать бонус к урону" }, { "ru": "Продать часть ядра ульты" }],
+      "constraints": [{ "ru": "Ты почти всегда ниже 65% здоровья" }, { "ru": "Ядро гибрида: Rapid Recharge и Surge of Power" }],
+      "choice": { "ru": "Enchanter's Emblem: в этом матче его бонус почти не работает." },
+      "consequences": [{ "ru": "Теряешь 18% сопротивления спириту: следи за спиритическим уроном Dynamo." }, { "ru": "Metal Skin береги под нырок Haze, а не под первую пулю." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "sell", "hybrid", "slots", "my-build"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_magic_shield", "item:upgrade_pristine_emblem", "item:upgrade_vex_barrier", "item:upgrade_magic_storm", "item:upgrade_rapid_recharge", "item:upgrade_metal_skin", "hero:hero_haze", "build:14"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-021",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 1700,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_extra_charge", "upgrade_sprint_booster", "upgrade_blitz_bullets"],
+    "enemies": [
+      { "hero": "hero_haze", "note": { "ru": "Ведёт по душам." } },
+      { "hero": "hero_drifter" },
+      { "hero": "hero_wraith" }
+    ],
+    "situation": { "ru": "12-я минута, ты отстаёшь: линию ты проиграл, у врагов заметно больше душ. Убийств и помощей у тебя почти нет: ты фармишь волны крипов и лагеря на своей стороне карты и стараешься не попадаться Drifter. В оружейные предметы вложено 3200 душ, есть Sprint Boots и 1700 душ." },
+    "symptoms": [{ "ru": "Убийств и помощей почти нет, ты живёшь за счёт фарма." }],
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["you-behind", "you-lose-lane"],
+    "options": [
+      {
+        "item": "upgrade_long_range",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "+40% урона оружия дальше 15 м: ты защищаешь линии и разменываешься с безопасной дистанции. Вложения в Weapon доходят до 4800, и бонус категории прыгает с +18% до +46% урона оружия. Сила сразу, а не через убийства, которых у тебя нет." }
+      },
+      {
+        "item": "upgrade_cardio_calibrator",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Улучшение Sprint Boots за 800: скорость и сопротивление замедлениям помогают уходить от ныряющих, но урона и порога не дают." },
+        "betterWhen": { "ru": "Если тебя ловят и убивают на фарме чаще, чем ты успеваешь что-то сделать." }
+      },
+      {
+        "item": "upgrade_trophy_collector",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Стаки дают только убийства и помощи, а их у тебя почти нет. Зато -15% урона оружия по NPC замедлит фарм, за счёт которого ты сейчас догоняешь." },
+        "betterWhen": { "ru": "Если твоя команда много дерётся и ты регулярно получаешь помощи." }
+      },
+      {
+        "item": "upgrade_health_stimpak",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Лечение между стычками, но оно сбивается от урона героев и не помогает догнать по силе." },
+        "betterWhen": { "ru": "Если ты на линии и тебя постоянно понемногу дожимают." }
+      }
+    ],
+    "principle": { "ru": "Отстаёшь и почти не участвуешь в убийствах - покупай силу сейчас, а не экономику от убийств." },
+    "mechanics": [
+      { "text": { "ru": "Trophy Collector копит стаки только за убийства и помощи; его минус - -15% урона оружия по NPC." }, "status": "data" },
+      { "text": { "ru": "Пороги Weapon: 3200 даёт +18%, 4800 даёт +46% урона оружия. Opening Rounds, Swift Striker и Long Range - предметы Weapon." }, "status": "data" },
+      { "text": { "ru": "Bloodscent у Drifter подсвечивает изолированных героев, и по ним он наносит усиленный урон." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Ты отстаёшь, и тебе нужна сила, чтобы безопасно фармить и защищаться." },
+      "solutions": [{ "ru": "Урон сейчас и порог Weapon" }, { "ru": "Экономика от убийств" }, { "ru": "Мобильность для побега" }],
+      "constraints": [{ "ru": "1700 душ" }, { "ru": "Убийств и помощей мало" }, { "ru": "Drifter охотится на одиночек" }],
+      "choice": { "ru": "Long Range: даёт силу сразу и закрывает порог Weapon 4800." },
+      "consequences": [{ "ru": "Trophy Collector можно купить позже, если команда начнёт драться." }, { "ru": "Держись ближе к союзникам: бонус дальнего боя не спасёт от нырка Drifter." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "behind", "economy", "trophy", "thresholds"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_long_range", "item:upgrade_cardio_calibrator", "item:upgrade_trophy_collector", "item:upgrade_health_stimpak", "hero:hero_drifter", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-022",
+    "kind": "imbue",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 1700,
+    "owned": ["upgrade_high_velocity_mag", "upgrade_grit", "upgrade_rapid_recharge", "upgrade_magic_storm"],
+    "enemies": [
+      { "hero": "hero_magician" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_orion" }
+    ],
+    "situation": { "ru": "15-я минута, ты играешь от ульты (твоя сборка Full Ult). Только что купил Surge of Power и выбираешь, на какую способность его назначить. План боя: Crow Familiar, 2-3 выстрела в голову из винтовки, затем Assassinate по цели ниже половины здоровья. Rapid Recharge уже есть, так что зарядов ульты много." },
+    "question": { "ru": "На какую способность назначить Surge of Power?" },
+    "problemTags": ["you-lack-damage", "you-cant-catch"],
+    "options": [
+      {
+        "ability": "citadel_ability_hornet_snipe",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Surge of Power даёт назначенной способности постоянные +28 Spirit Power, а при её применении - бонус к скорости и стрельбу без замедления (не чаще раза в 14 с). Assassinate с Rapid Recharge ты применяешь в каждом бою, и после выстрела сразу нужно сменить позицию или перейти к следующей цели. Так он назначен в обеих твоих сборках через ульту." }
+      },
+      {
+        "ability": "citadel_ability_hornet_leap",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Пули в Flight наносят спиритический урон, а улучшение T3 прямо говорит об увеличенном множителе Spirit Power, так что +28 Spirit Power здесь работают. Но Flight перезаряжается 42 с, и бонус при применении придёт редко." },
+        "betterWhen": { "ru": "Если ты почти весь урон наносишь из полёта и прокачал Flight до T3." }
+      },
+      {
+        "ability": "citadel_ability_hornet_sting",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Crow Familiar открывает каждый бой, но бонус скорости придёт в начале, когда ты ещё стоишь на позиции, а после Assassinate его не будет." },
+        "betterWhen": { "ru": "Если ты не играешь через ульту и Assassinate почти не применяешь." }
+      },
+      {
+        "ability": "citadel_ability_hornet_chain",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Stake ты применяешь в основном в защите, когда на тебя прыгают: бонус и Spirit Power принесут меньше всего." },
+        "betterWhen": { "ru": "Если Stake - главный инструмент поимки в твоей игре и ты кидаешь его в каждом бою." }
+      }
+    ],
+    "principle": { "ru": "Бонус при применении назначай на способность, которую применяешь чаще всего и ради которой собрана сборка." },
+    "mechanics": [
+      { "text": { "ru": "Surge of Power (imbue_active): +28 Spirit Power назначенной способности; при её применении +1,75 м скорости на 8 с и полная скорость при стрельбе, перезарядка эффекта 14 с." }, "status": "data" },
+      { "text": { "ru": "Assassinate: 2 заряда, Rapid Recharge добавляет ещё 2. Тип урона Assassinate - спиритический и оружейный." }, "status": "data" },
+      { "text": { "ru": "Flight T3: +10 спиритического урона с увеличенным множителем Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Насколько Spirit Power увеличивает урон именно Assassinate, в данных не указано." }, "status": "unverified" },
+      { "text": { "ru": "В твоих сборках Full Ult и Hybrid Surge of Power назначен на Assassinate." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Выбрать, какой способности отдать постоянный Spirit Power и бонус скорости при применении." },
+      "solutions": [{ "ru": "Ульта, вокруг которой построена сборка" }, { "ru": "Flight, где пули наносят спиритический урон" }, { "ru": "Способность, открывающая бой" }],
+      "constraints": [{ "ru": "Бонус при применении не чаще раза в 14 с" }, { "ru": "У Assassinate много зарядов благодаря Rapid Recharge" }],
+      "choice": { "ru": "Assassinate: применяешь чаще всего, а после выстрела как раз нужна скорость." },
+      "consequences": [{ "ru": "После каждого выстрела меняй позицию, пока действует бонус скорости." }, { "ru": "Если перейдёшь на игру из полёта, пересмотри назначение." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "imbue", "assassinate", "full-ult", "my-build"],
+    "dims": ["synergy", "mechanics"],
+    "sources": ["item:upgrade_magic_storm", "item:upgrade_rapid_recharge", "ability:citadel_ability_hornet_snipe", "ability:citadel_ability_hornet_leap", "ability:citadel_ability_hornet_sting", "ability:citadel_ability_hornet_chain", "build:8", "build:14"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-023",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration"],
+    "enemies": [
+      { "hero": "hero_lash" },
+      { "hero": "hero_yamato" },
+      { "hero": "hero_synth" },
+      { "hero": "hero_viper" }
+    ],
+    "situation": { "ru": "22-я минута. Каждый бой у врагов начинается с нырка: Lash прилетает на Grapple, Yamato - на Flying Slash, и драка идёт в 5-10 м от тебя. Издалека ты разносишь кого угодно, а в этих драках твой урон заметно проседает, хотя ты попадаешь." },
+    "symptoms": [{ "ru": "Издалека урон отличный, вблизи - заметно слабее при тех же попаданиях." }, { "ru": "Ты проигрываешь дуэли тем, кто до тебя добрался." }],
+    "question": { "ru": "В чём проблема и что купить?" },
+    "problemTags": ["enemy-dive", "you-get-caught", "you-lack-damage"],
+    "diagnosis": {
+      "prompt": { "ru": "Почему вблизи твой урон проседает?" },
+      "options": [
+        {
+          "id": "range",
+          "text": { "ru": "Главный бонус Sharpshooter работает только дальше 15 м, а ныряющие дерутся ближе." },
+          "correct": true,
+          "why": { "ru": "+60% урона Sharpshooter действует только дальше 15 м от цели. В драке на 5-10 м ты теряешь именно этот бонус, хотя попадаешь так же." }
+        },
+        {
+          "id": "opening",
+          "text": { "ru": "Opening Rounds не работает по раненым целям." },
+          "correct": false,
+          "why": { "ru": "Это влияет на добивание, но не объясняет разницу между дальним и ближним боем." }
+        },
+        {
+          "id": "resist",
+          "text": { "ru": "Ныряющие враги собрали сопротивление пулям." },
+          "correct": false,
+          "why": { "ru": "Тогда урон по ним был бы низким и на дистанции." }
+        },
+        {
+          "id": "ammo",
+          "text": { "ru": "Не хватает патронов." },
+          "correct": false,
+          "why": { "ru": "Проблема в силе каждого попадания вблизи, а не во времени перезарядки." }
+        }
+      ]
+    },
+    "options": [
+      {
+        "item": "upgrade_burst_fire",
+        "score": 80,
+        "verdict": "best",
+        "why": { "ru": "Его бонус не зависит от дистанции: попадание по герою даёт +32% скорострельности и +1,25 м скорости на 4,5 с. Скорострельность возвращает урон в ближнем бою, а скорость помогает снова разорвать дистанцию." }
+      },
+      {
+        "item": "upgrade_fleetfoot_boots",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "Убирает замедление при стрельбе и даёт активку на скорость и сопротивление замедлениям: помогает вернуться на свою дистанцию." },
+        "betterWhen": { "ru": "Если важнее уйти от нырка, чем выиграть ближнюю перестрелку." }
+      },
+      {
+        "item": "upgrade_close_quarter_combat",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "+50% урона ближе 15 м и замедление пулями. В нырке это сильно, но на дистанции предмет не даёт ничего, а ты стрелок дальнего боя." },
+        "betterWhen": { "ru": "Если ты сознательно перестраиваешься в стрелка ближнего боя, что для Vindicta почти никогда не нужно." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 20,
+        "verdict": "weak",
+        "why": { "ru": "Стоит 6400, недоступен, и -13% здоровья против ныряющих опасны." },
+        "betterWhen": { "ru": "Если ты сильно впереди и до тебя редко добираются." }
+      }
+    ],
+    "principle": { "ru": "Бонусы дальнего боя пропадают ближе 15 м: против ныряющих нужен урон без условия дистанции или способ её вернуть." },
+    "mechanics": [
+      { "text": { "ru": "Sharpshooter: +60% урона оружия только дальше 15 м от цели." }, "status": "data" },
+      { "text": { "ru": "Burst Fire: при попадании пулей по герою +32% скорострельности и +1,25 м скорости на 4,5 с." }, "status": "data" },
+      { "text": { "ru": "Fleetfoot убирает штраф к скорости при стрельбе; активка даёт +3 м скорости и +40% сопротивления замедлениям на 5 с." }, "status": "data" },
+      { "text": { "ru": "Stake привязывает прыгнувшего врага к месту падения кола: это способ вернуть себе дистанцию без покупки." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Ныряющие враги дерутся ближе 15 м, и бонус Sharpshooter пропадает." },
+      "solutions": [{ "ru": "Урон, не зависящий от дистанции" }, { "ru": "Мобильность, чтобы вернуть дистанцию" }, { "ru": "Перестроиться под ближний бой" }],
+      "constraints": [{ "ru": "3500 душ: доступен T3" }, { "ru": "Дальний бой остаётся твоей силой" }],
+      "choice": { "ru": "Burst Fire: работает на любой дистанции и даёт скорость, чтобы отойти." },
+      "consequences": [{ "ru": "Stake держи под нырок, чтобы привязать врага и отойти." }, { "ru": "Если нырки продолжат убивать, понадобится защита." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "diagnose", "long-range", "dive", "my-build"],
+    "dims": ["mechanics", "counter"],
+    "sources": ["item:upgrade_sharpshooter", "item:upgrade_burst_fire", "item:upgrade_fleetfoot_boots", "item:upgrade_close_quarter_combat", "item:upgrade_glass_cannon", "ability:citadel_ability_hornet_chain", "hero:hero_lash", "hero:hero_yamato", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-024",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_aprounds", "upgrade_counterspell"],
+    "enemies": [
+      { "hero": "hero_atlas" },
+      { "hero": "hero_punkgoat" },
+      { "hero": "hero_krill" },
+      { "hero": "hero_viscous" },
+      { "hero": "hero_dynamo" }
+    ],
+    "situation": { "ru": "34-я минута. Враги ходят одной плотной группой: Abrams, Billy, Mo & Krill и Viscous влетают вместе, Dynamo стягивает твою команду Singularity. В бою они стоят друг у друга вплотную: ты стреляешь в одного, а рядом с ним всегда ещё двое. Armor Piercer у тебя уже есть. Свободно 7000 душ и один слот." },
+    "symptoms": [{ "ru": "Рядом с твоей целью почти всегда стоят ещё 1-2 врага." }],
+    "question": { "ru": "Какой T4 урона взять?" },
+    "problemTags": ["teamfight", "enemy-tanky"],
+    "options": [
+      {
+        "item": "upgrade_ricochet",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "+18% скорострельности, и каждая пуля отскакивает ещё в двух врагов в 13 м от цели с 65% урона и всеми эффектами пуль. Когда враги стоят вплотную, каждая очередь бьёт сразу по нескольким." }
+      },
+      {
+        "item": "upgrade_critshot",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Четверть пуль наносит +100% урона оружия, плюс +30% патронов. Сильный урон, но только по одной цели." },
+        "betterWhen": { "ru": "Если враги расходятся и ты стреляешь по одиночным целям." }
+      },
+      {
+        "item": "upgrade_siphon_bullets",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Пули на время крадут максимум здоровья у врагов, плюс +15% урона и +10% сопротивления пулям. Хорош против толстых, но тоже бьёт по одной цели." },
+        "betterWhen": { "ru": "Против одного-двух очень толстых врагов, если нужна и живучесть." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "+85% урона оружия, но -13% здоровья против команды, которая влетает в тебя всей толпой." },
+        "betterWhen": { "ru": "Если ты стоишь далеко за своей командой и до тебя редко добираются." }
+      }
+    ],
+    "principle": { "ru": "Против плотной группы предмет, который размножает попадания, сильнее предмета, который усиливает одно попадание." },
+    "mechanics": [
+      { "text": { "ru": "Ricochet: +18% скорострельности; пули отскакивают в 2 врагов рядом с целью (13 м), нанося 65% урона и применяя эффекты пуль." }, "status": "data" },
+      { "text": { "ru": "Armor Piercer: пробивающие пули проходят врагов насквозь по линии выстрела." }, "status": "data" },
+      { "text": { "ru": "Lucky Shot: 25% пуль наносят +100% урона оружия; +30% патронов." }, "status": "data" },
+      { "text": { "ru": "Срабатывает ли эффект Armor Piercer на отскоках Ricochet, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги дерутся плотной группой, ты бьёшь по одной цели." },
+      "solutions": [{ "ru": "Размножить попадания на соседей" }, { "ru": "Усилить урон по одной цели" }, { "ru": "Добавить живучести" }],
+      "constraints": [{ "ru": "7000 душ и один слот" }, { "ru": "Armor Piercer уже есть" }, { "ru": "Враги влетают всей толпой" }],
+      "choice": { "ru": "Ricochet: каждая очередь бьёт по двум соседям цели." },
+      "consequences": [{ "ru": "Если враги начнут расходиться, ценность отскоков упадёт." }, { "ru": "Стреляй в центр группы, а не в крайнего." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "teamfight", "pick-1", "my-build"],
+    "dims": ["situation", "effect"],
+    "sources": ["item:upgrade_ricochet", "item:upgrade_critshot", "item:upgrade_siphon_bullets", "item:upgrade_glass_cannon", "item:upgrade_aprounds", "hero:hero_dynamo", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-025",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_counterspell"],
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_orion" }
+    ],
+    "situation": { "ru": "32-я минута. В бою ты постоянно что-то применяешь: Crow Familiar, Stake, несколько выстрелов Assassinate подряд благодаря Rapid Recharge, плюс активки Vampiric Burst и Dispel Magic. Враги держатся порознь и сопротивления пулям почти не собирают. Свободно 7000 душ и есть слот." },
+    "symptoms": [{ "ru": "За бой ты применяешь способности и активки пять-шесть раз и больше." }],
+    "question": { "ru": "Какой T4 урона выбрать?" },
+    "problemTags": ["you-lack-damage", "teamfight"],
+    "options": [
+      {
+        "item": "upgrade_enchanted_holsters",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Каждое применение способности или предмета в бою даёт стак: до 6 стаков по +11% скорострельности и -10% времени перезарядки, каждый стак обновляет длительность 18 с. Ты применяешь много всего, поэтому быстро держишь максимум. Автор билда считает его лучше Spiritual Overflow и Mercurial Magnum после их ослаблений." }
+      },
+      {
+        "item": "upgrade_critshot",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Четверть пуль наносит двойной урон оружия, плюс +30% патронов. Работает без условий, но не использует то, что ты много применяешь." },
+        "betterWhen": { "ru": "Если ты мало применяешь способностей и предметов и играешь почти только от стрельбы." }
+      },
+      {
+        "item": "upgrade_tech_overflow",
+        "score": 60,
+        "verdict": "good",
+        "why": { "ru": "Стрельба по героям заряжает +25% скорострельности, +30 Spirit Power и вампиризм спиритом. Но Spirit Lifesteal у тебя нет, поэтому цена полная." },
+        "betterWhen": { "ru": "Если Spirit Lifesteal уже куплен: тогда он дешевле и не занимает новый слот." }
+      },
+      {
+        "item": "upgrade_aprounds",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Игнорирует сопротивление пулям, а у врагов его почти нет: главная сила предмета пропадает." },
+        "betterWhen": { "ru": "Если враги начнут складывать сопротивление пулям." }
+      },
+      {
+        "item": "upgrade_ricochet",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Отскоки сильны против плотной группы, а враги держатся порознь." },
+        "betterWhen": { "ru": "Если враги дерутся толпой." }
+      }
+    ],
+    "principle": { "ru": "Spellslinger окупается частыми применениями: чем больше способностей и активок в бою, тем он сильнее." },
+    "mechanics": [
+      { "text": { "ru": "Spellslinger: +5% сокращения перезарядки способностей; в бою каждое применение способности или предмета даёт стак (до 6, 18 с): +11% скорострельности и -10% времени перезарядки за стак." }, "status": "data" },
+      { "text": { "ru": "Vampiric Burst и Dispel Magic - активные предметы; Rapid Recharge даёт Assassinate ещё 2 заряда." }, "status": "data" },
+      { "text": { "ru": "Spiritual Overflow собирается из Spirit Lifesteal." }, "status": "data" },
+      { "text": { "ru": "Заметка автора билда к Spellslinger: «Better than Overflow and Merc after their nerfs»." }, "status": "expert" },
+      { "text": { "ru": "Spellslinger встречается в 24% матчей Vindicta с винрейтом 59,4%, средняя минута покупки - 30-я. Это корреляция, а не причина." }, "status": "stat" }
+    ],
+    "tree": {
+      "problem": { "ru": "Выбрать T4 урона под стиль, где ты много применяешь." },
+      "solutions": [{ "ru": "Бафф за каждое применение" }, { "ru": "Урон без условий" }, { "ru": "Бафф за стрельбу по героям" }],
+      "constraints": [{ "ru": "7000 душ и один слот" }, { "ru": "Враги без сопротивления пулям и порознь" }, { "ru": "Spirit Lifesteal нет" }],
+      "choice": { "ru": "Spellslinger: твои частые применения держат его на максимуме." },
+      "consequences": [{ "ru": "Rapid Recharge теперь важнее: его заряды кормят стаки." }, { "ru": "Quicksilver Reload частично дублирует ускоренную перезарядку." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "pick-1", "synergy", "my-build"],
+    "dims": ["synergy", "build"],
+    "sources": ["item:upgrade_enchanted_holsters", "item:upgrade_critshot", "item:upgrade_tech_overflow", "item:upgrade_aprounds", "item:upgrade_ricochet", "item:upgrade_rapid_recharge", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-026",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7200,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_enchanted_holsters", "upgrade_counterspell", "upgrade_aprounds"],
+    "enemies": [
+      { "hero": "hero_nurse" },
+      { "hero": "hero_atlas" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_mirage" }
+    ],
+    "situation": { "ru": "37-я минута, все слоты заняты, Trophy Collector давно продан. У тебя Spellslinger, и ты держишь его стаки весь бой, потому что постоянно что-то применяешь: Crow Familiar, Stake, серии выстрелов Assassinate, активки. Перезарядка магазина с ним почти незаметна. Ты хочешь купить Lucky Shot, у тебя 7200 душ." },
+    "symptoms": [{ "ru": "Стаки Spellslinger у тебя почти всегда на максимуме." }],
+    "question": { "ru": "Что продать?" },
+    "problemTags": ["you-slots-full"],
+    "options": [
+      {
+        "item": "upgrade_quick_silver",
+        "score": 82,
+        "verdict": "best",
+        "why": { "ru": "Его главная ценность - мгновенная перезарядка магазина и скорострельность при применении Crow Familiar. Spellslinger уже ускоряет перезарядку и стрельбу от тех же применений, так что функция во многом дублируется. Стак Spellslinger Crow Familiar даст и без этого предмета." }
+      },
+      {
+        "item": "upgrade_pristine_emblem",
+        "score": 60,
+        "verdict": "good",
+        "why": { "ru": "Простой бонус к урону по целям выше 50% здоровья: ничего не дублирует, но и с твоими применениями не связан." },
+        "betterWhen": { "ru": "Если ты в основном добиваешь раненых, а по здоровым целям стреляют союзники." }
+      },
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Следующий по порядку продажи твоего билда, но именно его лишние заряды Assassinate дают тебе больше применений, а значит стаки Spellslinger. Продав его, ты ослабишь и ульту, и Spellslinger." },
+        "betterWhen": { "ru": "Если Spellslinger у тебя нет, а заряды Assassinate простаивают." }
+      },
+      {
+        "item": "upgrade_blitz_bullets",
+        "score": 35,
+        "verdict": "weak",
+        "why": { "ru": "+20% скорострельности - пассивно и без условий, на каждой пуле." },
+        "betterWhen": { "ru": "Если скорострельности у тебя с избытком, а не хватает урона за выстрел." }
+      },
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "Главный бонус к урону на дистанции." },
+        "betterWhen": { "ru": "Почти никогда." }
+      }
+    ],
+    "principle": { "ru": "Порядок продажи - ориентир, а не закон: продавай то, что дублирует новые предметы, и сохраняй то, что их кормит." },
+    "mechanics": [
+      { "text": { "ru": "Spellslinger: каждое применение способности или предмета в бою даёт стак (до 6): +11% скорострельности и -10% времени перезарядки за стак." }, "status": "data" },
+      { "text": { "ru": "Quicksilver Reload: при применении назначенной способности перезаряжает 100% патронов и даёт +10% скорострельности; заряжается 18 с." }, "status": "data" },
+      { "text": { "ru": "Rapid Recharge даёт Assassinate +2 заряда; каждый выстрел Assassinate - это отдельное применение способности." }, "status": "expert" },
+      { "text": { "ru": "Порядок продажи в твоём билде: Trophy Collector, Rapid Recharge, Quicksilver Reload, Opening Rounds, Swift Striker." }, "status": "expert" },
+      { "text": { "ru": "Уменьшает ли продажа бонус вложений в категорию, в данных не указано. Если уменьшает, продажа Quicksilver Reload опустит Spirit ниже 4800." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под Lucky Shot, а по списку следующий - Rapid Recharge, который кормит Spellslinger." },
+      "solutions": [{ "ru": "Продать то, что дублирует Spellslinger" }, { "ru": "Продать следующий предмет из списка" }, { "ru": "Продать простой бонус к урону" }],
+      "constraints": [{ "ru": "Spellslinger держится на частых применениях" }, { "ru": "Перезарядка магазина уже почти незаметна" }],
+      "choice": { "ru": "Quicksilver Reload: его перезарядка дублирует Spellslinger, а Crow Familiar стак даст и так." },
+      "consequences": [{ "ru": "В начале боя магазин больше не перезаряжается бесплатно: начинай с полного." }, { "ru": "Rapid Recharge и Opening Rounds остаются." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "sell", "synergy", "slots", "my-build"],
+    "dims": ["synergy", "build"],
+    "sources": ["item:upgrade_quick_silver", "item:upgrade_enchanted_holsters", "item:upgrade_rapid_recharge", "item:upgrade_pristine_emblem", "item:upgrade_blitz_bullets", "item:upgrade_critshot", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-027",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_counterspell"],
+    "allies": [
+      { "hero": "hero_haze", "note": { "ru": "Урон пулями." } },
+      { "hero": "hero_inferno", "note": { "ru": "Спиритический урон." } }
+    ],
+    "enemies": [
+      { "hero": "hero_atlas", "items": ["upgrade_improved_bullet_armor"] },
+      { "hero": "hero_familiar" },
+      { "hero": "hero_warden" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "33-я минута. Abrams стоит впереди и принимает огонь всей твоей команды. Твои попадания по нему снимают заметно меньше, чем по остальным, а когда он всё же проседает, Rem прыгает на него, и Abrams быстро восстанавливается. Ты много попадаешь в голову с дистанции. В команде есть Haze с пулями и Infernus со спиритическим уроном. Свободно 7000 душ и есть слот." },
+    "symptoms": [{ "ru": "Попадания по Abrams снимают заметно меньше, чем по другим." }, { "ru": "Раненый Abrams быстро восстанавливается." }],
+    "question": { "ru": "Что мешает убить Abrams и что купить?" },
+    "problemTags": ["enemy-tanky", "enemy-healing"],
+    "diagnosis": {
+      "prompt": { "ru": "В чём причина?" },
+      "options": [
+        {
+          "id": "both",
+          "text": { "ru": "У Abrams много сопротивления пулям, и при этом его лечат: нужно и снять защиту, и срезать лечение." },
+          "correct": true,
+          "why": { "ru": "Разница в уроне по нему и по другим целям - признак сопротивления пулям (у него Bullet Resilience), а быстрое восстановление - лечение от Rem." }
+        },
+        {
+          "id": "range",
+          "text": { "ru": "Ты стреляешь ближе 15 м." },
+          "correct": false,
+          "why": { "ru": "Ты попадаешь с дистанции, а урон низкий только по Abrams." }
+        },
+        {
+          "id": "firerate",
+          "text": { "ru": "Не хватает скорострельности." },
+          "correct": false,
+          "why": { "ru": "Тогда урон был бы низким по всем целям." }
+        },
+        {
+          "id": "spirit",
+          "text": { "ru": "Не хватает Spirit Power." },
+          "correct": false,
+          "why": { "ru": "Твой основной урон - винтовка, и проблема видна именно по пулям в одну цель." }
+        }
+      ]
+    },
+    "options": [
+      {
+        "item": "upgrade_banshee_slugs",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Хедшот вешает на цель -16% сопротивления пулям, -16% сопротивления спириту и -40% входящего лечения на 12 с. Ты часто попадаешь в голову, а дебафф на Abrams помогает и Haze, и Infernus. Один предмет отвечает на обе проблемы." }
+      },
+      {
+        "item": "upgrade_aprounds",
+        "score": 70,
+        "verdict": "good",
+        "why": { "ru": "60% пуль игнорируют сопротивление пулям - для твоего личного урона по Abrams это сильнее, но лечение от Rem остаётся, а союзникам эффект не помогает." },
+        "betterWhen": { "ru": "Если лечения у врагов нет или анти-хил уже есть, а мешает только сопротивление пулям." }
+      },
+      {
+        "item": "upgrade_toxic_bullets",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Режет лечение и вешает кровотечение от максимума здоровья, но сопротивление пулям не снимает." },
+        "betterWhen": { "ru": "Если душ на T4 нет: это T3, и проблему лечения он решает." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "+85% урона оружия, но сопротивление режет и его, а лечение остаётся." },
+        "betterWhen": { "ru": "Против команды без сопротивления и без лечения." }
+      }
+    ],
+    "principle": { "ru": "Цель и защищена, и лечится - ищи предмет, который бьёт по обеим проблемам и помогает всей команде." },
+    "mechanics": [
+      { "text": { "ru": "Crippling Headshot: хедшот даёт цели -16% сопротивления пулям, -16% сопротивления спириту и -40% входящего лечения на 12 с." }, "status": "data" },
+      { "text": { "ru": "Bullet Resilience: +35% сопротивления пулям, ниже 50% здоровья ещё +15%." }, "status": "data" },
+      { "text": { "ru": "Tag Along у Rem лечит союзника, к которому он прыгает." }, "status": "data" },
+      { "text": { "ru": "Как Crippling Headshot складывается с другими срезами лечения и с Crow Familiar, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Передний танк врага и защищён от пуль, и постоянно лечится." },
+      "solutions": [{ "ru": "Снять сопротивления и лечение одним дебаффом" }, { "ru": "Игнорировать сопротивление" }, { "ru": "Только срезать лечение" }],
+      "constraints": [{ "ru": "7000 душ и один слот" }, { "ru": "Ты часто попадаешь в голову" }, { "ru": "В команде есть урон пулями и спиритом" }],
+      "choice": { "ru": "Crippling Headshot: одна покупка закрывает обе проблемы для всей команды." },
+      "consequences": [{ "ru": "Целься в голову Abrams в начале каждого боя, чтобы дебафф висел." }, { "ru": "Armor Piercer остаётся вариантом на следующий T4." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "diagnose", "bullet-resist", "anti-heal", "teamfight"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_banshee_slugs", "item:upgrade_aprounds", "item:upgrade_toxic_bullets", "item:upgrade_glass_cannon", "item:upgrade_improved_bullet_armor", "hero:hero_atlas", "hero:hero_familiar", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-028",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 6800,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire"],
+    "enemies": [
+      { "hero": "hero_haze", "note": { "ru": "Отстаёт по душам." } },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_bebop" }
+    ],
+    "situation": { "ru": "24-я минута, ты сильно впереди: 11 убийств и 2 смерти, на Trophy Collector 14 стаков. Ты стоишь за своей передней линией, и до тебя почти никто не добирается. Враги не собирают сопротивление пулям. Свободно 6800 душ." },
+    "symptoms": [{ "ru": "Ты почти не умираешь и забираешь много убийств." }],
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["you-ahead"],
+    "options": [
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "+85% урона оружия за -13% максимума здоровья. Каждое убийство героя навсегда даёт +7% скорострельности (до 8 раз), а смерть снимает лишь один стак. Ты почти не умираешь и много убиваешь, так что минус почти не ощущается, а плюс копится. В твоём Hybrid так и написано: брать, если редко умираешь." }
+      },
+      {
+        "item": "upgrade_critshot",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Без минуса к здоровью: четверть пуль наносит двойной урон оружия. Надёжно, но слабее, когда до тебя никто не добирается." },
+        "betterWhen": { "ru": "Если тебя часто ловят и минус к здоровью опасен." }
+      },
+      {
+        "item": "upgrade_enchanted_holsters",
+        "score": 60,
+        "verdict": "good",
+        "why": { "ru": "Сильный T4, если ты много применяешь способности и активки, но у тебя из активок пока только Dispel Magic." },
+        "betterWhen": { "ru": "Когда в сборке появятся активки и ты будешь применять что-то каждые несколько секунд." }
+      },
+      {
+        "item": "upgrade_aprounds",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Игнорирует сопротивление пулям, а у врагов его нет: главная сила предмета пропадает." },
+        "betterWhen": { "ru": "Когда враги начнут складывать сопротивление пулям." }
+      }
+    ],
+    "principle": { "ru": "Впереди и почти не умираешь - бери урон с риском; часто ловят - урон без минусов." },
+    "mechanics": [
+      { "text": { "ru": "Glass Cannon: +85% урона оружия, -13% максимума здоровья; каждое убийство героя даёт постоянные +7% скорострельности (до 8 раз), смерть снимает один стак." }, "status": "data" },
+      { "text": { "ru": "Убийство из Assassinate даёт бонус к урону оружия; улучшение T3 добавляет +4% урона оружия за убийство." }, "status": "data" },
+      { "text": { "ru": "Сохраняется ли бонус Assassinate за убийства до конца матча, в данных не сказано; в описании твоего Hybrid написано, что сохраняется." }, "status": "unverified" },
+      { "text": { "ru": "В твоём Hybrid к Glass Cannon есть пометка: брать, если редко умираешь." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Ты впереди, и нужно превратить преимущество в победу." },
+      "solutions": [{ "ru": "Урон с риском" }, { "ru": "Надёжный урон без минусов" }, { "ru": "Ответ на сопротивление" }],
+      "constraints": [{ "ru": "6800 душ" }, { "ru": "До тебя почти не добираются" }, { "ru": "Сопротивления пулям у врагов нет" }],
+      "choice": { "ru": "Glass Cannon: минус почти не работает, а бонус растёт с каждым убийством." },
+      "consequences": [{ "ru": "Каждая смерть стоит стака: не рискуй ради одного добивания." }, { "ru": "Если враги начнут нырять на тебя, следующий предмет - защита." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "ahead", "assassinate", "hybrid", "my-build"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_glass_cannon", "item:upgrade_critshot", "item:upgrade_enchanted_holsters", "item:upgrade_aprounds", "ability:citadel_ability_hornet_snipe", "build:14", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-029",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_aprounds"],
+    "allies": [
+      { "hero": "hero_inferno", "note": { "ru": "Уже купил Healbane." } },
+      { "hero": "hero_wraith", "note": { "ru": "Уже купил Healbane." } }
+    ],
+    "enemies": [
+      { "hero": "hero_nurse" },
+      { "hero": "hero_tengu" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_warden" }
+    ],
+    "situation": { "ru": "31-я минута. Враги переживают почти любой ваш всплеск урона: Nurse Harrow лечит союзников иглами, Ivy держит связь Kudzu Connection, Lady Geist отхиливается Life Drain. У Infernus и Wraith в твоей команде уже есть Healbane, у тебя Crow Familiar с улучшением на срез лечения. Ты много попадаешь в голову. Свободно 7000 душ и есть слот." },
+    "symptoms": [{ "ru": "Враги восстанавливаются, хотя на них уже висят срезы лечения от союзников." }, { "ru": "Ты попадаешь в голову, но цели не падают." }],
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["enemy-healing", "teamfight"],
+    "options": [
+      {
+        "item": "upgrade_banshee_slugs",
+        "score": 80,
+        "verdict": "best",
+        "why": { "ru": "Срез лечения другого источника (-40% от хедшота) плюс -16% сопротивления пулям и спириту на 12 с. Даже если анти-хилы складываются плохо, срез сопротивлений усиливает урон всей команды по цели, а ты часто попадаешь в голову." }
+      },
+      {
+        "item": "upgrade_inhibitor",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Пули накапливают на цели -30% исходящего урона и -40% лечения, плюс +10% урона оружия и +150 здоровья. Полезен, когда цель ещё и опасна для тебя." },
+        "betterWhen": { "ru": "Если главная угроза - сильный стрелок врага, которого нужно и ослабить, и не дать вылечиться." }
+      },
+      {
+        "item": "upgrade_toxic_bullets",
+        "score": 55,
+        "verdict": "ok",
+        "why": { "ru": "Анти-хил пулями весь бой и кровотечение от максимума здоровья, дешевле T4. Как он складывается с Healbane союзников, в данных не указано, а сопротивления он не снимает." },
+        "betterWhen": { "ru": "Если ты плохо попадаешь в голову или душ на T4 нет." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Больше урона помогает перебить лечение, но не убирает его." },
+        "betterWhen": { "ru": "Если лечения у врагов немного и тебя редко достают." }
+      },
+      {
+        "item": "upgrade_healbane",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Два Healbane у союзников уже есть, а несколько Healbane от разных игроков складываются с убывающей отдачей: третий добавит меньше всего." },
+        "betterWhen": { "ru": "Если в команде ещё никто не купил Healbane и душ мало." }
+      }
+    ],
+    "principle": { "ru": "Анти-хил, который уже есть у союзников, складывается плохо: добавляй эффект другого типа и пользу для всей команды." },
+    "mechanics": [
+      { "text": { "ru": "Патч 30.10.2026: несколько Healbane от разных игроков складываются с убывающей отдачей." }, "status": "data" },
+      { "text": { "ru": "Crippling Headshot: хедшот даёт -16% сопротивления пулям, -16% сопротивления спириту и -40% входящего лечения на 12 с." }, "status": "data" },
+      { "text": { "ru": "Inhibitor: пули накапливают на цели -30% исходящего урона и -40% входящего лечения." }, "status": "data" },
+      { "text": { "ru": "Healing Needles у Nurse Harrow лечат союзников, Kudzu Connection у Ivy даёт связанному союзнику повторённое лечение, Life Drain лечит Lady Geist." }, "status": "data" },
+      { "text": { "ru": "Как складываются срезы лечения разных типов (Healbane, Crippling Headshot, Toxic Bullets, Crow Familiar), в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги сильно лечатся, хотя у союзников уже есть Healbane." },
+      "solutions": [{ "ru": "Анти-хил другого типа с пользой для команды" }, { "ru": "Анти-хил с ослаблением врага" }, { "ru": "Ещё один Healbane" }, { "ru": "Больше урона" }],
+      "constraints": [{ "ru": "Healbane от разных игроков складываются с убывающей отдачей" }, { "ru": "7000 душ и один слот" }, { "ru": "Ты часто попадаешь в голову" }],
+      "choice": { "ru": "Crippling Headshot: ценен даже при плохом сложении анти-хилов благодаря срезу сопротивлений." },
+      "consequences": [{ "ru": "Целься в голову хилерам и тем, кого лечат." }, { "ru": "Если анти-хила всё равно мало, решает фокус: убивайте хилера первым." }]
+    },
+    "difficulty": 5,
+    "tags": ["vindicta", "offense", "anti-heal", "crow", "teamfight"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_banshee_slugs", "item:upgrade_inhibitor", "item:upgrade_toxic_bullets", "item:upgrade_glass_cannon", "item:upgrade_healbane", "ability:citadel_ability_hornet_sting", "hero:hero_nurse", "hero:hero_tengu", "patch:2026-10-30"],
+    "status": "needs-review"
+  },
+  {
+    "id": "vin-off-030",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power"],
+    "enemies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_drifter" },
+      { "hero": "hero_synth" },
+      { "hero": "hero_lash" }
+    ],
+    "situation": { "ru": "30-я минута, команда отстаёт. Haze и Drifter охотятся за тобой: Drifter выслеживает одиночек, Haze подкрадывается в Smoke Bomb. Ты умираешь примерно раз за бой, обычно уже после того, как нанёс много урона. Свободно 6600 душ и есть слот." },
+    "symptoms": [{ "ru": "Тебя ловят почти в каждом бою." }],
+    "question": { "ru": "Какой T4 урона взять?" },
+    "problemTags": ["you-behind", "you-get-caught", "enemy-stealth"],
+    "options": [
+      {
+        "item": "upgrade_critshot",
+        "score": 82,
+        "verdict": "best",
+        "why": { "ru": "Четверть пуль наносит +100% урона оружия, плюс +30% патронов. Никаких минусов к здоровью, и ничего не теряется при смерти." }
+      },
+      {
+        "item": "upgrade_siphon_bullets",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "+15% урона, +10% сопротивления пулям, а пули на время крадут максимум здоровья у врагов: немного живучести в дуэли с теми, кто до тебя добрался." },
+        "betterWhen": { "ru": "Если ты проигрываешь именно затяжные дуэли с ныряющими, а не умираешь от мгновенного фокуса." }
+      },
+      {
+        "item": "upgrade_ricochet",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Хорош против плотной группы, а тебя ловят поодиночке." },
+        "betterWhen": { "ru": "Если враги дерутся толпой." }
+      },
+      {
+        "item": "upgrade_glass_cannon",
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "+85% урона, но -13% максимума здоровья делают тебя ещё более лёгкой целью для Haze и Drifter, а каждая смерть снимает стак скорострельности." },
+        "betterWhen": { "ru": "Если ты впереди и почти не умираешь." }
+      }
+    ],
+    "principle": { "ru": "Когда тебя часто ловят, предмет урона не должен делать тебя хрупче." },
+    "mechanics": [
+      { "text": { "ru": "Lucky Shot: 25% пуль наносят +100% урона оружия, бонус не может быть критическим; +30% патронов." }, "status": "data" },
+      { "text": { "ru": "Glass Cannon: -13% максимума здоровья; смерть снимает один стак скорострельности." }, "status": "data" },
+      { "text": { "ru": "Siphon Bullets: +15% урона оружия, +10% сопротивления пулям; пули на 17 с крадут 2,5% максимума здоровья врага (не чаще раза в 1,2 с)." }, "status": "data" },
+      { "text": { "ru": "Drifter наносит усиленный урон изолированным героям, Smoke Bomb делает Haze невидимой." }, "status": "data" }
+    ],
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "behind", "dive", "my-build"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_critshot", "item:upgrade_siphon_bullets", "item:upgrade_ricochet", "item:upgrade_glass_cannon", "hero:hero_haze", "hero:hero_drifter", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-031",
+    "kind": "surgery",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 2000,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver"],
+    "startBuild": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_magic_burst", "upgrade_improved_spirit", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_close_range", "upgrade_health_stimpak", "upgrade_reduce_debuff_duration"],
+    "swaps": 2,
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_orion" },
+      { "hero": "hero_ghost" }
+    ],
+    "situation": { "ru": "Ты расписал план покупок до 20-й минуты, Opening Rounds и Quicksilver Reload уже куплены. Ты стреляешь с дистанции и добиваешь из Assassinate. Два дешёвых предмета в плане почти не работают на твой стиль, и из-за них ни Weapon, ни Spirit не доходят до порога 4800." },
+    "question": { "ru": "Какими двумя предметами заменить слабые места плана?" },
+    "problemTags": ["you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_long_range",
+        "score": 90,
+        "verdict": "best",
+        "why": { "ru": "Вместо Close Quarters: тот работает только ближе 15 м, а Long Range даёт +40% урона дальше 15 м. Weapon в плане становится 4800 (Opening Rounds, Swift Striker, Long Range), и бонус категории прыгает с +18% до +46%." }
+      },
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Вместо Mystic Burst: +2 заряда и -14% перезарядки для Assassinate, которым ты добиваешь. Spirit в плане становится 5600 (Quicksilver Reload, Extra Spirit, Rapid Recharge), то есть проходит порог 4800 с бонусом +38 Spirit Power вместо +19." }
+      },
+      {
+        "item": "upgrade_titan_round",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "Тоже может заменить Close Quarters и тоже доводит Weapon до 4800, плюс +14% урона и вдвое больше патронов. Но не усиливает дальний бой и не ведёт к Sharpshooter." },
+        "betterWhen": { "ru": "Если в длинных перестрелках тебе не хватает магазина." }
+      },
+      {
+        "item": "upgrade_extra_charge",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Вместо Mystic Burst даёт третий заряд Assassinate, но Spirit остаётся 3200 и до порога не доходит." },
+        "betterWhen": { "ru": "Если душ на Rapid Recharge в этот отрезок игры не будет: Extra Charge станет его компонентом." }
+      },
+      {
+        "item": "upgrade_healbane",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Срезает лечение от твоего спиритического урона, но не помогает ни урону винтовки, ни ульте, а Spirit без Mystic Burst ещё и опустится до 2400." },
+        "betterWhen": { "ru": "Если у врагов сильный хилер." }
+      },
+      {
+        "item": "upgrade_close_quarter_combat",
+        "score": 10,
+        "verdict": "bad",
+        "why": { "ru": "Улучшение Close Quarters: формально поднимает Weapon до 6400, но весь бонус работает только ближе 15 м, а ты стреляешь издалека." },
+        "betterWhen": { "ru": "Только для героя ближнего боя." }
+      }
+    ],
+    "principle": { "ru": "Меняй слабые предметы так, чтобы категории доходили до 4800, и выбирай замену, которая подходит твоему стилю." },
+    "mechanics": [
+      { "text": { "ru": "Пороги вложений: Weapon 3200 даёт +18%, 4800 даёт +46% урона оружия; Spirit 3200 даёт +19, 4800 даёт +38 Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Close Quarters и Point Blank дают урон только ближе 15 м к цели; Long Range - только дальше 15 м." }, "status": "data" },
+      { "text": { "ru": "Mystic Burst (spirit T1) добавляет бонусный урон способностям раз в 14 с; Rapid Recharge даёт способностям с зарядами +2 заряда." }, "status": "data" },
+      { "text": { "ru": "Твой текущий билд закрывает Spirit 4.8k через Quicksilver Reload и Rapid Recharge, а Weapon 4.8k через Opening Rounds, Swift Striker и Long Range." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "План покупок разбросан: дешёвые предметы не работают на стиль и не дают порогов." },
+      "solutions": [{ "ru": "Заменить предмет ближнего боя на дальнобойный" }, { "ru": "Заменить слабый спиритический T1 на усиление ульты" }, { "ru": "Добавить анти-хил" }],
+      "constraints": [{ "ru": "Только две замены" }, { "ru": "Ты стреляешь издалека и добиваешь ультой" }],
+      "choice": { "ru": "Long Range вместо Close Quarters и Rapid Recharge вместо Mystic Burst: обе категории проходят 4800." },
+      "consequences": [{ "ru": "План становится дороже: Rapid Recharge стоит 3200 вместо 800." }, { "ru": "Long Range дальше улучшается в Sharpshooter." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "economy", "thresholds", "my-build"],
+    "dims": ["build", "mechanics"],
+    "sources": ["item:upgrade_long_range", "item:upgrade_rapid_recharge", "item:upgrade_titan_round", "item:upgrade_extra_charge", "item:upgrade_healbane", "item:upgrade_close_quarter_combat", "item:upgrade_close_range", "item:upgrade_magic_burst", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-032",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3400,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_magic_storm", "upgrade_magic_shield", "upgrade_rechargingbullets", "upgrade_vampire", "upgrade_vex_barrier", "upgrade_clip_size"],
+    "allies": [
+      { "hero": "hero_wraith", "note": { "ru": "Оружейный кэрри с похожим количеством душ." } }
+    ],
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_bebop" }
+    ],
+    "situation": { "ru": "22-я минута, гибридная сборка. У тебя девять предметов, но урон винтовки заметно ниже, чем у союзного Wraith с похожим количеством душ. Способности и живучесть в порядке. Враги почти не собирают сопротивление пулям, бои идут на твоей дистанции, патронов хватает. Свободно 3400 душ." },
+    "symptoms": [{ "ru": "Урон винтовки низкий по всем целям, а не по одной." }, { "ru": "Дистанция, патроны и сопротивление врагов проблему не объясняют." }],
+    "question": { "ru": "Почему винтовка бьёт слабо и что купить?" },
+    "problemTags": ["you-lack-damage"],
+    "diagnosis": {
+      "prompt": { "ru": "В чём причина?" },
+      "options": [
+        {
+          "id": "threshold",
+          "text": { "ru": "В оружейные предметы вложено 4000 душ: до порога 4800, где бонус категории прыгает с +18% до +46%, не хватает 800." },
+          "correct": true,
+          "why": { "ru": "Opening Rounds (1600), Recharging Rush (1600) и Extended Magazine (800) - это 4000 в Weapon. Бонус на 3200 - +18% урона оружия, на 4800 - +46%. Остальные души ушли в Spirit (8000) и Vitality (4800)." }
+        },
+        {
+          "id": "opening",
+          "text": { "ru": "Opening Rounds работает только по целям выше 50% здоровья." },
+          "correct": false,
+          "why": { "ru": "Это объясняет только просадку по раненым целям, а урон низкий по всем." }
+        },
+        {
+          "id": "spirit",
+          "text": { "ru": "Не хватает Spirit Power." },
+          "correct": false,
+          "why": { "ru": "В Spirit у тебя уже 8000, а проблема именно в уроне винтовки." }
+        },
+        {
+          "id": "kills",
+          "text": { "ru": "Бонус Assassinate за убийства ещё не накопился." },
+          "correct": false,
+          "why": { "ru": "Он помогает, но не объясняет, почему у Wraith с похожими душами урон оружия намного выше." }
+        }
+      ]
+    },
+    "options": [
+      {
+        "item": "upgrade_titan_round",
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Extended Magazine за 800: вложения в Weapon становятся 4800, и бонус категории прыгает до +46%. Сверху +14% урона оружия и вдвое больше патронов. Самый дешёвый способ поднять урон винтовки, и останутся души." }
+      },
+      {
+        "item": "upgrade_cooldown_reduction",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Перезарядка всех способностей полезна гибриду, но это Spirit: урон винтовки не растёт." },
+        "betterWhen": { "ru": "Когда Weapon уже 4800 и больше, а не хватает частоты способностей." }
+      },
+      {
+        "item": "upgrade_counterspell",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Защита от способностей, с уроном винтовки не связана." },
+        "betterWhen": { "ru": "Если тебя убивают ключевыми способностями врагов." }
+      },
+      {
+        "item": "upgrade_soaring_spirit",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Ещё Spirit Power, причём по полной цене: Extra Spirit уже ушёл в Surge of Power. Spirit и так 8000, а проблема в винтовке." },
+        "betterWhen": { "ru": "Если ты строишь сборку целиком через способности." }
+      }
+    ],
+    "principle": { "ru": "Считай вложения по категориям: 800 душ в нужную категорию иногда дают больше, чем T3 в другую." },
+    "mechanics": [
+      { "text": { "ru": "Пороги Weapon: 3200 даёт +18%, 4800 даёт +46% урона оружия." }, "status": "data" },
+      { "text": { "ru": "Категории предметов: Opening Rounds, Recharging Rush, Extended Magazine - Weapon; Quicksilver Reload, Rapid Recharge, Surge of Power - Spirit; Enchanter's Emblem, Bullet Lifesteal, Reactive Barrier - Vitality." }, "status": "data" },
+      { "text": { "ru": "Titanic Magazine собирается из Extended Magazine: +14% урона оружия и +100% патронов." }, "status": "data" },
+      { "text": { "ru": "Улучшение засчитывает стоимость компонента, поэтому вложения в Weapon после Titanic Magazine считаются как 1600 за него." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Урон винтовки ниже, чем должен быть при таком количестве предметов." },
+      "solutions": [{ "ru": "Довести Weapon до порога 4800" }, { "ru": "Вложиться в способности" }, { "ru": "Купить защиту" }],
+      "constraints": [{ "ru": "3400 душ" }, { "ru": "В Weapon 4000, в Spirit 8000" }, { "ru": "Extended Magazine уже есть и может стать компонентом" }],
+      "choice": { "ru": "Titanic Magazine: 800 душ закрывают порог, и бонус категории растёт с +18% до +46%." },
+      "consequences": [{ "ru": "Останутся души на следующий предмет Weapon, например Long Range." }, { "ru": "Следующий порог Weapon - 6400." }]
+    },
+    "difficulty": 5,
+    "tags": ["vindicta", "offense", "diagnose", "thresholds", "economy", "hybrid", "my-build"],
+    "dims": ["mechanics", "build"],
+    "sources": ["item:upgrade_titan_round", "item:upgrade_clip_size", "item:upgrade_cooldown_reduction", "item:upgrade_counterspell", "item:upgrade_soaring_spirit", "item:upgrade_rechargingbullets", "build:14"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-033",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3300,
+    "owned": ["upgrade_pristine_emblem", "upgrade_rapid_recharge", "upgrade_quick_silver", "upgrade_magic_storm", "upgrade_magic_shield", "upgrade_long_range"],
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_lash" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_wraith" }
+    ],
+    "situation": { "ru": "19-я минута, гибридная сборка. В затяжных боях ты тратишь все заряды Assassinate в первые секунды, а потом долго просто стреляешь из винтовки: урона ею ты наносишь много, но добивать нечем, и раненые враги уходят." },
+    "symptoms": [{ "ru": "Все заряды ульты уходят в начале боя." }, { "ru": "Раненые враги уходят, пока ульта перезаряжается, хотя из винтовки ты попадаешь." }],
+    "question": { "ru": "Что купить на 3300 душ?" },
+    "problemTags": ["you-cant-catch", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_rechargingbullets",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Когда ты наносишь 200 урона оружием за 3,5 с, он возвращает по заряду всем способностям с зарядами (у тебя это Assassinate), не чаще раза в 25 с. Стрельба в середине боя превращается в новые выстрелы ульты. Плюс +10% урона оружия и +20% патронов. Он есть в твоём Hybrid." }
+      },
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Улучшение Long Range за 1600: больше урона винтовки дальше 15 м, но заряды Assassinate он не возвращает." },
+        "betterWhen": { "ru": "Если заряды ульты у тебя не кончаются и нужен чистый урон." }
+      },
+      {
+        "item": "upgrade_cooldown_reduction",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Сокращает перезарядку всех способностей, но не возвращает заряд по ходу боя, дороже и занимает слот." },
+        "betterWhen": { "ru": "Если тебе не хватает частоты всех способностей, а не только ульты." }
+      },
+      {
+        "item": "upgrade_diviners_kevlar",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "-10% перезарядки ульты и барьер при её применении, но стоит 6400." },
+        "betterWhen": { "ru": "Позже, в сборке через ульту: в твоей Full Ult он идёт первым в поздней игре." }
+      }
+    ],
+    "principle": { "ru": "Урон винтовкой есть, а зарядов ульты нет - превращай одно в другое." },
+    "mechanics": [
+      { "text": { "ru": "Recharging Rush: +20% патронов и +10% урона оружия; нанесение 200 урона оружием за 3,5 с восстанавливает по заряду всем способностям с зарядами, перезарядка эффекта 25 с." }, "status": "data" },
+      { "text": { "ru": "У Vindicta заряды есть только у Assassinate." }, "status": "data" },
+      { "text": { "ru": "Diviner's Kevlar: +10% сокращения перезарядки ульты; при применении ульты барьер 1000 и +40 Spirit Power на 20 с." }, "status": "data" },
+      { "text": { "ru": "В описании твоего Hybrid: Recharging Rush возвращает заряд за 200 урона пушкой за 3,5 с, и не стоит сидеть на полных зарядах ульты." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Заряды Assassinate кончаются в начале боя, а добивать потом нечем." },
+      "solutions": [{ "ru": "Возвращать заряды уроном винтовки" }, { "ru": "Сократить перезарядку" }, { "ru": "Добивать винтовкой" }],
+      "constraints": [{ "ru": "3300 душ" }, { "ru": "Урона винтовкой ты наносишь много" }],
+      "choice": { "ru": "Recharging Rush: каждые 25 с стрельба возвращает заряд ульты." },
+      "consequences": [{ "ru": "Распределяй выстрелы ульты по бою, а не трать все сразу." }, { "ru": "Следующий шаг по Hybrid - Sharpshooter из Long Range." }]
+    },
+    "difficulty": 5,
+    "tags": ["vindicta", "offense", "assassinate", "hybrid", "synergy", "my-build"],
+    "dims": ["mechanics", "synergy"],
+    "sources": ["item:upgrade_rechargingbullets", "item:upgrade_sharpshooter", "item:upgrade_cooldown_reduction", "item:upgrade_diviners_kevlar", "ability:citadel_ability_hornet_snipe", "build:14", "build:8"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-034",
+    "kind": "active-timing",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6500,
+    "owned": ["upgrade_rapid_recharge", "upgrade_magic_storm", "upgrade_pristine_emblem", "upgrade_magic_shield", "upgrade_escalating_exposure", "upgrade_vex_barrier", "upgrade_soaring_spirit", "upgrade_magic_shock", "upgrade_cooldown_reduction", "upgrade_diviners_kevlar", "upgrade_tech_defense_shredders"],
+    "enemies": [
+      { "hero": "hero_mirage", "note": { "ru": "45% здоровья, отходит к своим." } },
+      { "hero": "hero_ghost", "note": { "ru": "90% здоровья, стоит открыто." } },
+      { "hero": "hero_tengu", "note": { "ru": "60% здоровья, держится позади." } }
+    ],
+    "situation": { "ru": "30-я минута, сборка Full Ult, бой у средней линии. Ты на возвышенности в 35 м от врагов, готовы 2 заряда Assassinate. Mirage с 45% здоровья отходит к своим и через пару секунд скроется за углом. Lady Geist с 90% стоит открыто и бьёт твоего союзника. Ivy с 60% держится позади." },
+    "question": { "ru": "Что сделать с Assassinate прямо сейчас?" },
+    "problemTags": ["you-cant-catch", "teamfight"],
+    "options": [
+      {
+        "action": { "ru": "Продержать прицел полную секунду и выстрелить в Mirage, пока он не скрылся; второй заряд сразу использовать по следующей цели ниже 50% здоровья." },
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "Полный урон Assassinate - только после 1 с в прицеле, бонусный урон - по целям ниже 50%: Mirage подходит под оба условия и сейчас уйдёт. Убийство из Assassinate даёт бонус урона оружия. Применение ульты включает Diviner's Kevlar: барьер 1000 и +40 Spirit Power на 20 с, так что, пока ты целишься вторым зарядом, ты защищён." }
+      },
+      {
+        "action": { "ru": "Сначала Crow Familiar и пара выстрелов в голову по Lady Geist, чтобы опустить её ниже 50%, а Assassinate потом." },
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Правильный порядок для цели, которая никуда не денется: Opening Rounds усиливает винтовку, пока цель выше 50%, а Assassinate добивает после. Но Mirage за это время уйдёт." },
+        "betterWhen": { "ru": "Если раненой цели, которая вот-вот скроется, нет." }
+      },
+      {
+        "action": { "ru": "Выстрелить полностью заряженным выстрелом в Lady Geist: она стоит открыто, промахнуться сложно." },
+        "score": 30,
+        "verdict": "weak",
+        "why": { "ru": "Полный заряд, но цель выше 50%: бонусного урона нет, и убить её одним выстрелом вряд ли выйдет." },
+        "betterWhen": { "ru": "Если Lady Geist уже ниже половины здоровья." }
+      },
+      {
+        "action": { "ru": "Быстро выстрелить дважды без полного прицеливания: в Mirage и в Lady Geist." },
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "Без полной секунды в прицеле выстрел наносит только часть урона, а Lady Geist выше 50% и бонуса не получит. Можно потратить оба заряда и никого не убить." },
+        "betterWhen": { "ru": "Если цель на грани смерти и любой частичный урон добьёт её до того, как она скроется." }
+      }
+    ],
+    "principle": { "ru": "Assassinate - по целям ниже 50% и после полной секунды в прицеле; здоровых сначала опускай винтовкой." },
+    "mechanics": [
+      { "text": { "ru": "Assassinate наносит лишь часть урона, пока не заряжен: полный заряд через 1,0 с в прицеле." }, "status": "data" },
+      { "text": { "ru": "Assassinate наносит бонусный урон врагам ниже 50% здоровья; смертельный выстрел даёт бонус к урону оружия." }, "status": "data" },
+      { "text": { "ru": "Diviner's Kevlar: при применении ульты барьер 1000 и +40 Spirit Power на 20 с, перезарядка 40 с." }, "status": "data" },
+      { "text": { "ru": "Opening Rounds: +25% урона оружия по врагам выше 50% здоровья." }, "status": "data" },
+      { "text": { "ru": "В описании твоей Full Ult сказано, что без заряда выстрел наносит половину урона. В данных указано только «часть урона»." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Два заряда ульты и три цели с разным здоровьем, одна вот-вот уйдёт." },
+      "solutions": [{ "ru": "Добить уходящую раненую цель" }, { "ru": "Сначала опустить здоровую цель винтовкой" }, { "ru": "Стрелять быстро без заряда" }],
+      "constraints": [{ "ru": "Полный урон только после 1 с в прицеле" }, { "ru": "Бонус только по целям ниже 50%" }, { "ru": "Mirage скроется через пару секунд" }],
+      "choice": { "ru": "Заряженный выстрел в Mirage, второй заряд - по следующей цели ниже 50%." },
+      "consequences": [{ "ru": "Барьер Kevlar прикрывает тебя, пока целишься вторым зарядом." }, { "ru": "Lady Geist сначала опусти винтовкой ниже половины." }]
+    },
+    "difficulty": 4,
+    "tags": ["vindicta", "offense", "assassinate", "full-ult", "my-build"],
+    "dims": ["active", "mechanics"],
+    "sources": ["ability:citadel_ability_hornet_snipe", "ability:citadel_ability_hornet_sting", "item:upgrade_diviners_kevlar", "item:upgrade_pristine_emblem", "hero:hero_mirage", "hero:hero_ghost", "build:8"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-035",
+    "kind": "sell",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7300,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_aprounds", "upgrade_counterspell", "upgrade_critshot"],
+    "allies": [
+      { "hero": "hero_atlas", "note": { "ru": "Начинает бои." } },
+      { "hero": "hero_haze", "note": { "ru": "Влетает вместе с Abrams." } },
+      { "hero": "hero_inferno" }
+    ],
+    "enemies": [
+      { "hero": "hero_nurse" },
+      { "hero": "hero_mirage" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "36-я минута, все слоты заняты, Trophy Collector уже продан. Бои начинает твоя команда: Abrams и Haze влетают первыми, Infernus поджигает. Ты стреляешь с 30 м по тем, кого они уже ранили: к твоим выстрелам у большинства целей меньше половины здоровья. Все заряды Assassinate ты тратишь на добивание в каждом бою. Ты хочешь купить Crippling Headshot против лечения Nurse Harrow, у тебя 7300 душ." },
+    "symptoms": [{ "ru": "Почти каждая твоя цель к моменту выстрела уже ниже половины здоровья." }, { "ru": "Заряды Assassinate ты тратишь в каждом бою." }],
+    "question": { "ru": "Что продать?" },
+    "problemTags": ["you-slots-full", "enemy-healing"],
+    "options": [
+      {
+        "item": "upgrade_pristine_emblem",
+        "score": 82,
+        "verdict": "best",
+        "why": { "ru": "Его главный бонус, +25% урона оружия, работает только по целям выше 50% здоровья, а ты почти всегда стреляешь по уже раненым. Для добивания ниже 50% у тебя есть бонус Assassinate. Остаются только скорость пули и немного урона, которые дают и другие предметы." }
+      },
+      {
+        "item": "upgrade_quick_silver",
+        "score": 62,
+        "verdict": "good",
+        "why": { "ru": "Следующий по списку после Rapid Recharge: перезарядка магазина и скорострельность при применении Crow Familiar. Полезен, но ничем не уникален в поздней игре." },
+        "betterWhen": { "ru": "Если ты сам начинаешь бои по здоровым целям: тогда Opening Rounds ценнее." }
+      },
+      {
+        "item": "upgrade_blitz_bullets",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "+20% скорострельности работает по любым целям, в отличие от бонуса Opening Rounds." },
+        "betterWhen": { "ru": "Если скорострельности у тебя с избытком, а условие Opening Rounds выполняется часто." }
+      },
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 25,
+        "verdict": "weak",
+        "why": { "ru": "По порядку продажи он идёт первым, но ты тратишь все заряды Assassinate в каждом бою: продав его, ты потеряешь именно те выстрелы, которыми добиваешь." },
+        "betterWhen": { "ru": "Если заряды ульты у тебя простаивают." }
+      },
+      {
+        "item": "upgrade_sharpshooter",
+        "score": 5,
+        "verdict": "bad",
+        "why": { "ru": "Ты стреляешь с 30 м: это твой главный бонус к урону." },
+        "betterWhen": { "ru": "Почти никогда." }
+      }
+    ],
+    "principle": { "ru": "Продавай предмет, чьё условие в твоей роли почти не выполняется, даже если по списку он не следующий." },
+    "mechanics": [
+      { "text": { "ru": "Opening Rounds: +25% урона оружия по врагам выше 50% здоровья; ещё +8% урона оружия, +60% скорости пули, +7 Spirit Power." }, "status": "data" },
+      { "text": { "ru": "Assassinate наносит бонусный урон врагам ниже 50% здоровья." }, "status": "data" },
+      { "text": { "ru": "Rapid Recharge: +2 заряда, -14% перезарядки и +14 Spirit Power способностям с зарядами." }, "status": "data" },
+      { "text": { "ru": "Порядок продажи в твоём билде: Trophy Collector, Rapid Recharge, Quicksilver Reload, Opening Rounds, Swift Striker." }, "status": "expert" },
+      { "text": { "ru": "Уменьшает ли продажа бонус вложений в категорию, в данных не указано. Если уменьшает, Weapon после продажи Opening Rounds опустится ровно до порога 22400, и бонус категории не изменится." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Нужен слот под Crippling Headshot, Trophy Collector уже продан." },
+      "solutions": [{ "ru": "Продать по списку" }, { "ru": "Продать предмет, чьё условие не выполняется" }, { "ru": "Продать простой бонус к скорострельности" }],
+      "constraints": [{ "ru": "Ты добиваешь раненых, а не начинаешь бои" }, { "ru": "Все заряды Assassinate тратятся в каждом бою" }],
+      "choice": { "ru": "Opening Rounds: его бонус почти не срабатывает в твоей роли." },
+      "consequences": [{ "ru": "Если придётся самому начинать бои по здоровым целям, урон в начале проседает." }, { "ru": "Rapid Recharge остаётся и продолжает кормить добивания." }]
+    },
+    "difficulty": 5,
+    "tags": ["vindicta", "offense", "sell", "assassinate", "slots", "my-build"],
+    "dims": ["mechanics", "build"],
+    "sources": ["item:upgrade_pristine_emblem", "item:upgrade_quick_silver", "item:upgrade_blitz_bullets", "item:upgrade_rapid_recharge", "item:upgrade_sharpshooter", "item:upgrade_banshee_slugs", "ability:citadel_ability_hornet_snipe", "build:24"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-036",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_blitz_bullets", "upgrade_sharpshooter", "upgrade_reduce_debuff_duration", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_surging_power", "upgrade_counterspell", "upgrade_health_stealing_magic"],
+    "enemies": [
+      { "hero": "hero_gigawatt" },
+      { "hero": "hero_inferno" },
+      { "hero": "hero_ghost" },
+      { "hero": "hero_orion" }
+    ],
+    "situation": { "ru": "33-я минута. Враги наносят в основном спиритический урон издалека: Seven, Infernus и Lady Geist изматывают тебя в долгих перестрелках. Против них ты уже купил Spirit Lifesteal. Ты почти всё время стреляешь по героям, а способности применяешь не так часто. Свободен один слот, у тебя 6600 душ." },
+    "question": { "ru": "Какой T4 взять?" },
+    "problemTags": ["enemy-spirit-dps", "you-lack-damage"],
+    "options": [
+      {
+        "item": "upgrade_tech_overflow",
+        "score": 85,
+        "verdict": "best",
+        "why": { "ru": "Улучшение Spirit Lifesteal: платишь 4800, и свободный слот остаётся свободным. Стрельба по героям заряжает +25% скорострельности, +30 Spirit Power и дополнительный вампиризм спиритом, а это и урон, и лечение в долгих перестрелках. Автор билда пишет, что он всё ещё лучше большинства T4 по урону." }
+      },
+      {
+        "item": "upgrade_enchanted_holsters",
+        "score": 65,
+        "verdict": "good",
+        "why": { "ru": "Сильный T4 для частых применений, но ты применяешь способности не так часто, он стоит полные 6400 и занимает последний свободный слот." },
+        "betterWhen": { "ru": "Если ты постоянно применяешь способности и активки, а Spirit Lifesteal не нужен." }
+      },
+      {
+        "item": "upgrade_critshot",
+        "score": 50,
+        "verdict": "ok",
+        "why": { "ru": "Чистый урон без условий, но никакой живучести против изматывающего спиритического урона, и нужен новый слот." },
+        "betterWhen": { "ru": "Если враги убивают тебя не изматыванием, а редкими всплесками, и живучесть не нужна." }
+      },
+      {
+        "item": "upgrade_damage_recycler",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Тоже улучшение Spirit Lifesteal за 4800: много здоровья и вампиризма пулями и спиритом. Живучее, но урона даёт меньше, чем Spiritual Overflow." },
+        "betterWhen": { "ru": "Если враги режут тебе лечение: Leech ослабляет эффекты анти-хила." }
+      }
+    ],
+    "principle": { "ru": "Если компонент T4 уже куплен, этот T4 дешевле и не занимает новый слот: учитывай это при сравнении." },
+    "mechanics": [
+      { "text": { "ru": "Spiritual Overflow собирается из Spirit Lifesteal: +15% вампиризма спиритом, +90 здоровья, +8 Spirit Power; стрельба по героям заряжает +25% скорострельности, +30 Spirit Power и +10% вампиризма спиритом на 15 с." }, "status": "data" },
+      { "text": { "ru": "Leech собирается из Bullet Lifesteal и Spirit Lifesteal; Spellslinger и Lucky Shot компонентов не имеют." }, "status": "data" },
+      { "text": { "ru": "Заметка автора билда к Spiritual Overflow: «Still better than most T4 for Dps»." }, "status": "expert" },
+      { "text": { "ru": "Spiritual Overflow встречается в 25% матчей Vindicta с винрейтом 57,6%. Это корреляция, а не причина." }, "status": "stat" }
+    ],
+    "difficulty": 2,
+    "tags": ["vindicta", "offense", "pick-1", "slots", "economy", "my-build"],
+    "dims": ["build", "counter"],
+    "sources": ["item:upgrade_tech_overflow", "item:upgrade_health_stealing_magic", "item:upgrade_enchanted_holsters", "item:upgrade_critshot", "item:upgrade_damage_recycler", "hero:hero_gigawatt", "build:24", "stat:vindicta-item-usage-2026-09"],
+    "status": "expert"
+  },
+  {
+    "id": "vin-off-037",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "early-mid",
+    "souls": 3300,
+    "owned": ["upgrade_pristine_emblem", "upgrade_improved_spirit", "upgrade_extra_charge"],
+    "allies": [
+      { "hero": "hero_punkgoat", "note": { "ru": "Силён вблизи, сам начинает драки." } },
+      { "hero": "hero_krill", "note": { "ru": "Силён вблизи, сам начинает драки." } }
+    ],
+    "enemies": [
+      { "hero": "hero_orion" },
+      { "hero": "hero_magician" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_atlas" }
+    ],
+    "situation": { "ru": "12-я минута. У врагов три хрупких героя дальнего боя: Grey Talon, Sinclair и Paradox держатся позади и после разменов часто отходят с половиной здоровья или меньше. Твои Billy и Mo & Krill сильны вблизи и сами начинают драки. Ты стабильно ловишь отходящих врагов первым выстрелом Assassinate, но второго заряда часто не хватает. Начало у тебя как в твоём Hybrid: Opening Rounds, Extra Spirit, Extra Charge. Свободно 3300 душ." },
+    "symptoms": [{ "ru": "Раненые враги отходят, и зарядов ульты не хватает, чтобы добить всех." }],
+    "question": { "ru": "Какой первый крупный предмет взять, и в какую сторону вести сборку?" },
+    "problemTags": ["you-cant-catch", "enemy-long-range"],
+    "options": [
+      {
+        "item": "upgrade_rapid_recharge",
+        "score": 88,
+        "verdict": "best",
+        "why": { "ru": "Враги хрупкие и часто отходят раненными - идеальные цели для Assassinate с его бонусом по целям ниже 50%. Rapid Recharge за 2400 даёт ещё 2 заряда, -14% перезарядки и +14 Spirit Power для ульты. С него начинается середина и твоего Hybrid, и твоей Full Ult." }
+      },
+      {
+        "item": "upgrade_magic_storm",
+        "score": 68,
+        "verdict": "good",
+        "why": { "ru": "Улучшение Extra Spirit за 2400: +28 Spirit Power назначенной способности и скорость после её применения. Хорошо в паре с ультой, но выстрелов не добавляет, а их сейчас и не хватает." },
+        "betterWhen": { "ru": "Сразу после Rapid Recharge: в твоих сборках через ульту он идёт следующим и назначается на Assassinate." }
+      },
+      {
+        "item": "upgrade_long_range",
+        "score": 45,
+        "verdict": "ok",
+        "why": { "ru": "Путь чистого стрелка: +40% урона дальше 15 м. Против хрупкой задней линии это тоже работает, но не решает нехватку зарядов ульты." },
+        "betterWhen": { "ru": "Если враги толстые и редко отходят раненными: тогда выгоднее вести сборку через винтовку." }
+      },
+      {
+        "item": "upgrade_burst_fire",
+        "score": 40,
+        "verdict": "ok",
+        "why": { "ru": "Rapid Rounds нет, поэтому полные 3200 за скорострельность, которая раскрывается в долгой перестрелке, а не в добивании отходящих." },
+        "betterWhen": { "ru": "Если ты играешь от винтовки и бои затяжные." }
+      }
+    ],
+    "principle": { "ru": "Направление сборки выбирай по врагам: хрупкие цели, которые отходят раненными, - повод играть от Assassinate." },
+    "mechanics": [
+      { "text": { "ru": "Assassinate наносит бонусный урон врагам ниже 50% здоровья; у него 2 заряда." }, "status": "data" },
+      { "text": { "ru": "Rapid Recharge собирается из Extra Charge: +2 заряда, -14% перезарядки, +14 Spirit Power способностям с зарядами." }, "status": "data" },
+      { "text": { "ru": "Surge of Power собирается из Extra Spirit: +28 Spirit Power назначенной способности и скорость после её применения." }, "status": "data" },
+      { "text": { "ru": "В твоих Hybrid и Full Ult середина игры начинается с Rapid Recharge и Surge of Power; в копии Ace's Vindicta Carry акцент на винтовку через Weapon 4.8k." }, "status": "expert" }
+    ],
+    "tree": {
+      "problem": { "ru": "Выбрать направление сборки и первый крупный предмет." },
+      "solutions": [{ "ru": "Через ульту: больше зарядов Assassinate" }, { "ru": "Гибрид: сила ульты и скорость" }, { "ru": "Через винтовку: урон на дистанции" }],
+      "constraints": [{ "ru": "3300 душ" }, { "ru": "Extra Charge и Extra Spirit уже есть" }, { "ru": "Враги хрупкие и отходят ранеными" }],
+      "choice": { "ru": "Rapid Recharge: больше выстрелов ульты по целям, которые и так ниже половины здоровья." },
+      "consequences": [{ "ru": "Следующий шаг - Surge of Power на Assassinate." }, { "ru": "Если враги начнут собирать здоровье и сопротивления, винтовка снова станет главной." }]
+    },
+    "difficulty": 3,
+    "tags": ["vindicta", "offense", "assassinate", "hybrid", "full-ult", "my-build"],
+    "dims": ["situation", "build"],
+    "sources": ["item:upgrade_rapid_recharge", "item:upgrade_magic_storm", "item:upgrade_long_range", "item:upgrade_burst_fire", "item:upgrade_extra_charge", "item:upgrade_improved_spirit", "ability:citadel_ability_hornet_snipe", "build:14", "build:8", "build:24"],
+    "status": "expert"
+  }
+]

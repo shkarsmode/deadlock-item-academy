@@ -1,0 +1,1508 @@
+[
+  {
+    "id": "gen-001",
+    "kind": "buy",
+    "hero": "hero_necro",
+    "phase": "laning",
+    "souls": 1700,
+    "owned": ["upgrade_medic_bullets", "upgrade_grit", "upgrade_improved_spirit"],
+    "enemies": [
+      { "hero": "hero_krill", "note": { "ru": "Scorn бьёт всех рядом и лечит Mo & Krill от нанесённого урона." } },
+      { "hero": "hero_atlas", "note": { "ru": "Siphon Life высасывает здоровье и лечит Abrams." } }
+    ],
+    "situation": { "ru": "Лайн 2 на 2. Mo & Krill и Abrams постоянно лезут к тебе вплотную: Scorn и Siphon Life наносят урон и сразу возвращают им здоровье. Deadheads из Jar of Dead и твой луч снимают им по трети полоски, но через несколько секунд после размена у них снова почти полное здоровье, а у тебя нет. У тебя 1700 душ." },
+    "question": { "ru": "Что купить, чтобы твои размены перестали обнуляться?" },
+    "problemTags": ["enemy-healing", "enemy-lifesteal", "you-lose-lane"],
+    "options": [
+      { "item": "upgrade_healbane", "score": 90, "verdict": "best", "why": { "ru": "Твой постоянный урон - спиритический: Deadheads раз за разом кусают цель. Каждое такое попадание вешает -35% к входящему лечению на 8 с, поэтому Scorn и Siphon Life лечат заметно слабее. Стоит 1600 и укладывается в бюджет, а если враг умрёт под эффектом, ты ещё и подлечишься." } },
+      { "item": "upgrade_mystic_regeneration", "score": 45, "verdict": "ok", "why": { "ru": "Твой спирит-урон по героям даст тебе регенерацию, а по двум разным героям - больше. Ты тоже начнёшь отхиливаться, но их лечение не уменьшится и останется сильнее твоего." }, "betterWhen": { "ru": "Если враги не лечатся, а просто понемногу снимают тебе здоровье, и нужно пересидеть их на линии." } },
+      { "item": "upgrade_health", "score": 30, "verdict": "weak", "why": { "ru": "Больше здоровья помогает пережить размен, но не мешает им лечиться: каждый размен по-прежнему обнуляется." }, "betterWhen": { "ru": "Если ты умираешь в лайне от одного бурста, а не проигрываешь из-за их лечения." } },
+      { "item": "upgrade_toxic_bullets", "score": 30, "verdict": "weak", "why": { "ru": "Тоже режет лечение (-40%) и добавляет кровотечение, но стоит 3200, а у тебя 1700: сейчас не по карману." }, "betterWhen": { "ru": "Позже, когда накопишь 3200 и твой луч начнёт наносить больше урона: тогда это сильный предмет для Graves." } }
+    ],
+    "principle": { "ru": "Враг лечится в каждом размене - режь лечение тем уроном, который ты наносишь постоянно." },
+    "mechanics": [
+      { "text": { "ru": "Healbane: твой спирит-урон снижает входящее лечение врага на 35% на 8 с; если враг умирает под эффектом, ты получаешь лечение." }, "status": "data" },
+      { "text": { "ru": "Scorn лечит Mo & Krill на основе нанесённого урона, Siphon Life лечит Abrams на часть нанесённого урона." }, "status": "data" },
+      { "text": { "ru": "Deadheads из Jar of Dead раз за разом наносят спирит-урон врагам." }, "status": "data" },
+      { "text": { "ru": "Toxic Bullets стоит 3200 и копит срез лечения от попаданий пулями." }, "status": "data" }
+    ],
+    "difficulty": 1,
+    "tags": ["general", "anti-heal", "graves", "laning"],
+    "dims": ["counter", "situation"],
+    "sources": ["item:upgrade_healbane", "item:upgrade_toxic_bullets", "item:upgrade_mystic_regeneration", "ability:ability_intimidate", "ability:citadel_ability_bull_heal", "ability:ability_necro_hauntingskull", "hero:hero_krill", "hero:hero_atlas"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-002",
+    "kind": "buy",
+    "hero": "hero_inferno",
+    "phase": "laning",
+    "souls": 1800,
+    "owned": ["upgrade_improved_spirit", "upgrade_endurance"],
+    "enemies": [
+      { "hero": "hero_haze", "note": { "ru": "Бьёт почти только оружием, Fixation разгоняет урон по одной цели." } }
+    ],
+    "situation": { "ru": "Лайн 1 на 1 против Haze. Она держится на средней дистанции и поливает тебя из оружия: чем дольше очередь по тебе, тем больнее каждая пуля. Способностями она тебя почти не трогает, но за пару длинных очередей ты теряешь половину здоровья. У тебя 1800 душ." },
+    "question": { "ru": "Какую защиту купить первой?" },
+    "problemTags": ["enemy-gun-dps", "you-lose-lane"],
+    "options": [
+      { "item": "upgrade_regenerating_bullet_shield", "score": 88, "verdict": "best", "why": { "ru": "+18% Bullet Resist режет именно тот урон, которым тебя бьют. Пока у тебя больше 65% здоровья, жилет ещё даёт +22% урона оружия и +7% скорострельности, так что в разменах ты отвечаешь сильнее. Стоит 1600, по бюджету." } },
+      { "item": "upgrade_health", "score": 50, "verdict": "ok", "why": { "ru": "+210 здоровья помогает против любого урона и стоит 800, но урон каждой пули не уменьшает, а Fixation продолжает разгоняться." }, "betterWhen": { "ru": "Если урон врага смешанный и неясно, какой резист нужен, или душ меньше 1600." } },
+      { "item": "upgrade_return_fire", "score": 45, "verdict": "ok", "why": { "ru": "+10% Bullet Resist - вдвое меньше, а активка на 6.5 с возвращает часть урона атакующему. Ценность зависит от того, сколько Haze успеет выстрелить именно в это окно." }, "betterWhen": { "ru": "Если враг разменивается короткими предсказуемыми заходами и ты успеваешь включить активку прямо перед ними." } },
+      { "item": "upgrade_magic_shield", "score": 15, "verdict": "bad", "why": { "ru": "Даёт Spirit Resist, а Haze бьёт пулями: защита не того типа." }, "betterWhen": { "ru": "Против лайнера, который разменивается способностями: Lady Geist, Seven, McGinnis с турелями." } }
+    ],
+    "principle": { "ru": "Сначала посмотри, чем тебя бьют: от пуль защищает Bullet Resist, от способностей - Spirit Resist." },
+    "mechanics": [
+      { "text": { "ru": "Battle Vest: +18% Bullet Resist; выше 65% здоровья +22% урона оружия и +7% скорострельности." }, "status": "data" },
+      { "text": { "ru": "Fixation: каждое попадание Haze по цели увеличивает урон её пуль по этой цели." }, "status": "data" },
+      { "text": { "ru": "Enchanter's Emblem даёт +18% Spirit Resist, а не Bullet Resist." }, "status": "data" },
+      { "text": { "ru": "Return Fire: +10% Bullet Resist, активка на 6.5 с возвращает атакующему 65% урона пуль." }, "status": "data" }
+    ],
+    "difficulty": 1,
+    "tags": ["general", "resist", "laning"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_regenerating_bullet_shield", "item:upgrade_magic_shield", "item:upgrade_return_fire", "item:upgrade_health", "ability:ability_stacking_damage", "hero:hero_haze"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-003",
+    "kind": "buy",
+    "hero": "hero_warden",
+    "phase": "early-mid",
+    "souls": 2200,
+    "owned": ["upgrade_health", "upgrade_improved_stamina", "upgrade_endurance"],
+    "enemies": [
+      { "hero": "hero_vampirebat", "note": { "ru": "Sanguine Retreat: становится недоступной для выбора целью и улетает, может повторить." } },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "Ты в который раз догоняешь Mina с третью здоровья, но в момент добивания она рассыпается, становится недоступной для выбора целью и улетает в сторону, а потом ещё раз. Binding Word она не дожидается: успевает сместиться. Ты теряешь время и возвращаешься ни с чем. У тебя 2200 душ." },
+    "question": { "ru": "Что купить, чтобы она перестала уходить?" },
+    "problemTags": ["enemy-high-mobility", "you-cant-catch"],
+    "options": [
+      { "item": "upgrade_containment", "score": 90, "verdict": "best", "why": { "ru": "Замедляет цель и накладывает немоту на предметы и способности передвижения. Sanguine Retreat в данных помечен как способность передвижения, поэтому под чарами Mina не может улететь, и ты добиваешь её. Дальность 25 м, перезарядка 29 с, стоит 1600: вешай до того, как она начала побег." } },
+      { "item": "upgrade_slowing_bullets", "score": 45, "verdict": "ok", "why": { "ru": "Замедление от пуль копится и мешает ей бегать, но улететь способностью она всё равно сможет." }, "betterWhen": { "ru": "Против цели, которая убегает ногами и рывками выносливости, а не способностью передвижения." } },
+      { "item": "upgrade_target_stun", "score": 30, "verdict": "weak", "why": { "ru": "Стан через 2 с решил бы проблему, но стоит 3200, а у тебя 2200." }, "betterWhen": { "ru": "Позже, против целей, которые уходят в воздух: стан против воздушных целей длится дольше." } },
+      { "item": "upgrade_sprint_booster", "score": 20, "verdict": "weak", "why": { "ru": "Скорость спринта помогает быстрее вернуться на линию, но не мешает Mina улететь." }, "betterWhen": { "ru": "Если проблема в том, что ты медленно возвращаешься на линию, а не в побегах врага." } }
+    ],
+    "principle": { "ru": "Цель убегает способностью передвижения - нужна немота передвижения, а не просто замедление." },
+    "mechanics": [
+      { "text": { "ru": "Slowing Hex: замедление, немота предметов и способностей передвижения, повышенная гравитация; 25 м, 3.5 с, перезарядка 29 с." }, "status": "data" },
+      { "text": { "ru": "Sanguine Retreat делает Mina недоступной для выбора целью и переносит в точку; в данных помечен как способность передвижения." }, "status": "data" },
+      { "text": { "ru": "Binding Word обездвиживает, только если цель не отошла от начальной позиции за время побега." }, "status": "data" }
+    ],
+    "difficulty": 1,
+    "tags": ["general", "mobility"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_containment", "item:upgrade_slowing_bullets", "item:upgrade_target_stun", "ability:ability_vampirebat_batblink", "ability:ability_warden_lock_down", "hero:hero_vampirebat"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-004",
+    "kind": "buy",
+    "hero": "hero_yamato",
+    "phase": "early-mid",
+    "souls": 3400,
+    "owned": ["upgrade_improved_spirit", "upgrade_health", "upgrade_close_range", "upgrade_improved_stamina"],
+    "enemies": [
+      { "hero": "hero_chessmaster", "note": { "ru": "Rook Battery: ладьи с уроном и обездвиживанием." } },
+      { "hero": "hero_bookworm", "note": { "ru": "Captivating Read: замедление, затем обездвиживание." } },
+      { "hero": "hero_warden" }
+    ],
+    "situation": { "ru": "Ты влетаешь Flying Slash на цель, и тебя тут же приковывают к месту: Rook Battery Solomon, следом Captivating Read Paige. Ты стоишь, не можешь ни отойти, ни дотянуться до цели, и тебя спокойно расстреливают. Оглушений у них почти нет: проблема именно в обездвиживании. У тебя 3400 душ." },
+    "question": { "ru": "Какой предмет решает эту проблему?" },
+    "problemTags": ["enemy-immobilize", "you-get-caught"],
+    "options": [
+      { "item": "upgrade_reduce_debuff_duration", "score": 90, "verdict": "best", "why": { "ru": "Снимает все неультимативные негативные эффекты, включая обездвиживание и замедления. Если что-то снято, лечит на 250 и даёт скорость, чтобы добежать до цели или уйти. Ограничение предмета - стан и сон, а обездвиживание к ним не относится: нажать можно прямо под ним." } },
+      { "item": "upgrade_debuff_reducer", "score": 50, "verdict": "ok", "why": { "ru": "+25% Debuff Resist укорачивает обездвиживание, но не снимает его: ты всё равно стоишь под огнём." }, "betterWhen": { "ru": "Если душ меньше 3200 или ты потом собираешь из него Unstoppable или Spellbreaker." } },
+      { "item": "upgrade_tech_purge", "score": 40, "verdict": "ok", "why": { "ru": "Урон от их способностей станет меньше, но тебя всё так же держат на месте и добивают оружием." }, "betterWhen": { "ru": "Если тебя убивает спирит-бурст, а не то, что ты не можешь сдвинуться." } },
+      { "item": "upgrade_unstoppable", "score": 30, "verdict": "weak", "why": { "ru": "Даёт иммунитет к обездвиживанию (Root), но стоит 6400, а у тебя 3400." }, "betterWhen": { "ru": "В поздней игре, когда тебя ещё и оглушают: включай его до контроля." } },
+      { "item": "upgrade_metal_skin", "score": 25, "verdict": "weak", "why": { "ru": "5 с иммунитета к пулям переживают один залп, но обездвиживание остаётся, и после окончания эффекта тебя добьют." }, "betterWhen": { "ru": "Если тебя убивает оружие одного керри, а обездвиживание короткое." } }
+    ],
+    "principle": { "ru": "Тебя держат на месте обычными способностями - покупай очищение: под обездвиживанием его можно нажать." },
+    "mechanics": [
+      { "text": { "ru": "Dispel Magic снимает все неультимативные негативные эффекты; если что-то снято, лечит и ускоряет. Нельзя использовать под Stun или Sleep." }, "status": "data" },
+      { "text": { "ru": "Rook Battery и Captivating Read - обычные способности, не ультимейты, и обе накладывают обездвиживание." }, "status": "data" },
+      { "text": { "ru": "Unstoppable даёт иммунитет к Stun, Silence, Sleep, Root и Disarm и стоит 6400." }, "status": "data" }
+    ],
+    "difficulty": 1,
+    "tags": ["general", "cc"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_reduce_debuff_duration", "item:upgrade_debuff_reducer", "item:upgrade_unstoppable", "ability:ability_chessmaster_forkpiece", "ability:ability_bookworm_aoemagic", "ability:ability_warden_lock_down", "ability:citadel_ability_flying_strike"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-005",
+    "kind": "buy",
+    "hero": "hero_astro",
+    "phase": "laning",
+    "souls": 1700,
+    "owned": ["upgrade_headshot_booster", "upgrade_high_velocity_mag"],
+    "enemies": [
+      { "hero": "hero_forge", "note": { "ru": "Mini Turret: турель, которая бьёт спирит-уроном по времени." } }
+    ],
+    "situation": { "ru": "Лайн 1 на 1 против McGinnis. Стоит тебе подойти для размена, она ставит Mini Turret, и турель весь размен бьёт тебя. Сама McGinnis стреляет не так много, но после каждого размена здоровья у тебя меньше, чем у неё. Больше всего урона по тебе наносит турель. У тебя 1700 душ." },
+    "question": { "ru": "Какая защита закроет урон турели?" },
+    "problemTags": ["enemy-summons", "enemy-spirit-dps", "you-lose-lane"],
+    "options": [
+      { "item": "upgrade_magic_shield", "score": 85, "verdict": "best", "why": { "ru": "Турель наносит спирит-урон по времени, и +18% Spirit Resist режет именно его. Пока ты выше 65% здоровья, ещё +15 духовной силы для Powder Keg и 5% сокращения перезарядки способностей. Стоит 1600, по бюджету." } },
+      { "item": "upgrade_health", "score": 50, "verdict": "ok", "why": { "ru": "+210 здоровья за 800 помогает против любого урона, но урон турели не уменьшает." }, "betterWhen": { "ru": "Если урон по тебе смешанный или нужно сэкономить." } },
+      { "item": "upgrade_non_player_bonus", "score": 25, "verdict": "weak", "why": { "ru": "+25% урона оружия по NPC ускоряет фарм. Считается ли турель NPC для этого бонуса, в данных не сказано, а урон по тебе предмет не режет." }, "betterWhen": { "ru": "Если хочешь быстрее фармить лагеря и крипов, а размены не проигрываешь." } },
+      { "item": "upgrade_regenerating_bullet_shield", "score": 15, "verdict": "bad", "why": { "ru": "Bullet Resist защищает от пуль самой McGinnis, а основной урон наносит турель, и он спиритический." }, "betterWhen": { "ru": "Против лайнера, который бьёт в основном из оружия: Haze, Wraith." } }
+    ],
+    "principle": { "ru": "Смотри, каким уроном бьёт призыв: у турелей McGinnis он спиритический, значит и защита нужна от спирит-урона." },
+    "mechanics": [
+      { "text": { "ru": "Mini Turret стреляет по врагам и наносит спирит-урон по времени; турель исчезает после ограниченного времени жизни." }, "status": "data" },
+      { "text": { "ru": "Enchanter's Emblem: +18% Spirit Resist; выше 65% здоровья +15 духовной силы и 5% сокращения перезарядки." }, "status": "data" },
+      { "text": { "ru": "Monster Rounds: +25% урона оружия и +25% Bullet Resist против NPC." }, "status": "data" },
+      { "text": { "ru": "Считаются ли турели и другие призывы NPC для бонусов Monster Rounds, в данных не указано." }, "status": "unverified" }
+    ],
+    "difficulty": 1,
+    "tags": ["general", "summons", "laning"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_magic_shield", "item:upgrade_regenerating_bullet_shield", "item:upgrade_non_player_bonus", "item:upgrade_health", "ability:citadel_ability_shieldedsentry", "hero:hero_forge"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-006",
+    "kind": "buy",
+    "hero": "hero_haze",
+    "phase": "early-mid",
+    "souls": 3600,
+    "owned": ["upgrade_blitz_bullets", "upgrade_clip_size", "upgrade_close_range", "upgrade_sprint_booster", "upgrade_headshot_booster"],
+    "enemies": [
+      { "hero": "hero_kelvin", "note": { "ru": "Frost Grenade лечит его союзников." } },
+      { "hero": "hero_dynamo", "note": { "ru": "Rejuvenating Aurora восстанавливает здоровье ему и союзникам рядом." } },
+      { "hero": "hero_atlas" }
+    ],
+    "situation": { "ru": "Ты выигрываешь перестрелки, но не добиваешь: Kelvin бросает Frost Grenade, которая лечит его союзников, Dynamo встаёт в Rejuvenating Aurora, и цель, почти лишённая здоровья, уходит с половиной полоски. Почти весь твой урон - пули: Fixation и Bullet Dance. Способностей со спирит-уроном у тебя мало. У тебя 3600 душ." },
+    "question": { "ru": "Какой анти-хил подходит именно тебе?" },
+    "problemTags": ["enemy-healing", "you-lack-damage"],
+    "options": [
+      { "item": "upgrade_toxic_bullets", "score": 88, "verdict": "best", "why": { "ru": "Твои пули копят на цели кровотечение: она теряет процент максимального здоровья и получает -40% к входящему лечению. Ты стреляешь непрерывно, так что эффект держится на цели весь бой, и лечение Kelvin и Dynamo проседает. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_rupture", "score": 55, "verdict": "ok", "why": { "ru": "Режет лечение сильнее (-55%) и не зависит от типа урона, но это одна цель раз в 30 с и дальность 20 м. Против двух лекарей и меняющихся целей твои пули надёжнее." }, "betterWhen": { "ru": "Если лечится одна конкретная цель, а держать её под постоянным огнём не получается." } },
+      { "item": "upgrade_healbane", "score": 30, "verdict": "weak", "why": { "ru": "Срабатывает только от спирит-урона, а у тебя его почти нет: Sleep Dagger раз в 30 с. Срез будет висеть редко." }, "betterWhen": { "ru": "На герое с постоянным спирит-уроном: Seven, Infernus, Graves." } },
+      { "item": "upgrade_inhibitor", "score": 25, "verdict": "weak", "why": { "ru": "Пули копят срез лечения и снижают исходящий урон цели, но стоит 6400 при 3600 душ." }, "betterWhen": { "ru": "В поздней игре, особенно против керри, который лечится от собственного урона." } }
+    ],
+    "principle": { "ru": "Анти-хил выбирай по своему урону: пули - Toxic Bullets, постоянный спирит-урон - Healbane, нет постоянного урона - Decay." },
+    "mechanics": [
+      { "text": { "ru": "Toxic Bullets: пули копят кровотечение, цель теряет процент максимального здоровья; на кровоточащей цели -40% к входящему лечению." }, "status": "data" },
+      { "text": { "ru": "Healbane срабатывает от спирит-урона. Decay - активный предмет на одну цель: -55% к лечению на 12 с, дальность 20 м, перезарядка 30 с." }, "status": "data" },
+      { "text": { "ru": "Frost Grenade лечит союзников Kelvin; Rejuvenating Aurora восстанавливает здоровье Dynamo и союзникам рядом." }, "status": "data" },
+      { "text": { "ru": "Как складываются срезы лечения из разных источников, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Цели переживают перестрелку за счёт лечения от поддержки." },
+      "solutions": [{ "ru": "Снизить входящее лечение целей" }, { "ru": "Убить лекаря первым" }, { "ru": "Наносить урон быстрее, чем приходит лечение" }],
+      "constraints": [{ "ru": "3600 душ: доступен один предмет T3" }, { "ru": "Почти весь урон - пули" }, { "ru": "Лечат двое поддержки, цели меняются" }],
+      "choice": { "ru": "Toxic Bullets: срез лечения накладывает твой основной урон, на каждую цель, в которую ты стреляешь." },
+      "consequences": [{ "ru": "Держи цель под огнём: без попаданий кровотечение спадает." }, { "ru": "Если у цели Leech, срез будет слабее." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "anti-heal"],
+    "dims": ["counter", "situation"],
+    "sources": ["item:upgrade_toxic_bullets", "item:upgrade_healbane", "item:upgrade_rupture", "item:upgrade_inhibitor", "ability:ability_ice_grenade", "ability:citadel_ability_nikuman", "ability:ability_stacking_damage", "hero:hero_haze"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-007",
+    "kind": "buy",
+    "hero": "hero_necro",
+    "phase": "early-mid",
+    "souls": 2400,
+    "owned": ["upgrade_medic_bullets", "upgrade_improved_spirit", "upgrade_improved_stamina", "upgrade_crackshot", "upgrade_weapon_shielding"],
+    "enemies": [
+      { "hero": "hero_ghost", "note": { "ru": "Essence Bomb и Malice: спирит-урон." } },
+      { "hero": "hero_gigawatt", "note": { "ru": "Lightning Ball и Static Charge: спирит-урон и стан." } }
+    ],
+    "situation": { "ru": "Ты купил Weapon Shielding, но размены всё равно проигрываешь: Lady Geist бросает Essence Bomb и Malice, Seven добавляет Lightning Ball и Static Charge. Барьер от твоего предмета почти никогда не появляется, а здоровье пропадает за пару секунд после их комбинации. У тебя 2400 душ." },
+    "question": { "ru": "Что купить следующим?" },
+    "problemTags": ["enemy-spirit-burst", "you-die-fast"],
+    "options": [
+      { "item": "upgrade_magic_shield", "score": 85, "verdict": "best", "why": { "ru": "+18% Spirit Resist против того урона, который тебя убивает. Пока ты выше 65% здоровья, ещё +15 духовной силы и 5% сокращения перезарядки для Jar of Dead и Grasping Hands. Стоит 1600 и укладывается в бюджет." } },
+      { "item": "upgrade_spirit_bubble", "score": 72, "verdict": "good", "why": { "ru": "Тоже против спирит-урона: +15% Spirit Resist и барьер 300, если за 3.5 с получаешь 225+ спирит-урона. Но Grit уже ушёл в Weapon Shielding, поэтому платишь полные 1600, а барьер срабатывает раз в 45 с." }, "betterWhen": { "ru": "Если у тебя ещё есть Grit (тогда апгрейд стоит 800), или враг бьёт редкими мощными комбинациями." } },
+      { "item": "upgrade_tech_purge", "score": 30, "verdict": "weak", "why": { "ru": "Лучший спирит-резист в T3 (+30%), но стоит 3200, а у тебя 2400." }, "betterWhen": { "ru": "Чуть позже, когда накопишь 3200: хороший следующий шаг против этого же состава." } },
+      { "item": "upgrade_regenerating_bullet_shield", "score": 10, "verdict": "bad", "why": { "ru": "Ещё защита от пуль, а тебя убивают способностями." }, "betterWhen": { "ru": "Против лайнера с оружейным уроном: Haze, Wraith, Vindicta." } }
+    ],
+    "principle": { "ru": "Защита, которая не срабатывает, - не та защита. Смотри тип урона в отчёте о смерти." },
+    "mechanics": [
+      { "text": { "ru": "Weapon Shielding даёт барьер только при большом уроне оружием за короткое время." }, "status": "data" },
+      { "text": { "ru": "Essence Bomb, Malice, Lightning Ball и Static Charge наносят спирит-урон." }, "status": "data" },
+      { "text": { "ru": "Enchanter's Emblem: +18% Spirit Resist. Spirit Shielding: +15% Spirit Resist и барьер 300 при 225+ спирит-урона за 3.5 с, перезарядка 45 с." }, "status": "data" },
+      { "text": { "ru": "Spirit Shielding улучшается из Grit; Spirit Resilience стоит 3200." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Смерть в разменах от спирит-бурста двух кастеров." },
+      "solutions": [{ "ru": "Поднять Spirit Resist" }, { "ru": "Получить барьер от спирит-урона" }, { "ru": "Взять больше здоровья" }],
+      "constraints": [{ "ru": "2400 душ" }, { "ru": "Grit уже улучшен в Weapon Shielding" }, { "ru": "Урон почти весь спиритический" }],
+      "choice": { "ru": "Enchanter's Emblem: дешёвый резист нужного типа и бонус к способностям." },
+      "consequences": [{ "ru": "Следующим шагом можно взять Spirit Resilience." }, { "ru": "Бонусы Emblem пропадают ниже 65% здоровья, но резист остаётся." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "resist", "graves"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_magic_shield", "item:upgrade_spirit_bubble", "item:upgrade_tech_purge", "item:upgrade_weapon_shielding", "ability:ability_blood_bomb", "ability:ability_blood_shards", "ability:citadel_ability_lightning_ball", "ability:citadel_ability_static_charge"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-008",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_long_range"],
+    "enemies": [
+      { "hero": "hero_haze", "note": { "ru": "Сильно впереди по душам, заходит из невидимости." } },
+      { "hero": "hero_bebop" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "Ты стреляешь с высоты из-за спин своей команды. Раз за разом повторяется одно и то же: Haze появляется рядом из невидимости, кидает кинжал, ты засыпаешь, а когда просыпаешься, она уже крутится в Bullet Dance и расстреливает тебя за пару секунд. Почти весь урон по тебе - пули. У тебя 3500 душ." },
+    "question": { "ru": "Что купить, чтобы переживать её заход?" },
+    "problemTags": ["enemy-stealth", "enemy-sleep", "enemy-gun-dps", "you-die-fast"],
+    "options": [
+      { "item": "upgrade_metal_skin", "score": 86, "verdict": "best", "why": { "ru": "Иммунитет к пулям на 5 с, а Bullet Dance длится 3.5 с и бьёт оружием. Спящие просыпаются вскоре после урона: проснулся - нажал, и главный урон Haze уходит в ноль. Плюс постоянные +12% Bullet Resist. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_vex_barrier", "score": 62, "verdict": "good", "why": { "ru": "Дешёвый барьер 325, когда тебя усыпляют: смягчает начало захода. Но если Haze сильно впереди, Bullet Dance снесёт барьер и тебя вместе с ним." }, "betterWhen": { "ru": "Если тебя контролят разные герои, а не один стрелок, или как первый шаг к Indomitable." } },
+      { "item": "upgrade_auto_cleanse", "score": 30, "verdict": "weak", "why": { "ru": "Сам снимает следующий сон и даёт барьер, но стоит 6400 при 3500 душ." }, "betterWhen": { "ru": "В поздней игре, особенно если Reactive Barrier уже куплен: доплата будет 4800." } },
+      { "item": "upgrade_reduce_debuff_duration", "score": 15, "verdict": "bad", "why": { "ru": "Во сне его не нажать, а урон Haze - пули, а не дебафф: снимать после захода нечего." }, "betterWhen": { "ru": "Против урона по времени и замедлений от обычных способностей: Infernus, Shiv." } },
+      { "item": "upgrade_tech_purge", "score": 10, "verdict": "bad", "why": { "ru": "Режет спирит-урон, а Haze убивает тебя оружием." }, "betterWhen": { "ru": "Против спирит-бурста: Lady Geist, Seven." } }
+    ],
+    "principle": { "ru": "Против невидимого стрелка покупай то, что гасит его главный урон, а не попытку его найти." },
+    "mechanics": [
+      { "text": { "ru": "Smoke Bomb делает Haze невидимой; атака снимает невидимость, использование предметов - нет; близкие враги видят её сквозь невидимость." }, "status": "data" },
+      { "text": { "ru": "Sleep Dagger не снимает невидимость; спящие просыпаются вскоре после получения урона." }, "status": "data" },
+      { "text": { "ru": "Bullet Dance длится 3.5 с: Haze стреляет из оружия по врагам рядом с идеальной точностью." }, "status": "data" },
+      { "text": { "ru": "Metal Skin: иммунитет к пулям на 5 с, перезарядка 24 с. Dispel Magic нельзя использовать во сне." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Заход из невидимости: сон, затем оружейный бурст." },
+      "solutions": [{ "ru": "Погасить оружейный урон" }, { "ru": "Снять или смягчить сон" }, { "ru": "Стоять ближе к команде: близкие враги видят Haze" }],
+      "constraints": [{ "ru": "3500 душ" }, { "ru": "Автоматическая защита от сна стоит 6400" }, { "ru": "Урон почти весь от пуль" }],
+      "choice": { "ru": "Metal Skin: нажать после пробуждения, когда начинается Bullet Dance." },
+      "consequences": [{ "ru": "Не трать Metal Skin на мелкий урон до её захода." }, { "ru": "Позже добавь Indomitable, если сон начнёт решать драки." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "stealth", "vindicta"],
+    "dims": ["counter", "active"],
+    "sources": ["item:upgrade_metal_skin", "item:upgrade_vex_barrier", "item:upgrade_auto_cleanse", "item:upgrade_reduce_debuff_duration", "ability:ability_smoke_bomb", "ability:ability_sleep_dagger", "ability:ability_bullet_flurry", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-009",
+    "kind": "buy",
+    "hero": "hero_lash",
+    "phase": "late",
+    "souls": 7200,
+    "owned": ["upgrade_soaring_spirit", "upgrade_superior_stamina", "upgrade_cooldown_reduction", "upgrade_tech_purge", "upgrade_magic_shock", "upgrade_health_stealing_magic", "upgrade_magic_vulnerability", "upgrade_imbued_duration_extender"],
+    "enemies": [
+      { "hero": "hero_gigawatt", "note": { "ru": "Static Charge: стан после короткой задержки." } },
+      { "hero": "hero_tengu", "note": { "ru": "Stone Form: стан врагов рядом." } },
+      { "hero": "hero_atlas", "note": { "ru": "Shoulder Charge в стену и Seismic Impact: станы." } },
+      { "hero": "hero_astro" }
+    ],
+    "situation": { "ru": "Поздняя игра. Тебя ловят раньше, чем ты начинаешь заход: Static Charge Seven, Stone Form Ivy или Seismic Impact Abrams оглушают тебя в момент, когда ты их не ждёшь, и за время стана тебя добивают. Очищение под станом не нажать, а предугадать, когда прилетит стан, не получается. У тебя 7200 душ." },
+    "question": { "ru": "Какой предмет против неожиданных оглушений тебе нужен?" },
+    "problemTags": ["enemy-stun", "you-get-caught", "teamfight"],
+    "options": [
+      { "item": "upgrade_auto_cleanse", "score": 88, "verdict": "best", "why": { "ru": "Пассивно снимает следующий Stun, а также Chain, Immobilize, Sleep, Silence или Fear, сразу даёт барьер 325 и сокращает перезарядки способностей на 20%. Нажимать ничего не нужно, поэтому неожиданный стан не решает бой. Перезарядка 55 с, по бюджету." } },
+      { "item": "upgrade_unstoppable", "score": 70, "verdict": "good", "why": { "ru": "Иммунитет к Stun, Silence, Sleep, Root и Disarm на 5.5 с, но под станом или сном его не нажать: включать нужно до контроля. Работает, когда ты сам начинаешь заход и знаешь, когда прилетят станы." }, "betterWhen": { "ru": "Если ты сам инициируешь и против тебя несколько станов подряд: 5.5 с иммунитета закрывают их все, а Indomitable снимает только один." } },
+      { "item": "upgrade_debuff_reducer", "score": 45, "verdict": "ok", "why": { "ru": "+25% Debuff Resist укорачивает стан, но не отменяет его. Дёшево, но в поздней игре это не полноценный ответ." }, "betterWhen": { "ru": "Если душ мало, или как первый шаг к Unstoppable." } },
+      { "item": "upgrade_vex_barrier", "score": 40, "verdict": "ok", "why": { "ru": "Барьер 325 при стане помогает пережить его, но сам стан остаётся." }, "betterWhen": { "ru": "В середине игры как дешёвая часть будущего Indomitable." } },
+      { "item": "upgrade_reduce_debuff_duration", "score": 15, "verdict": "bad", "why": { "ru": "Нельзя использовать под станом, а стан - главная проблема. Снимать после него уже поздно." }, "betterWhen": { "ru": "Против замедлений, обездвиживания и урона по времени." } }
+    ],
+    "principle": { "ru": "Стан не снимешь предметом, который жмётся руками: нужен пассив или нажатие до контроля." },
+    "mechanics": [
+      { "text": { "ru": "Indomitable автоматически снимает следующий Stun, Chain, Immobilize, Sleep, Silence или Fear, даёт барьер 325 и сокращает перезарядки способностей на 20%; перезарядка 55 с." }, "status": "data" },
+      { "text": { "ru": "Unstoppable и Dispel Magic нельзя использовать под Stun или Sleep." }, "status": "data" },
+      { "text": { "ru": "Static Charge оглушает после короткой задержки; Stone Form и Seismic Impact оглушают врагов рядом." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Неожиданные станы обрывают каждый заход." },
+      "solutions": [{ "ru": "Автоматически снимать стан" }, { "ru": "Включать иммунитет до контроля" }, { "ru": "Сокращать длительность стана" }],
+      "constraints": [{ "ru": "Стан приходит до твоего захода, предугадать сложно" }, { "ru": "Очищение под станом не нажимается" }, { "ru": "7200 душ" }],
+      "choice": { "ru": "Indomitable: срабатывает сам и не требует угадывать момент." },
+      "consequences": [{ "ru": "Первый стан в драке снимается, второй - нет: держись подальше от второго источника." }, { "ru": "Перезарядка 55 с: в драке через полминуты защиты может не быть." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "cc"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_auto_cleanse", "item:upgrade_unstoppable", "item:upgrade_reduce_debuff_duration", "item:upgrade_debuff_reducer", "item:upgrade_vex_barrier", "ability:citadel_ability_static_charge", "ability:citadel_ability_tengu_stone_form", "ability:citadel_ability_bull_leap"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-010",
+    "kind": "active-timing",
+    "hero": "hero_kelvin",
+    "phase": "laning",
+    "souls": 1500,
+    "owned": ["upgrade_health_stimpak", "upgrade_improved_spirit", "upgrade_endurance"],
+    "enemies": [
+      { "hero": "hero_ratking", "note": { "ru": "Rat Swarm: крысы кусают спирит-уроном и снижают Bullet Resist." } },
+      { "hero": "hero_haze" }
+    ],
+    "situation": { "ru": "Лайн 2 на 2. Rat King выпускает Rat Swarm: на тебе висят три крысы, каждая кусает спирит-уроном и снижает твой Bullet Resist, а чем больше крыс, тем чаще они кусают. Haze уже стреляет в тебя из оружия. У тебя 55% здоровья, Healing Rite и Frost Grenade готовы." },
+    "question": { "ru": "Что сделать прямо сейчас?" },
+    "problemTags": ["enemy-summons", "enemy-debuffs", "you-lose-lane"],
+    "options": [
+      { "action": { "ru": "Сделать рывок по земле или в воздухе, чтобы стряхнуть крыс, и отойти" }, "score": 90, "verdict": "best", "why": { "ru": "По описанию Rat Swarm крысу можно сбросить досрочно рывком по земле или в воздухе. Это бесплатно: ты убираешь и спирит-урон, и падение Bullet Resist раньше, чем Haze успеет стрелять по ослабленной броне." } },
+      { "action": { "ru": "Бросить Frost Grenade во врагов и продолжить размен" }, "score": 45, "verdict": "ok", "why": { "ru": "Граната замедлит Rat King и Haze и нанесёт им урон, но крысы останутся на тебе и продолжат кусать." }, "betterWhen": { "ru": "Сразу после того, как стряхнул крыс: замедление поможет отойти или наказать врагов за заход." } },
+      { "action": { "ru": "Стрелять в Rat King, пока он рядом" }, "score": 25, "verdict": "weak", "why": { "ru": "Крысы кусают тем быстрее, чем их больше, а твой Bullet Resist продолжает падать: размен выигрывает Haze." }, "betterWhen": { "ru": "Если у Rat King очень мало здоровья и ты точно добьёшь его раньше, чем броня упадёт." } },
+      { "item": "upgrade_health_stimpak", "action": { "ru": "Нажать Healing Rite на себя и продолжать стоять" }, "score": 10, "verdict": "bad", "why": { "ru": "Healing Rite снимается, если ты получаешь урон от вражеских игроков. Крысы и Haze продолжают бить, и лечение пропадёт почти сразу." }, "betterWhen": { "ru": "Когда ты вышел из боя и хочешь быстрее восстановиться и вернуться на линию." } }
+    ],
+    "principle": { "ru": "Прицепившийся призыв сначала попробуй сбросить механикой: это бесплатно и быстрее любой покупки." },
+    "mechanics": [
+      { "text": { "ru": "Rat Swarm: крысы прыгают на врагов, наносят спирит-урон по времени и снижают Bullet Resist с каждым укусом; чем больше крыс, тем быстрее укусы; крысу можно сбросить рывком по земле или в воздухе." }, "status": "data" },
+      { "text": { "ru": "Healing Rite снимается, если цель получает урон от вражеских игроков или объектов." }, "status": "data" },
+      { "text": { "ru": "Frost Grenade наносит врагам спирит-урон и замедляет их, а союзников лечит." }, "status": "data" }
+    ],
+    "difficulty": 2,
+    "tags": ["general", "summons", "laning"],
+    "dims": ["active", "mechanics"],
+    "sources": ["ability:ability_ratking_ratnibble", "ability:ability_ice_grenade", "item:upgrade_health_stimpak", "hero:hero_ratking", "hero:hero_haze"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-011",
+    "kind": "buy",
+    "hero": "hero_magician",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_soaring_spirit", "upgrade_magic_tempo", "upgrade_magic_shield", "upgrade_extra_charge", "upgrade_sprint_booster"],
+    "enemies": [
+      { "hero": "hero_orion", "note": { "ru": "Rain of Arrows: взлетает, планирует и стреляет с мультивыстрелом." } },
+      { "hero": "hero_deadpack", "note": { "ru": "Chimera Mk1: полёт на реактивном ранце." } },
+      { "hero": "hero_lash" }
+    ],
+    "situation": { "ru": "Grey Talon взлетает Rain of Arrows и медленно планирует над твоей командой, поливая её усиленными стрелами, а Deadman Danny летает на реактивном ранце. Пока они в воздухе, твоя команда почти не может их достать, а они наносят много урона сверху. Grey Talon обычно висит высоко и далеко от тебя. У тебя 3600 душ." },
+    "question": { "ru": "Какой предмет лучше всего снимает врагов с неба?" },
+    "problemTags": ["enemy-high-mobility", "you-cant-catch", "enemy-long-range"],
+    "options": [
+      { "item": "upgrade_target_stun", "score": 85, "verdict": "best", "why": { "ru": "Стан через 2 с, а против воздушных целей он длится дольше. На время стана повышает гравитацию цели, то есть тянет её вниз. Дальность 45 м: достаёт высоко и далеко летящего Grey Talon. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_containment", "score": 68, "verdict": "good", "why": { "ru": "Замедляет, повышает гравитацию и накладывает немоту на способности передвижения, а Rain of Arrows и Chimera Mk1 в данных помечены как способности передвижения. Но дальность всего 25 м, а прервёт ли немота уже начавшийся полёт, в данных не сказано." }, "betterWhen": { "ru": "Если цель ближе 25 м или ты успеваешь повесить чары до взлёта; и если душ мало." } },
+      { "item": "upgrade_targeted_silence", "score": 45, "verdict": "ok", "why": { "ru": "Немота по площади мешает применять способности, но прервёт ли она уже начатый полёт, в данных не сказано, а опускать цель на землю она не умеет." }, "betterWhen": { "ru": "Против группы врагов, которые вот-вот прыгнут на вас способностями: немота до захода." } },
+      { "item": "upgrade_slowing_bullets", "score": 35, "verdict": "weak", "why": { "ru": "Замедление копится от пуль, но гравитацию не меняет и с неба цель не снимает." }, "betterWhen": { "ru": "Против наземных бегунов, в которых ты долго попадаешь из оружия." } }
+    ],
+    "principle": { "ru": "Враг силён в воздухе - бери то, что опускает его на землю: стан против воздушных целей длится дольше." },
+    "mechanics": [
+      { "text": { "ru": "Knockdown: стан через 2 с, против воздушных целей длится дольше, на время стана повышает гравитацию цели; дальность 45 м, перезарядка 35 с." }, "status": "data" },
+      { "text": { "ru": "Slowing Hex: замедление, немота предметов и способностей передвижения, повышенная гравитация; дальность 25 м." }, "status": "data" },
+      { "text": { "ru": "Rain of Arrows поднимает Grey Talon высоко в воздух и даёт ему урон оружия и мультивыстрел, пока он в воздухе; обе способности, Rain of Arrows и Chimera Mk1, помечены в данных как способности передвижения." }, "status": "data" },
+      { "text": { "ru": "Прерывает ли немота уже начатый полёт Rain of Arrows или Chimera Mk1, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги наносят много урона из воздуха, и их не достать." },
+      "solutions": [{ "ru": "Опустить цель на землю" }, { "ru": "Запретить способности передвижения" }, { "ru": "Перебить в воздухе дальнобойным уроном" }],
+      "constraints": [{ "ru": "3600 душ" }, { "ru": "Grey Talon высоко и дальше 25 м" }, { "ru": "Два воздушных героя" }],
+      "choice": { "ru": "Knockdown: дальность 45 м и усиленный стан против воздушных целей." },
+      "consequences": [{ "ru": "Стан приходит через 2 с: кидай, пока цель планирует, а не когда она уже приземляется." }, { "ru": "Против наземных целей стан обычной длины." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "mobility"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_target_stun", "item:upgrade_containment", "item:upgrade_targeted_silence", "item:upgrade_slowing_bullets", "ability:ability_power_jump", "ability:ability_deadpack_rocketeer", "hero:hero_orion", "hero:hero_deadpack"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-012",
+    "kind": "buy",
+    "hero": "hero_wraith",
+    "phase": "mid",
+    "souls": 3400,
+    "owned": ["upgrade_blitz_bullets", "upgrade_titan_round", "upgrade_regenerating_bullet_shield", "upgrade_sprint_booster", "upgrade_headshot_booster"],
+    "allies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_synth" },
+      { "hero": "hero_inferno" },
+      { "hero": "hero_drifter" }
+    ],
+    "enemies": [
+      { "hero": "hero_atlas", "note": { "ru": "Врывается Shoulder Charge." } },
+      { "hero": "hero_shiv", "note": { "ru": "Заходит и отходит Slice and Dice." } },
+      { "hero": "hero_warden" }
+    ],
+    "situation": { "ru": "Середина игры. Твоя команда - сплошь урон: Haze, Pocket, Infernus и Drifter. Удержать цель на месте вам почти нечем: сон Haze прерывается от урона, а оглушение Infernus есть только в ультимейте. Abrams, Shiv и Warden раз за разом врываются в вашу заднюю линию, наносят урон и спокойно отходят, когда становится опасно. Ты много бьёшь из оружия, но цели не стоят на месте. У тебя 3400 душ." },
+    "question": { "ru": "Что купить, чтобы команда начала добивать?" },
+    "problemTags": ["team-lacks-cc", "you-cant-catch", "enemy-dive"],
+    "options": [
+      { "item": "upgrade_target_stun", "score": 84, "verdict": "best", "why": { "ru": "Точечный стан на 45 м через 2 с - то, чего не хватает всей команде. Пока цель оглушена, она не уходит, и твой урон вместе с уроном союзников успевает её добить. Против бойцов, которые прыгают и оказываются в воздухе, стан ещё и длится дольше." } },
+      { "item": "upgrade_containment", "score": 72, "verdict": "good", "why": { "ru": "Дешевле и мешает отходить: Shoulder Charge и Slice and Dice в данных помечены как способности передвижения, и под чарами их не применить. Но это не стан: цель продолжает стрелять и бить." }, "betterWhen": { "ru": "Если главная проблема - побег на способностях передвижения, и тебе важно сэкономить души на урон." } },
+      { "item": "upgrade_toxic_bullets", "score": 45, "verdict": "ok", "why": { "ru": "Больше урона процентом от здоровья и срез лечения, но если цель уходит, урон не успевает её добить." }, "betterWhen": { "ru": "Если цели не убегают, а переживают за счёт лечения." } },
+      { "item": "upgrade_glitch", "score": 30, "verdict": "weak", "why": { "ru": "Сильнейший одиночный контроль: прерывание, немота, обезоруживание и запрет предметов. Но стоит 6400, а твой урон на время проклятия падает на 25%." }, "betterWhen": { "ru": "В поздней игре против одной ключевой цели с важными предметами и ультимейтом." } }
+    ],
+    "principle": { "ru": "Если в команде никто не держит цель, контроль ценнее ещё одного предмета на урон." },
+    "mechanics": [
+      { "text": { "ru": "Knockdown: стан через 2 с, против воздушных целей длится дольше; дальность 45 м." }, "status": "data" },
+      { "text": { "ru": "Slowing Hex накладывает немоту на способности передвижения; Shoulder Charge и Slice and Dice помечены в данных как способности передвижения." }, "status": "data" },
+      { "text": { "ru": "Спящие от Sleep Dagger просыпаются вскоре после урона; стан Infernus - в ультимейте Concussive Combustion." }, "status": "data" },
+      { "text": { "ru": "Cursed Relic снижает твой собственный урон на 25% на время проклятия." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги заходят и уходят: в команде нет надёжного контроля." },
+      "solutions": [{ "ru": "Купить свой контроль" }, { "ru": "Не дать уйти способностями передвижения" }, { "ru": "Больше урона, чтобы убивать за время захода" }],
+      "constraints": [{ "ru": "3400 душ" }, { "ru": "Ты - главный стрелок команды" }, { "ru": "Враги - бойцы с рывками" }],
+      "choice": { "ru": "Knockdown: стан на большой дистанции даёт команде время добить." },
+      "consequences": [{ "ru": "Кидай стан на того, кто уже потерял здоровье, а не на свежую цель." }, { "ru": "За 2 с до стана цель ещё действует и может успеть включить защиту, например Unstoppable." }]
+    },
+    "difficulty": 2,
+    "tags": ["general", "team", "cc"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_target_stun", "item:upgrade_containment", "item:upgrade_toxic_bullets", "item:upgrade_glitch", "ability:ability_sleep_dagger", "ability:ability_fire_bomb", "ability:citadel_ability_bull_charge", "ability:citadel_ability_shiv_dash"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-013",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_metal_skin"],
+    "enemies": [
+      { "hero": "hero_ghost" },
+      { "hero": "hero_gigawatt" },
+      { "hero": "hero_haze" }
+    ],
+    "situation": { "ru": "Середина игры. Против Haze ты купил Metal Skin, и от её заходов теперь спасаешься. Но умирать ты не перестал: в последних смертях почти весь урон пришёл от Essence Bomb Lady Geist и от Lightning Ball со Static Charge от Seven. Metal Skin в этих смертях ничего не меняет. У тебя 3600 душ." },
+    "symptoms": [
+      { "ru": "Metal Skin нажат, а здоровье всё равно тает." },
+      { "ru": "Больше половины урона в отчёте о смерти - способности." },
+      { "ru": "Ты погибаешь за 2-3 секунды после их комбинации." }
+    ],
+    "question": { "ru": "Что купить следующим?" },
+    "problemTags": ["enemy-spirit-burst", "you-die-fast"],
+    "diagnosis": {
+      "prompt": { "ru": "Что тебя убивает теперь?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Спирит-бурст от способностей Lady Geist и Seven." }, "correct": true, "why": { "ru": "Почти весь урон в отчёте - способности, а Metal Skin блокирует только пули." } },
+        { "id": "b", "text": { "ru": "Haze: одного Metal Skin просто мало." }, "correct": false, "why": { "ru": "От заходов Haze ты теперь спасаешься, а урон в последних смертях - от способностей." } },
+        { "id": "c", "text": { "ru": "Тебе не хватает здоровья в целом." }, "correct": false, "why": { "ru": "Здоровье немного помогло бы, но урон одного типа выгоднее резать резистом этого типа." } },
+        { "id": "d", "text": { "ru": "Тебя держат контролем." }, "correct": false, "why": { "ru": "Ты погибаешь от урона за 2-3 секунды, а не стоишь под станом всё это время." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_tech_purge", "score": 85, "verdict": "best", "why": { "ru": "+30% Spirit Resist сразу и ещё +15% ниже 50% здоровья: именно против бурста способностями. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_magic_shield", "score": 65, "verdict": "good", "why": { "ru": "+18% Spirit Resist дешевле, но слабее; бонусы работают только выше 65% здоровья, а под бурстом ты быстро падаешь ниже." }, "betterWhen": { "ru": "Если душ меньше 3200 или хочешь сэкономить на следующий предмет урона." } },
+      { "item": "upgrade_counterspell", "score": 62, "verdict": "good", "why": { "ru": "Парирование отменяет одну способность целиком, например Essence Bomb или Static Charge. Сильно, если читаешь броски, но против двух кастеров с несколькими способностями одного парирования мало." }, "betterWhen": { "ru": "Если тебя убивает одна главная способность, которую ты видишь заранее." } },
+      { "item": "upgrade_improved_bullet_armor", "score": 10, "verdict": "bad", "why": { "ru": "Ещё защита от пуль, а пули тебя уже не убивают." }, "betterWhen": { "ru": "Если основной урон по тебе - оружие нескольких стрелков." } }
+    ],
+    "principle": { "ru": "Защита должна совпадать с типом урона в последних смертях, а не с тем, кто убивал тебя раньше." },
+    "mechanics": [
+      { "text": { "ru": "Metal Skin даёт иммунитет только к пулям." }, "status": "data" },
+      { "text": { "ru": "Spirit Resilience: +30% Spirit Resist, ниже 50% здоровья ещё +15%." }, "status": "data" },
+      { "text": { "ru": "Essence Bomb, Lightning Ball и Static Charge наносят спирит-урон." }, "status": "data" },
+      { "text": { "ru": "Counterspell: следующее парирование защищает от урона и эффектов вражеских способностей и предметов; окно 0.8 с, перезарядка 23 с." }, "status": "data" }
+    ],
+    "difficulty": 2,
+    "tags": ["general", "resist", "vindicta"],
+    "dims": ["situation", "counter"],
+    "sources": ["item:upgrade_tech_purge", "item:upgrade_magic_shield", "item:upgrade_counterspell", "item:upgrade_improved_bullet_armor", "item:upgrade_metal_skin", "ability:ability_blood_bomb", "ability:citadel_ability_lightning_ball", "ability:citadel_ability_static_charge", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-014",
+    "kind": "buy",
+    "hero": "hero_tengu",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_magic_shield", "upgrade_improved_spirit", "upgrade_extra_charge", "upgrade_guardian_ward", "upgrade_sprint_booster"],
+    "allies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_gigawatt" },
+      { "hero": "hero_hornet" }
+    ],
+    "enemies": [
+      { "hero": "hero_atlas", "note": { "ru": "Главный танк, лечится в каждом бою." } },
+      { "hero": "hero_krill" },
+      { "hero": "hero_wraith" },
+      { "hero": "hero_ghost" }
+    ],
+    "situation": { "ru": "Середина игры. Abrams врывается в твою команду и не умирает: Siphon Life высасывает здоровье у всех рядом и лечит его, а Infernal Resilience превращает часть полученного урона в регенерацию. Haze, Seven и Vindicta бьют его, но лечение перекрывает их урон. Твой личный урон невелик: Entangling Thorns и Stone Form задевают его редко, основной урон дают союзники. У тебя 3500 душ." },
+    "question": { "ru": "Какой анти-хил подходит именно тебе?" },
+    "problemTags": ["enemy-healing", "enemy-lifesteal", "enemy-tanky"],
+    "options": [
+      { "item": "upgrade_rupture", "score": 85, "verdict": "best", "why": { "ru": "Активный предмет: наводишь на Abrams, и на 12 с его входящее лечение падает на 55%, плюс урон по времени от его текущего здоровья. Твой постоянный урон по нему не нужен: бьют союзники, а ты одним нажатием режешь лечение сильнее любого другого варианта по бюджету. Дальность 20 м, перезарядка 30 с." } },
+      { "item": "upgrade_healbane", "score": 60, "verdict": "good", "why": { "ru": "Дёшево и срабатывает от твоего спирит-урона, но по Abrams нужно постоянно попадать, а твои способности бьют редко: -35% будет висеть с перерывами." }, "betterWhen": { "ru": "На герое с постоянным спирит-уроном по цели или по площади: Seven, Infernus, Graves." } },
+      { "item": "upgrade_toxic_bullets", "score": 40, "verdict": "ok", "why": { "ru": "Срез -40% и кровотечение от максимального здоровья, но копится от твоих пуль, а ты не основной стрелок команды." }, "betterWhen": { "ru": "На оружейном керри, который весь бой стреляет в одну цель." } },
+      { "item": "upgrade_spirit_burn", "score": 20, "verdict": "weak", "why": { "ru": "-70% лечения, но срабатывает только после 500 спирит-урона по цели за 5 с: твой урон до такого порога не доходит. И стоит 6400." }, "betterWhen": { "ru": "На спирит-бурст герое в поздней игре." } }
+    ],
+    "principle": { "ru": "Мало своего урона - бери активный анти-хил, который не зависит от того, сколько ты попадаешь." },
+    "mechanics": [
+      { "text": { "ru": "Decay: активный, на одну цель, дальность 20 м; урон по времени от текущего здоровья цели и -55% к входящему лечению на 12 с; урон Decay не убивает и не активирует эффекты предметов." }, "status": "data" },
+      { "text": { "ru": "Healbane режет лечение только после твоего спирит-урона, Toxic Bullets - после попаданий твоими пулями, Spirit Burn - после 500 спирит-урона за 5 с." }, "status": "data" },
+      { "text": { "ru": "Siphon Life лечит Abrams на часть нанесённого урона; Infernal Resilience даёт регенерацию за часть полученного урона." }, "status": "data" },
+      { "text": { "ru": "Как срез от Decay складывается с анти-хилом союзников и режет ли он регенерацию Infernal Resilience, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Танк переживает фокус всей команды за счёт лечения." },
+      "solutions": [{ "ru": "Срезать танку лечение" }, { "ru": "Переключить команду на другую цель" }, { "ru": "Добавить команде урона" }],
+      "constraints": [{ "ru": "Твой личный урон мал" }, { "ru": "3500 душ" }, { "ru": "Урон по танку наносят союзники" }],
+      "choice": { "ru": "Decay: одно нажатие даёт самый сильный срез лечения и не зависит от твоего урона." },
+      "consequences": [{ "ru": "Наводи Decay в начале фокуса, а не когда Abrams уже уходит." }, { "ru": "Decay не добивает: последний урон должны нанести союзники." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "anti-heal", "tank"],
+    "dims": ["counter", "build"],
+    "sources": ["item:upgrade_rupture", "item:upgrade_healbane", "item:upgrade_toxic_bullets", "item:upgrade_spirit_burn", "ability:citadel_ability_bull_heal", "ability:citadel_ability_passive_beefy", "ability:citadel_ability_tengu_urn", "ability:citadel_ability_tengu_stone_form", "hero:hero_atlas"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-015",
+    "kind": "buy",
+    "hero": "hero_chrono",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_titan_round", "upgrade_regenerating_bullet_shield", "upgrade_improved_spirit", "upgrade_sprint_booster", "upgrade_high_velocity_mag"],
+    "enemies": [
+      { "hero": "hero_atlas", "items": ["upgrade_boxing_glove", "upgrade_melee_charge"], "note": { "ru": "Бьёт тяжёлыми ударами ближнего боя." } },
+      { "hero": "hero_punkgoat", "note": { "ru": "Bashdown и удары битой." } },
+      { "hero": "hero_yamato", "note": { "ru": "Flying Slash: рывок и удар ближнего боя." } }
+    ],
+    "situation": { "ru": "Середина игры. В тебя по очереди врываются Abrams, Billy и Yamato и бьют вплотную: тяжёлые удары кулаком, Bashdown битой, Flying Slash. Battle Vest у тебя уже есть, но здоровье всё равно тает. В отчёте о смерти больше всего урона ближнего боя. У тебя 3600 душ." },
+    "question": { "ru": "Какая защита закроет этот урон?" },
+    "problemTags": ["enemy-melee", "enemy-dive", "you-die-fast"],
+    "options": [
+      { "item": "upgrade_tech_damage_pulse", "score": 82, "verdict": "best", "why": { "ru": "+22% Melee Resist и +100 здоровья против урона ближнего боя, а пульс каждые 1.4 с бьёт спирит-уроном двух ближайших врагов в 9 м, то есть тех, кто к тебе подошёл. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_melee_rebuttal", "score": 70, "verdict": "good", "why": { "ru": "+18% Melee Resist и +75 здоровья всего за 800, а удачное парирование лечит тебя на весь парированный урон и возвращает его врагу. Самый дешёвый ответ, но основная ценность - в парированиях." }, "betterWhen": { "ru": "Если ты уверенно парируешь тяжёлые удары или душ мало." } },
+      { "item": "upgrade_improved_bullet_armor", "score": 25, "verdict": "weak", "why": { "ru": "+35% Bullet Resist защищает от пуль, а для ближнего боя в данных есть отдельная характеристика, Melee Resist." }, "betterWhen": { "ru": "Против стрелков, особенно если ты часто оказываешься ниже 50% здоровья." } },
+      { "item": "upgrade_metal_skin", "score": 15, "verdict": "bad", "why": { "ru": "Иммунитет только к пулям, а тебя бьют кулаками, битой и мечом." }, "betterWhen": { "ru": "Против оружейного урона: Haze, Wraith, Vindicta." } }
+    ],
+    "principle": { "ru": "Ближний бой - отдельный тип урона со своей защитой, Melee Resist. Пулевая броня тут не главное." },
+    "mechanics": [
+      { "text": { "ru": "Torment Pulse: +100 здоровья, +22% Melee Resist; каждые 1.4 с наносит спирит-урон двум ближайшим врагам в радиусе 9 м." }, "status": "data" },
+      { "text": { "ru": "Rebuttal: +18% Melee Resist; удачное парирование лечит на парированный урон и возвращает его атакующему." }, "status": "data" },
+      { "text": { "ru": "Metal Skin даёт иммунитет только к пулям." }, "status": "data" },
+      { "text": { "ru": "Снижает ли Bullet Resist урон ближнего боя, в данных не указано: у предметов Melee Resist указан отдельной характеристикой." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Смерть от урона ближнего боя трёх бойцов." },
+      "solutions": [{ "ru": "Поднять Melee Resist" }, { "ru": "Парировать тяжёлые удары" }, { "ru": "Наказывать тех, кто подошёл вплотную" }],
+      "constraints": [{ "ru": "3600 душ" }, { "ru": "Battle Vest уже есть и не помогает" }, { "ru": "Бойцы заходят по очереди" }],
+      "choice": { "ru": "Torment Pulse: Melee Resist, здоровье и урон по тем, кто стоит рядом." },
+      "consequences": [{ "ru": "Учись парировать: позже Rebuttal станет дешёвым дополнением." }, { "ru": "Против стрелков всё равно понадобится Bullet Resist." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "resist"],
+    "dims": ["counter", "effect"],
+    "sources": ["item:upgrade_tech_damage_pulse", "item:upgrade_melee_rebuttal", "item:upgrade_improved_bullet_armor", "item:upgrade_metal_skin", "ability:ability_punkgoat_ult", "ability:citadel_ability_flying_strike", "hero:hero_atlas", "hero:hero_punkgoat"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-016",
+    "kind": "buy",
+    "hero": "hero_vampirebat",
+    "phase": "early-mid",
+    "souls": 3600,
+    "owned": ["upgrade_soaring_spirit", "upgrade_magic_shield", "upgrade_extra_charge", "upgrade_sprint_booster", "upgrade_magic_burst"],
+    "enemies": [
+      { "hero": "hero_bebop", "note": { "ru": "Grapple Arm притягивает первого, в кого попадёт." } },
+      { "hero": "hero_doorman", "note": { "ru": "Luggage Cart тащит героев за собой." } },
+      { "hero": "hero_astro" }
+    ],
+    "situation": { "ru": "Bebop постоянно ловит тебя Grapple Arm: механическая рука притягивает тебя к нему, дальше Exploding Uppercut подбрасывает, Sticky Bomb взрывается, и ты погибаешь, не успев применить Sanguine Retreat. Это не стан и не обездвиживание: тебя просто подтягивают. Иногда то же делает Luggage Cart от The Doorman. У тебя 3600 душ." },
+    "question": { "ru": "Какой предмет отвечает на притягивание?" },
+    "problemTags": ["enemy-pull", "enemy-burst-combo", "you-get-caught"],
+    "options": [
+      { "item": "upgrade_counterspell", "score": 82, "verdict": "best", "why": { "ru": "Следующее парирование защищает от урона и эффектов вражеских способностей и предметов. Парируешь руку Bebop, и притягивания нет, а значит нет и всей комбинации. За успешное парирование ты ещё лечишься и получаешь скорость и духовную силу. Окно 0.8 с, перезарядка 23 с." } },
+      { "item": "upgrade_tech_purge", "score": 62, "verdict": "good", "why": { "ru": "Sticky Bomb наносит спирит-урон, и +30% Spirit Resist сделает комбинацию менее смертельной. Но Exploding Uppercut бьёт ближним боем, а притягивать тебя будут так же." }, "betterWhen": { "ru": "Если ты плохо читаешь бросок руки и не уверен в парировании." } },
+      { "item": "upgrade_reduce_debuff_duration", "score": 30, "verdict": "weak", "why": { "ru": "Снимает висящие негативные эффекты, но притягивание мгновенное: снимать после него нечего, а комбинация уже идёт." }, "betterWhen": { "ru": "Против замедлений, обездвиживания и урона по времени." } },
+      { "item": "upgrade_vex_barrier", "score": 25, "verdict": "weak", "why": { "ru": "Барьер появляется при Stun, Chain, Immobilize, Sleep или Silence. Притягивания в этом списке нет, так что на руку Bebop предмет не реагирует." }, "betterWhen": { "ru": "Против станов и обездвиживания." } },
+      { "item": "upgrade_unstoppable", "score": 20, "verdict": "weak", "why": { "ru": "Иммунитет к Stun, Silence, Sleep, Root и Disarm; притягивания в списке нет, а стоит он 6400." }, "betterWhen": { "ru": "В поздней игре против станов и сна, если включаешь его заранее." } }
+    ],
+    "principle": { "ru": "Притягивание - не статус: его не очистить и не переждать барьером на контроль, его нужно не получить." },
+    "mechanics": [
+      { "text": { "ru": "Grapple Arm притягивает первого персонажа, в которого попадёт; Exploding Uppercut наносит урон ближнего боя и отбрасывает; Sticky Bomb наносит спирит-урон после задержки." }, "status": "data" },
+      { "text": { "ru": "Counterspell: следующее парирование защищает от урона и эффектов вражеских способностей и предметов; окно 0.8 с, перезарядка 23 с." }, "status": "data" },
+      { "text": { "ru": "Reactive Barrier срабатывает при Stun, Chain, Immobilize, Sleep или Silence." }, "status": "data" },
+      { "text": { "ru": "Защищает ли Unstoppable от притягивания, в данных не сказано: в его списке притягивания нет." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Притягивание запускает смертельную комбинацию." },
+      "solutions": [{ "ru": "Не получить притягивание: парирование" }, { "ru": "Пережить комбинацию резистом" }, { "ru": "Держаться вне дальности руки" }],
+      "constraints": [{ "ru": "3600 душ" }, { "ru": "Притягивание - не статус, очищать нечего" }, { "ru": "Комбинация смешанная: ближний бой и спирит-урон" }],
+      "choice": { "ru": "Counterspell: отменяет начало комбинации целиком." },
+      "consequences": [{ "ru": "Парирование тратится на первую способность: не трать его на мелочь перед броском руки." }, { "ru": "Если парировать не получается, следующим бери Spirit Resilience." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "cc"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_counterspell", "item:upgrade_tech_purge", "item:upgrade_vex_barrier", "item:upgrade_unstoppable", "item:upgrade_reduce_debuff_duration", "ability:citadel_ability_hook", "ability:citadel_ability_uppercut", "ability:citadel_ability_sticky_bomb", "ability:ability_doorman_luggage_cart"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-017",
+    "kind": "buy",
+    "hero": "hero_bookworm",
+    "phase": "mid",
+    "souls": 3300,
+    "owned": ["upgrade_grit", "upgrade_improved_spirit", "upgrade_magic_shield", "upgrade_health_stimpak", "upgrade_sprint_booster"],
+    "enemies": [
+      { "hero": "hero_werewolf", "items": ["upgrade_cloaking_device_active"], "note": { "ru": "Купил Shadow Weave." } },
+      { "hero": "hero_viscous" },
+      { "hero": "hero_mirage" }
+    ],
+    "situation": { "ru": "Середина игры. Silver купил предмет на невидимость и охотится на тебя: ты стоишь позади команды, и он вдруг появляется рядом с усиленным уроном оружия, Slam Fire разряжает в тебя обойму, и через пару секунд ты погибаешь. Откуда он придёт, ты не видишь и не успеваешь среагировать. Урон в отчёте о смерти почти полностью оружейный. У тебя 3300 душ." },
+    "question": { "ru": "Что купить против таких засад?" },
+    "problemTags": ["enemy-stealth", "enemy-gun-dps", "you-die-fast"],
+    "options": [
+      { "item": "upgrade_weapon_shielding", "score": 84, "verdict": "best", "why": { "ru": "Срабатывает сам: если за 4 с получаешь 250+ урона оружием, появляется барьер 300, плюс постоянные +18% Bullet Resist. Засаду не нужно видеть заранее. Grit уже куплен, доплата всего 800, и остаются души на следующий предмет." } },
+      { "item": "upgrade_metal_skin", "score": 68, "verdict": "good", "why": { "ru": "Полный иммунитет к пулям на 5 с сильнее против Slam Fire, но его нужно успеть нажать, а засада начинается внезапно. Успел в первую секунду - засада проваливается." }, "betterWhen": { "ru": "Если ты замечаешь заход заранее или урон приходит долгой серией, а не одной обоймой." } },
+      { "item": "upgrade_weapon_backstabber", "score": 25, "verdict": "weak", "why": { "ru": "Подсвечивает врагов сквозь стены, но только после того, как ты ранишь их оружием вблизи. Невидимого Silver до засады он не найдёт." }, "betterWhen": { "ru": "На бойце ближнего боя, который сам охотится за убегающими целями." } },
+      { "item": "upgrade_spirit_bubble", "score": 15, "verdict": "bad", "why": { "ru": "Такой же дешёвый апгрейд Grit, но барьер срабатывает от спирит-урона, а засада оружейная." }, "betterWhen": { "ru": "Против засад со спирит-бурстом, например от Pocket." } }
+    ],
+    "principle": { "ru": "Против невидимой засады нужна защита, которая срабатывает сама, а не та, которую надо успеть нажать." },
+    "mechanics": [
+      { "text": { "ru": "Shadow Weave: невидимость; получив урон, владелец ненадолго раскрывается; атака или способность снимает невидимость и запускает засаду: +50% урона оружия и +25 духовной силы на 5 с." }, "status": "data" },
+      { "text": { "ru": "Weapon Shielding: +18% Bullet Resist и барьер 300, если за 4 с получено 250+ урона оружием от героев; перезарядка 35 с; улучшается из Grit." }, "status": "data" },
+      { "text": { "ru": "Slam Fire мгновенно перезаряжает оружие и на несколько выстрелов даёт скорострельность и бонус урона оружия от здоровья цели." }, "status": "data" },
+      { "text": { "ru": "Stalker раскрывает врагов сквозь стены только после твоего урона оружием вблизи." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Невидимый враг убивает тебя оружием раньше, чем ты успеваешь среагировать." },
+      "solutions": [{ "ru": "Автоматическая защита от оружейного урона" }, { "ru": "Активная защита от пуль" }, { "ru": "Найти врага до засады" }],
+      "constraints": [{ "ru": "3300 душ" }, { "ru": "Grit уже есть" }, { "ru": "Засада внезапная: на реакцию нет времени" }],
+      "choice": { "ru": "Weapon Shielding: барьер появляется сам в момент засады." },
+      "consequences": [{ "ru": "Барьер раз в 35 с: вторая засада подряд будет опаснее." }, { "ru": "Позже можно добавить Metal Skin как второй слой защиты." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "stealth"],
+    "dims": ["counter", "build"],
+    "sources": ["item:upgrade_weapon_shielding", "item:upgrade_metal_skin", "item:upgrade_weapon_backstabber", "item:upgrade_spirit_bubble", "item:upgrade_cloaking_device_active", "ability:ability_werewolf_unloadgun", "hero:hero_werewolf"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-018",
+    "kind": "buy",
+    "hero": "hero_necro",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_medic_bullets", "upgrade_chain_lightning", "upgrade_improved_stamina", "upgrade_crackshot", "upgrade_weapon_shielding", "upgrade_soaring_spirit"],
+    "enemies": [
+      { "hero": "hero_inferno", "note": { "ru": "Flame Dash: рывок с сопротивлением замедлению." } },
+      { "hero": "hero_shiv" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "Середина игры. Infernus поджигает твою команду и уходит Flame Dash: рывок вперёд, за ним огненный след, и Deadheads не успевают его догрызть. Ты пробовал его замедлять, но во время рывка замедление на него почти не действует. Grasping Hands он просто обходит стороной. У тебя 3500 душ." },
+    "question": { "ru": "Что купить, чтобы Infernus перестал уходить?" },
+    "problemTags": ["enemy-high-mobility", "you-cant-catch"],
+    "options": [
+      { "item": "upgrade_containment", "score": 85, "verdict": "best", "why": { "ru": "Накладывает немоту на способности и предметы передвижения, а Flame Dash в данных помечен как способность передвижения: пока висят чары, рывок не применить. Плюс замедление и повышенная гравитация. Стоит 1600, и остаются души. Вешай, пока он поджигает вас, до рывка." } },
+      { "item": "upgrade_magic_slow", "score": 50, "verdict": "ok", "why": { "ru": "Deadheads постоянно наносят спирит-урон, так что замедление держалось бы почти всё время. Но во время Flame Dash у Infernus есть сопротивление замедлению, а сам рывок остаётся доступен." }, "betterWhen": { "ru": "Против бегунов без рывков и без сопротивления замедлению, которых Deadheads кусают весь бой." } },
+      { "item": "upgrade_slowing_bullets", "score": 40, "verdict": "ok", "why": { "ru": "Замедление копится от твоих попаданий лучом, но рывок снова уводит Infernus, а сопротивление замедлению во время Flame Dash работает против этого предмета." }, "betterWhen": { "ru": "Против целей, которые убегают пешком в зоне твоего луча." } },
+      { "item": "upgrade_cardio_calibrator", "score": 10, "verdict": "bad", "why": { "ru": "Уменьшает замедления на тебе и даёт скорость, но не мешает Infernus уходить." }, "betterWhen": { "ru": "Если это тебя замедляют и догоняют." } }
+    ],
+    "principle": { "ru": "Против рывка с сопротивлением замедлению работает запрет передвижения, а не замедление." },
+    "mechanics": [
+      { "text": { "ru": "Flame Dash: рывок вперёд, во время которого Infernus получает сопротивление замедлению; в данных помечен как способность передвижения." }, "status": "data" },
+      { "text": { "ru": "Slowing Hex: замедление, немота предметов и способностей передвижения, повышенная гравитация; 25 м, 3.5 с, перезарядка 29 с." }, "status": "data" },
+      { "text": { "ru": "Mystic Slow замедляет цель при получении спирит-урона: 24% скорости на 2 с." }, "status": "data" },
+      { "text": { "ru": "Deadheads из Jar of Dead раз за разом наносят спирит-урон врагам." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Цель с рывком уходит из любой драки." },
+      "solutions": [{ "ru": "Запретить рывок" }, { "ru": "Замедлить цель" }, { "ru": "Перекрыть путь Grasping Hands" }],
+      "constraints": [{ "ru": "3500 душ" }, { "ru": "Во время рывка у Infernus есть сопротивление замедлению" }, { "ru": "Grasping Hands он обходит" }],
+      "choice": { "ru": "Slowing Hex: немота передвижения не даёт начать рывок." },
+      "consequences": [{ "ru": "Вешай чары до рывка: после него Infernus уже далеко." }, { "ru": "Сэкономленные души пойдут на урон или защиту от поджога." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "mobility", "graves"],
+    "dims": ["counter", "synergy"],
+    "sources": ["item:upgrade_containment", "item:upgrade_magic_slow", "item:upgrade_slowing_bullets", "item:upgrade_cardio_calibrator", "ability:ability_flame_dash", "ability:ability_necro_hauntingskull", "ability:ability_necro_zombiewall", "hero:hero_inferno"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-019",
+    "kind": "buy",
+    "hero": "hero_necro",
+    "phase": "late",
+    "souls": 7200,
+    "owned": ["upgrade_chain_lightning", "upgrade_superior_stamina", "upgrade_toxic_bullets", "upgrade_magic_shield", "upgrade_magic_vulnerability", "upgrade_health_stealing_magic", "upgrade_tech_damage_pulse", "upgrade_soaring_spirit", "upgrade_weapon_shielding"],
+    "enemies": [
+      { "hero": "hero_atlas", "items": ["upgrade_tech_purge", "upgrade_colossus"], "note": { "ru": "Colossus и Spirit Resilience." } },
+      { "hero": "hero_warden", "note": { "ru": "Last Stand: высокие резисты во время канала." } },
+      { "hero": "hero_viscous", "note": { "ru": "Goo Ball: большие Bullet и Spirit Resist." } },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "Поздняя игра. У врага три толстых бойца в первой линии: Abrams с Colossus и Spirit Resilience, Warden и Viscous. Твои Deadheads и призраки висят на них весь бой, но полоска здоровья почти не двигается. Toxic Bullets у тебя уже есть, Mystic Vulnerability тоже. У тебя 7200 душ." },
+    "question": { "ru": "Что купить, чтобы продавить их первую линию?" },
+    "problemTags": ["enemy-tanky", "you-lack-damage", "teamfight"],
+    "options": [
+      { "item": "upgrade_escalating_exposure", "score": 86, "verdict": "best", "why": { "ru": "Каждый твой спирит-урон по цели добавляет стак Spirit Amp: +4.5% к твоему спирит-урону по ней, до 12 стаков, не чаще раза в 0.7 с на цель. Deadheads бьют постоянно, поэтому стаки набираются на каждом танке, по которому идёт урон. Mystic Vulnerability уже есть: улучшение стоит 4800." } },
+      { "item": "upgrade_spirit_burn", "score": 62, "verdict": "good", "why": { "ru": "Взрыв и горение после 500 спирит-урона за 5 с и -70% к лечению. Но танки держатся на резистах и запасе здоровья, а не на лечении, и это 6400 против 4800." }, "betterWhen": { "ru": "Если враги переживают за счёт лечения: Abrams с Siphon Life, поддержка-лекарь." } },
+      { "item": "upgrade_magic_shock", "score": 45, "verdict": "ok", "why": { "ru": "Игнорирует Spirit Resist и добавляет урон от текущего здоровья, но срабатывает только на способности, которая наносит больше 165 урона за раз, и копит заряд 14 с. Твой основной урон - частые попадания Deadheads, а не один крупный удар." }, "betterWhen": { "ru": "На бурст-кастере, который бьёт одной крупной способностью: Grey Talon, Lady Geist, Seven." } },
+      { "item": "upgrade_aprounds", "score": 30, "verdict": "weak", "why": { "ru": "Пули игнорируют Bullet Resist с шансом 60%, но твой урон в основном спиритический, а луч бьёт на короткой дистанции." }, "betterWhen": { "ru": "На оружейном керри, против которого танк собрал броню от пуль." } }
+    ],
+    "principle": { "ru": "Против танков бери усиление, которое растёт от твоего самого частого источника урона." },
+    "mechanics": [
+      { "text": { "ru": "Escalating Exposure: спирит-урон вешает стакающийся Spirit Amp +4.5% за стак, до 12 стаков на 12 с, не чаще раза в 0.7 с на цель; +17% Spirit Resist; улучшается из Mystic Vulnerability." }, "status": "data" },
+      { "text": { "ru": "Tankbuster срабатывает на способностях, наносящих больше 165 урона, заряжается 14 с, игнорирует Spirit Resist и добавляет 7.5% текущего здоровья цели." }, "status": "data" },
+      { "text": { "ru": "Spirit Burn: после 500 спирит-урона за 5 с взрыв, горение и -70% к входящему лечению." }, "status": "data" },
+      { "text": { "ru": "Colossus даёт +35% Bullet и Spirit Resist на 7 с; Spirit Resilience: +30% Spirit Resist." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Танки первой линии не продавливаются твоим уроном." },
+      "solutions": [{ "ru": "Усилить свой урон по цели" }, { "ru": "Срезать резисты" }, { "ru": "Бить уроном от здоровья цели" }],
+      "constraints": [{ "ru": "Основной урон - частые спирит-попадания Deadheads" }, { "ru": "Mystic Vulnerability уже есть" }, { "ru": "7200 душ" }],
+      "choice": { "ru": "Escalating Exposure: стаки растут от каждого попадания Deadheads, а улучшение дешевле на 1600." },
+      "consequences": [{ "ru": "Держи урон на одной цели: стаки висят на конкретном враге 12 с." }, { "ru": "Против активного Colossus по возможности переключись на другую цель на его 7 с." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "tank", "graves"],
+    "dims": ["build", "synergy"],
+    "sources": ["item:upgrade_escalating_exposure", "item:upgrade_magic_shock", "item:upgrade_spirit_burn", "item:upgrade_aprounds", "item:upgrade_colossus", "item:upgrade_tech_purge", "ability:ability_necro_hauntingskull", "ability:ability_warden_riot_protocol", "ability:viscous_goo_bowling_ball"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-020",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3500,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_sharpshooter"],
+    "enemies": [
+      { "hero": "hero_atlas", "items": ["upgrade_improved_bullet_armor"], "note": { "ru": "Собрал Bullet Resilience." } },
+      { "hero": "hero_bebop" },
+      { "hero": "hero_kelvin" }
+    ],
+    "situation": { "ru": "Середина игры. Abrams купил Bullet Resilience и стоит впереди своей команды. Твои пули с дальней дистанции почти не снимают ему здоровье, а Infernal Resilience возвращает часть урона регенерацией. Ты стреляешь из-за спин союзников, обычно дальше 15 м, чтобы работал бонус Sharpshooter. У тебя 3500 душ." },
+    "question": { "ru": "Что купить, чтобы снова пробивать Abrams?" },
+    "problemTags": ["enemy-tanky", "you-lack-damage"],
+    "options": [
+      { "item": "upgrade_toxic_bullets", "score": 82, "verdict": "best", "why": { "ru": "Кровотечение отнимает процент от максимального здоровья, так что огромный запас здоровья Abrams работает против него самого, а на кровоточащей цели -40% к входящему лечению. Работает на любой дистанции и копится от твоей частой стрельбы. Стоит 3200, по бюджету." } },
+      { "item": "upgrade_headshot_booster2", "score": 70, "verdict": "good", "why": { "ru": "Попадание в голову снижает Bullet Resist на 12% на 12 с с любой дистанции. Дешевле и позже улучшается в Crippling Headshot. Но нужны стабильные хедшоты." }, "betterWhen": { "ru": "Если ты уверенно попадаешь в голову и хочешь сэкономить или собрать Crippling Headshot." } },
+      { "item": "upgrade_greater_withering_whip", "score": 45, "verdict": "ok", "why": { "ru": "С 32 м снижает Bullet Resist на 13% и обезоруживает на 4.25 с. Но эффект короткий, а Abrams опасен в основном способностями и ближним боем." }, "betterWhen": { "ru": "Если у врага есть стрелок, которого нужно выключить на время фокуса." } },
+      { "item": "upgrade_aprounds", "score": 30, "verdict": "weak", "why": { "ru": "С шансом 60% пули игнорируют Bullet Resist - идеальный ответ на броню, но 6400 при 3500 душ." }, "betterWhen": { "ru": "В поздней игре, когда есть 6400 душ." } },
+      { "item": "upgrade_bullet_armor_reduction_aura", "score": 25, "verdict": "weak", "why": { "ru": "Снижает Bullet Resist врагам в радиусе 15 м вокруг тебя, а бонус Sharpshooter работает только дальше 15 м. Чтобы аура работала, придётся встать рядом с Abrams и потерять бонус дальней дистанции." }, "betterWhen": { "ru": "На герое, который воюет вблизи: Abrams, Shiv, Yamato." } }
+    ],
+    "principle": { "ru": "Против брони выбирай средство, которое работает на твоей дистанции." },
+    "mechanics": [
+      { "text": { "ru": "Hunter's Aura действует в радиусе 15 м; Sharpshooter даёт бонус урона только дальше 15 м от цели." }, "status": "data" },
+      { "text": { "ru": "Toxic Bullets: кровотечение от процента максимального здоровья и -40% к входящему лечению на кровоточащей цели." }, "status": "data" },
+      { "text": { "ru": "Weakening Headshot: хедшот снижает Bullet Resist на 12% на 12 с. Armor Piercer: шанс 60% игнорировать Bullet Resist, стоит 6400." }, "status": "data" },
+      { "text": { "ru": "Bullet Resilience: +35% Bullet Resist, ниже 50% здоровья ещё +15%." }, "status": "data" },
+      { "text": { "ru": "Режет ли срез лечения регенерацию от Infernal Resilience, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Броня Abrams гасит твой дальнобойный урон." },
+      "solutions": [{ "ru": "Урон от процента здоровья" }, { "ru": "Снизить Bullet Resist" }, { "ru": "Игнорировать Bullet Resist" }],
+      "constraints": [{ "ru": "3500 душ" }, { "ru": "Ты стреляешь дальше 15 м ради Sharpshooter" }, { "ru": "Abrams регенерирует" }],
+      "choice": { "ru": "Toxic Bullets: работает на любой дистанции и бьёт тем сильнее, чем больше у цели здоровья." },
+      "consequences": [{ "ru": "Позже добавь Armor Piercer или Crippling Headshot." }, { "ru": "Не подходи к Abrams ближе 15 м ради ауры: потеряешь бонус дальности." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "tank", "vindicta"],
+    "dims": ["build", "synergy", "counter"],
+    "sources": ["item:upgrade_toxic_bullets", "item:upgrade_headshot_booster2", "item:upgrade_greater_withering_whip", "item:upgrade_aprounds", "item:upgrade_bullet_armor_reduction_aura", "item:upgrade_sharpshooter", "item:upgrade_improved_bullet_armor", "ability:citadel_ability_passive_beefy", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-021",
+    "kind": "buy",
+    "hero": "hero_krill",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_chonky", "upgrade_tech_purge", "upgrade_cooldown_reduction", "upgrade_improved_bullet_armor", "upgrade_health_stealing_magic", "upgrade_superior_stamina"],
+    "enemies": [
+      { "hero": "hero_gigawatt", "note": { "ru": "Storm Cloud: канал с уроном по площади." } },
+      { "hero": "hero_bebop", "note": { "ru": "Hyper Beam: канал с уроном и замедлением." } },
+      { "hero": "hero_dynamo", "note": { "ru": "Singularity: канал со станом и притягиванием." } }
+    ],
+    "situation": { "ru": "Поздняя игра. Враги выигрывают драки ультимейтами с каналом: Dynamo открывает Singularity, Seven поднимает Storm Cloud, Bebop добавляет Hyper Beam. Пока идёт канал, твоя команда тает. Ты хочешь гарантированно сбивать хотя бы один из этих каналов. У тебя 7000 душ." },
+    "question": { "ru": "Какой предмет надёжно прерывает канал?" },
+    "problemTags": ["enemy-channel-ult", "teamfight"],
+    "options": [
+      { "item": "upgrade_glitch", "score": 85, "verdict": "best", "why": { "ru": "В описании прямо сказано: проклятие прерывает, накладывает немоту, обезоруживает и запрещает предметы. Наводишь на Seven или Bebop в начале канала, и ультимейт обрывается. Минусы: перезарядка 55 с, дальность 20 м и -25% к твоему урону на 3.25 с." } },
+      { "item": "upgrade_target_stun", "score": 45, "verdict": "ok", "why": { "ru": "Стан прилетает только через 2 с, а прерывает ли стан канал, в данных прямо не сказано. Против коротких каналов может не успеть." }, "betterWhen": { "ru": "Если нужно дальнобойное оглушение на 45 м или цель в воздухе." } },
+      { "item": "upgrade_unstoppable", "score": 25, "verdict": "weak", "why": { "ru": "Защищает тебя от стана Singularity, но урон каналов проходит, и команду предмет не спасает." }, "betterWhen": { "ru": "Если ультимейты в основном держат тебя станом, а их урон невелик." } },
+      { "item": "upgrade_targeted_silence", "score": 15, "verdict": "bad", "why": { "ru": "Ловушка: в описании прямо сказано, что эта немота не прерывает способности с каналом. Ультимейт, который уже идёт, продолжится." }, "betterWhen": { "ru": "Чтобы не дать врагам начать ультимейт: немота до начала канала." } }
+    ],
+    "principle": { "ru": "Не каждая немота прерывает канал. Читай описание: прерывание должно быть написано прямо." },
+    "mechanics": [
+      { "text": { "ru": "Cursed Relic: проклятие прерывает, накладывает немоту, обезоруживает, запрещает предметы и снимает неультимативные баффы; 20 м, 3.25 с, перезарядка 55 с, твой урон -25% на время эффекта." }, "status": "data" },
+      { "text": { "ru": "Silence Wave: немота по площади, которая не прерывает способности с каналом." }, "status": "data" },
+      { "text": { "ru": "Singularity, Storm Cloud и Hyper Beam - ультимейты с каналом. Storm Cloud не наносит урон врагам вне прямой видимости." }, "status": "data" },
+      { "text": { "ru": "Прерывает ли стан от Knockdown канал, в данных прямо не сказано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Ультимейты с каналом выигрывают каждую драку." },
+      "solutions": [{ "ru": "Прервать канал" }, { "ru": "Не дать начать канал" }, { "ru": "Уйти из зоны или из прямой видимости" }],
+      "constraints": [{ "ru": "7000 душ" }, { "ru": "Три разных канала" }, { "ru": "Нужен гарантированный эффект" }],
+      "choice": { "ru": "Cursed Relic: прерывание прямо указано в описании." },
+      "consequences": [{ "ru": "Один Relic на 55 с: выбирай самый опасный канал." }, { "ru": "Против Storm Cloud без предмета: уходи за стену, вне прямой видимости урона нет." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "ult", "cc"],
+    "dims": ["mechanics", "counter"],
+    "sources": ["item:upgrade_glitch", "item:upgrade_targeted_silence", "item:upgrade_target_stun", "item:upgrade_unstoppable", "ability:citadel_ability_storm_cloud", "ability:citadel_ability_bebop_laser_beam", "ability:citadel_ability_self_vacuum", "hero:hero_krill"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-022",
+    "kind": "diagnose-buy",
+    "hero": "hero_gigawatt",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_soaring_spirit", "upgrade_magic_tempo", "upgrade_healbane", "upgrade_magic_shield", "upgrade_extra_charge"],
+    "enemies": [
+      { "hero": "hero_bookworm", "note": { "ru": "Plot Armor: барьер союзнику и бонус урона оружия." } },
+      { "hero": "hero_chessmaster", "note": { "ru": "Kingside Knight: барьер союзнику." } },
+      { "hero": "hero_haze" }
+    ],
+    "situation": { "ru": "Середина игры. Ты купил Healbane, решив, что враги лечатся, но драки не изменились. Ты попадаешь Lightning Ball и Static Charge по Haze, но первые сотни урона уходят в дополнительную полоску поверх её здоровья, а пока полоска держится, Haze бьёт сильнее обычного. Через несколько секунд полоска исчезает, но твой бурст к этому моменту уже закончился. У тебя 3600 душ." },
+    "symptoms": [
+      { "ru": "Healbane не меняет исход драк." },
+      { "ru": "Дополнительная полоска появляется на цели прямо перед твоим бурстом." },
+      { "ru": "Пока полоска держится, Haze наносит больше урона оружием." }
+    ],
+    "question": { "ru": "Что купить, чтобы барьеры перестали спасать цель?" },
+    "problemTags": ["enemy-barriers", "you-lack-damage"],
+    "diagnosis": {
+      "prompt": { "ru": "Что на самом деле спасает Haze?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Барьеры от поддержки: Plot Armor от Paige и Kingside Knight от Solomon. Барьер - не лечение, и Healbane его не режет." }, "correct": true, "why": { "ru": "Полоска поглощает урон до здоровья и исчезает через несколько секунд, а вместе с ней пропадает бонус урона: так работает Plot Armor." } },
+        { "id": "b", "text": { "ru": "Сильное лечение, просто Healbane мало." }, "correct": false, "why": { "ru": "Лечение возвращает уже потерянное здоровье, а здесь урон поглощается раньше, чем доходит до здоровья." } },
+        { "id": "c", "text": { "ru": "У Haze высокий Spirit Resist." }, "correct": false, "why": { "ru": "Резист уменьшал бы урон всё время, а не только первые сотни урона в течение нескольких секунд." } },
+        { "id": "d", "text": { "ru": "Вампиризм Haze от пуль." }, "correct": false, "why": { "ru": "Вампиризм лечит от нанесённого урона, а полоска появляется ещё до того, как Haze начинает стрелять." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_targeted_silence", "score": 80, "verdict": "best", "why": { "ru": "Расширяющийся снаряд на 40 м накладывает немоту на всех, кого заденет. Открой драку им по Paige и Solomon: под немотой они не смогут дать новый барьер, и твой бурст дойдёт до здоровья Haze. Учти: уже начатые каналы немота не прерывает." } },
+      { "item": "upgrade_magic_vulnerability", "score": 45, "verdict": "ok", "why": { "ru": "Усиливает твой спирит-урон по цели через снижение Spirit Resist, но барьеры по-прежнему съедают начало бурста." }, "betterWhen": { "ru": "Против целей, которые переживают бурст за счёт Spirit Resist." } },
+      { "item": "upgrade_magic_shock", "score": 40, "verdict": "ok", "why": { "ru": "Добавляет урон от текущего здоровья и игнорирует Spirit Resist, но барьер всё равно появляется в момент твоего бурста." }, "betterWhen": { "ru": "Против танков с высоким Spirit Resist без поддержки." } },
+      { "item": "upgrade_rupture", "score": 25, "verdict": "weak", "why": { "ru": "Ещё один анти-хил: барьер - не лечение, и проблема останется." }, "betterWhen": { "ru": "Против цели, которая переживает за счёт лечения или вампиризма." } }
+    ],
+    "principle": { "ru": "Барьер - не лечение. Против барьеров выключай их источник или пережидай их длительность, а не режь лечение." },
+    "mechanics": [
+      { "text": { "ru": "Plot Armor даёт союзнику барьер на 5 с, и пока барьер держится, союзник наносит больше урона оружием; перезарядка 28 с." }, "status": "data" },
+      { "text": { "ru": "Kingside Knight даёт союзнику барьер и выносливость." }, "status": "data" },
+      { "text": { "ru": "Healbane снижает входящее лечение врага; про барьеры в его описании ничего нет." }, "status": "data" },
+      { "text": { "ru": "Silence Wave: расширяющийся снаряд с немотой по площади, дальность 40 м, перезарядка 42 с; не прерывает способности с каналом." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Барьеры поддержки поглощают твой бурст." },
+      "solutions": [{ "ru": "Не дать поддержке поставить барьер" }, { "ru": "Переждать барьер и бить после" }, { "ru": "Больше урона, чтобы пробить барьер" }],
+      "constraints": [{ "ru": "3600 душ" }, { "ru": "Healbane уже куплен и не помогает" }, { "ru": "Два источника барьеров" }],
+      "choice": { "ru": "Silence Wave: немота по площади выключает обоих поддержек на начало драки." },
+      "consequences": [{ "ru": "Кидай немоту до своего бурста, а не после." }, { "ru": "Если барьер уже стоит, переключись на другую цель или подожди: Plot Armor держится 5 с." }]
+    },
+    "difficulty": 3,
+    "tags": ["general", "barrier"],
+    "dims": ["mechanics", "counter", "situation"],
+    "sources": ["item:upgrade_targeted_silence", "item:upgrade_healbane", "item:upgrade_magic_vulnerability", "item:upgrade_magic_shock", "item:upgrade_rupture", "ability:ability_bookworm_knightbarrier", "ability:ability_chessmaster_knightbuff", "hero:hero_bookworm", "hero:hero_chessmaster"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-023",
+    "kind": "active-timing",
+    "hero": "hero_atlas",
+    "phase": "late",
+    "souls": 6800,
+    "owned": ["upgrade_colossus", "upgrade_glitch", "upgrade_tech_purge", "upgrade_boxing_glove", "upgrade_melee_charge", "upgrade_improved_bullet_armor"],
+    "enemies": [
+      { "hero": "hero_necro", "note": { "ru": "Поставил Borrowed Decree." } },
+      { "hero": "hero_forge" },
+      { "hero": "hero_wraith" }
+    ],
+    "situation": { "ru": "Поздняя игра, драка у вашей базы. Graves ставит Borrowed Decree: надгробие рядом с твоей командой, из которого постоянно появляются призраки. Они идут к вам и взрываются спирит-уроном с замедлением, когда подходят к героям. Сам Graves стоит позади своих. Ты в 8 м от надгробия, Shoulder Charge и Cursed Relic готовы." },
+    "question": { "ru": "Что сделать первым?" },
+    "problemTags": ["enemy-summons", "teamfight", "objective-pressure"],
+    "options": [
+      { "action": { "ru": "Подойти к надгробию и разбить его двумя тяжёлыми ударами" }, "score": 88, "verdict": "best", "why": { "ru": "По описанию надгробие разрушается двумя тяжёлыми ударами ближнего боя. Ты рядом и силён вблизи: пара ударов убирает источник призраков на всю оставшуюся длительность ультимейта, а это до 16 с." } },
+      { "action": { "ru": "Отойти с командой и отбиваться от призраков, пока ультимейт не закончится" }, "score": 40, "verdict": "ok", "why": { "ru": "Призраки взрываются только рядом с героями, так что отступление уменьшит урон. Но Borrowed Decree длится 16 с, и всё это время вы отдаёте территорию у своей базы." }, "betterWhen": { "ru": "Если у надгробия стоит вся вражеская команда и подойти значит умереть." } },
+      { "item": "upgrade_glitch", "action": { "ru": "Проклясть Graves через Cursed Relic, чтобы сбить ультимейт" }, "score": 30, "verdict": "weak", "why": { "ru": "Прервёт ли проклятие уже поставленное надгробие, в данных не сказано. При этом у Borrowed Decree в данных стоит флаг полного возврата перезарядки при прерывании канала: даже удачное прерывание вернёт Graves ультимейт, а ты потратишь предмет с перезарядкой 55 с." }, "betterWhen": { "ru": "Против канала без возврата перезарядки, например Storm Cloud у Seven." } },
+      { "action": { "ru": "Расстреливать надгробие из оружия с текущей позиции" }, "score": 25, "verdict": "weak", "why": { "ru": "В описании сказано только о двух тяжёлых ударах; сколько выдержит надгробие от пуль, данные не говорят. Ближний бой - проверенный способ, и ты уже рядом." }, "betterWhen": { "ru": "Если подойти к надгробию нельзя, а другого способа нет." } }
+    ],
+    "principle": { "ru": "Против призывов сначала бей источник, если в описании сказано, как его уничтожить." },
+    "mechanics": [
+      { "text": { "ru": "Borrowed Decree: надгробие в точке призывает призраков в течение 16 с; враги могут разрушить его двумя тяжёлыми ударами ближнего боя." }, "status": "data" },
+      { "text": { "ru": "Призраки идут к врагам и взрываются рядом с героем или объектом, нанося спирит-урон по площади и ненадолго замедляя." }, "status": "data" },
+      { "text": { "ru": "У Borrowed Decree в данных стоит флаг полного возврата перезарядки при прерывании канала." }, "status": "data" },
+      { "text": { "ru": "Получает ли надгробие урон от пуль и прерывает ли Cursed Relic уже поставленное надгробие, в данных не указано." }, "status": "unverified" }
+    ],
+    "difficulty": 3,
+    "tags": ["general", "summons"],
+    "dims": ["active", "mechanics"],
+    "sources": ["ability:ability_necro_gravestone", "item:upgrade_glitch", "ability:citadel_ability_bull_charge", "hero:hero_necro", "hero:hero_atlas"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-024",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_rapid_recharge", "upgrade_sharpshooter", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_counterspell", "upgrade_headshot_booster2", "upgrade_vampire", "upgrade_trophy_collector", "upgrade_quick_silver"],
+    "enemies": [
+      { "hero": "hero_nurse", "note": { "ru": "Healing Needles: лечащие шприцы для союзников." } },
+      { "hero": "hero_kelvin", "note": { "ru": "Frost Grenade и Frozen Shelter лечат союзников." } },
+      { "hero": "hero_atlas" },
+      { "hero": "hero_ghost" }
+    ],
+    "situation": { "ru": "Поздняя игра. У врага сразу два лекаря: Nurse Harrow стреляет лечащими шприцами Healing Needles, Kelvin бросает Frost Grenade и ставит Frozen Shelter. Ты попадаешь в голову с дальней дистанции, но цели отлечиваются быстрее, чем ты успеваешь добить их Assassinate. Crow Familiar с T1 режет лечение, но только одной цели и с долгой перезарядкой. Weakening Headshot у тебя уже есть. У тебя 7000 душ." },
+    "question": { "ru": "Какой анти-хил лучше всего ложится на твой стиль?" },
+    "problemTags": ["enemy-healing", "you-lack-damage", "teamfight"],
+    "options": [
+      { "item": "upgrade_banshee_slugs", "score": 86, "verdict": "best", "why": { "ru": "Каждый хедшот режет цели входящее лечение на 40% и снижает Bullet и Spirit Resist на 16% на 12 с. Ты снайпер и попадаешь в голову постоянно, а Weakening Headshot уже куплен: доплата 4800. Одним предметом ты получаешь анти-хил и пробивание для Assassinate." } },
+      { "item": "upgrade_toxic_bullets", "score": 72, "verdict": "good", "why": { "ru": "Дешевле и тоже -40% к лечению, плюс кровотечение от максимального здоровья. Копится от любых попаданий, а не только в голову, но резисты не снижает." }, "betterWhen": { "ru": "Если в голову попадаешь редко или нужно сэкономить 1600 душ на защиту." } },
+      { "item": "upgrade_inhibitor", "score": 55, "verdict": "ok", "why": { "ru": "Пули копят срез лечения -40% и снижение исходящего урона цели на 30%. Сильно в дуэли с одним керри, но дороже на 1600 и не усиливает твой урон." }, "betterWhen": { "ru": "Если главная угроза - дуэль с вражеским керри, чей урон нужно срезать." } },
+      { "item": "upgrade_spirit_burn", "score": 30, "verdict": "weak", "why": { "ru": "Срабатывает после 500 спирит-урона за 5 с, а основной урон оружейной Vindicta - пули." }, "betterWhen": { "ru": "В спирит-сборке через Assassinate и Crow Familiar, если ты стабильно набираешь 500 спирит-урона за 5 с." } },
+      { "item": "upgrade_healbane", "score": 25, "verdict": "weak", "why": { "ru": "Срабатывает от спирит-урона, а твой основной урон - пули: эффект будет висеть только после Crow Familiar и способностей." }, "betterWhen": { "ru": "На спирит-кастере с постоянным спирит-уроном по площади." } }
+    ],
+    "principle": { "ru": "Анти-хил выгоднее брать на ту механику, которой ты пользуешься чаще всего: снайпер режет лечение через хедшоты." },
+    "mechanics": [
+      { "text": { "ru": "Crippling Headshot: хедшот снижает Bullet Resist и Spirit Resist на 16% и входящее лечение на 40% на 12 с; улучшается из Weakening Headshot." }, "status": "data" },
+      { "text": { "ru": "Toxic Bullets: -40% к лечению на кровоточащей цели. Inhibitor: пули копят -30% к исходящему урону и -40% к лечению цели." }, "status": "data" },
+      { "text": { "ru": "Crow Familiar с T1 снижает входящее лечение на 35%; базовая перезарядка способности 32 с." }, "status": "data" },
+      { "text": { "ru": "Healing Needles лечат союзников Nurse Harrow; Frost Grenade и Frozen Shelter лечат союзников Kelvin." }, "status": "data" },
+      { "text": { "ru": "Как складываются срезы лечения от Crow Familiar и от предмета, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Два лекаря отхиливают цели быстрее твоего добивания." },
+      "solutions": [{ "ru": "Срез лечения через хедшоты" }, { "ru": "Срез лечения через любые попадания" }, { "ru": "Срезать урон вражескому керри" }],
+      "constraints": [{ "ru": "7000 душ" }, { "ru": "Weakening Headshot уже куплен" }, { "ru": "Ты стабильно попадаешь в голову с дальней дистанции" }],
+      "choice": { "ru": "Crippling Headshot: анти-хил и снижение резистов из того, что ты уже делаешь." },
+      "consequences": [{ "ru": "Перед Assassinate целься в голову именно той цели, которую лечат." }, { "ru": "Если хедшоты не идут, Toxic Bullets надёжнее." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "anti-heal", "vindicta"],
+    "dims": ["build", "synergy", "counter"],
+    "sources": ["item:upgrade_banshee_slugs", "item:upgrade_headshot_booster2", "item:upgrade_toxic_bullets", "item:upgrade_inhibitor", "item:upgrade_spirit_burn", "item:upgrade_healbane", "ability:citadel_ability_hornet_sting", "ability:citadel_ability_hornet_snipe", "ability:ability_nurse_healing_needles", "ability:ability_ice_dome"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-025",
+    "kind": "buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 5200,
+    "owned": ["upgrade_rapid_recharge", "upgrade_sharpshooter", "upgrade_burst_fire", "upgrade_titan_round", "upgrade_counterspell", "upgrade_vex_barrier", "upgrade_trophy_collector", "upgrade_quick_silver", "upgrade_vampire"],
+    "enemies": [
+      { "hero": "hero_krill", "note": { "ru": "Sand Blast: обезоруживание." } },
+      { "hero": "hero_fencer", "note": { "ru": "Riposte: обездвиживание и обезоруживание." } },
+      { "hero": "hero_lash", "items": ["upgrade_greater_withering_whip"], "note": { "ru": "Купил Disarming Hex." } }
+    ],
+    "situation": { "ru": "Середина игры. Тебя раз за разом обезоруживают: Mo & Krill выпрыгивает из Burrow и бьёт Sand Blast, Apollo отражает твой выстрел Riposte и прилетает к тебе, Lash кидает Disarming Hex. Пока у тебя нет оружия, ты почти ничего не наносишь. Reactive Barrier на Sand Blast и Disarming Hex не срабатывает. У тебя 5200 душ." },
+    "question": { "ru": "Что купить против обезоруживания?" },
+    "problemTags": ["enemy-disarm", "enemy-immobilize", "you-get-caught"],
+    "options": [
+      { "item": "upgrade_reduce_debuff_duration", "score": 82, "verdict": "best", "why": { "ru": "Снимает все неультимативные негативные эффекты, а Sand Blast, Riposte и Disarming Hex - не ультимейты. Нажимаешь, и оружие снова в руках, плюс лечение 250 и скорость. Нажать можно: обезоруживание и обездвиживание - не стан и не сон. 3200 при 5200 душ." } },
+      { "item": "upgrade_debuff_reducer", "score": 45, "verdict": "ok", "why": { "ru": "+25% Debuff Resist укорачивает обезоруживание и любой контроль и позже улучшается в Unstoppable. Но эффект не снимается." }, "betterWhen": { "ru": "Если собираешь Unstoppable по частям." } },
+      { "item": "upgrade_unstoppable", "score": 35, "verdict": "weak", "why": { "ru": "Иммунитет к Disarm и Root подходит идеально, но стоит 6400, а у тебя 5200." }, "betterWhen": { "ru": "Через пару минут, если тебя ещё и станят: включай заранее, под станом его не нажать." } },
+      { "item": "upgrade_auto_cleanse", "score": 25, "verdict": "weak", "why": { "ru": "Ловушка: улучшение Reactive Barrier кажется логичным, но в списке Indomitable есть Stun, Chain, Immobilize, Sleep, Silence и Fear, а Disarm нет. Обездвиживание от Riposte он снимет, обезоруживание останется." }, "betterWhen": { "ru": "Если тебя оглушают и усыпляют, а не обезоруживают." } },
+      { "item": "upgrade_metal_skin", "score": 20, "verdict": "weak", "why": { "ru": "Защищает от пуль, но обезоруживание не снимает: ты всё так же не стреляешь." }, "betterWhen": { "ru": "Если тебя убивает урон оружием, а не то, что ты не можешь стрелять." } }
+    ],
+    "principle": { "ru": "Проверяй список эффектов в описании: Indomitable не снимает Disarm, а Dispel Magic снимает всё неультимативное." },
+    "mechanics": [
+      { "text": { "ru": "Indomitable автоматически снимает Stun, Chain, Immobilize, Sleep, Silence или Fear; Disarm в списке нет." }, "status": "data" },
+      { "text": { "ru": "Reactive Barrier срабатывает при Stun, Chain, Immobilize, Sleep или Silence; Disarm в списке нет." }, "status": "data" },
+      { "text": { "ru": "Dispel Magic снимает все неультимативные негативные эффекты; нельзя использовать под Stun или Sleep." }, "status": "data" },
+      { "text": { "ru": "Sand Blast обезоруживает врагов перед Mo & Krill; Riposte обездвиживает и обезоруживает; Disarming Hex обезоруживает и снижает Bullet Resist." }, "status": "data" },
+      { "text": { "ru": "Unstoppable даёт иммунитет к Stun, Silence, Sleep, Root и Disarm; стоит 6400, с Debuff Reducer доплата 4800." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Обезоруживание выключает твой основной урон." },
+      "solutions": [{ "ru": "Очистить обезоруживание" }, { "ru": "Включить иммунитет к обезоруживанию заранее" }, { "ru": "Сократить длительность контроля" }],
+      "constraints": [{ "ru": "5200 душ" }, { "ru": "Reactive Barrier на Disarm не реагирует" }, { "ru": "Три разных источника, все не ультимейты" }],
+      "choice": { "ru": "Dispel Magic: снимает любое неультимативное обезоруживание и лечит." },
+      "consequences": [{ "ru": "Перезарядка 45 с: снимай главный эффект, а не первый попавшийся." }, { "ru": "Если позже появятся станы, добавь Unstoppable." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "cc", "vindicta"],
+    "dims": ["mechanics", "counter"],
+    "sources": ["item:upgrade_reduce_debuff_duration", "item:upgrade_auto_cleanse", "item:upgrade_vex_barrier", "item:upgrade_unstoppable", "item:upgrade_debuff_reducer", "item:upgrade_metal_skin", "item:upgrade_greater_withering_whip", "ability:ability_throw_sand", "ability:ability_fencer_riposte", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-026",
+    "kind": "diagnose-buy",
+    "hero": "hero_necro",
+    "phase": "mid",
+    "souls": 5200,
+    "owned": ["upgrade_toxic_bullets", "upgrade_superior_stamina", "upgrade_magic_shield", "upgrade_magic_vulnerability", "upgrade_health_stealing_magic", "upgrade_tech_damage_pulse", "upgrade_soaring_spirit", "upgrade_vex_barrier"],
+    "enemies": [
+      { "hero": "hero_haze" },
+      { "hero": "hero_drifter" },
+      { "hero": "hero_lash" }
+    ],
+    "situation": { "ru": "Середина игры. Ты стоишь со своей командой, и вдруг засыпаешь от кинжала, прилетевшего непонятно откуда. Reactive Barrier даёт барьер, но когда ты просыпаешься, тебя уже расстреливают в упор, и барьер исчезает за секунду. Кто тебя бьёт, ты видишь, только когда уже поздно. У тебя 5200 душ." },
+    "symptoms": [
+      { "ru": "Перед смертью ты засыпаешь, хотя рядом никого не видно." },
+      { "ru": "Урон после пробуждения почти весь от оружия." },
+      { "ru": "Барьер от Reactive Barrier появляется, но не спасает." }
+    ],
+    "question": { "ru": "Что купить?" },
+    "problemTags": ["enemy-stealth", "enemy-sleep", "enemy-gun-dps", "you-die-fast"],
+    "diagnosis": {
+      "prompt": { "ru": "В чём настоящая проблема?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Haze подходит в невидимости, усыпляет Sleep Dagger и расстреливает в Bullet Dance: контроль на открытие плюс оружейный урон." }, "correct": true, "why": { "ru": "Сон из пустоты - это Sleep Dagger, который не снимает невидимость, а урон после пробуждения - пули Bullet Dance." } },
+        { "id": "b", "text": { "ru": "Тебя убивает спирит-бурст." }, "correct": false, "why": { "ru": "Урон после пробуждения почти весь от оружия." } },
+        { "id": "c", "text": { "ru": "Это ультимейт Rem, Naptime." }, "correct": false, "why": { "ru": "Naptime усыпляет после канала, который видно заранее, и бьёт спирит-уроном после пробуждения; у тебя сон мгновенный, а урон от пуль." } },
+        { "id": "d", "text": { "ru": "Тебе не хватает здоровья." }, "correct": false, "why": { "ru": "Ты погибаешь от связки сна и пуль, а запас здоровья не решает ни ту, ни другую часть." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_auto_cleanse", "score": 84, "verdict": "best", "why": { "ru": "Улучшение уже купленного Reactive Barrier: следующий Sleep снимается автоматически, ты получаешь барьер и -20% к перезарядкам способностей. Просыпаешься сразу и успеваешь поставить Grasping Hands между собой и Haze или отойти к команде. Доплата 4800 при 5200 душ." } },
+      { "item": "upgrade_metal_skin", "score": 72, "verdict": "good", "why": { "ru": "Иммунитет к пулям на 5 с гасит Bullet Dance, если ты успеваешь нажать его после пробуждения: спящие просыпаются вскоре после урона. Дешевле, но сон всё равно забирает первые секунды." }, "betterWhen": { "ru": "Если Haze заходит без сна или ты просыпаешься раньше, чем начинается её танец." } },
+      { "item": "upgrade_unstoppable", "score": 25, "verdict": "weak", "why": { "ru": "Даёт иммунитет ко сну, но во сне его не нажать, а кинжал прилетает внезапно. И стоит 6400 при 5200 душ." }, "betterWhen": { "ru": "Если ты сам начинаешь драку и знаешь, когда прилетит контроль." } },
+      { "item": "upgrade_tech_purge", "score": 15, "verdict": "bad", "why": { "ru": "Резист не того типа: убивает оружие." }, "betterWhen": { "ru": "Против спирит-бурста: Lady Geist, Seven." } },
+      { "item": "upgrade_reduce_debuff_duration", "score": 10, "verdict": "bad", "why": { "ru": "Нельзя использовать во сне, а урон Haze - пули, а не дебаффы." }, "betterWhen": { "ru": "Против урона по времени и неультимативных замедлений." } }
+    ],
+    "principle": { "ru": "Против невидимого врага с контролем на открытие бери то, что срабатывает само в момент контроля." },
+    "mechanics": [
+      { "text": { "ru": "Indomitable автоматически снимает следующий Stun, Chain, Immobilize, Sleep, Silence или Fear, даёт барьер 325 и -20% к перезарядкам способностей; улучшается из Reactive Barrier." }, "status": "data" },
+      { "text": { "ru": "Sleep Dagger не снимает невидимость Haze; спящие просыпаются вскоре после урона." }, "status": "data" },
+      { "text": { "ru": "Unstoppable и Dispel Magic нельзя использовать во сне." }, "status": "data" },
+      { "text": { "ru": "Grasping Hands обездвиживает врагов, которые проходят сквозь стену рук." }, "status": "data" },
+      { "text": { "ru": "Naptime усыпляет врагов в зоне взгляда Rem только после окончания канала." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Невидимый заход: сон, затем оружейный бурст." },
+      "solutions": [{ "ru": "Автоматически снять сон" }, { "ru": "Погасить оружейный урон" }, { "ru": "Держаться ближе к команде" }],
+      "constraints": [{ "ru": "5200 душ" }, { "ru": "Reactive Barrier уже есть" }, { "ru": "Сон прилетает внезапно: активку не успеть нажать" }],
+      "choice": { "ru": "Indomitable: сон снимается сам, и ты сразу действуешь." },
+      "consequences": [{ "ru": "Перезарядка 55 с: второй заход за минуту будет опаснее." }, { "ru": "Следующей покупкой может стать Metal Skin против самого Bullet Dance." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "stealth", "cc", "graves"],
+    "dims": ["situation", "counter"],
+    "sources": ["item:upgrade_auto_cleanse", "item:upgrade_vex_barrier", "item:upgrade_metal_skin", "item:upgrade_unstoppable", "item:upgrade_reduce_debuff_duration", "item:upgrade_tech_purge", "ability:ability_sleep_dagger", "ability:ability_smoke_bomb", "ability:ability_bullet_flurry", "ability:ability_familiar_ability01", "ability:ability_necro_zombiewall"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-027",
+    "kind": "active-timing",
+    "hero": "hero_shiv",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_unstoppable", "upgrade_reduce_debuff_duration", "upgrade_close_quarter_combat", "upgrade_tech_purge", "upgrade_vampire", "upgrade_superior_stamina", "upgrade_cooldown_reduction"],
+    "enemies": [
+      { "hero": "hero_familiar", "note": { "ru": "Naptime: взгляд сквозь стены, в конце канала сон." } },
+      { "hero": "hero_atlas" },
+      { "hero": "hero_gigawatt" }
+    ],
+    "situation": { "ru": "Поздняя игра. Ты врываешься в драку Slice and Dice. Rem начинает Naptime: её взгляд проходит сквозь стены, ты в зоне, тебя замедляют, дальность рывка уменьшена, а способности передвижения не работают. Когда канал закончится, все в зоне уснут, а после пробуждения получат много спирит-урона. Оба твоих защитных предмета готовы." },
+    "question": { "ru": "Как поступить?" },
+    "problemTags": ["enemy-channel-ult", "enemy-sleep", "teamfight"],
+    "options": [
+      { "action": { "ru": "Включить иммунитет к контролю сейчас, пока канал ещё идёт и ты не спишь" }, "score": 86, "verdict": "best", "why": { "ru": "Пока ты только замедлен, Unstoppable нажимается: ограничение у него - стан и сон. Он даёт иммунитет ко сну на 5.5 с, и когда канал закончится, ты не уснёшь. Жми, когда ты уже под взглядом и канал идёт, а не задолго до ультимейта." } },
+      { "action": { "ru": "Выходить из зоны пешком и обычными рывками" }, "score": 45, "verdict": "ok", "why": { "ru": "Обычные рывки работают, хоть и короче, а замедление мешает. Если зона узкая, можно успеть, но если нет - уснёшь без защиты." }, "betterWhen": { "ru": "Если Unstoppable на перезарядке и ты стоишь у края зоны." } },
+      { "action": { "ru": "Рвануть из зоны через Slice and Dice" }, "score": 20, "verdict": "weak", "why": { "ru": "Под взглядом нельзя применять способности передвижения, а Slice and Dice в данных помечен как способность передвижения." }, "betterWhen": { "ru": "До того, как взгляд Rem накрыл тебя: тогда рывок выводит из зоны." } },
+      { "item": "upgrade_reduce_debuff_duration", "action": { "ru": "Дождаться сна и снять его Dispel Magic" }, "score": 5, "verdict": "bad", "why": { "ru": "Dispel Magic нельзя использовать во сне, и он снимает только неультимативные эффекты, а Naptime - ультимейт." }, "betterWhen": { "ru": "Против обездвиживания и замедлений от обычных способностей." } }
+    ],
+    "principle": { "ru": "Иммунитет включают до контроля: под сном и станом защитные предметы не нажать." },
+    "mechanics": [
+      { "text": { "ru": "Naptime: враги в зоне взгляда замедлены, у них уменьшена дальность рывка и нельзя применять способности передвижения; по окончании канала они засыпают, а после пробуждения получают спирит-урон." }, "status": "data" },
+      { "text": { "ru": "Unstoppable: иммунитет к Stun, Silence, Sleep, Root и Disarm на 5.5 с; нельзя использовать под Stun или Sleep." }, "status": "data" },
+      { "text": { "ru": "Dispel Magic снимает только неультимативные эффекты и не нажимается во сне." }, "status": "data" },
+      { "text": { "ru": "Slice and Dice помечен в данных как способность передвижения." }, "status": "data" },
+      { "text": { "ru": "Сколько длится канал Naptime, в данных не указано, поэтому точный момент нажатия зависит от игры." }, "status": "unverified" }
+    ],
+    "difficulty": 4,
+    "tags": ["general", "ult", "cc"],
+    "dims": ["active", "mechanics"],
+    "sources": ["ability:ability_familiar_ability01", "item:upgrade_unstoppable", "item:upgrade_reduce_debuff_duration", "ability:citadel_ability_shiv_dash", "hero:hero_familiar"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-028",
+    "kind": "buy",
+    "hero": "hero_drifter",
+    "phase": "late",
+    "souls": 6800,
+    "owned": ["upgrade_close_quarter_combat", "upgrade_burst_fire", "upgrade_vampire", "upgrade_superior_stamina", "upgrade_tech_purge", "upgrade_hollow_point_rounds", "upgrade_titan_round"],
+    "enemies": [
+      { "hero": "hero_wraith", "items": ["upgrade_divine_barrier", "upgrade_rocket_booster", "upgrade_metal_skin"], "note": { "ru": "Выживает на активных предметах." } },
+      { "hero": "hero_kelvin" },
+      { "hero": "hero_bebop" }
+    ],
+    "situation": { "ru": "Поздняя игра. Ты охотишься на вражеского Wraith: Stalker's Mark, появляешься у него за спиной, Rend. Но каждый раз он нажимает Divine Barrier на себя: 600 барьера, все твои замедления и кровотечение слетают, и он уходит. Majestic Leap после твоего первого удара он применить не может, так что спасает его именно Divine Barrier. У тебя 6800 душ." },
+    "question": { "ru": "Какой предмет не даст ему спастись?" },
+    "problemTags": ["enemy-barriers", "you-cant-catch"],
+    "options": [
+      { "item": "upgrade_glitch", "score": 84, "verdict": "best", "why": { "ru": "Проклятие на 3.25 с запрещает использовать предметы, плюс немота и обезоруживание. Наложи его до того, как он нажмёт Divine Barrier, и ни барьера, ни очищения не будет. Минус: на время проклятия твой урон снижается на 25%, так что добивайте его вместе с командой в эти 3.25 с." } },
+      { "item": "upgrade_target_stun", "score": 62, "verdict": "good", "why": { "ru": "Divine Barrier снимает все дебаффы, кроме стана, так что оглушение он не очистит. Но стан приходит через 2 с, и Divine Barrier он успеет нажать раньше: барьер всё равно появится." }, "betterWhen": { "ru": "Против цели, которая очищается от замедлений и ловушек, но не успевает заранее спастись предметом." } },
+      { "item": "upgrade_rupture", "score": 30, "verdict": "weak", "why": { "ru": "Сильный анти-хил и урон от текущего здоровья, но это дебафф, который Divine Barrier снимет, а барьер - не лечение." }, "betterWhen": { "ru": "Против цели, которая выживает за счёт лечения." } },
+      { "item": "upgrade_aoe_root", "score": 25, "verdict": "weak", "why": { "ru": "Притягивание срабатывает сразу, но наложенный Slowing Hex - дебафф, и Divine Barrier снимет его вместе с остальными." }, "betterWhen": { "ru": "Против группы подвижных врагов без очищения." } }
+    ],
+    "principle": { "ru": "Если враг выживает на активных предметах, не дай ему их нажать." },
+    "mechanics": [
+      { "text": { "ru": "Cursed Relic: на 3.25 с прерывает, накладывает немоту, обезоруживает, запрещает использовать предметы и снимает все неультимативные баффы; твой урон снижен на 25%; перезарядка 55 с." }, "status": "data" },
+      { "text": { "ru": "Divine Barrier снимает с цели все дебаффы, кроме стана, и даёт барьер 600 и скорость; можно применить на себя." }, "status": "data" },
+      { "text": { "ru": "Majestic Leap нельзя использовать 5 с после атаки вражеского героя." }, "status": "data" },
+      { "text": { "ru": "Knockdown накладывает стан через 2 с." }, "status": "data" },
+      { "text": { "ru": "Снимает ли Cursed Relic уже наложенный барьер, в данных не сказано: в описании говорится о неультимативных баффах." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Цель переживает каждый заход на активных предметах." },
+      "solutions": [{ "ru": "Запретить предметы" }, { "ru": "Наложить контроль, который предмет не снимает" }, { "ru": "Убить быстрее, чем он нажмёт" }],
+      "constraints": [{ "ru": "6800 душ" }, { "ru": "Divine Barrier снимает всё, кроме стана" }, { "ru": "Majestic Leap выключается твоим первым ударом" }],
+      "choice": { "ru": "Cursed Relic: без предметов у Wraith нет ни барьера, ни очищения." },
+      "consequences": [{ "ru": "Проклинай до его нажатия, а не после." }, { "ru": "Твой урон на 3.25 с ниже: важно, чтобы рядом были союзники." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "barrier", "cc"],
+    "dims": ["counter", "mechanics"],
+    "sources": ["item:upgrade_glitch", "item:upgrade_target_stun", "item:upgrade_rupture", "item:upgrade_aoe_root", "item:upgrade_divine_barrier", "item:upgrade_rocket_booster", "ability:drifter_shadow_mark", "ability:drifter_blood_blast", "hero:hero_wraith"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-029",
+    "kind": "buy",
+    "hero": "hero_forge",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_containment", "upgrade_cold_front", "upgrade_soaring_spirit", "upgrade_imbued_duration_extender", "upgrade_cooldown_reduction", "upgrade_magic_shield", "upgrade_tech_purge", "upgrade_rapid_recharge"],
+    "enemies": [
+      { "hero": "hero_wraith", "note": { "ru": "Project Mind: телепорт." } },
+      { "hero": "hero_lash", "note": { "ru": "Grapple: притягивает себя к цели." } },
+      { "hero": "hero_vampirebat", "note": { "ru": "Sanguine Retreat: улетает, недоступна для выбора целью." } },
+      { "hero": "hero_synth", "note": { "ru": "Flying Cloak и Enchanter's Satchel." } }
+    ],
+    "situation": { "ru": "Поздняя игра. Ты выставляешь турели и запускаешь Heavy Barrage по точке, но вражеская команда очень подвижная: Wraith, Lash, Mina и Pocket просто выходят из зоны ракет и от турелей. Slowing Hex ловит только одного, а Cold Front лишь замедляет тех, кто рядом с тобой. У тебя 6600 душ." },
+    "question": { "ru": "Какое улучшение лучше удержит врагов в зоне твоего урона?" },
+    "problemTags": ["enemy-high-mobility", "you-cant-catch", "teamfight"],
+    "options": [
+      { "item": "upgrade_aoe_root", "score": 84, "verdict": "best", "why": { "ru": "Вакуумная граната стягивает всех врагов в радиусе 12 м в одну точку и накладывает на каждого Slowing Hex: замедление и немоту способностей передвижения на 4 с. Project Mind, Grapple и Sanguine Retreat помечены в данных как способности передвижения. Стянул - и запускай Heavy Barrage в ту же точку. Slowing Hex уже есть: доплата 4800." } },
+      { "item": "upgrade_arctic_blast", "score": 68, "verdict": "good", "why": { "ru": "Ледяная волна вокруг тебя в радиусе 16 м замораживает на 1 с, потом замедляет и останавливает восстановление выносливости. Сильно, но работает вокруг тебя, а McGinnis воюет с дистанции, и способности передвижения волна не блокирует. Cold Front уже есть: доплата 4800." }, "betterWhen": { "ru": "Если враги сами прыгают на тебя и на турели: заморозка бьёт в радиусе вокруг тебя." } },
+      { "item": "upgrade_target_stun", "score": 50, "verdict": "ok", "why": { "ru": "Надёжный стан, но на одну цель и через 2 с; остальные трое уходят из-под ракет." }, "betterWhen": { "ru": "Если опасна одна цель, а остальные не убегают." } },
+      { "item": "upgrade_capacitor", "score": 30, "verdict": "weak", "why": { "ru": "Сильное замедление, запрет выносливости и немота передвижения, но одним снарядом по одной цели. Без Tesla Bullets он стоит полные 6400 против 4800 за любое из двух улучшений." }, "betterWhen": { "ru": "На оружейном герое с Tesla Bullets против одной скользкой цели." } }
+    ],
+    "principle": { "ru": "Против многих подвижных врагов нужен групповой контроль, совместимый с твоим уроном по зоне." },
+    "mechanics": [
+      { "text": { "ru": "Vortex Web: граната стягивает врагов в радиусе 12 м и накладывает Slowing Hex на 4 с; улучшается из Slowing Hex." }, "status": "data" },
+      { "text": { "ru": "Arctic Blast: волна вокруг тебя радиусом 16 м, заморозка 1 с, затем замедление и заморозка восстановления выносливости; улучшается из Cold Front." }, "status": "data" },
+      { "text": { "ru": "Heavy Barrage выпускает ракеты, которые летят в выбранную точку." }, "status": "data" },
+      { "text": { "ru": "Project Mind, Grapple и Sanguine Retreat помечены в данных как способности передвижения; Flying Cloak Pocket так не помечен." }, "status": "data" },
+      { "text": { "ru": "Остановит ли немота передвижения телепорт Pocket к Flying Cloak, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Враги выходят из зоны твоего урона быстрее, чем он их убивает." },
+      "solutions": [{ "ru": "Стянуть всех в одну точку" }, { "ru": "Заморозить тех, кто рядом" }, { "ru": "Оглушить главную цель" }],
+      "constraints": [{ "ru": "6600 душ" }, { "ru": "Slowing Hex и Cold Front уже есть: оба улучшения стоят по 4800" }, { "ru": "Твой урон - по зоне и с дистанции" }],
+      "choice": { "ru": "Vortex Web: стягивает и запрещает побег, а Heavy Barrage добивает в той же точке." },
+      "consequences": [{ "ru": "Кидай гранату перед ракетами, а не после." }, { "ru": "Pocket может уйти иначе: не трать гранату на него одного." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "mobility"],
+    "dims": ["build", "synergy"],
+    "sources": ["item:upgrade_aoe_root", "item:upgrade_arctic_blast", "item:upgrade_target_stun", "item:upgrade_capacitor", "item:upgrade_containment", "item:upgrade_cold_front", "ability:citadel_ability_rocket_barrage", "ability:citadel_ability_projectmind", "ability:citadel_ability_lash", "ability:ability_vampirebat_batblink", "ability:synth_plasma_flux"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-030",
+    "kind": "buy",
+    "hero": "hero_necro",
+    "phase": "late",
+    "souls": 6500,
+    "owned": ["upgrade_toxic_bullets", "upgrade_superior_stamina", "upgrade_magic_shield", "upgrade_escalating_exposure", "upgrade_health_stealing_magic", "upgrade_tech_damage_pulse", "upgrade_soaring_spirit", "upgrade_chain_lightning"],
+    "allies": [
+      { "hero": "hero_hornet" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_synth" },
+      { "hero": "hero_unicorn" },
+      { "hero": "hero_haze" }
+    ],
+    "enemies": [
+      { "hero": "hero_wraith" },
+      { "hero": "hero_priest" },
+      { "hero": "hero_ratking" },
+      { "hero": "hero_astro" },
+      { "hero": "hero_werewolf" }
+    ],
+    "situation": { "ru": "Поздняя игра. В твоей команде нет ни одного танка: Vindicta, Paradox, Pocket, Celeste и Haze - все хрупкие. Враги - пятеро стрелков: Wraith, Venator, Rat King, Holliday и Silver. В каждой драке они расстреливают ваших с дистанции, и стоять впереди некому. Из-за короткой дистанции луча ты и так ближе всех к линии фронта. У тебя 6500 душ." },
+    "question": { "ru": "Что купить, чтобы команда переживала перестрелки?" },
+    "problemTags": ["team-lacks-frontline", "enemy-gun-dps", "teamfight"],
+    "options": [
+      { "item": "upgrade_dps_aura", "score": 82, "verdict": "best", "why": { "ru": "Пассивно даёт +17% Bullet Resist всем союзникам в радиусе 35 м, а активка на 7 с даёт тебе и союзникам скорость и скорострельность. Против пяти стрелков это защита для всей хрупкой команды, а не только для тебя. Останется 3300 душ на следующий предмет." } },
+      { "item": "upgrade_colossus", "score": 62, "verdict": "good", "why": { "ru": "Сам станешь толще (+35% Bullet и Spirit Resist на 7 с) и замедлишь врагов рядом, но стрелки бьют с дистанции и к тебе не подойдут, а союзникам предмет ничего не даёт." }, "betterWhen": { "ru": "Если враги - бойцы ближнего боя, которые сами лезут в тебя." } },
+      { "item": "upgrade_improved_bullet_armor", "score": 50, "verdict": "ok", "why": { "ru": "+35% Bullet Resist только тебе. Ты выживешь, но команда продолжит умирать." }, "betterWhen": { "ru": "Если фокусируют именно тебя, а союзники в безопасности." } },
+      { "item": "upgrade_discord", "score": 30, "verdict": "weak", "why": { "ru": "Можно повесить на союзника: Spirit Resist, Debuff Resist и аура урона от максимального здоровья врагов. Но враги бьют пулями, а Spirit Resist от них не защищает." }, "betterWhen": { "ru": "Против спирит-команды, когда нужно усилить союзника-бойца." } }
+    ],
+    "principle": { "ru": "Нет танка - защищай всю команду аурой, а не только себя." },
+    "mechanics": [
+      { "text": { "ru": "Heroic Aura: пассивно +17% Bullet Resist союзникам в радиусе 35 м; активка на 7 с даёт тебе и союзникам рядом скорость и +26% скорострельности; перезарядка 22 с." }, "status": "data" },
+      { "text": { "ru": "Colossus: на 7 с +35% Bullet и Spirit Resist, замедление и уменьшение скорости рывка врагов в радиусе 14 м." }, "status": "data" },
+      { "text": { "ru": "Scourge: на союзника +40% Spirit Resist, +20% Debuff Resist и аура урона 2.3% от максимального здоровья врагов в секунду." }, "status": "data" },
+      { "text": { "ru": "Урон оружия Graves падает на дистанции 7.6-17 м: его луч рассчитан на ближний бой." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Хрупкую команду без танка расстреливают с дистанции." },
+      "solutions": [{ "ru": "Защитить всю команду аурой" }, { "ru": "Стать танком самому" }, { "ru": "Защитить только себя" }],
+      "constraints": [{ "ru": "6500 душ" }, { "ru": "Враги - пятеро стрелков" }, { "ru": "Ты и так ближе всех к фронту" }],
+      "choice": { "ru": "Heroic Aura: Bullet Resist всей команде и активка на драку." },
+      "consequences": [{ "ru": "Держись рядом с союзниками: аура работает в радиусе 35 м." }, { "ru": "На оставшиеся 3300 можно добавить Bullet Resilience себе." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "team", "graves"],
+    "dims": ["build", "situation"],
+    "sources": ["item:upgrade_dps_aura", "item:upgrade_colossus", "item:upgrade_improved_bullet_armor", "item:upgrade_discord", "hero:hero_necro", "hero:hero_wraith", "hero:hero_priest", "hero:hero_ratking"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-031",
+    "kind": "buy",
+    "hero": "hero_nano",
+    "phase": "mid",
+    "souls": 5000,
+    "owned": ["upgrade_soaring_spirit", "upgrade_debuff_reducer", "upgrade_cooldown_reduction", "upgrade_magic_shock", "upgrade_magic_shield", "upgrade_superior_stamina", "upgrade_health_stealing_magic"],
+    "enemies": [
+      { "hero": "hero_orion", "note": { "ru": "Charged Shot: один мощный спирит-выстрел." } },
+      { "hero": "hero_ghost", "note": { "ru": "Essence Bomb: одна мощная бомба." } },
+      { "hero": "hero_hornet" }
+    ],
+    "situation": { "ru": "Середина игры. Ты заходишь с фланга, и тебя убивают двумя-тремя огромными ударами: Charged Shot от Grey Talon, Essence Bomb от Lady Geist, а потом добивание. Каждый удар - один большой кусок спирит-урона, между ними почти нет мелкого урона. Enchanter's Emblem у тебя есть, но после первого удара ты ниже 65% и его бонусы пропадают. У тебя 5000 душ." },
+    "question": { "ru": "Что купить против серии крупных спирит-ударов?" },
+    "problemTags": ["enemy-spirit-burst", "you-die-fast"],
+    "options": [
+      { "item": "upgrade_spellbreaker", "score": 84, "verdict": "best", "why": { "ru": "Следующий крупный спирит-удар от 175 урона уменьшается на 65%, перезарядка 9 с. Против серии редких больших ударов это сильнее, чем процент резиста. Плюс +18% Spirit Resist и +25% Debuff Resist. Debuff Reducer уже есть: доплата 4800." } },
+      { "item": "upgrade_tech_purge", "score": 72, "verdict": "good", "why": { "ru": "+30% Spirit Resist всегда и ещё +15% ниже 50% здоровья. Работает против любого спирит-урона и дешевле, но каждый крупный удар режется только на процент резиста." }, "betterWhen": { "ru": "Если спирит-урон по тебе идёт потоком мелких попаданий, а не крупными разовыми ударами." } },
+      { "item": "upgrade_absorbing_armor", "score": 30, "verdict": "weak", "why": { "ru": "+22% Spirit Resist и сокращение перезарядок от крупных спирит-ударов, но стоит 6400 при 5000 душ." }, "betterWhen": { "ru": "Когда душ хватает и хочется резиста вместе с темпом способностей." } },
+      { "item": "upgrade_unstoppable", "score": 25, "verdict": "weak", "why": { "ru": "Иммунитет к контролю, но тебя убивает урон, а не стан. Доплата тоже 4800, но проблему он не решает." }, "betterWhen": { "ru": "Если перед смертью тебя держат контролем." } },
+      { "item": "upgrade_metal_skin", "score": 10, "verdict": "bad", "why": { "ru": "Защита от пуль, а удары спиритические." }, "betterWhen": { "ru": "Против стрелков." } }
+    ],
+    "principle": { "ru": "Против редких огромных ударов эффективнее срез одного удара, против потока урона - процентный резист." },
+    "mechanics": [
+      { "text": { "ru": "Spellbreaker: следующий удар спирит-урона от 175 снижается на 65%, перезарядка 9 с; +18% Spirit Resist, +25% Debuff Resist; улучшается из Debuff Reducer." }, "status": "data" },
+      { "text": { "ru": "Spirit Resilience: +30% Spirit Resist, ниже 50% здоровья ещё +15%." }, "status": "data" },
+      { "text": { "ru": "Charged Shot и Essence Bomb наносят спирит-урон одним мощным попаданием." }, "status": "data" },
+      { "text": { "ru": "Бонусы Enchanter's Emblem к духовной силе и перезарядке работают только выше 65% здоровья." }, "status": "data" },
+      { "text": { "ru": "Witchmail: +22% Spirit Resist; крупные спирит-удары сокращают перезарядку случайной способности; стоит 6400." }, "status": "data" }
+    ],
+    "tree": {
+      "problem": { "ru": "Серия из 2-3 огромных спирит-ударов убивает тебя на заходе." },
+      "solutions": [{ "ru": "Срезать один крупный удар" }, { "ru": "Поднять процентный Spirit Resist" }, { "ru": "Не попадать под удары" }],
+      "constraints": [{ "ru": "5000 душ" }, { "ru": "Debuff Reducer уже есть" }, { "ru": "Удары редкие, но огромные" }],
+      "choice": { "ru": "Spellbreaker: крупный удар раз в 9 с теряет 65% урона." },
+      "consequences": [{ "ru": "Перезарядка 9 с: если два удара придут подряд быстрее, второй пройдёт полностью." }, { "ru": "Против потока мелкого урона позже добавь Spirit Resilience." }]
+    },
+    "difficulty": 4,
+    "tags": ["general", "resist"],
+    "dims": ["mechanics", "counter", "build"],
+    "sources": ["item:upgrade_spellbreaker", "item:upgrade_tech_purge", "item:upgrade_absorbing_armor", "item:upgrade_unstoppable", "item:upgrade_metal_skin", "item:upgrade_debuff_reducer", "ability:ability_charged_shot", "ability:ability_blood_bomb", "hero:hero_nano"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-032",
+    "kind": "diagnose-buy",
+    "hero": "hero_hornet",
+    "phase": "mid",
+    "souls": 3600,
+    "owned": ["upgrade_pristine_emblem", "upgrade_quick_silver", "upgrade_rapid_recharge", "upgrade_trophy_collector", "upgrade_blitz_bullets", "upgrade_long_range"],
+    "enemies": [
+      { "hero": "hero_mirage" },
+      { "hero": "hero_kelvin" },
+      { "hero": "hero_lash" }
+    ],
+    "situation": { "ru": "Середина игры. Mirage раз за разом уходит от тебя с низким здоровьем: отбегает за угол, начинает Traveler и после короткого ожидания телепортируется через полкарты. Ты успеваешь попасть по нему во время ожидания, но телепорт всё равно срабатывает. Раньше в этой же игре твои попадания его останавливали. У тебя 3600 душ." },
+    "symptoms": [
+      { "ru": "Урон по Mirage во время ожидания телепорта больше не сбивает его." },
+      { "ru": "Раньше в этой же игре попадания его останавливали." },
+      { "ru": "После телепорта у Mirage появляется барьер." }
+    ],
+    "question": { "ru": "Что купить, чтобы сбивать его телепорт?" },
+    "problemTags": ["enemy-channel-ult", "enemy-high-mobility", "you-cant-catch"],
+    "diagnosis": {
+      "prompt": { "ru": "Почему твой урон перестал сбивать телепорт?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Mirage прокачал Traveler до T3: телепорт больше не прерывается уроном, но по-прежнему прерывается станом, обездвиживанием, сном и немотой передвижения." }, "correct": true, "why": { "ru": "По описанию T3 убирает только прерывание уроном, остальные условия прерывания остаются." } },
+        { "id": "b", "text": { "ru": "У Mirage барьер, поэтому урон не проходит." }, "correct": false, "why": { "ru": "Барьер появляется уже после телепорта, а не во время ожидания." } },
+        { "id": "c", "text": { "ru": "Телепорт вообще нельзя прервать." }, "correct": false, "why": { "ru": "По описанию его прерывают урон, стан, обездвиживание, сон и немота передвижения; T3 убирает только урон." } },
+        { "id": "d", "text": { "ru": "Ты попадаешь слишком слабо." }, "correct": false, "why": { "ru": "Раньше прерывание срабатывало от твоих попаданий: дело не в количестве урона, а в улучшении." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_containment", "score": 85, "verdict": "best", "why": { "ru": "Накладывает немоту на способности и предметы передвижения, а немота передвижения прямо названа в описании Traveler среди того, что прерывает телепорт. Срабатывает без задержки, дальность 25 м, перезарядка 29 с, стоит 1600." } },
+      { "item": "upgrade_target_stun", "score": 55, "verdict": "ok", "why": { "ru": "Стан тоже прерывает телепорт по описанию, но наступает только через 2 с. Сколько длится ожидание Traveler, в данных не указано, так что можно не успеть." }, "betterWhen": { "ru": "Если ты заранее видишь, что Mirage готовится уйти, или против целей в воздухе." } },
+      { "item": "upgrade_targeted_silence", "score": 30, "verdict": "weak", "why": { "ru": "В описании Traveler сказано именно о немоте передвижения. Считается ли общая немота от Silence Wave такой немотой, в данных не уточняется." }, "betterWhen": { "ru": "Чтобы не дать врагам начать способности перед дракой." } },
+      { "item": "upgrade_toxic_bullets", "score": 10, "verdict": "bad", "why": { "ru": "Больше урона ничего не даст: после T3 урон телепорт не прерывает." }, "betterWhen": { "ru": "Против Mirage без T3 Traveler или против цели, которая отлечивается." } }
+    ],
+    "principle": { "ru": "Узнай, чем прерывается способность, и купи именно это: после улучшения урон может перестать работать." },
+    "mechanics": [
+      { "text": { "ru": "Traveler: после короткого ожидания Mirage телепортируется в точку; урон, Stun, Immobilize, Sleep или немота передвижения во время ожидания прерывают телепорт; T3 убирает прерывание уроном; после телепорта Mirage получает барьер." }, "status": "data" },
+      { "text": { "ru": "Slowing Hex накладывает немоту на предметы и способности передвижения; дальность 25 м." }, "status": "data" },
+      { "text": { "ru": "Knockdown накладывает стан через 2 с." }, "status": "data" },
+      { "text": { "ru": "Сколько длится ожидание Traveler и считается ли привязь Stake обездвиживанием для его прерывания, в данных не указано." }, "status": "unverified" },
+      { "text": { "ru": "Прерывает ли Traveler общая немота от Silence Wave, в данных не сказано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Mirage с низким здоровьем уходит телепортом, и урон его больше не сбивает." },
+      "solutions": [{ "ru": "Немота передвижения" }, { "ru": "Стан или обездвиживание" }, { "ru": "Добить до начала телепорта" }],
+      "constraints": [{ "ru": "3600 душ" }, { "ru": "Traveler с T3: урон не прерывает" }, { "ru": "Ожидание короткое: задержка стана опасна" }],
+      "choice": { "ru": "Slowing Hex: немота передвижения без задержки прямо прерывает Traveler." },
+      "consequences": [{ "ru": "Держи чары для момента, когда Mirage начинает Traveler." }, { "ru": "Если успеваешь, добивай его Assassinate ещё до начала телепорта." }]
+    },
+    "difficulty": 5,
+    "tags": ["general", "ult", "mobility", "vindicta"],
+    "dims": ["mechanics", "situation", "counter"],
+    "sources": ["ability:mirage_teleport", "item:upgrade_containment", "item:upgrade_target_stun", "item:upgrade_targeted_silence", "item:upgrade_toxic_bullets", "ability:citadel_ability_hornet_chain", "hero:hero_mirage", "build:616630"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-033",
+    "kind": "diagnose-buy",
+    "hero": "hero_dynamo",
+    "phase": "late",
+    "souls": 6600,
+    "owned": ["upgrade_soaring_spirit", "upgrade_imbued_duration_extender", "upgrade_cooldown_reduction", "upgrade_magic_shield", "upgrade_reduce_debuff_duration", "upgrade_debuff_reducer", "upgrade_superior_stamina"],
+    "enemies": [
+      { "hero": "hero_wraith", "items": ["upgrade_glitch"] },
+      { "hero": "hero_orion" },
+      { "hero": "hero_atlas" }
+    ],
+    "situation": { "ru": "Поздняя игра. Ты начинаешь Singularity, и через мгновение канал обрывается. После этого ты не можешь применить ни способности, ни предметы, а твои баффы пропадают. Dispel Magic в эти секунды тоже не нажимается. Иногда то же самое случается, когда ты заходишь в ловушку Grey Talon. У тебя 6600 душ." },
+    "symptoms": [
+      { "ru": "Канал Singularity обрывается сразу после начала." },
+      { "ru": "После этого не нажимается ни один предмет, даже Dispel Magic." },
+      { "ru": "С тебя пропадают баффы от обычных способностей и предметов." }
+    ],
+    "question": { "ru": "Что купить против этого?" },
+    "problemTags": ["enemy-curse", "enemy-silence", "teamfight"],
+    "diagnosis": {
+      "prompt": { "ru": "Что с тобой происходит?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Проклятие: Cursed Relic у Wraith или Spirit Snare Grey Talon. Оно прерывает канал, накладывает немоту, обезоруживает и запрещает предметы, а Cursed Relic ещё и снимает неультимативные баффы." }, "correct": true, "why": { "ru": "Мгновенное прерывание, запрет предметов и пропавшие баффы - это ровно описание проклятия." } },
+        { "id": "b", "text": { "ru": "Это стан, поэтому Dispel Magic не нажимается." }, "correct": false, "why": { "ru": "Пропавшие баффы стан не объясняет: снятие неультимативных баффов есть в описании Cursed Relic." } },
+        { "id": "c", "text": { "ru": "Это немота от Silence Wave." }, "correct": false, "why": { "ru": "Silence Wave по описанию не прерывает каналы и не запрещает предметы." } },
+        { "id": "d", "text": { "ru": "Тебе не хватает Debuff Resist." }, "correct": false, "why": { "ru": "Debuff Reducer у тебя уже есть: сопротивление укорачивает эффект, но не спасает канал и не даёт нажать предмет." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_counterspell", "score": 80, "verdict": "best", "why": { "ru": "Следующее парирование защищает от урона и эффектов вражеских способностей и предметов, а Cursed Relic - вражеский предмет. Поймал момент - проклятия нет, и канал Singularity продолжается. Окно 0.8 с, перезарядка 23 с. Против Spirit Snare надёжнее просто не заходить в ловушку." } },
+      { "item": "upgrade_unstoppable", "score": 45, "verdict": "ok", "why": { "ru": "Даёт иммунитет к Silence и Disarm, но проклятие ещё запрещает предметы и снимает все неультимативные баффы. Переживёт ли Unstoppable проклятие, в данных не сказано. Доплата 4800." }, "betterWhen": { "ru": "Против станов, сна и немоты, если включаешь его заранее." } },
+      { "item": "upgrade_auto_cleanse", "score": 30, "verdict": "weak", "why": { "ru": "В списке Indomitable: Stun, Chain, Immobilize, Sleep, Silence и Fear. Curse там нет, и снимет ли он немоту от проклятия, неизвестно." }, "betterWhen": { "ru": "Против станов и сна от разных героев." } },
+      { "item": "upgrade_spellbreaker", "score": 20, "verdict": "weak", "why": { "ru": "Режет крупный спирит-удар, но проклятие - не урон. Доплата 4800." }, "betterWhen": { "ru": "Если тебя убивает один мощный спирит-удар." } }
+    ],
+    "principle": { "ru": "Против проклятия, которое запрещает предметы, помогает только то, что срабатывает до него: парирование." },
+    "mechanics": [
+      { "text": { "ru": "Cursed Relic: на 3.25 с прерывает, накладывает немоту, обезоруживает, запрещает использовать предметы и снимает все неультимативные баффы; дальность 20 м, перезарядка 55 с." }, "status": "data" },
+      { "text": { "ru": "Spirit Snare: взведённая ловушка Grey Talon проклинает врага, вошедшего в радиус: прерывание, немота, обезоруживание и запрет предметов." }, "status": "data" },
+      { "text": { "ru": "Counterspell: следующее парирование защищает от урона и эффектов вражеских способностей и предметов; окно 0.8 с." }, "status": "data" },
+      { "text": { "ru": "Indomitable снимает Stun, Chain, Immobilize, Sleep, Silence или Fear; Curse в списке нет." }, "status": "data" },
+      { "text": { "ru": "Защитит ли Unstoppable от проклятия и можно ли парировать срабатывание ловушки Spirit Snare, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Проклятие обрывает твой ультимейт и выключает предметы." },
+      "solutions": [{ "ru": "Не получить проклятие: парирование" }, { "ru": "Иммунитет заранее" }, { "ru": "Держаться вне ловушек и вне дальности Relic" }],
+      "constraints": [{ "ru": "Под проклятием предметы не нажать" }, { "ru": "Debuff Reducer уже есть" }, { "ru": "6600 душ" }],
+      "choice": { "ru": "Counterspell: защищает от эффекта вражеского предмета до того, как он сработает." },
+      "consequences": [{ "ru": "Начинай Singularity, когда Wraith с Relic далеко или Relic на перезарядке 55 с." }, { "ru": "Ловушки Grey Talon обходи: их проще не трогать." }]
+    },
+    "difficulty": 5,
+    "tags": ["general", "cc"],
+    "dims": ["mechanics", "counter"],
+    "sources": ["item:upgrade_counterspell", "item:upgrade_glitch", "item:upgrade_unstoppable", "item:upgrade_auto_cleanse", "item:upgrade_spellbreaker", "ability:ability_immobilize_trap", "ability:citadel_ability_self_vacuum", "hero:hero_wraith", "hero:hero_orion"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-034",
+    "kind": "diagnose-buy",
+    "hero": "hero_priest",
+    "phase": "late",
+    "souls": 7000,
+    "owned": ["upgrade_toxic_bullets", "upgrade_titan_round", "upgrade_burst_fire", "upgrade_headhunter", "upgrade_vampire", "upgrade_superior_stamina", "upgrade_regenerating_bullet_shield"],
+    "enemies": [
+      { "hero": "hero_haze", "items": ["upgrade_damage_recycler"] },
+      { "hero": "hero_gigawatt" },
+      { "hero": "hero_shiv" }
+    ],
+    "situation": { "ru": "Поздняя игра. У тебя Toxic Bullets, а Consecrating Grenade тоже режет лечение горящим целям. Против большинства врагов это работает, но Haze всё равно выигрывает затяжные перестрелки: пока она стреляет, её здоровье почти не падает. Лекарей у врага нет. У тебя 7000 душ." },
+    "symptoms": [
+      { "ru": "Значок сниженного лечения на Haze висит, но она всё равно отхиливается от своей стрельбы." },
+      { "ru": "Против других врагов твой анти-хил работает как надо." },
+      { "ru": "Haze лечится, только пока наносит урон." }
+    ],
+    "question": { "ru": "Что купить, чтобы выиграть перестрелку с Haze?" },
+    "problemTags": ["enemy-lifesteal", "enemy-gun-dps"],
+    "diagnosis": {
+      "prompt": { "ru": "Почему твой анти-хил не работает против Haze?" },
+      "options": [
+        { "id": "a", "text": { "ru": "У Haze Leech: он ослабляет наложенное на неё снижение лечения, а лечится она от собственного урона." }, "correct": true, "why": { "ru": "Лечение появляется только во время её стрельбы, а Leech по описанию ослабляет вражеский срез лечения." } },
+        { "id": "b", "text": { "ru": "Срезы лечения не складываются, нужен ещё один." }, "correct": false, "why": { "ru": "Как складываются разные срезы, в данных не указано, а против других врагов твой срез работает. Отличие Haze - её предмет." } },
+        { "id": "c", "text": { "ru": "У врага есть незаметный лекарь." }, "correct": false, "why": { "ru": "Лекарей у врага нет, а лечение появляется только тогда, когда Haze стреляет." } },
+        { "id": "d", "text": { "ru": "Toxic Bullets не срабатывает из-за дистанции." }, "correct": false, "why": { "ru": "Значок сниженного лечения на ней висит, значит предмет срабатывает." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_inhibitor", "score": 82, "verdict": "best", "why": { "ru": "Пули копят на цели снижение исходящего урона на 30% и срез лечения на 40%. Leech по описанию ослабляет только снижение лечения, а снижение урона он не трогает. Меньше урона у Haze - меньше и её вампиризма, и урона по тебе. Стоит 6400, по бюджету." } },
+      { "item": "upgrade_metal_skin", "score": 66, "verdict": "good", "why": { "ru": "5 с иммунитета к пулям: Haze не наносит тебе урона оружием, а значит и не лечится от тебя. Дешевле, но работает окнами по 5 с раз в 24 с." }, "betterWhen": { "ru": "Если перестрелки короткие и ты успеваешь нажать активку под её главную очередь или Bullet Dance." } },
+      { "item": "upgrade_banshee_slugs", "score": 45, "verdict": "ok", "why": { "ru": "Ещё один срез лечения через хедшоты плюс снижение резистов. Но Leech ослабит и этот срез." }, "betterWhen": { "ru": "Против цели без Leech, которую лечат союзники." } },
+      { "item": "upgrade_spirit_burn", "score": 25, "verdict": "weak", "why": { "ru": "Срез -70%, но у Venator в основном оружейный урон, а порог 500 спирит-урона за 5 с набрать трудно; Leech ослабит и этот срез." }, "betterWhen": { "ru": "На спирит-бурст герое против лечения поддержки." } }
+    ],
+    "principle": { "ru": "Если враг сопротивляется анти-хилу, режь источник его лечения: урон, которым он лечится." },
+    "mechanics": [
+      { "text": { "ru": "Leech: +30% Bullet Lifesteal и +30% Spirit Lifesteal; ослабляет наложенное врагами снижение лечения." }, "status": "data" },
+      { "text": { "ru": "Inhibitor: пули копят на цели -30% к исходящему урону и -40% к входящему лечению на 5 с." }, "status": "data" },
+      { "text": { "ru": "Consecrating Grenade поджигает врагов, и горящие цели получают меньше лечения." }, "status": "data" },
+      { "text": { "ru": "Вампиризм лечит от нанесённого урона, поэтому снижение урона цели уменьшает и её лечение." }, "status": "expert" },
+      { "text": { "ru": "Насколько именно Leech ослабляет срез лечения и как складываются разные срезы, в данных не указано." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Вампиризм Haze сильнее твоего анти-хила." },
+      "solutions": [{ "ru": "Ещё больше среза лечения" }, { "ru": "Срезать урон, от которого она лечится" }, { "ru": "Не давать ей наносить урон по тебе" }],
+      "constraints": [{ "ru": "7000 душ" }, { "ru": "Leech ослабляет любой срез лечения" }, { "ru": "Анти-хил у тебя уже есть" }],
+      "choice": { "ru": "Inhibitor: снижение урона Leech не ослабляет, а меньше урона - меньше вампиризма." },
+      "consequences": [{ "ru": "Inhibitor копится от попаданий: держи Haze под огнём." }, { "ru": "Против Bullet Dance всё равно может понадобиться Metal Skin." }]
+    },
+    "difficulty": 5,
+    "tags": ["general", "anti-heal"],
+    "dims": ["mechanics", "counter", "situation"],
+    "sources": ["item:upgrade_inhibitor", "item:upgrade_damage_recycler", "item:upgrade_metal_skin", "item:upgrade_banshee_slugs", "item:upgrade_spirit_burn", "item:upgrade_toxic_bullets", "ability:ability_priest_flashbang", "hero:hero_haze"],
+    "status": "expert"
+  },
+  {
+    "id": "gen-035",
+    "kind": "diagnose-buy",
+    "hero": "hero_ghost",
+    "phase": "late",
+    "souls": 6900,
+    "owned": ["upgrade_soaring_spirit", "upgrade_reduce_debuff_duration", "upgrade_health_stealing_magic", "upgrade_magic_vulnerability", "upgrade_cooldown_reduction", "upgrade_tech_purge", "upgrade_debuff_reducer"],
+    "enemies": [
+      { "hero": "hero_vampirebat" },
+      { "hero": "hero_chrono" },
+      { "hero": "hero_tengu" },
+      { "hero": "hero_inferno" }
+    ],
+    "situation": { "ru": "Поздняя игра. В каждой командной драке ты теряешь способности в самый важный момент. Ты нажимаешь Dispel Magic: иногда немота слетает, а иногда остаётся, и ты стоишь без Soul Exchange и Life Drain, пока тебя убивают. У тебя 6900 душ." },
+    "symptoms": [
+      { "ru": "Немота, которая не снимается, приходит, когда на тебя налетает туча летучих мышей." },
+      { "ru": "После касания стены времени Paradox очищение срабатывает нормально." },
+      { "ru": "Ты погибаешь с готовыми способностями на панели." }
+    ],
+    "question": { "ru": "Что купить, чтобы не терять способности в драке?" },
+    "problemTags": ["enemy-silence", "teamfight"],
+    "diagnosis": {
+      "prompt": { "ru": "Почему Dispel Magic работает через раз?" },
+      "options": [
+        { "id": "a", "text": { "ru": "Немоту, которая не снимается, накладывает ультимейт Mina, Nox Nostra, а Dispel Magic снимает только неультимативные эффекты." }, "correct": true, "why": { "ru": "Мыши - это Nox Nostra, а немота от Time Wall - обычная способность, и её очищение снимает." } },
+        { "id": "b", "text": { "ru": "Dispel Magic не работает под немотой." }, "correct": false, "why": { "ru": "Ограничение Dispel Magic - стан и сон, а не немота: немота от Time Wall снимается нормально." } },
+        { "id": "c", "text": { "ru": "Тебя оглушают, поэтому предмет не нажимается." }, "correct": false, "why": { "ru": "Предмет нажимается, просто часть немоты остаётся: дело в источнике эффекта, а не в стане." } },
+        { "id": "d", "text": { "ru": "Немота слишком длинная, нужен Debuff Resist." }, "correct": false, "why": { "ru": "Debuff Reducer у тебя уже есть, а эффект ультимейта не снимается вообще: длительность тут вторична." } }
+      ]
+    },
+    "options": [
+      { "item": "upgrade_unstoppable", "score": 82, "verdict": "best", "why": { "ru": "Подавляет негативные эффекты и даёт иммунитет к Silence, Stun, Sleep, Root и Disarm на 5.5 с, и в описании нет исключения для ультимейтов. Нажимать можно и под немотой, нельзя только под станом и сном. Включай, когда Mina начинает Nox Nostra или перед своим заходом. Debuff Reducer уже есть: доплата 4800." } },
+      { "item": "upgrade_auto_cleanse", "score": 62, "verdict": "good", "why": { "ru": "Автоматически снимает следующий Silence, исключения для ультимейтов в описании тоже нет. Но это один эффект раз в 55 с, а в Nox Nostra каждая мышь накладывает немоту отдельно." }, "betterWhen": { "ru": "Если контроль приходит одиночными эффектами в неожиданный момент: один стан или один сон." } },
+      { "item": "upgrade_counterspell", "score": 45, "verdict": "ok", "why": { "ru": "Парирование защищает от одной способности, а мыши Nox Nostra прилетают роем; сколько их закроет одно окно 0.8 с, в данных не указано." }, "betterWhen": { "ru": "Против одиночных опасных способностей, которые ты умеешь читать: крюк, стан, проклятие." } },
+      { "item": "upgrade_spellbreaker", "score": 30, "verdict": "weak", "why": { "ru": "Снижает следующий крупный спирит-удар на 65%, но немоту не снимает и от неё не защищает." }, "betterWhen": { "ru": "Если тебя убивает один мощный спирит-удар, а не потеря способностей." } }
+    ],
+    "principle": { "ru": "Очищение снимает только неультимативные эффекты. Против немоты от ультимейта нужна защита, включённая заранее." },
+    "mechanics": [
+      { "text": { "ru": "Dispel Magic снимает только неультимативные негативные эффекты; нельзя использовать под Stun или Sleep." }, "status": "data" },
+      { "text": { "ru": "Unstoppable подавляет негативные эффекты и даёт иммунитет к Stun, Silence, Sleep, Root и Disarm на 5.5 с; нельзя использовать под Stun или Sleep; исключения для ультимейтов в описании нет." }, "status": "data" },
+      { "text": { "ru": "Nox Nostra - ультимейт Mina: мыши ищут цели, и каждая наносит спирит-урон и накладывает Silence." }, "status": "data" },
+      { "text": { "ru": "Time Wall с T2 накладывает немоту на 2.3 с на врагов, которые её касаются; Air Drop с T3 накладывает немоту на 3 с." }, "status": "data" },
+      { "text": { "ru": "Indomitable снимает только следующий эффект из своего списка; перезарядка 55 с." }, "status": "data" },
+      { "text": { "ru": "Работают ли иммунитет Unstoppable и очищение Indomitable именно против немоты от Nox Nostra, в данных прямо не проверено: в описаниях просто нет исключения для ультимейтов." }, "status": "unverified" }
+    ],
+    "tree": {
+      "problem": { "ru": "Немота от ультимейта выключает твои способности в драке." },
+      "solutions": [{ "ru": "Иммунитет к немоте заранее" }, { "ru": "Автоматическое очищение" }, { "ru": "Парирование" }],
+      "constraints": [{ "ru": "Dispel Magic не снимает эффекты ультимейтов" }, { "ru": "Мыши накладывают немоту много раз" }, { "ru": "6900 душ, Debuff Reducer уже есть" }],
+      "choice": { "ru": "Unstoppable: 5.5 с иммунитета закрывают всю волну мышей." },
+      "consequences": [{ "ru": "Включай заранее: под станом и сном он не нажимается." }, { "ru": "Dispel Magic оставь против немоты Time Wall и других обычных эффектов." }]
+    },
+    "difficulty": 5,
+    "tags": ["general", "cc", "ult"],
+    "dims": ["mechanics", "counter", "active"],
+    "sources": ["item:upgrade_unstoppable", "item:upgrade_auto_cleanse", "item:upgrade_counterspell", "item:upgrade_spellbreaker", "item:upgrade_reduce_debuff_duration", "ability:ability_vampirebat_batswarm", "ability:citadel_ability_chrono_time_wall", "ability:citadel_ability_tengu_airlift", "hero:hero_vampirebat"],
+    "status": "expert"
+  }
+]

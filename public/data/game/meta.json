@@ -1,0 +1,812 @@
+{
+ "schema": 1,
+ "clientVersion": 6864,
+ "versionDate": "2026-11-18T14:12:48",
+ "fetchedAt": "2026-11-23T10:31:50.926Z",
+ "sources": [
+  "https://api.deadlock-api.com/v1/assets/items",
+  "https://api.deadlock-api.com/v1/assets/items?language=russian",
+  "https://api.deadlock-api.com/v1/assets/heroes",
+  "https://api.deadlock-api.com/v1/assets/heroes?language=russian",
+  "https://api.deadlock-api.com/v1/assets/generic-data",
+  "https://api.deadlock-api.com/v1/assets/steam-info",
+  "https://api.deadlock-api.com/v2/patches"
+ ],
+ "counts": {
+  "items": 173,
+  "standardItems": 156,
+  "heroes": 44
+ },
+ "priceTiers": [
+  0,
+  800,
+  1600,
+  3200,
+  6400,
+  9999
+ ],
+ "investment": {
+  "weapon": [
+   {
+    "threshold": 800,
+    "bonus": 9
+   },
+   {
+    "threshold": 1600,
+    "bonus": 12
+   },
+   {
+    "threshold": 2400,
+    "bonus": 15
+   },
+   {
+    "threshold": 3200,
+    "bonus": 18
+   },
+   {
+    "threshold": 4800,
+    "bonus": 46
+   },
+   {
+    "threshold": 6400,
+    "bonus": 54
+   },
+   {
+    "threshold": 8000,
+    "bonus": 62
+   },
+   {
+    "threshold": 11200,
+    "bonus": 74
+   },
+   {
+    "threshold": 16000,
+    "bonus": 86
+   },
+   {
+    "threshold": 22400,
+    "bonus": 100
+   },
+   {
+    "threshold": 28800,
+    "bonus": 115
+   }
+  ],
+  "vitality": [
+   {
+    "threshold": 800,
+    "bonus": 9
+   },
+   {
+    "threshold": 1600,
+    "bonus": 12
+   },
+   {
+    "threshold": 2400,
+    "bonus": 15
+   },
+   {
+    "threshold": 3200,
+    "bonus": 20
+   },
+   {
+    "threshold": 4800,
+    "bonus": 38
+   },
+   {
+    "threshold": 6400,
+    "bonus": 42
+   },
+   {
+    "threshold": 8000,
+    "bonus": 46
+   },
+   {
+    "threshold": 11200,
+    "bonus": 50
+   },
+   {
+    "threshold": 16000,
+    "bonus": 54
+   },
+   {
+    "threshold": 22400,
+    "bonus": 60
+   },
+   {
+    "threshold": 28800,
+    "bonus": 66
+   }
+  ],
+  "spirit": [
+   {
+    "threshold": 800,
+    "bonus": 7
+   },
+   {
+    "threshold": 1600,
+    "bonus": 11
+   },
+   {
+    "threshold": 2400,
+    "bonus": 15
+   },
+   {
+    "threshold": 3200,
+    "bonus": 19
+   },
+   {
+    "threshold": 4800,
+    "bonus": 38
+   },
+   {
+    "threshold": 6400,
+    "bonus": 45
+   },
+   {
+    "threshold": 8000,
+    "bonus": 52
+   },
+   {
+    "threshold": 11200,
+    "bonus": 59
+   },
+   {
+    "threshold": 16000,
+    "bonus": 66
+   },
+   {
+    "threshold": 22400,
+    "bonus": 75
+   },
+   {
+    "threshold": 28800,
+    "bonus": 100
+   }
+  ]
+ },
+ "shopGroups": [
+  {
+   "key": "EMagazines",
+   "slot": "weapon",
+   "items": [
+    "upgrade_clip_size",
+    "upgrade_active_reload",
+    "upgrade_intensifying_clip",
+    "upgrade_titan_round",
+    "upgrade_infinitemagazine",
+    "upgrade_reinforcing_casings"
+   ]
+  },
+  {
+   "key": "ERateOfFire",
+   "slot": "weapon",
+   "items": [
+    "upgrade_rapid_rounds",
+    "upgrade_blitz_bullets",
+    "upgrade_burst_fire",
+    "upgrade_ricochet"
+   ]
+  },
+  {
+   "key": "EBulletVelocity",
+   "slot": "weapon",
+   "items": [
+    "upgrade_weighted_shots",
+    "upgrade_high_velocity_mag",
+    "upgrade_long_range",
+    "upgrade_split_shot",
+    "upgrade_pristine_emblem",
+    "upgrade_sharpshooter",
+    "upgrade_aprounds"
+   ]
+  },
+  {
+   "key": "EHeadshotEnthusiasts",
+   "slot": "weapon",
+   "items": [
+    "upgrade_headshot_booster",
+    "upgrade_headshot_booster2",
+    "upgrade_headhunter",
+    "upgrade_banshee_slugs"
+   ]
+  },
+  {
+   "key": "EWeaponRange",
+   "slot": "weapon",
+   "items": [
+    "upgrade_close_range",
+    "upgrade_close_quarter_combat",
+    "upgrade_bullet_armor_reduction_aura",
+    "upgrade_cloaking_device_active",
+    "upgrade_proc_silence"
+   ]
+  },
+  {
+   "key": "ETankingBullets",
+   "slot": "weapon",
+   "items": [
+    "upgrade_melee_charge",
+    "upgrade_berserker",
+    "upgrade_fervor"
+   ]
+  },
+  {
+   "key": "ESpiritSlinger",
+   "slot": "weapon",
+   "items": [
+    "upgrade_crackshot",
+    "upgrade_tech_defense_shredders",
+    "upgrade_spellslinger_headshots",
+    "upgrade_chain_lightning",
+    "upgrade_tech_overflow"
+   ]
+  },
+  {
+   "key": "EActives",
+   "slot": "weapon",
+   "items": [
+    "upgrade_fleetfoot_boots",
+    "upgrade_thermal_detonator",
+    "upgrade_dps_aura",
+    "upgrade_warp_stone"
+   ]
+  },
+  {
+   "key": "EMisc",
+   "slot": "weapon",
+   "items": [
+    "upgrade_hollow_point_rounds",
+    "upgrade_non_player_bonus",
+    "upgrade_kinetic_sash",
+    "upgrade_toxic_bullets",
+    "upgrade_critshot"
+   ]
+  },
+  {
+   "key": "ESlowingBullets",
+   "slot": "weapon",
+   "items": [
+    "upgrade_slowing_bullets",
+    "upgrade_glass_cannon"
+   ]
+  },
+  {
+   "key": "EMoreHealth",
+   "slot": "vitality",
+   "items": [
+    "upgrade_health",
+    "upgrade_health_2",
+    "upgrade_chonky",
+    "upgrade_colossus",
+    "upgrade_unstoppable"
+   ]
+  },
+  {
+   "key": "EHealing",
+   "slot": "vitality",
+   "items": [
+    "upgrade_medic_bullets",
+    "upgrade_health_stimpak",
+    "upgrade_health_nova",
+    "upgrade_rescue_beam"
+   ]
+  },
+  {
+   "key": "ERevitalization",
+   "slot": "vitality",
+   "items": [
+    "upgrade_endurance",
+    "upgrade_restorative_locket",
+    "upgrade_vex_barrier",
+    "upgrade_healing_booster",
+    "upgrade_healbuff"
+   ]
+  },
+  {
+   "key": "EDebuffs",
+   "slot": "vitality",
+   "items": [
+    "upgrade_debuff_reducer",
+    "upgrade_reduce_debuff_duration",
+    "upgrade_inhibitor"
+   ]
+  },
+  {
+   "key": "ESpiritProtection",
+   "slot": "vitality",
+   "items": [
+    "upgrade_tech_armor",
+    "upgrade_magic_shield",
+    "upgrade_tech_purge",
+    "upgrade_cheat_death",
+    "upgrade_absorbing_armor",
+    "upgrade_phantom_strike",
+    "upgrade_spellbreaker"
+   ]
+  },
+  {
+   "key": "EBulletProtection",
+   "slot": "vitality",
+   "items": [
+    "upgrade_return_fire",
+    "upgrade_regenerating_bullet_shield",
+    "upgrade_bullet_armor",
+    "upgrade_improved_bullet_armor",
+    "upgrade_deflecting_armor"
+   ]
+  },
+  {
+   "key": "ELifesteal",
+   "slot": "vitality",
+   "items": [
+    "upgrade_vampire",
+    "upgrade_surging_power",
+    "upgrade_health_stealing_magic",
+    "upgrade_infuser",
+    "upgrade_damage_recycler"
+   ]
+  },
+  {
+   "key": "EMelee",
+   "slot": "vitality",
+   "items": [
+    "upgrade_lifestrike_gauntlets",
+    "upgrade_melee_rebuttal",
+    "upgrade_boxing_glove"
+   ]
+  },
+  {
+   "key": "EMovementAndAgility",
+   "slot": "vitality",
+   "items": [
+    "upgrade_improved_stamina",
+    "upgrade_sprint_booster",
+    "upgrade_cardio_calibrator",
+    "upgrade_superior_stamina",
+    "upgrade_rocket_booster",
+    "upgrade_juggernaut"
+   ]
+  },
+  {
+   "key": "EAntiHealing",
+   "slot": "vitality",
+   "items": [
+    "upgrade_healbane"
+   ]
+  },
+  {
+   "key": "EAdditionalProtection",
+   "slot": "vitality",
+   "items": [
+    "upgrade_weapon_shielding",
+    "upgrade_spirit_bubble",
+    "upgrade_savior",
+    "upgrade_metal_skin",
+    "upgrade_veil_walker",
+    "upgrade_siphon_bullets",
+    "upgrade_diviners_kevlar"
+   ]
+  },
+  {
+   "key": "EMoreSpirit",
+   "slot": "spirit",
+   "items": [
+    "upgrade_improved_spirit",
+    "upgrade_magic_storm",
+    "upgrade_soaring_spirit",
+    "upgrade_boundless_spirit"
+   ]
+  },
+  {
+   "key": "EBurstDamage",
+   "slot": "spirit",
+   "items": [
+    "upgrade_magic_burst",
+    "upgrade_quick_silver",
+    "upgrade_magic_shock",
+    "upgrade_ultimate_burst"
+   ]
+  },
+  {
+   "key": "ESpiritRange",
+   "slot": "spirit",
+   "items": [
+    "upgrade_magic_reach",
+    "upgrade_arcane_surge",
+    "upgrade_tech_range"
+   ]
+  },
+  {
+   "key": "EDuration",
+   "slot": "spirit",
+   "items": [
+    "upgrade_arcane_extension",
+    "upgrade_imbued_duration_extender",
+    "upgrade_magic_carpet",
+    "upgrade_spirit_burn"
+   ]
+  },
+  {
+   "key": "ECharges",
+   "slot": "spirit",
+   "items": [
+    "upgrade_extra_charge",
+    "upgrade_rapid_recharge"
+   ]
+  },
+  {
+   "key": "ECooldown",
+   "slot": "spirit",
+   "items": [
+    "upgrade_magic_tempo",
+    "upgrade_cooldown_reduction",
+    "upgrade_ability_power_shard"
+   ]
+  },
+  {
+   "key": "EMeleeSpirit",
+   "slot": "spirit",
+   "items": [
+    "upgrade_acolytes_glove",
+    "upgrade_spirit_snatch"
+   ]
+  },
+  {
+   "key": "ESlowingMagic",
+   "slot": "spirit",
+   "items": [
+    "upgrade_suppressor",
+    "upgrade_magic_slow",
+    "upgrade_mystic_reverb"
+   ]
+  },
+  {
+   "key": "EMagicVulnerability",
+   "slot": "spirit",
+   "items": [
+    "upgrade_magic_vulnerability",
+    "upgrade_escalating_exposure"
+   ]
+  },
+  {
+   "key": "ECrownControl",
+   "slot": "spirit",
+   "items": [
+    "upgrade_containment",
+    "upgrade_target_stun",
+    "upgrade_aoe_root"
+   ]
+  },
+  {
+   "key": "EAntiGun",
+   "slot": "spirit",
+   "items": [
+    "upgrade_withering_whip",
+    "upgrade_greater_withering_whip"
+   ]
+  },
+  {
+   "key": "EMiscSpirit",
+   "slot": "spirit",
+   "items": [
+    "upgrade_mystic_regeneration",
+    "upgrade_bullet_resist_shredder",
+    "upgrade_tech_damage_pulse"
+   ]
+  },
+  {
+   "key": "EActives",
+   "slot": "spirit",
+   "items": [
+    "upgrade_spirit_sap",
+    "upgrade_rupture",
+    "upgrade_cold_front",
+    "upgrade_self_bubble",
+    "upgrade_targeted_silence",
+    "upgrade_glitch",
+    "upgrade_discord",
+    "upgrade_focus_lens",
+    "upgrade_ability_refresher"
+   ]
+  }
+ ],
+ "itemHashes": {
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_goose_egg": "2ell97kd0xf",
+  "upgrade_magic_burst": "btz88ytahr",
+  "upgrade_magic_reach": "axgl70e88p",
+  "upgrade_mystic_regeneration": "19n4bscaja5",
+  "upgrade_withering_whip": "1upod56nkuv",
+  "upgrade_acolytes_glove": "17ogiog04xl",
+  "upgrade_arcane_surge": "24b97yec588",
+  "upgrade_bullet_resist_shredder": "z4p9pyjm0h",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_slow": "25q563sary2",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_spirit_sap": "vyuf03pojv",
+  "upgrade_suppressor": "arwx9wv9pl",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1",
+  "upgrade_tech_range": "1nuer0fvovk",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_resonant_healing": "in5c9w4l3z",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_spirit_snatch": "1jnj4exr5xi",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_arctic_blast": "1d1zv09f90k",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_focus_lens": "2ao4uqvybi2",
+  "upgrade_ultimate_burst": "17e3cq6fy7m",
+  "upgrade_magic_carpet": "sd7i7wy03l",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_mystic_reverb": "z7dyoe7xe7",
+  "upgrade_ability_refresher": "339hndrykv",
+  "upgrade_discord": "iz1afspme0",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_transcendent_cooldown": "1puwd68ro21",
+  "upgrade_aoe_root": "1b9pgad0pxf",
+  "upgrade_shivas_bracelet": "1calxkrfjrv",
+  "upgrade_patrons_blessing": "1domw92ea7z",
+  "upgrade_mystical_piano": "1xxp3zdiig",
+  "upgrade_omnicharge_pendant": "np0g4k4vga",
+  "upgrade_prism_blast": "t13vyvnamf",
+  "upgrade_shrink_ray": "726oqvgksj",
+  "upgrade_unstable_concoction": "pnjoktw0lk",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_lifestrike_gauntlets": "8n3szoopsu",
+  "upgrade_melee_rebuttal": "2b5y6j7rf01",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_guardian_ward": "1kl3pv3ucnn",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_healing_booster": "ykrubfnvtv",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_restorative_locket": "nc1xc9rta6",
+  "upgrade_return_fire": "2aqq82u6r6u",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_chonky": "1o5agjvpja8",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_health_nova": "25mp17g95ja",
+  "upgrade_boxing_glove": "1hcp4nq3r79",
+  "upgrade_rocket_booster": "23jznin7y39",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_rescue_beam": "d2y15aolhs",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_veil_walker": "1osw8birm12",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_cheat_death": "195en73xfn5",
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_healbuff": "1v74fx41ut7",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_infuser": "xibaah6cf6",
+  "upgrade_inhibitor": "1q1qh4qje16",
+  "upgrade_juggernaut": "kxkxsbv6lh",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_deflecting_armor": "1s8k4bk8v49",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_absorbing_armor": "7cipgv5wt9",
+  "upgrade_celestial_guidance": "hql1kijw1r",
+  "upgrade_cloak_of_opportunity": "13uqm0z0zfi",
+  "upgrade_electric_slippers": "nqrv9xi0hn",
+  "upgrade_eternal_gift": "18pex61yf6o",
+  "upgrade_nullification_aura": "297u8yc6v9q",
+  "upgrade_icarus_wings": "g586rswirj",
+  "upgrade_shadow_strike": "112ez0p4qqb",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_non_player_bonus": "1yhuoamena4",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_active_reload": "1korgwc0cod",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_intensifying_clip": "27ym9hnohf",
+  "upgrade_kinetic_sash": "28q57cj4sbb",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_melee_charge": "wd3k38lsus",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc",
+  "upgrade_split_shot": "1b6ba587slp",
+  "upgrade_weapon_backstabber": "1aac18axiro",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_headshot_booster2": "1luao1ixcq0",
+  "upgrade_thermal_detonator": "1dlkaa1gpgf",
+  "upgrade_bulletshredimbue": "1au185o9zig",
+  "upgrade_berserker": "ca6fytx2uc",
+  "upgrade_blood_tribute": "90x6dq824t",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_non_player_bonus_sacrifice": "1etpf104l8e",
+  "upgrade_reinforcing_casings": "1i39mk8urmh",
+  "upgrade_express_shot": "a8xd9vpb8z",
+  "upgrade_headhunter": "i9sijb1cpa",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_hollow_point_rounds": "dcl6ofc74w",
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_cloaking_device_active": "1548p85lpvy",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_spellslinger_headshots": "17yfke6mtoa",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_weighted_shots": "vpljjgt33u",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_crushing_fists": "2sj1ndru0y",
+  "upgrade_fervor": "1seziithpl5",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_proc_silence": "1isf0gj21ro",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_eldritch_shot": "12p03ypxmou",
+  "upgrade_infinite_rounds": "2100snh5w6l",
+  "upgrade_runed_gauntlets": "20cl0be02f0"
+ },
+ "heroHashes": {
+  "hero_atlas": "2dyxvpn7yxn",
+  "hero_fencer": "1obtnscv85w",
+  "hero_baba": "umpwh6vzmi",
+  "hero_bebop": "2fkdg2dz0un",
+  "hero_punkgoat": "91u2wrwdgo",
+  "hero_nano": "iz9bwzwsml",
+  "hero_unicorn": "2bz8w4kfj04",
+  "hero_deadpack": "2difbkeahg6",
+  "hero_drifter": "10ilo63cx45",
+  "hero_dynamo": "xykuyxpayi",
+  "hero_necro": "suetqgxg44",
+  "hero_orion": "lrowee8jok",
+  "hero_haze": "1q3tkb5uvlv",
+  "hero_astro": "1c4ku0tcg07",
+  "hero_inferno": "hs0x76hif2",
+  "hero_tengu": "1qsh0v27bup",
+  "hero_kelvin": "1ek3vqst8vg",
+  "hero_ghost": "hdri0pmerd",
+  "hero_lash": "okb7e5a3vy",
+  "hero_forge": "72k6e9wnvl",
+  "hero_vampirebat": "5waitgncok",
+  "hero_mirage": "14ju5ph3g35",
+  "hero_krill": "1exgepzvucm",
+  "hero_nurse": "iok284al4v",
+  "hero_bookworm": "r9utyz06wm",
+  "hero_chrono": "28t3xytxifm",
+  "hero_synth": "1hsudbhctby",
+  "hero_ratking": "xgbs9n1gk6",
+  "hero_familiar": "o6glro62nv",
+  "hero_gigawatt": "2cke1j9g3bt",
+  "hero_shiv": "2d1e1my3wkw",
+  "hero_werewolf": "1dh5wbrjp94",
+  "hero_magician": "288rt608imh",
+  "hero_chessmaster": "1wshknfren3",
+  "hero_doorman": "inzcsx7oay",
+  "hero_priest": "27ybb9whfzg",
+  "hero_frank": "7adtni6n2e",
+  "hero_hornet": "2b8zxzyxce3",
+  "hero_artist": "98hoy23om",
+  "hero_viscous": "vaxdxedu3r",
+  "hero_viper": "5srf1vqb15",
+  "hero_warden": "qa4f3xr4ay",
+  "hero_wraith": "17pfdk09b70",
+  "hero_yamato": "j8tp14la4b"
+ },
+ "patches": [
+  {
+   "title": "Minor Update - 11-04-2026",
+   "date": "2026-11-05T05:02:30Z",
+   "url": "https://store.steampowered.com/news/app/1422450/view/680766308468391944"
+  },
+  {
+   "title": "Halloween 2026 + Gameplay Update",
+   "date": "2026-10-30T20:51:49Z",
+   "url": "https://store.steampowered.com/news/app/1422450/view/680765564125186045"
+  },
+  {
+   "title": "09-29-2026",
+   "date": "2026-10-15T03:12:00Z",
+   "url": "https://forums.playdeadlock.com/threads/09-29-2026.166726/"
+  },
+  {
+   "title": "Minor Update - 10-14-2026",
+   "date": "2026-10-15T03:11:58Z",
+   "url": "https://store.steampowered.com/news/app/1422450/view/669505296465396213"
+  },
+  {
+   "title": "Minor Update - 10-05-2026",
+   "date": "2026-10-05T23:05:32Z",
+   "url": "https://store.steampowered.com/news/app/1422450/view/703281025618282632"
+  },
+  {
+   "title": "09-16-2026 Update",
+   "date": "2026-09-16T22:41:46Z",
+   "url": "https://forums.playdeadlock.com/threads/09-16-2026-update.162572/"
+  },
+  {
+   "title": "08-22-2026 Update",
+   "date": "2026-09-16T22:41:28Z",
+   "url": "https://forums.playdeadlock.com/threads/08-22-2026-update.162571/"
+  },
+  {
+   "title": "08-12-2026 Update",
+   "date": "2026-09-16T22:41:13Z",
+   "url": "https://forums.playdeadlock.com/threads/08-12-2026-update.162570/"
+  },
+  {
+   "title": "06-30-2026 Update",
+   "date": "2026-07-28T20:28:07Z",
+   "url": "https://forums.playdeadlock.com/threads/06-30-2026-update.146261/"
+  },
+  {
+   "title": "05-22-2026 Update",
+   "date": "2026-06-12T00:59:45Z",
+   "url": "https://forums.playdeadlock.com/threads/05-22-2026-update.135477/"
+  },
+  {
+   "title": "04-30-2026 Update",
+   "date": "2026-05-01T23:49:47Z",
+   "url": "https://forums.playdeadlock.com/threads/04-30-2026-update.129989/"
+  },
+  {
+   "title": "04-10-2026 Update",
+   "date": "2026-04-11T04:03:53Z",
+   "url": "https://forums.playdeadlock.com/threads/04-10-2026-update.125825/"
+  },
+  {
+   "title": "03-25-2026 Update",
+   "date": "2026-03-31T01:35:20Z",
+   "url": "https://forums.playdeadlock.com/threads/03-25-2026-update.121766/"
+  },
+  {
+   "title": "03-21-2026 Update",
+   "date": "2026-03-21T19:34:30Z",
+   "url": "https://forums.playdeadlock.com/threads/03-21-2026-update.120256/"
+  },
+  {
+   "title": "03-06-2026 Update",
+   "date": "2026-03-11T04:39:40Z",
+   "url": "https://forums.playdeadlock.com/threads/03-06-2026-update.114328/"
+  }
+ ]
+}

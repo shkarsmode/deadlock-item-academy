@@ -1,0 +1,336 @@
+<div class="runner">
+  <header class="topbar">
+    <button class="btn btn-ghost btn-sm" (click)="exit()" [attr.aria-label]="'Выйти' | l: 'Exit'">
+      <app-icon name="x" [size]="16" />
+      <span class="hide-sm">{{ 'Выйти' | l: 'Exit' }}</span>
+      <kbd class="kbd-hint">Esc</kbd>
+    </button>
+    <div class="prog" role="progressbar" [attr.aria-valuenow]="session.results().length" [attr.aria-valuemax]="session.total()">
+      <div class="bar"><i [style.width.%]="session.progress() * 100"></i></div>
+    </div>
+    <span class="count num small muted">{{ counter() }}</span>
+  </header>
+
+  @if (phase() === 'done') {
+    <app-session-summary />
+  } @else if (q(); as qq) {
+    <section class="stage" [class.wide]="!!qq.scenario">
+      @if (qq.relearn) {
+        <div class="relearn small"><app-icon name="repeat" [size]="14" /> {{ 'Закрепляем ошибку другим вопросом' | l: 'Reinforcing a mistake with a different question' }}</div>
+      }
+
+      <!-- ===================================================== prompt -->
+      <div class="prompt" [class.with-ctx]="!!qq.scenario">
+        @if (qq.scenario; as sc) {
+          <div class="ctx panel panel-pad">
+            <app-scenario-context [s]="sc" [hints]="qq.hints" [showProblem]="qq.format !== 'two-step'" />
+          </div>
+        }
+        <div class="qa">
+        <div class="ask">
+          @if (qq.prompt.itemKey && qq.prompt.showIcon) {
+            <app-item-icon class="big-icon" [key]="qq.prompt.itemKey" [size]="132" [alt]="!!qq.prompt.showName" />
+          }
+          @if (qq.prompt.pair; as pair) {
+            <div class="pair">
+              @if (qq.type === 'contrast' && qq.optionView === 'icon') {
+                <!-- recognition contrast: the options below are the icons -->
+              } @else {
+                @for (k of pair; track k) {
+                  <div class="pair-item">
+                    <app-item-icon [key]="k" [size]="72" />
+                    <span class="small">{{ game.item(k)?.name | gn }}</span>
+                  </div>
+                }
+              }
+            </div>
+          }
+          <h1 class="q-text">
+            {{ qq.prompt.text | tx }}
+            @if (qq.prompt.itemKey && qq.prompt.showName) {
+              <span class="q-name">{{ game.item(qq.prompt.itemKey)?.name | gn }}</span>
+            }
+          </h1>
+          @if (qq.prompt.sub) {
+            <p class="muted sub">{{ qq.prompt.sub | tx }}</p>
+          }
+          @if (qq.prompt.quote) {
+            <blockquote class="quote">{{ qq.prompt.quote | tx }}</blockquote>
+          }
+          @if (qq.prompt.stats?.length) {
+            <div class="panel panel-pad stats-box"><app-stats [stats]="qq.prompt.stats!" /></div>
+          }
+          @if (timeLeft() !== null) {
+            <div class="bar timer" [class.bad]="timeLeft()! < 4000"><i [style.width.%]="(timeLeft()! / (qq.timeLimitMs ?? 1)) * 100"></i></div>
+          }
+        </div>
+
+      <!-- ===================================================== answer area -->
+      @if (inDiagnosisStep()) {
+        <div class="step-label upper faint">{{ 'Шаг 1 из 2: в чём главная проблема?' | l: 'Step 1 of 2: what is the main problem?' }}</div>
+        <p class="diag-prompt">{{ diagnosis()?.prompt | tx }}</p>
+        <div class="options text">
+          @for (d of diagnosis()?.options ?? []; track d.id; let i = $index) {
+            <button class="opt" (click)="session.chooseDiagnosis(d.id)">
+              <kbd class="kbd-hint">{{ i + 1 }}</kbd>
+              <span class="grow">{{ d.text | tx }}</span>
+            </button>
+          }
+        </div>
+      } @else if (phase() === 'diagnosis-feedback') {
+        <div class="callout" [class.good]="diagnosisPicked()?.correct" [class.bad]="!diagnosisPicked()?.correct">
+          <app-icon [name]="diagnosisPicked()?.correct ? 'ok' : 'fail'" />
+          <div>
+            <b>{{ diagnosisPicked()?.correct ? ('Проблема определена верно' | l: 'Correct diagnosis') : ('Проблема в другом' | l: 'The problem is elsewhere') }}</b>
+            <p>{{ diagnosisPicked()?.why | tx }}</p>
+            @if (!diagnosisPicked()?.correct) {
+              @for (d of diagnosis()?.options ?? []; track d.id) {
+                @if (d.correct) {
+                  <p class="small"><b>{{ 'Главная проблема:' | l: 'Main problem:' }}</b> {{ d.text | tx }}. {{ d.why | tx }}</p>
+                }
+              }
+            }
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary btn-lg" (click)="session.continueAfterDiagnosis()">
+            {{ 'Шаг 2: выбрать покупку' | l: 'Step 2: choose a purchase' }} <kbd class="kbd-hint">Enter</kbd>
+          </button>
+        </div>
+      } @else if (qq.format === 'recall') {
+        @if (phase() === 'answering') {
+          <form class="recall" (submit)="$event.preventDefault(); submitRecall()">
+            <input
+              #recall
+              class="input recall-input"
+              [value]="typed()"
+              (input)="typed.set($any($event.target).value)"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              [attr.aria-label]="'Название предмета' | l: 'Item name'"
+              [placeholder]="'Название предмета' | l: 'Item name'"
+            />
+            <button class="btn btn-primary" type="submit">{{ 'Ответить' | l: 'Answer' }} <kbd class="kbd-hint">Enter</kbd></button>
+          </form>
+        }
+      } @else if (qq.format === 'surgery' && qq.scenario; as sc) {
+        @if (phase() === 'answering') {
+          <div class="surgery">
+            <div>
+              <div class="upper faint">{{ 'Твой билд: отметь, что убрать' | l: 'Your build: mark what to remove' }} ({{ surgeryRemove().length }}/{{ sc.swaps }})</div>
+              <div class="chips">
+                @for (k of sc.startBuild ?? []; track k) {
+                  <button class="chip" [class.on]="surgeryRemove().includes(k)" (click)="toggleRemove(k)" [attr.aria-pressed]="surgeryRemove().includes(k)">
+                    <app-item-icon [key]="k" [size]="32" [alt]="true" />
+                    <span class="small">{{ game.item(k)?.name | gn }}</span>
+                  </button>
+                }
+              </div>
+            </div>
+            <div>
+              <div class="upper faint">{{ 'Что добавить' | l: 'What to add' }} ({{ surgeryAdd().length }}/{{ sc.swaps }})</div>
+              <div class="chips">
+                @for (o of qq.options; track o.id) {
+                  <button class="chip add" [class.on]="surgeryAdd().includes(o.id)" (click)="toggleAdd(o.id)" [attr.aria-pressed]="surgeryAdd().includes(o.id)">
+                    <app-item-icon [key]="o.itemKey" [size]="32" [alt]="true" />
+                    <span class="small">{{ game.item(o.itemKey)?.name | gn }}</span>
+                    <span class="faint xsmall num">{{ game.item(o.itemKey)?.cost }}</span>
+                  </button>
+                }
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" [disabled]="!surgeryAdd().length" (click)="submitSurgery()">{{ 'Готово' | l: 'Done' }}</button>
+            </div>
+          </div>
+        }
+      } @else {
+        <div class="options" [class]="'options ' + qq.optionView">
+          @for (o of qq.options; track o.id; let i = $index) {
+            <button
+              class="opt"
+              [class]="'opt ' + optionState(o)"
+              [disabled]="phase() !== 'answering'"
+              (click)="choose(o)"
+              [attr.aria-label]="o.itemKey && qq.optionView === 'icon' ? ('Вариант' | l: 'Option') + ' ' + (i + 1) : null"
+            >
+              <kbd class="kbd-hint">{{ i + 1 }}</kbd>
+              @switch (qq.optionView) {
+                @case ('icon') {
+                  <app-item-icon [key]="o.itemKey" [size]="76" [alt]="phase() === 'feedback'" />
+                  @if (phase() === 'feedback') {
+                    <span class="small name-under">{{ game.item(o.itemKey)?.name | gn }}</span>
+                  }
+                }
+                @case ('icon-name') {
+                  <app-item-icon [key]="o.itemKey" [size]="44" [alt]="true" />
+                  <span class="grow opt-name">
+                    {{ game.item(o.itemKey)?.name | gn }}
+                    @if (qq.scenario) {
+                      <span class="faint xsmall num cost">{{ game.item(o.itemKey)?.cost }}</span>
+                    }
+                  </span>
+                }
+                @case ('name') {
+                  <span class="grow opt-name">{{ game.item(o.itemKey)?.name | gn }}</span>
+                }
+                @case ('ability') {
+                  <app-ability-icon [key]="o.abilityKey" [size]="40" [showSlot]="true" />
+                  <span class="grow opt-name">{{ abilityName(o.abilityKey) }}</span>
+                }
+                @default {
+                  @if (o.itemKey) {
+                    <app-item-icon [key]="o.itemKey" [size]="32" [alt]="true" />
+                  }
+                  <span class="grow">{{ o.text | tx }}</span>
+                }
+              }
+              @if (phase() === 'feedback' && o.verdict) {
+                <span class="verdict" [class]="'verdict v-' + o.verdict">{{ verdictLabel(o.verdict) }}</span>
+              }
+            </button>
+          }
+        </div>
+      }
+
+      <!-- ===================================================== confidence -->
+      @if (phase() === 'confidence') {
+        <div class="confidence" role="group" [attr.aria-label]="'Насколько ты уверен?' | l: 'How sure are you?'">
+          <div class="small muted">{{ 'Насколько ты уверен в ответе?' | l: 'How sure are you?' }}</div>
+          <div class="conf-row">
+            @for (c of confidences; track c.id) {
+              <button class="btn" (click)="confidence(c.id)"><kbd class="kbd-hint">{{ c.key }}</kbd> {{ c.ru | l: c.en }}</button>
+            }
+          </div>
+        </div>
+      }
+
+      @if (phase() === 'answering' && qq.allowDontKnow && qq.format !== 'surgery') {
+        <div class="dk">
+          <button class="btn btn-ghost" (click)="dontKnow()">{{ 'Не знаю' | l: "I don't know" }} <kbd class="kbd-hint">0</kbd></button>
+        </div>
+      }
+        </div>
+      </div>
+
+      <!-- ===================================================== feedback -->
+      @if (phase() === 'feedback' && last(); as r) {
+        <div class="feedback panel" [class]="'feedback panel tone-' + resultTone()" aria-live="polite">
+          <div class="fb-head">
+            <app-icon [name]="r.result === 'correct' ? 'ok' : r.result === 'partial' ? 'info' : 'fail'" [size]="20" />
+            <b>
+              @switch (r.result) {
+                @case ('correct') { {{ 'Верно' | l: 'Correct' }} }
+                @case ('partial') { {{ 'Частично верно' | l: 'Partly right' }} }
+                @case ('dontknow') { {{ 'Ничего страшного: запомним' | l: 'No problem: let us learn it' }} }
+                @default { {{ 'Неверно' | l: 'Not quite' }} }
+              }
+            </b>
+            @if (r.score > 0 && r.score < 1) {
+              <span class="num small muted">{{ i18n.pct(r.score) }}</span>
+            }
+            <span class="spacer"></span>
+            @if (r.confidence) {
+              <span class="small faint">{{ 'Уверенность:' | l: 'Confidence:' }} {{ confLabel(r.confidence) }}</span>
+            }
+          </div>
+          @if (r.typo) {
+            <p class="small">{{ 'Засчитано с опечаткой. Правильно:' | l: 'Accepted with a typo. Correct:' }} <b>{{ game.item(qq.expectedItem)?.name?.en }}</b></p>
+          }
+          @if (r.result === 'wrong' && (r.confidence === 'sure' || r.confidence === 'likely')) {
+            <p class="callout warn small"><app-icon name="alert" [size]="16" /> {{ 'Уверенная ошибка: это заблуждение будет возвращаться с приоритетом, пока не исправится.' | l: 'Confident mistake: this misconception gets priority until fixed.' }}</p>
+          }
+
+          @if (qq.scenario; as sc) {
+            @if (r.chosen?.why) {
+              <div class="chosen-why">
+                <div class="upper faint">{{ 'Твой выбор' | l: 'Your choice' }}</div>
+                <p>{{ r.chosen?.why | tx }}</p>
+                @if (r.chosen?.betterWhen) {
+                  <p class="small muted"><b>{{ 'Был бы лучше, если:' | l: 'Better when:' }}</b> {{ r.chosen?.betterWhen | tx }}</p>
+                }
+              </div>
+            }
+            <div class="principle"><app-icon name="bulb" [size]="16" /> <b>{{ sc.principle | tx }}</b></div>
+            <button class="btn btn-ghost btn-sm" (click)="showAllOptions.set(!showAllOptions())" [attr.aria-expanded]="showAllOptions()">
+              <app-icon [name]="showAllOptions() ? 'up' : 'down'" [size]="16" /> {{ 'Разбор всех вариантов' | l: 'All options explained' }}
+            </button>
+            @if (showAllOptions() || r.result !== 'correct') {
+              <ul class="list all-opts">
+                @for (o of sortedOptions(); track o.id) {
+                  <li>
+                    <div class="row">
+                      @if (o.itemKey) {
+                        <app-item-icon [key]="o.itemKey" [size]="28" [alt]="true" />
+                        <b>{{ game.item(o.itemKey)?.name | gn }}</b>
+                      } @else if (o.abilityKey) {
+                        <app-ability-icon [key]="o.abilityKey" [size]="28" />
+                        <b>{{ abilityName(o.abilityKey) }}</b>
+                      } @else {
+                        <b>{{ o.text | tx }}</b>
+                      }
+                      <span class="spacer"></span>
+                      <span class="verdict" [class]="'verdict v-' + o.verdict">{{ verdictLabel(o.verdict) }} · {{ o.score }}</span>
+                    </div>
+                    <p class="small">{{ o.why | tx }}</p>
+                    @if (o.betterWhen) {
+                      <p class="small muted">{{ 'Лучше, если:' | l: 'Better when:' }} {{ o.betterWhen | tx }}</p>
+                    }
+                  </li>
+                }
+              </ul>
+              @if (sc.mechanics.length) {
+                <div class="mech">
+                  <div class="upper faint">{{ 'Механики' | l: 'Mechanics' }}</div>
+                  <ul>
+                    @for (m of sc.mechanics; track $index) {
+                      <li>{{ m.text | tx }} <app-claim [status]="m.status" /></li>
+                    }
+                  </ul>
+                </div>
+              }
+              @if (sc.tree; as t) {
+                <details class="tree">
+                  <summary>{{ 'Дерево решения' | l: 'Decision tree' }}</summary>
+                  <ol class="tree-steps">
+                    <li><span class="faint">{{ 'Проблема' | l: 'Problem' }}</span> {{ t.problem | tx }}</li>
+                    <li><span class="faint">{{ 'Возможные решения' | l: 'Possible solutions' }}</span> @for (x of t.solutions; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
+                    <li><span class="faint">{{ 'Ограничения' | l: 'Constraints' }}</span> @for (x of t.constraints; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
+                    <li><span class="faint">{{ 'Выбор' | l: 'Choice' }}</span> <b>{{ t.choice | tx }}</b></li>
+                    <li><span class="faint">{{ 'Последствия' | l: 'Consequences' }}</span> @for (x of t.consequences; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
+                  </ol>
+                </details>
+              }
+            }
+          } @else {
+            <div class="briefs" [class.two]="!!chosenItemKey()">
+              @if (qq.explain.focusItem) {
+                <app-item-brief [key]="qq.explain.focusItem" [label]="chosenItemKey() ? ('правильный ответ' | l: 'correct answer') : null" />
+              }
+              @if (chosenItemKey(); as ck) {
+                <app-item-brief class="chosen" [key]="ck" [iconSize]="44" [label]="'ты выбрал' | l: 'you picked'" [depthOverride]="'simple'" />
+              }
+            </div>
+            @for (line of qq.explain.lines; track $index) {
+              <p class="small">{{ line | tx }}</p>
+            }
+            @if (qq.explain.rule) {
+              <div class="principle"><app-icon name="bulb" [size]="16" /> <b>{{ qq.explain.rule | tx }}</b></div>
+            }
+          }
+
+          <div class="actions">
+            @if (qq.explain.focusItem) {
+              <a class="btn btn-ghost btn-sm" [routerLink]="['/items', qq.explain.focusItem]" target="_blank">{{ 'Подробнее о предмете' | l: 'Item details' }} <app-icon name="external" [size]="14" /></a>
+            }
+            <span class="spacer"></span>
+            <button #nextBtn class="btn btn-primary btn-lg next" (click)="session.next()">
+              {{ 'Дальше' | l: 'Next' }} <kbd class="kbd-hint">Enter</kbd>
+            </button>
+          </div>
+        </div>
+      }
+    </section>
+  }
+</div>

@@ -1,0 +1,167 @@
+<div class="page">
+  <div class="page-head">
+    <div class="grow">
+      <h1>{{ 'Аналитика обучения' | l: 'Learning analytics' }}</h1>
+      <p class="sub">{{ 'Только реальные ответы. Рядом с каждой цифрой размер выборки.' | l: 'Real answers only. Sample size next to every number.' }}</p>
+    </div>
+    <div class="seg">
+      <button [class.on]="days() === 7" (click)="days.set(7)">7 {{ 'дней' | l: 'days' }}</button>
+      <button [class.on]="days() === 30" (click)="days.set(30)">30 {{ 'дней' | l: 'days' }}</button>
+    </div>
+  </div>
+
+  @if (!total()) {
+    <div class="panel empty">
+      <p>{{ 'За этот период ещё нет ответов.' | l: 'No answers in this period yet.' }}</p>
+      <a class="btn btn-primary" routerLink="/practice">{{ 'Начать тренировку' | l: 'Start practicing' }}</a>
+    </div>
+  } @else {
+    <section class="grid grid-4 kpis">
+      <div class="panel panel-pad"><app-meter [label]="'Узнавание предметов' | l: 'Item recognition'" [value]="recognition().value" [n]="recognition().n" /></div>
+      <div class="panel panel-pad"><app-meter [label]="'Ситуационные решения' | l: 'Situational decisions'" [value]="situational().value" [n]="situational().n" /></div>
+      <div class="panel panel-pad"><app-meter [label]="'Выбор контрпредмета' | l: 'Counter-item choice'" [value]="counter().value" [n]="counter().n" /></div>
+      <div class="panel panel-pad"><app-meter [label]="'Уверен, но ошибся' | l: 'Confident but wrong'" [value]="calib().confidentWrong.value" [n]="calib().confidentWrong.n" /></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h3>{{ 'Динамика' | l: 'Trend' }}</h3><span class="spacer"></span><span class="xsmall faint">{{ 'столбцы: ответы · линия: точность' | l: 'bars: answers · line: accuracy' }}</span></div>
+      <div class="panel-body">
+        <div class="chart" [style.--n]="series().length">
+          @for (d of series(); track d.day) {
+            <div class="col" [attr.title]="i18n.date(d.day) + ': ' + d.answers + (d.accuracy !== null ? ' · ' + i18n.pct(d.accuracy) : '')">
+              <div class="bars">
+                <i class="b" [style.height.%]="(d.answers / seriesMax()) * 100" [class.empty]="!d.answers"></i>
+                @if (d.accuracy !== null) {
+                  <span class="dot" [style.bottom.%]="d.accuracy * 100"></span>
+                }
+              </div>
+              @if (days() === 7 || $index % 5 === 0) {
+                <span class="xsmall faint lbl">{{ i18n.date(d.day) }}</span>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <div class="grid grid-2">
+      <section class="panel">
+        <div class="panel-head"><app-icon name="brain" /><h3>{{ 'Перенос: новые ситуации против повторных' | l: 'Transfer: new vs repeated situations' }}</h3></div>
+        <div class="panel-body stack-3">
+          <app-meter [label]="'Впервые увиденные ситуации' | l: 'First-time situations'" [value]="transfer().novel.value" [n]="transfer().novel.n" />
+          <app-meter [label]="'Повторные ситуации' | l: 'Repeated situations'" [value]="transfer().repeated.value" [n]="transfer().repeated.n" />
+          <p class="xsmall faint">{{ 'Новые ситуации лучше показывают, перенесётся ли знание в матч: на повторных легко запомнить ответ.' | l: 'First-time situations show transfer to real matches better: repeated ones can be memorized.' }}</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><app-icon name="gauge" /><h3>{{ 'Калибровка уверенности' | l: 'Confidence calibration' }}</h3></div>
+        <div class="panel-body stack-3">
+          @for (c of confLabels; track c.id) {
+            <app-meter [label]="c.ru | l: c.en" [value]="calib().levels[c.id].value" [n]="calib().levels[c.id].n" />
+          }
+          <p class="xsmall faint">{{ 'Хорошая калибровка: «точно знаю» почти всегда верно, «угадал» заметно хуже.' | l: 'Good calibration: "certain" is almost always right, "guessed" clearly worse.' }}</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>{{ 'Знания по измерениям' | l: 'Knowledge by dimension' }}</h3></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>{{ 'Измерение' | l: 'Dimension' }}</th><th>{{ 'Точность' | l: 'Accuracy' }}</th><th>{{ 'Сила памяти' | l: 'Memory strength' }}</th></tr></thead>
+            <tbody>
+              @for (d of dims(); track d.d) {
+                <tr>
+                  <td>{{ d.name }}</td>
+                  <td class="num">{{ pct(d.acc) }} <span class="faint xsmall">n={{ d.acc.n }}</span></td>
+                  <td class="num">{{ pct(d.str) }} <span class="faint xsmall">{{ d.str.n }} {{ 'предм.' | l: 'items' }}</span></td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>{{ 'По сложности и категориям' | l: 'By difficulty and category' }}</h3></div>
+        <div class="panel-body stack-4">
+          <div class="diffs">
+            @for (r of diffs(); track $index) {
+              <div class="dcol" [attr.title]="pct(r) + ' · n=' + r.n">
+                <div class="dbar"><i [style.height.%]="(r.value ?? 0) * 100"></i></div>
+                <span class="xsmall faint">{{ $index + 1 }}</span>
+                <span class="xsmall num">{{ pct(r) }}</span>
+              </div>
+            }
+          </div>
+          <div class="stack-2">
+            @for (s of ['weapon', 'vitality', 'spirit']; track s) {
+              <div class="row small"><span [class]="'grow c-' + s">{{ s }}</span><span class="faint">{{ 'ошибок' | l: 'errors' }}</span> <b class="num">{{ pct(slots()[s]) }}</b> <span class="faint xsmall">n={{ slots()[s].n }}</span></div>
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>{{ 'По героям' | l: 'By hero' }}</h3></div>
+        <ul class="list">
+          @for (h of heroes(); track h.key) {
+            <li class="hrow">
+              <app-hero-avatar [key]="h.key" [size]="28" />
+              <span class="grow">{{ heroName(h.key) }}</span>
+              <span class="small num">{{ i18n.pct(h.acc) }}</span>
+              <span class="xsmall faint">n={{ h.n }}</span>
+            </li>
+          } @empty {
+            <li class="empty small">{{ 'Нет ответов по героям.' | l: 'No hero answers.' }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><app-icon name="repeat" /><h3>{{ 'Часто путаемые пары' | l: 'Often confused pairs' }}</h3></div>
+        <ul class="list">
+          @for (p of pairs(); track p.id) {
+            <li class="pair">
+              <a [routerLink]="['/items', p.items[0]]"><app-item-icon [key]="p.items[0]" [size]="30" [title]="true" /></a>
+              <span class="faint">↔</span>
+              <a [routerLink]="['/items', p.items[1]]"><app-item-icon [key]="p.items[1]" [size]="30" [title]="true" /></a>
+              <span class="grow small">{{ game.item(p.items[0])?.name | gn }} / {{ game.item(p.items[1])?.name | gn }}</span>
+              <span class="xsmall faint num">×{{ p.count }}</span>
+              <a class="btn btn-ghost btn-sm" routerLink="/compare" [queryParams]="{ a: p.items[0], b: p.items[1] }">{{ 'Сравнить' | l: 'Compare' }}</a>
+            </li>
+          } @empty {
+            <li class="empty small">{{ 'Путаниц пока нет.' | l: 'No confusions yet.' }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><app-icon name="alert" class="c-warn" /><h3>{{ 'Проблемные предметы' | l: 'Problem items' }}</h3></div>
+        <div class="panel-body row-wrap">
+          @for (k of problems(); track k) {
+            <a [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="36" [title]="true" /></a>
+          } @empty {
+            <span class="small muted">{{ 'Нет.' | l: 'None.' }}</span>
+          }
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><app-icon name="clock" /><h3>{{ 'Давно не повторялись' | l: 'Not reviewed for a while' }}</h3></div>
+        <ul class="list">
+          @for (s of stale(); track s.item) {
+            <li class="hrow">
+              <app-item-icon [key]="s.item" [size]="26" />
+              <span class="grow small">{{ game.item(s.item)?.name | gn }}</span>
+              <span class="xsmall faint">{{ i18n.relative(s.lastAt) }}</span>
+            </li>
+          }
+        </ul>
+      </section>
+    </div>
+    <p class="xsmall faint foot">
+      {{ 'Всего ответов за период:' | l: 'Answers in period:' }} {{ total() }}. {{ 'Точность в сценариях учитывает частичные решения (оценка 0-100).' | l: 'Scenario accuracy includes partial solutions (score 0-100).' }}
+    </p>
+  }
+</div>

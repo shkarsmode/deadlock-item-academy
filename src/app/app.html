@@ -1,0 +1,139 @@
+@if (game.status() === 'error') {
+  <div class="fatal">
+    <div class="panel panel-pad stack-3">
+      <h2>{{ 'Не удалось загрузить данные игры' | l: 'Could not load game data' }}</h2>
+      <p class="muted small">{{ game.error() }}</p>
+      <button class="btn btn-primary" (click)="retry()">{{ 'Повторить' | l: 'Retry' }}</button>
+    </div>
+  </div>
+} @else if (game.status() !== 'ready' || !profiles.ready()) {
+  <div class="boot" role="status">
+    <span class="logo-mark"></span>
+    <span class="muted small">{{ 'Загружаю предметы...' | l: 'Loading items...' }}</span>
+  </div>
+} @else {
+  <div class="shell" [class.focus]="focusMode()">
+    @if (!focusMode()) {
+      <aside class="sidebar" [attr.aria-label]="'Навигация' | l: 'Navigation'">
+        <a class="brand" routerLink="/">
+          <span class="logo-mark"></span>
+          <span class="brand-text">
+            <b>Item Academy</b>
+            <small>Deadlock</small>
+          </span>
+        </a>
+        <nav>
+          @for (g of nav; track g.en) {
+            <div class="group">
+              <div class="group-title">{{ g.ru | l: g.en }}</div>
+              @for (n of g.items; track n.path) {
+                <a
+                  class="nav-link"
+                  [routerLink]="n.path"
+                  routerLinkActive="on"
+                  [routerLinkActiveOptions]="{ exact: !!n.exact }"
+                  [attr.title]="n.ru | l: n.en"
+                >
+                  <app-icon [name]="n.icon" />
+                  <span class="label">{{ n.ru | l: n.en }}</span>
+                </a>
+              }
+            </div>
+          }
+        </nav>
+        <a class="profile" routerLink="/settings" routerLinkActive="on" [attr.title]="'Профиль и настройки' | l: 'Profile & settings'">
+          <app-hero-avatar [key]="profiles.settings().heroFocus" [size]="28" />
+          <span class="label">
+            <b class="truncate">{{ profiles.current()?.name }}</b>
+            <small>{{ 'Настройки' | l: 'Settings' }}</small>
+          </span>
+          <app-icon name="settings" [size]="16" />
+        </a>
+      </aside>
+    }
+
+    <main class="main" id="main">
+      @if (profiles.storageError()) {
+        <div class="callout warn storage">
+          <app-icon name="alert" />
+          <span>{{ 'Браузер не даёт сохранять данные (IndexedDB). Прогресс не сохранится после закрытия вкладки.' | l: 'The browser blocks local storage (IndexedDB). Progress will not be saved.' }}</span>
+        </div>
+      }
+      <router-outlet />
+    </main>
+
+    @if (!focusMode()) {
+      <nav class="tabbar" [attr.aria-label]="'Разделы' | l: 'Sections'">
+        @for (t of tabs; track t.path) {
+          <a [routerLink]="t.path" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: !!t.exact }" (click)="moreOpen.set(false)">
+            <app-icon [name]="t.icon" [size]="20" />
+            <span>{{ t.ru | l: t.en }}</span>
+          </a>
+        }
+        <button type="button" [class.on]="moreOpen() || moreActive()" (click)="moreOpen.set(!moreOpen())" [attr.aria-expanded]="moreOpen()">
+          <app-icon name="menu" [size]="20" />
+          <span>{{ 'Ещё' | l: 'More' }}</span>
+        </button>
+      </nav>
+      @if (moreOpen()) {
+        <div class="more-backdrop" (click)="moreOpen.set(false)"></div>
+        <div class="more-sheet" role="dialog" [attr.aria-label]="'Все разделы' | l: 'All sections'">
+          @for (g of nav; track g.en) {
+            <div class="group-title">{{ g.ru | l: g.en }}</div>
+            <div class="more-grid">
+              @for (n of g.items; track n.path) {
+                <a [routerLink]="n.path" (click)="moreOpen.set(false)" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: !!n.exact }">
+                  <app-icon [name]="n.icon" />
+                  <span>{{ n.ru | l: n.en }}</span>
+                </a>
+              }
+            </div>
+          }
+          <a class="more-settings" routerLink="/settings" (click)="moreOpen.set(false)">
+            <app-icon name="settings" />
+            <span>{{ 'Профиль и настройки' | l: 'Profile & settings' }}</span>
+          </a>
+        </div>
+      }
+    }
+  </div>
+}
+
+@if (hotkeys.helpOpen()) {
+  <div class="backdrop" (click)="hotkeys.helpOpen.set(false)">
+    <div class="dialog" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
+      <div class="panel-head">
+        <app-icon name="keyboard" />
+        <h3>{{ 'Горячие клавиши' | l: 'Keyboard shortcuts' }}</h3>
+        <span class="spacer"></span>
+        <button class="btn btn-ghost btn-icon btn-sm" (click)="hotkeys.helpOpen.set(false)" [attr.aria-label]="'Закрыть' | l: 'Close'"><app-icon name="x" /></button>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tbody>
+            <tr><td><kbd>1</kbd> ... <kbd>5</kbd></td><td>{{ 'Выбрать вариант ответа' | l: 'Choose an answer' }}</td></tr>
+            <tr><td><kbd>0</kbd> / <kbd>D</kbd></td><td>{{ '«Не знаю»' | l: '"I don\'t know"' }}</td></tr>
+            <tr><td><kbd>Q</kbd> <kbd>W</kbd> <kbd>E</kbd> <kbd>R</kbd></td><td>{{ 'Уверенность: угадал / не уверен / почти уверен / точно знаю' | l: 'Confidence: guess / unsure / likely / sure' }}</td></tr>
+            <tr><td><kbd>Enter</kbd> / <kbd>Space</kbd></td><td>{{ 'Дальше' | l: 'Next' }}</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>{{ 'Выйти из тренировки' | l: 'Leave practice' }}</td></tr>
+            <tr><td><kbd>/</kbd></td><td>{{ 'Поиск по предметам' | l: 'Search items' }}</td></tr>
+            <tr><td><kbd>S</kbd></td><td>{{ 'Режим изучения: скрыть названия' | l: 'Study mode: hide names' }}</td></tr>
+            <tr><td><kbd>?</kbd></td><td>{{ 'Эта справка' | l: 'This help' }}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+}
+
+<div class="toast-host" aria-live="polite">
+  @if (updateReady()) {
+    <div class="toast update-toast">
+      <span>{{ 'Доступна новая версия приложения или данных.' | l: 'A new version of the app or data is available.' }}</span>
+      <button class="btn btn-sm btn-primary" (click)="retry()">{{ 'Обновить' | l: 'Reload' }}</button>
+    </div>
+  }
+  @for (t of toasts.list(); track t.id) {
+    <div class="toast" [class.c-good]="t.tone === 'good'" [class.c-bad]="t.tone === 'bad'">{{ t.text }}</div>
+  }
+</div>

@@ -1,0 +1,3375 @@
+{
+ "build:graves-current": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_damage_recycler": "1hn3fstk7ep"
+ },
+ "build:vindicta-current": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "build:vindicta-full-ult": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_transcendent_cooldown": "1puwd68ro21",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_spellslinger_headshots": "17yfke6mtoa",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_ultimate_burst": "17e3cq6fy7m"
+ },
+ "build:vindicta-hybrid": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "course:hero_hornet": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_magic_reach": "axgl70e88p",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_bullet_resist_shredder": "z4p9pyjm0h",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_ultimate_burst": "17e3cq6fy7m",
+  "upgrade_bulletshredimbue": "1au185o9zig",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_blood_tribute": "90x6dq824t",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_headshot_booster2": "1luao1ixcq0",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_mystic_reverb": "z7dyoe7xe7",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_ricochet": "1voiq977qqo"
+ },
+ "course:hero_necro": {
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_ability_refresher": "339hndrykv",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_arcane_surge": "24b97yec588",
+  "upgrade_magic_reach": "axgl70e88p",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_ultimate_burst": "17e3cq6fy7m",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_suppressor": "arwx9wv9pl",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_magic_shield": "m52946qeoh"
+ },
+ "item:upgrade_ability_power_shard": {
+  "upgrade_ability_power_shard": "15y3nr6p37l"
+ },
+ "item:upgrade_ability_refresher": {
+  "upgrade_ability_refresher": "339hndrykv"
+ },
+ "item:upgrade_absorbing_armor": {
+  "upgrade_absorbing_armor": "7cipgv5wt9"
+ },
+ "item:upgrade_acolytes_glove": {
+  "upgrade_acolytes_glove": "17ogiog04xl"
+ },
+ "item:upgrade_active_reload": {
+  "upgrade_active_reload": "1korgwc0cod"
+ },
+ "item:upgrade_aoe_root": {
+  "upgrade_aoe_root": "1b9pgad0pxf"
+ },
+ "item:upgrade_aprounds": {
+  "upgrade_aprounds": "1dm0ii6ik6p"
+ },
+ "item:upgrade_arcane_extension": {
+  "upgrade_arcane_extension": "22ddxygzcj1"
+ },
+ "item:upgrade_arcane_surge": {
+  "upgrade_arcane_surge": "24b97yec588"
+ },
+ "item:upgrade_arctic_blast": {
+  "upgrade_arctic_blast": "1d1zv09f90k"
+ },
+ "item:upgrade_auto_cleanse": {
+  "upgrade_auto_cleanse": "dhkjtu4fij"
+ },
+ "item:upgrade_banshee_slugs": {
+  "upgrade_banshee_slugs": "1805f78xoui"
+ },
+ "item:upgrade_berserker": {
+  "upgrade_berserker": "ca6fytx2uc"
+ },
+ "item:upgrade_blitz_bullets": {
+  "upgrade_blitz_bullets": "hkcgc4a7y3"
+ },
+ "item:upgrade_blood_tribute": {
+  "upgrade_blood_tribute": "90x6dq824t"
+ },
+ "item:upgrade_boundless_spirit": {
+  "upgrade_boundless_spirit": "biwfns4t2x"
+ },
+ "item:upgrade_boxing_glove": {
+  "upgrade_boxing_glove": "1hcp4nq3r79"
+ },
+ "item:upgrade_bullet_armor_reduction_aura": {
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs"
+ },
+ "item:upgrade_bullet_resist_shredder": {
+  "upgrade_bullet_resist_shredder": "z4p9pyjm0h"
+ },
+ "item:upgrade_bulletshredimbue": {
+  "upgrade_bulletshredimbue": "1au185o9zig"
+ },
+ "item:upgrade_burst_fire": {
+  "upgrade_burst_fire": "giw2jb2u0b"
+ },
+ "item:upgrade_capacitor": {
+  "upgrade_capacitor": "12u4tnqudwp"
+ },
+ "item:upgrade_cardio_calibrator": {
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "item:upgrade_chain_lightning": {
+  "upgrade_chain_lightning": "n3v2qlo911"
+ },
+ "item:upgrade_cheat_death": {
+  "upgrade_cheat_death": "195en73xfn5"
+ },
+ "item:upgrade_chonky": {
+  "upgrade_chonky": "1o5agjvpja8"
+ },
+ "item:upgrade_clip_size": {
+  "upgrade_clip_size": "1miwz54f6b9"
+ },
+ "item:upgrade_cloaking_device_active": {
+  "upgrade_cloaking_device_active": "1548p85lpvy"
+ },
+ "item:upgrade_close_quarter_combat": {
+  "upgrade_close_quarter_combat": "23t6p4laqxq"
+ },
+ "item:upgrade_close_range": {
+  "upgrade_close_range": "biudjm6g51"
+ },
+ "item:upgrade_cold_front": {
+  "upgrade_cold_front": "1rg1pjop4w3"
+ },
+ "item:upgrade_colossus": {
+  "upgrade_colossus": "2eupse1t6ks"
+ },
+ "item:upgrade_containment": {
+  "upgrade_containment": "m52qnga4zv"
+ },
+ "item:upgrade_cooldown_reduction": {
+  "upgrade_cooldown_reduction": "2e9grwk3p6o"
+ },
+ "item:upgrade_counterspell": {
+  "upgrade_counterspell": "16v6sb7g772"
+ },
+ "item:upgrade_crackshot": {
+  "upgrade_crackshot": "e5h2b0dalf"
+ },
+ "item:upgrade_critshot": {
+  "upgrade_critshot": "207envs31i3"
+ },
+ "item:upgrade_crushing_fists": {
+  "upgrade_crushing_fists": "2sj1ndru0y"
+ },
+ "item:upgrade_damage_recycler": {
+  "upgrade_damage_recycler": "1hn3fstk7ep"
+ },
+ "item:upgrade_debuff_reducer": {
+  "upgrade_debuff_reducer": "pco21rfn7c"
+ },
+ "item:upgrade_deflecting_armor": {
+  "upgrade_deflecting_armor": "1s8k4bk8v49"
+ },
+ "item:upgrade_discord": {
+  "upgrade_discord": "iz1afspme0"
+ },
+ "item:upgrade_divine_barrier": {
+  "upgrade_divine_barrier": "19p3qtjbjr9"
+ },
+ "item:upgrade_diviners_kevlar": {
+  "upgrade_diviners_kevlar": "10xnxgzql51"
+ },
+ "item:upgrade_dps_aura": {
+  "upgrade_dps_aura": "2amt3dp0hyi"
+ },
+ "item:upgrade_enchanted_holsters": {
+  "upgrade_enchanted_holsters": "1no4wxhkjj2"
+ },
+ "item:upgrade_endurance": {
+  "upgrade_endurance": "1e2p02i7l49"
+ },
+ "item:upgrade_escalating_exposure": {
+  "upgrade_escalating_exposure": "1nav7vg4ksp"
+ },
+ "item:upgrade_ethereal_bullets": {
+  "upgrade_ethereal_bullets": "29d6axxgf42"
+ },
+ "item:upgrade_express_shot": {
+  "upgrade_express_shot": "a8xd9vpb8z"
+ },
+ "item:upgrade_extra_charge": {
+  "upgrade_extra_charge": "ubwfbbifkk"
+ },
+ "item:upgrade_fervor": {
+  "upgrade_fervor": "1seziithpl5"
+ },
+ "item:upgrade_fleetfoot_boots": {
+  "upgrade_fleetfoot_boots": "21439ndd2r2"
+ },
+ "item:upgrade_focus_lens": {
+  "upgrade_focus_lens": "2ao4uqvybi2"
+ },
+ "item:upgrade_fury_trance": {
+  "upgrade_fury_trance": "21rvb7e5j4n"
+ },
+ "item:upgrade_glass_cannon": {
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "item:upgrade_glitch": {
+  "upgrade_glitch": "1wpbayqgbos"
+ },
+ "item:upgrade_goose_egg": {
+  "upgrade_goose_egg": "2ell97kd0xf"
+ },
+ "item:upgrade_greater_withering_whip": {
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1"
+ },
+ "item:upgrade_grit": {
+  "upgrade_grit": "y96a5n84x2"
+ },
+ "item:upgrade_guardian_ward": {
+  "upgrade_guardian_ward": "1kl3pv3ucnn"
+ },
+ "item:upgrade_headhunter": {
+  "upgrade_headhunter": "i9sijb1cpa"
+ },
+ "item:upgrade_headshot_booster": {
+  "upgrade_headshot_booster": "2dero87czez"
+ },
+ "item:upgrade_headshot_booster2": {
+  "upgrade_headshot_booster2": "1luao1ixcq0"
+ },
+ "item:upgrade_healbane": {
+  "upgrade_healbane": "1hksz2umx6d"
+ },
+ "item:upgrade_healbuff": {
+  "upgrade_healbuff": "1v74fx41ut7"
+ },
+ "item:upgrade_healing_booster": {
+  "upgrade_healing_booster": "ykrubfnvtv"
+ },
+ "item:upgrade_health": {
+  "upgrade_health": "2a3k258viz0"
+ },
+ "item:upgrade_health_nova": {
+  "upgrade_health_nova": "25mp17g95ja"
+ },
+ "item:upgrade_health_stealing_magic": {
+  "upgrade_health_stealing_magic": "qrmt7o395b"
+ },
+ "item:upgrade_health_stimpak": {
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "item:upgrade_high_velocity_mag": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q"
+ },
+ "item:upgrade_hollow_point_rounds": {
+  "upgrade_hollow_point_rounds": "dcl6ofc74w"
+ },
+ "item:upgrade_imbued_duration_extender": {
+  "upgrade_imbued_duration_extender": "2fx1q716q2u"
+ },
+ "item:upgrade_improved_bullet_armor": {
+  "upgrade_improved_bullet_armor": "1eolk10in47"
+ },
+ "item:upgrade_improved_spirit": {
+  "upgrade_improved_spirit": "szulgeknua"
+ },
+ "item:upgrade_improved_stamina": {
+  "upgrade_improved_stamina": "1094hii4g6j"
+ },
+ "item:upgrade_infuser": {
+  "upgrade_infuser": "xibaah6cf6"
+ },
+ "item:upgrade_inhibitor": {
+  "upgrade_inhibitor": "1q1qh4qje16"
+ },
+ "item:upgrade_intensifying_clip": {
+  "upgrade_intensifying_clip": "27ym9hnohf"
+ },
+ "item:upgrade_juggernaut": {
+  "upgrade_juggernaut": "kxkxsbv6lh"
+ },
+ "item:upgrade_kinetic_sash": {
+  "upgrade_kinetic_sash": "28q57cj4sbb"
+ },
+ "item:upgrade_lifestrike_gauntlets": {
+  "upgrade_lifestrike_gauntlets": "8n3szoopsu"
+ },
+ "item:upgrade_long_range": {
+  "upgrade_long_range": "16ey0s9fklq"
+ },
+ "item:upgrade_magic_burst": {
+  "upgrade_magic_burst": "btz88ytahr"
+ },
+ "item:upgrade_magic_carpet": {
+  "upgrade_magic_carpet": "sd7i7wy03l"
+ },
+ "item:upgrade_magic_reach": {
+  "upgrade_magic_reach": "axgl70e88p"
+ },
+ "item:upgrade_magic_shield": {
+  "upgrade_magic_shield": "m52946qeoh"
+ },
+ "item:upgrade_magic_shock": {
+  "upgrade_magic_shock": "1v00afkg2xf"
+ },
+ "item:upgrade_magic_slow": {
+  "upgrade_magic_slow": "25q563sary2"
+ },
+ "item:upgrade_magic_storm": {
+  "upgrade_magic_storm": "biqevnp1ug"
+ },
+ "item:upgrade_magic_tempo": {
+  "upgrade_magic_tempo": "7jrhc826wv"
+ },
+ "item:upgrade_magic_vulnerability": {
+  "upgrade_magic_vulnerability": "1y9ohp19sz9"
+ },
+ "item:upgrade_medic_bullets": {
+  "upgrade_medic_bullets": "h6nbvl10cx"
+ },
+ "item:upgrade_melee_charge": {
+  "upgrade_melee_charge": "wd3k38lsus"
+ },
+ "item:upgrade_melee_rebuttal": {
+  "upgrade_melee_rebuttal": "2b5y6j7rf01"
+ },
+ "item:upgrade_metal_skin": {
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "item:upgrade_mystic_regeneration": {
+  "upgrade_mystic_regeneration": "19n4bscaja5"
+ },
+ "item:upgrade_mystic_reverb": {
+  "upgrade_mystic_reverb": "z7dyoe7xe7"
+ },
+ "item:upgrade_non_player_bonus": {
+  "upgrade_non_player_bonus": "1yhuoamena4"
+ },
+ "item:upgrade_non_player_bonus_sacrifice": {
+  "upgrade_non_player_bonus_sacrifice": "1etpf104l8e"
+ },
+ "item:upgrade_phantom_strike": {
+  "upgrade_phantom_strike": "1xrh3ekn7d7"
+ },
+ "item:upgrade_pristine_emblem": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3"
+ },
+ "item:upgrade_proc_silence": {
+  "upgrade_proc_silence": "1isf0gj21ro"
+ },
+ "item:upgrade_quick_silver": {
+  "upgrade_quick_silver": "d21w02hdl7"
+ },
+ "item:upgrade_rapid_recharge": {
+  "upgrade_rapid_recharge": "1g67jx7g858"
+ },
+ "item:upgrade_rapid_rounds": {
+  "upgrade_rapid_rounds": "1ceub92nf5f"
+ },
+ "item:upgrade_rechargingbullets": {
+  "upgrade_rechargingbullets": "exmkfdh1q9"
+ },
+ "item:upgrade_reduce_debuff_duration": {
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "item:upgrade_regenerating_bullet_shield": {
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef"
+ },
+ "item:upgrade_reinforcing_casings": {
+  "upgrade_reinforcing_casings": "1i39mk8urmh"
+ },
+ "item:upgrade_rescue_beam": {
+  "upgrade_rescue_beam": "d2y15aolhs"
+ },
+ "item:upgrade_resonant_healing": {
+  "upgrade_resonant_healing": "in5c9w4l3z"
+ },
+ "item:upgrade_restorative_locket": {
+  "upgrade_restorative_locket": "nc1xc9rta6"
+ },
+ "item:upgrade_return_fire": {
+  "upgrade_return_fire": "2aqq82u6r6u"
+ },
+ "item:upgrade_ricochet": {
+  "upgrade_ricochet": "1voiq977qqo"
+ },
+ "item:upgrade_rocket_booster": {
+  "upgrade_rocket_booster": "23jznin7y39"
+ },
+ "item:upgrade_rupture": {
+  "upgrade_rupture": "1hfdflsudlx"
+ },
+ "item:upgrade_self_bubble": {
+  "upgrade_self_bubble": "1ia44vpxlnq"
+ },
+ "item:upgrade_sharpshooter": {
+  "upgrade_sharpshooter": "1xpnh0rcbgg"
+ },
+ "item:upgrade_siphon_bullets": {
+  "upgrade_siphon_bullets": "1h7cwksl0dv"
+ },
+ "item:upgrade_slowing_bullets": {
+  "upgrade_slowing_bullets": "2aa7goexw37"
+ },
+ "item:upgrade_soaring_spirit": {
+  "upgrade_soaring_spirit": "1er4501vaf7"
+ },
+ "item:upgrade_spellbreaker": {
+  "upgrade_spellbreaker": "21cefcioie2"
+ },
+ "item:upgrade_spellslinger_headshots": {
+  "upgrade_spellslinger_headshots": "17yfke6mtoa"
+ },
+ "item:upgrade_spirit_bubble": {
+  "upgrade_spirit_bubble": "1r26bwza3ic"
+ },
+ "item:upgrade_spirit_burn": {
+  "upgrade_spirit_burn": "1puwxlliud8"
+ },
+ "item:upgrade_spirit_sap": {
+  "upgrade_spirit_sap": "vyuf03pojv"
+ },
+ "item:upgrade_spirit_snatch": {
+  "upgrade_spirit_snatch": "1jnj4exr5xi"
+ },
+ "item:upgrade_split_shot": {
+  "upgrade_split_shot": "1b6ba587slp"
+ },
+ "item:upgrade_sprint_booster": {
+  "upgrade_sprint_booster": "1hzuec6oh6z"
+ },
+ "item:upgrade_superior_stamina": {
+  "upgrade_superior_stamina": "4t9gdzirki"
+ },
+ "item:upgrade_suppressor": {
+  "upgrade_suppressor": "arwx9wv9pl"
+ },
+ "item:upgrade_surging_power": {
+  "upgrade_surging_power": "17qqz5odcsk"
+ },
+ "item:upgrade_target_stun": {
+  "upgrade_target_stun": "1nkct8tcuvw"
+ },
+ "item:upgrade_targeted_silence": {
+  "upgrade_targeted_silence": "gm2kzqobgq"
+ },
+ "item:upgrade_tech_damage_pulse": {
+  "upgrade_tech_damage_pulse": "s52k7vnyb9"
+ },
+ "item:upgrade_tech_defense_shredders": {
+  "upgrade_tech_defense_shredders": "h3vy7g22cc"
+ },
+ "item:upgrade_tech_overflow": {
+  "upgrade_tech_overflow": "9j2wklmq0e"
+ },
+ "item:upgrade_tech_purge": {
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "item:upgrade_tech_range": {
+  "upgrade_tech_range": "1nuer0fvovk"
+ },
+ "item:upgrade_thermal_detonator": {
+  "upgrade_thermal_detonator": "1dlkaa1gpgf"
+ },
+ "item:upgrade_titan_round": {
+  "upgrade_titan_round": "f8o899722s"
+ },
+ "item:upgrade_toxic_bullets": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86"
+ },
+ "item:upgrade_transcendent_cooldown": {
+  "upgrade_transcendent_cooldown": "1puwd68ro21"
+ },
+ "item:upgrade_trophy_collector": {
+  "upgrade_trophy_collector": "yhyn9z43pn"
+ },
+ "item:upgrade_ultimate_burst": {
+  "upgrade_ultimate_burst": "17e3cq6fy7m"
+ },
+ "item:upgrade_unstoppable": {
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "item:upgrade_vampire": {
+  "upgrade_vampire": "27gksx1uw33"
+ },
+ "item:upgrade_veil_walker": {
+  "upgrade_veil_walker": "1osw8birm12"
+ },
+ "item:upgrade_vex_barrier": {
+  "upgrade_vex_barrier": "2amjcp04gif"
+ },
+ "item:upgrade_warp_stone": {
+  "upgrade_warp_stone": "ojtfb3txk0"
+ },
+ "item:upgrade_weapon_backstabber": {
+  "upgrade_weapon_backstabber": "1aac18axiro"
+ },
+ "item:upgrade_weapon_shielding": {
+  "upgrade_weapon_shielding": "1lys40ck0b8"
+ },
+ "item:upgrade_weighted_shots": {
+  "upgrade_weighted_shots": "vpljjgt33u"
+ },
+ "item:upgrade_withering_whip": {
+  "upgrade_withering_whip": "1upod56nkuv"
+ },
+ "problem:abilities-on-cooldown": {
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_transcendent_cooldown": "1puwd68ro21",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_ability_refresher": "339hndrykv",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_absorbing_armor": "7cipgv5wt9"
+ },
+ "problem:behind-in-souls": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_split_shot": "1b6ba587slp",
+  "upgrade_non_player_bonus": "1yhuoamena4",
+  "upgrade_non_player_bonus_sacrifice": "1etpf104l8e",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_goose_egg": "2ell97kd0xf",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_debuff_reducer": "pco21rfn7c"
+ },
+ "problem:cant-catch-fleeing-target": {
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_aoe_root": "1b9pgad0pxf",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_magic_slow": "25q563sary2",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_fleetfoot_boots": "21439ndd2r2"
+ },
+ "problem:cursed-no-items": {
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "problem:die-to-damage-over-time": {
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_discord": "iz1afspme0",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_damage_recycler": "1hn3fstk7ep"
+ },
+ "problem:die-to-gun-damage": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_deflecting_armor": "1s8k4bk8v49",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_withering_whip": "1upod56nkuv",
+  "upgrade_suppressor": "arwx9wv9pl",
+  "upgrade_juggernaut": "kxkxsbv6lh",
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1",
+  "upgrade_inhibitor": "1q1qh4qje16"
+ },
+ "problem:die-to-spirit-burst": {
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_absorbing_armor": "7cipgv5wt9",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_cheat_death": "195en73xfn5",
+  "upgrade_spirit_sap": "vyuf03pojv",
+  "upgrade_proc_silence": "1isf0gj21ro",
+  "upgrade_targeted_silence": "gm2kzqobgq"
+ },
+ "problem:disarmed": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7"
+ },
+ "problem:enemies-heal-a-lot": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_inhibitor": "1q1qh4qje16",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_capacitor": "12u4tnqudwp"
+ },
+ "problem:enemy-anti-heal-on-me": {
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_improved_bullet_armor": "1eolk10in47"
+ },
+ "problem:enemy-barriers-absorb-burst": {
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_focus_lens": "2ao4uqvybi2",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_capacitor": "12u4tnqudwp"
+ },
+ "problem:enemy-dives-me": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_cheat_death": "195en73xfn5",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "problem:enemy-healer-keeps-team-alive": {
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_proc_silence": "1isf0gj21ro",
+  "upgrade_phantom_strike": "1xrh3ekn7d7"
+ },
+ "problem:enemy-invisible": {
+  "upgrade_weapon_backstabber": "1aac18axiro",
+  "upgrade_thermal_detonator": "1dlkaa1gpgf",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "problem:enemy-melee-brawler": {
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_juggernaut": "kxkxsbv6lh",
+  "upgrade_melee_rebuttal": "2b5y6j7rf01",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_cold_front": "1rg1pjop4w3"
+ },
+ "problem:enemy-split-pushes": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_split_shot": "1b6ba587slp",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_arcane_extension": "22ddxygzcj1"
+ },
+ "problem:enemy-too-tanky": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_discord": "iz1afspme0",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc",
+  "upgrade_spirit_sap": "vyuf03pojv",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_hollow_point_rounds": "dcl6ofc74w",
+  "upgrade_bullet_resist_shredder": "z4p9pyjm0h",
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs"
+ },
+ "problem:enemy-ult-wipes-team": {
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_divine_barrier": "19p3qtjbjr9"
+ },
+ "problem:focused-first-in-teamfights": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_rocket_booster": "23jznin7y39",
+  "upgrade_cheat_death": "195en73xfn5"
+ },
+ "problem:immobilized-and-killed": {
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_warp_stone": "ojtfb3txk0"
+ },
+ "problem:kited-at-range": {
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "problem:lack-damage": {
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_close_quarter_combat": "23t6p4laqxq"
+ },
+ "problem:losing-lane": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_mystic_regeneration": "19n4bscaja5",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_withering_whip": "1upod56nkuv",
+  "upgrade_non_player_bonus": "1yhuoamena4"
+ },
+ "problem:my-summons-do-nothing": {
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_ability_refresher": "339hndrykv"
+ },
+ "problem:my-ult-gets-interrupted": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_diviners_kevlar": "10xnxgzql51"
+ },
+ "problem:out-of-ammo": {
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reinforcing_casings": "1i39mk8urmh",
+  "upgrade_intensifying_clip": "27ym9hnohf",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_active_reload": "1korgwc0cod",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_kinetic_sash": "28q57cj4sbb"
+ },
+ "problem:picked-by-sniper": {
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_warp_stone": "ojtfb3txk0"
+ },
+ "problem:pulled-hooked": {
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_superior_stamina": "4t9gdzirki"
+ },
+ "problem:push-objectives": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_split_shot": "1b6ba587slp",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_ability_refresher": "339hndrykv",
+  "upgrade_aoe_root": "1b9pgad0pxf",
+  "upgrade_arctic_blast": "1d1zv09f90k",
+  "upgrade_targeted_silence": "gm2kzqobgq"
+ },
+ "problem:silenced": {
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_siphon_bullets": "1h7cwksl0dv"
+ },
+ "problem:slots-full-what-to-sell": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_non_player_bonus": "1yhuoamena4",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "problem:slowed-all-the-time": {
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_juggernaut": "kxkxsbv6lh",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_magic_carpet": "sd7i7wy03l"
+ },
+ "problem:stunned-before-i-act": {
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_counterspell": "16v6sb7g772"
+ },
+ "problem:summons-overwhelm-us": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_split_shot": "1b6ba587slp",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_thermal_detonator": "1dlkaa1gpgf",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_melee_charge": "wd3k38lsus",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_glitch": "1wpbayqgbos"
+ },
+ "problem:team-lacks-cc": {
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_aoe_root": "1b9pgad0pxf",
+  "upgrade_arctic_blast": "1d1zv09f90k",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_proc_silence": "1isf0gj21ro",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1"
+ },
+ "problem:team-no-frontline": {
+  "upgrade_chonky": "1o5agjvpja8",
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_guardian_ward": "1kl3pv3ucnn",
+  "upgrade_discord": "iz1afspme0",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_arcane_extension": "22ddxygzcj1"
+ },
+ "problem:won-lane-snowball": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_phantom_strike": "1xrh3ekn7d7",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_goose_egg": "2ell97kd0xf"
+ },
+ "scenario:act-001": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:act-002": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2"
+ },
+ "scenario:act-003": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_tech_overflow": "9j2wklmq0e"
+ },
+ "scenario:act-004": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_target_stun": "1nkct8tcuvw"
+ },
+ "scenario:act-005": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_targeted_silence": "gm2kzqobgq"
+ },
+ "scenario:act-006": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_rescue_beam": "d2y15aolhs"
+ },
+ "scenario:act-007": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_warp_stone": "ojtfb3txk0"
+ },
+ "scenario:act-008": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_fury_trance": "21rvb7e5j4n"
+ },
+ "scenario:act-009": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2"
+ },
+ "scenario:act-010": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_rupture": "1hfdflsudlx"
+ },
+ "scenario:act-011": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_ability_power_shard": "15y3nr6p37l"
+ },
+ "scenario:act-012": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_ability_refresher": "339hndrykv"
+ },
+ "scenario:act-013": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_return_fire": "2aqq82u6r6u",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:act-014": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_containment": "m52qnga4zv"
+ },
+ "scenario:act-015": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_self_bubble": "1ia44vpxlnq"
+ },
+ "scenario:act-016": {
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_tech_overflow": "9j2wklmq0e"
+ },
+ "scenario:act-017": {
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_tech_overflow": "9j2wklmq0e"
+ },
+ "scenario:act-018": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:gen-001": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_mystic_regeneration": "19n4bscaja5",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_toxic_bullets": "1ajbuy0ag86"
+ },
+ "scenario:gen-002": {
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_return_fire": "2aqq82u6r6u",
+  "upgrade_magic_shield": "m52946qeoh"
+ },
+ "scenario:gen-003": {
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_sprint_booster": "1hzuec6oh6z"
+ },
+ "scenario:gen-004": {
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:gen-005": {
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_non_player_bonus": "1yhuoamena4",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef"
+ },
+ "scenario:gen-006": {
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_inhibitor": "1q1qh4qje16"
+ },
+ "scenario:gen-007": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef"
+ },
+ "scenario:gen-008": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:gen-009": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:gen-010": {
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_endurance": "1e2p02i7l49"
+ },
+ "scenario:gen-011": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_slowing_bullets": "2aa7goexw37"
+ },
+ "scenario:gen-012": {
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_glitch": "1wpbayqgbos"
+ },
+ "scenario:gen-013": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_improved_bullet_armor": "1eolk10in47"
+ },
+ "scenario:gen-014": {
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_guardian_ward": "1kl3pv3ucnn",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_spirit_burn": "1puwxlliud8"
+ },
+ "scenario:gen-015": {
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_boxing_glove": "1hcp4nq3r79",
+  "upgrade_melee_charge": "wd3k38lsus",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_melee_rebuttal": "2b5y6j7rf01",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:gen-016": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_magic_burst": "btz88ytahr",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "scenario:gen-017": {
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_cloaking_device_active": "1548p85lpvy",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_weapon_backstabber": "1aac18axiro",
+  "upgrade_spirit_bubble": "1r26bwza3ic"
+ },
+ "scenario:gen-018": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_magic_slow": "25q563sary2",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "scenario:gen-019": {
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_aprounds": "1dm0ii6ik6p"
+ },
+ "scenario:gen-020": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_headshot_booster2": "1luao1ixcq0",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs"
+ },
+ "scenario:gen-021": {
+  "upgrade_chonky": "1o5agjvpja8",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_targeted_silence": "gm2kzqobgq"
+ },
+ "scenario:gen-022": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_rupture": "1hfdflsudlx"
+ },
+ "scenario:gen-023": {
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_boxing_glove": "1hcp4nq3r79",
+  "upgrade_melee_charge": "wd3k38lsus",
+  "upgrade_improved_bullet_armor": "1eolk10in47"
+ },
+ "scenario:gen-024": {
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_headshot_booster2": "1luao1ixcq0",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_inhibitor": "1q1qh4qje16",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_healbane": "1hksz2umx6d"
+ },
+ "scenario:gen-025": {
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:gen-026": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:gen-027": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o"
+ },
+ "scenario:gen-028": {
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_hollow_point_rounds": "dcl6ofc74w",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_rocket_booster": "23jznin7y39",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_aoe_root": "1b9pgad0pxf"
+ },
+ "scenario:gen-029": {
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_cold_front": "1rg1pjop4w3",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_aoe_root": "1b9pgad0pxf",
+  "upgrade_arctic_blast": "1d1zv09f90k",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_capacitor": "12u4tnqudwp"
+ },
+ "scenario:gen-030": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_colossus": "2eupse1t6ks",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_discord": "iz1afspme0"
+ },
+ "scenario:gen-031": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_absorbing_armor": "7cipgv5wt9",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:gen-032": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_toxic_bullets": "1ajbuy0ag86"
+ },
+ "scenario:gen-033": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_spellbreaker": "21cefcioie2"
+ },
+ "scenario:gen-034": {
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_headhunter": "i9sijb1cpa",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_inhibitor": "1q1qh4qje16",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_spirit_burn": "1puwxlliud8"
+ },
+ "scenario:gen-035": {
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_spellbreaker": "21cefcioie2"
+ },
+ "scenario:gra-001": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_improved_spirit": "szulgeknua"
+ },
+ "scenario:gra-002": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_weapon_shielding": "1lys40ck0b8"
+ },
+ "scenario:gra-003": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua"
+ },
+ "scenario:gra-004": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_health": "2a3k258viz0"
+ },
+ "scenario:gra-005": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_long_range": "16ey0s9fklq"
+ },
+ "scenario:gra-006": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_guardian_ward": "1kl3pv3ucnn",
+  "upgrade_weapon_shielding": "1lys40ck0b8"
+ },
+ "scenario:gra-007": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_arcane_surge": "24b97yec588",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_kinetic_sash": "28q57cj4sbb"
+ },
+ "scenario:gra-008": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_arcane_surge": "24b97yec588",
+  "upgrade_magic_reach": "axgl70e88p",
+  "upgrade_kinetic_sash": "28q57cj4sbb",
+  "upgrade_superior_stamina": "4t9gdzirki"
+ },
+ "scenario:gra-009": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_spirit_bubble": "1r26bwza3ic"
+ },
+ "scenario:gra-010": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_health_stealing_magic": "qrmt7o395b"
+ },
+ "scenario:gra-011": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh"
+ },
+ "scenario:gra-012": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_spirit_burn": "1puwxlliud8"
+ },
+ "scenario:gra-013": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_long_range": "16ey0s9fklq"
+ },
+ "scenario:gra-014": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:gra-015": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_non_player_bonus": "1yhuoamena4",
+  "upgrade_health_stealing_magic": "qrmt7o395b"
+ },
+ "scenario:gra-016": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_dps_aura": "2amt3dp0hyi"
+ },
+ "scenario:gra-017": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:gra-018": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:gra-019": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:gra-020": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:gra-021": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg",
+  "ability_necro_gravestone": "1vmccovdqk"
+ },
+ "scenario:gra-022": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_mystic_reverb": "z7dyoe7xe7",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:gra-023": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_ability_power_shard": "15y3nr6p37l"
+ },
+ "scenario:gra-024": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_spirit_burn": "1puwxlliud8"
+ },
+ "scenario:gra-025": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_ability_refresher": "339hndrykv",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_siphon_bullets": "1h7cwksl0dv"
+ },
+ "scenario:gra-026": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:gra-027": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_healing_booster": "ykrubfnvtv",
+  "upgrade_infuser": "xibaah6cf6"
+ },
+ "scenario:gra-028": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_transcendent_cooldown": "1puwd68ro21"
+ },
+ "scenario:gra-029": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_spirit_bubble": "1r26bwza3ic"
+ },
+ "scenario:gra-030": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_rocket_booster": "23jznin7y39"
+ },
+ "scenario:gra-031": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b"
+ },
+ "scenario:gra-032": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_ability_refresher": "339hndrykv"
+ },
+ "scenario:gra-033": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_vampire": "27gksx1uw33"
+ },
+ "scenario:gra-034": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_siphon_bullets": "1h7cwksl0dv"
+ },
+ "scenario:gra-035": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_diviners_kevlar": "10xnxgzql51"
+ },
+ "scenario:imb-001": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_leap": "w21x3zn7tr"
+ },
+ "scenario:imb-002": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_leap": "w21x3zn7tr",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c"
+ },
+ "scenario:imb-003": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_leap": "w21x3zn7tr",
+  "citadel_ability_hornet_chain": "2cobkl30kih"
+ },
+ "scenario:imb-004": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_leap": "w21x3zn7tr"
+ },
+ "scenario:imb-005": {
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "citadel_ability_hornet_leap": "w21x3zn7tr",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c"
+ },
+ "scenario:imb-006": {
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_bulletshredimbue": "1au185o9zig",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_leap": "w21x3zn7tr"
+ },
+ "scenario:imb-007": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "citadel_ability_hornet_leap": "w21x3zn7tr",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c"
+ },
+ "scenario:imb-008": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_fear": "hrpf146beg",
+  "ability_necro_hauntingskull": "cgo4yro5x6"
+ },
+ "scenario:imb-009": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:imb-010": {
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:imb-011": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:imb-012": {
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_spirit_burn": "1puwxlliud8",
+  "upgrade_mystic_reverb": "z7dyoe7xe7",
+  "ability_necro_zombiewall": "16jjpncmskd",
+  "ability_necro_gravestone": "1vmccovdqk",
+  "ability_necro_hauntingskull": "cgo4yro5x6",
+  "ability_necro_fear": "hrpf146beg"
+ },
+ "scenario:imb-013": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_mystic_reverb": "z7dyoe7xe7",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_leap": "w21x3zn7tr"
+ },
+ "scenario:srg-001": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_deflecting_armor": "1s8k4bk8v49",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:srg-002": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_vex_barrier": "2amjcp04gif"
+ },
+ "scenario:srg-003": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:srg-004": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:srg-005": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:srg-006": {
+  "upgrade_medic_bullets": "h6nbvl10cx",
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_chain_lightning": "n3v2qlo911",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_magic_slow": "25q563sary2"
+ },
+ "scenario:srg-007": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_boundless_spirit": "biwfns4t2x",
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "scenario:srg-008": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_damage_pulse": "s52k7vnyb9",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_superior_stamina": "4t9gdzirki",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_capacitor": "12u4tnqudwp",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_healing_booster": "ykrubfnvtv",
+  "upgrade_health_stealing_magic": "qrmt7o395b"
+ },
+ "scenario:vin-def-001": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:vin-def-002": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_magic_shield": "m52946qeoh"
+ },
+ "scenario:vin-def-003": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:vin-def-004": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_rocket_booster": "23jznin7y39"
+ },
+ "scenario:vin-def-005": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-006": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef"
+ },
+ "scenario:vin-def-007": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-008": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:vin-def-009": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:vin-def-010": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-011": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2"
+ },
+ "scenario:vin-def-012": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:vin-def-013": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:vin-def-014": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "scenario:vin-def-015": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "scenario:vin-def-016": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_counterspell": "16v6sb7g772"
+ },
+ "scenario:vin-def-017": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_tech_purge": "1garc1kehmv"
+ },
+ "scenario:vin-def-018": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_fury_trance": "21rvb7e5j4n"
+ },
+ "scenario:vin-def-019": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_spellbreaker": "21cefcioie2",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-020": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg"
+ },
+ "scenario:vin-def-021": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_rocket_booster": "23jznin7y39"
+ },
+ "scenario:vin-def-022": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "scenario:vin-def-023": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_regenerating_bullet_shield": "x7gm60v6ef"
+ },
+ "scenario:vin-def-024": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-025": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_divine_barrier": "19p3qtjbjr9",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-026": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_counterspell": "16v6sb7g772"
+ },
+ "scenario:vin-def-027": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-028": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_self_bubble": "1ia44vpxlnq"
+ },
+ "scenario:vin-def-029": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-030": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_warp_stone": "ojtfb3txk0"
+ },
+ "scenario:vin-def-031": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-032": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_rocket_booster": "23jznin7y39",
+  "upgrade_warp_stone": "ojtfb3txk0",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "scenario:vin-def-033": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:vin-def-034": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_metal_skin": "1mbdtnl8rwb"
+ },
+ "scenario:vin-def-035": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_self_bubble": "1ia44vpxlnq",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "scenario:vin-off-001": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_close_range": "biudjm6g51"
+ },
+ "scenario:vin-off-002": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_long_range": "16ey0s9fklq"
+ },
+ "scenario:vin-off-003": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_magic_tempo": "7jrhc826wv"
+ },
+ "scenario:vin-off-004": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_close_quarter_combat": "23t6p4laqxq"
+ },
+ "scenario:vin-off-005": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_counterspell": "16v6sb7g772"
+ },
+ "scenario:vin-off-006": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_active_reload": "1korgwc0cod",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_rapid_rounds": "1ceub92nf5f"
+ },
+ "scenario:vin-off-007": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_magic_burst": "btz88ytahr"
+ },
+ "scenario:vin-off-008": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "scenario:vin-off-009": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:vin-off-010": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_blood_tribute": "90x6dq824t",
+  "upgrade_bullet_armor_reduction_aura": "13wvko3wdzs",
+  "upgrade_aprounds": "1dm0ii6ik6p"
+ },
+ "scenario:vin-off-011": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_clip_size": "1miwz54f6b9"
+ },
+ "scenario:vin-off-012": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_chain": "2cobkl30kih",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_leap": "w21x3zn7tr"
+ },
+ "scenario:vin-off-013": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_fury_trance": "21rvb7e5j4n",
+  "upgrade_damage_recycler": "1hn3fstk7ep",
+  "upgrade_tech_overflow": "9j2wklmq0e"
+ },
+ "scenario:vin-off-014": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_blood_tribute": "90x6dq824t",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_cardio_calibrator": "8d58wb7dil"
+ },
+ "scenario:vin-off-015": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_dps_aura": "2amt3dp0hyi",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_ricochet": "1voiq977qqo"
+ },
+ "scenario:vin-off-016": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_banshee_slugs": "1805f78xoui"
+ },
+ "scenario:vin-off-017": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_healbane": "1hksz2umx6d"
+ },
+ "scenario:vin-off-018": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_critshot": "207envs31i3"
+ },
+ "scenario:vin-off-019": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_critshot": "207envs31i3"
+ },
+ "scenario:vin-off-020": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_ethereal_bullets": "29d6axxgf42",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:vin-off-021": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_cardio_calibrator": "8d58wb7dil",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_health_stimpak": "6l7afhq7ig"
+ },
+ "scenario:vin-off-022": {
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "citadel_ability_hornet_snipe": "13ezsi3ua2c",
+  "citadel_ability_hornet_leap": "w21x3zn7tr",
+  "citadel_ability_hornet_sting": "87lyepk033",
+  "citadel_ability_hornet_chain": "2cobkl30kih"
+ },
+ "scenario:vin-off-023": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "scenario:vin-off-024": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "scenario:vin-off-025": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_ricochet": "1voiq977qqo"
+ },
+ "scenario:vin-off-026": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_aprounds": "1dm0ii6ik6p"
+ },
+ "scenario:vin-off-027": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "scenario:vin-off-028": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_aprounds": "1dm0ii6ik6p"
+ },
+ "scenario:vin-off-029": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_banshee_slugs": "1805f78xoui",
+  "upgrade_inhibitor": "1q1qh4qje16",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_glass_cannon": "h38mgxj6v6",
+  "upgrade_healbane": "1hksz2umx6d"
+ },
+ "scenario:vin-off-030": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_siphon_bullets": "1h7cwksl0dv",
+  "upgrade_ricochet": "1voiq977qqo",
+  "upgrade_glass_cannon": "h38mgxj6v6"
+ },
+ "scenario:vin-off-031": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_close_quarter_combat": "23t6p4laqxq",
+  "upgrade_magic_burst": "btz88ytahr",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_trophy_collector": "yhyn9z43pn",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_close_range": "biudjm6g51",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "scenario:vin-off-032": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_soaring_spirit": "1er4501vaf7"
+ },
+ "scenario:vin-off-033": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_rechargingbullets": "exmkfdh1q9",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51"
+ },
+ "scenario:vin-off-034": {
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_magic_shield": "m52946qeoh",
+  "upgrade_escalating_exposure": "1nav7vg4ksp",
+  "upgrade_vex_barrier": "2amjcp04gif",
+  "upgrade_soaring_spirit": "1er4501vaf7",
+  "upgrade_magic_shock": "1v00afkg2xf",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_diviners_kevlar": "10xnxgzql51",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc"
+ },
+ "scenario:vin-off-035": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_aprounds": "1dm0ii6ik6p",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_critshot": "207envs31i3"
+ },
+ "scenario:vin-off-036": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_blitz_bullets": "hkcgc4a7y3",
+  "upgrade_sharpshooter": "1xpnh0rcbgg",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_burst_fire": "giw2jb2u0b",
+  "upgrade_titan_round": "f8o899722s",
+  "upgrade_surging_power": "17qqz5odcsk",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_tech_overflow": "9j2wklmq0e",
+  "upgrade_enchanted_holsters": "1no4wxhkjj2",
+  "upgrade_critshot": "207envs31i3",
+  "upgrade_damage_recycler": "1hn3fstk7ep"
+ },
+ "scenario:vin-off-037": {
+  "upgrade_pristine_emblem": "2ekte8ozsu3",
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_long_range": "16ey0s9fklq",
+  "upgrade_burst_fire": "giw2jb2u0b"
+ }
+}

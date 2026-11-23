@@ -1,0 +1,183 @@
+<div class="page">
+  @if (h(); as hero) {
+    <a class="btn btn-ghost btn-sm back" routerLink="/paths"><app-icon name="back" [size]="16" /> {{ 'Курсы' | l: 'Paths' }}</a>
+    <header class="head panel">
+      <app-hero-avatar [hero]="hero" [size]="72" />
+      <div class="grow">
+        <div class="row-wrap">
+          <h1>{{ hero.name | gn }}</h1>
+          @if (course()) {
+            <span class="tag tag-accent">{{ 'Полный курс' | l: 'Full course' }}</span>
+          } @else {
+            <span class="tag">{{ 'Базовый курс' | l: 'Basic course' }}</span>
+          }
+        </div>
+        <p class="muted small">{{ hero.role | gt }} · {{ hero.tags.join(', ') }}</p>
+        @if (course(); as c) {
+          <p class="summary">{{ c.summary | tx }}</p>
+        } @else if (hero.playstyle) {
+          <p class="summary">{{ hero.playstyle | gt }}</p>
+        }
+        <div class="row-wrap actions">
+          <button class="btn btn-primary" (click)="trainHero()"><app-icon name="play" /> {{ 'Тренировка по герою' | l: 'Hero practice' }}</button>
+          @if (!isFocus()) {
+            <button class="btn" (click)="focus()">{{ 'Сделать основным героем' | l: 'Make main hero' }}</button>
+          }
+          @if (build(); as b) {
+            <a class="btn" [routerLink]="['/builds', b.id]"><app-icon name="wrench" /> Master Your Build</a>
+          }
+          <span class="small faint">{{ scenarioCount() }} {{ 'ситуаций' | l: 'situations' }}</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head"><h2>{{ 'Способности' | l: 'Abilities' }}</h2><span class="spacer"></span><app-claim status="data" /></div>
+      <div class="abilities">
+        @for (a of hero.abilities; track a.key) {
+          <div class="ab">
+            <div class="row">
+              <app-ability-icon [key]="a.key" [size]="40" [showSlot]="true" />
+              <div class="grow">
+                <b>{{ a.name | gn }}</b>
+                <div class="xsmall faint num">@if (a.cooldown) {{{ a.cooldown }} s} @if (a.charges) { · {{ a.charges }} {{ 'заряда' | l: 'charges' }}} @if (a.damageTypes.length) { · {{ a.damageTypes.join('/') }}}</div>
+              </div>
+            </div>
+            <p class="small muted"><app-rt [text]="a.description | gt" /></p>
+            @if (course(); as c) {
+              @for (n of c.abilityNotes; track n.ability) {
+                @if (n.ability === a.key) {
+                  <p class="small role">{{ n.role | tx }}</p>
+                  @if (n.itemSynergy.length) {
+                    <ul class="syn">
+                      @for (s of n.itemSynergy; track s.item) {
+                        <li class="small"><a [routerLink]="['/items', s.item]"><app-item-icon [key]="s.item" [size]="22" [alt]="true" /> {{ game.item(s.item)?.name | gn }}</a>: {{ s.note | tx }} <app-claim [status]="s.status" /></li>
+                      }
+                    </ul>
+                  }
+                }
+              }
+            }
+            <details class="ups">
+              <summary class="xsmall faint">{{ 'Улучшения T1-T3' | l: 'Upgrades T1-T3' }}</summary>
+              @for (u of a.upgrades; track $index) {
+                @if (u) {
+                  <p class="xsmall"><span class="faint">T{{ $index + 1 }}</span> <app-rt [text]="u | gt" /></p>
+                }
+              }
+            </details>
+          </div>
+        }
+      </div>
+    </section>
+
+    @if (course(); as c) {
+      @if (c.archetypes.length) {
+        <section class="panel">
+          <div class="panel-head"><h2>{{ 'Архетипы сборок' | l: 'Build archetypes' }}</h2></div>
+          <div class="grid grid-3 panel-body">
+            @for (ar of c.archetypes; track ar.id) {
+              <div class="arch">
+                <b>{{ ar.name | tx }}</b>
+                <p class="small muted">{{ ar.idea | tx }}</p>
+                <div class="row-wrap">
+                  @for (k of ar.coreItems; track k) {
+                    <a [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="30" [title]="true" /></a>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
+      <section class="modules">
+        <h2 class="mod-title">{{ 'Модули курса' | l: 'Course modules' }}</h2>
+        @for (m of c.modules; track m.id; let i = $index) {
+          <div class="panel module" [class.open]="open() === m.id">
+            <button class="mod-head" (click)="open.set(open() === m.id ? null : m.id)" [attr.aria-expanded]="open() === m.id">
+              <span class="idx num">{{ i + 1 }}</span>
+              <span class="grow">
+                <b>{{ m.title | tx }}</b>
+                <span class="small muted goal">{{ m.goal | tx }}</span>
+              </span>
+              @if (moduleProgress(m); as p) {
+                @if (p.total) {
+                  <span class="prog xsmall faint num">{{ p.known }}/{{ p.total }}</span>
+                }
+              }
+              <app-icon [name]="open() === m.id ? 'up' : 'down'" [size]="16" />
+            </button>
+            @if (open() === m.id) {
+              <div class="mod-body stack-3">
+                @for (p of m.lesson; track $index) {
+                  <p>{{ p | tx }}</p>
+                }
+                @if (m.keyPoints.length) {
+                  <div class="keys">
+                    <div class="upper faint">{{ 'Запомни' | l: 'Remember' }}</div>
+                    <ul>
+                      @for (k of m.keyPoints; track $index) {
+                        <li><b>{{ k | tx }}</b></li>
+                      }
+                    </ul>
+                  </div>
+                }
+                @if (m.items.length) {
+                  <div class="row-wrap">
+                    @for (k of m.items; track k) {
+                      <a class="mod-item" [routerLink]="['/items', k]">
+                        <app-item-icon [key]="k" [size]="34" [alt]="true" />
+                        <span class="xsmall">{{ game.item(k)?.name | gn }}</span>
+                        <app-level [level]="knowledge.levels().get(k) ?? 0" />
+                      </a>
+                    }
+                  </div>
+                }
+                <div class="row">
+                  <button class="btn btn-primary" (click)="trainModule(m)"><app-icon name="play" /> {{ 'Тренировать модуль' | l: 'Practice this module' }}</button>
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </section>
+
+      @if (c.commonMistakes?.length) {
+        <section class="panel">
+          <div class="panel-head"><app-icon name="alert" class="c-warn" /><h2>{{ 'Типичные ошибки' | l: 'Common mistakes' }}</h2></div>
+          <ul class="panel-body claims">
+            @for (x of c.commonMistakes; track $index) {
+              <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+            }
+          </ul>
+        </section>
+      }
+    } @else {
+      <section class="panel">
+        <div class="panel-head"><h2>{{ 'Популярные предметы' | l: 'Popular items' }}</h2><span class="spacer"></span><app-claim status="stat" /></div>
+        <div class="panel-body stack-4">
+          <p class="small muted">{{ 'Глубокого курса для этого героя пока нет. Базовый курс: способности из данных клиента и предметы, которые на нём чаще всего покупают. Частота покупки не доказывает, что предмет лучший.' | l: 'No deep course for this hero yet. Basic course: abilities from client data and the most purchased items. Purchase frequency is not proof of quality.' }}</p>
+          @for (p of popular(); track p.id) {
+            @if (p.items.length) {
+              <div>
+                <div class="upper faint">{{ p.ru | l: p.en }}</div>
+                <div class="row-wrap mt">
+                  @for (x of p.items; track x.itemKey) {
+                    <a class="mod-item" [routerLink]="['/items', x.itemKey]">
+                      <app-item-icon [key]="x.itemKey" [size]="34" [alt]="true" />
+                      <span class="xsmall">{{ game.item(x.itemKey)?.name | gn }}</span>
+                      <span class="xsmall faint num">{{ x.pickPct }}%</span>
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </section>
+    }
+  } @else {
+    <div class="empty">{{ 'Герой не найден.' | l: 'Hero not found.' }}</div>
+  }
+</div>

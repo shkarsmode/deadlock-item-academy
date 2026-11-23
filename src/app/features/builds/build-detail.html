@@ -1,0 +1,353 @@
+<div class="page">
+  @if (build(); as b) {
+    <a class="btn btn-ghost btn-sm back" routerLink="/builds"><app-icon name="back" [size]="16" /> Build Doctor</a>
+
+    <header class="head panel">
+      <app-hero-avatar [key]="b.heroKey" [size]="56" />
+      <div class="grow">
+        @if (editing()) {
+          <input class="input name-input" [value]="draftName()" (input)="draftName.set($any($event.target).value)" [attr.aria-label]="'Название билда' | l: 'Build name'" />
+        } @else {
+          <h1>{{ b.name }}</h1>
+        }
+        <div class="row-wrap small muted meta">
+          <span>{{ hero()?.name | gn }}</span>
+          @if (b.source.note) {
+            <span>· {{ b.source.note }}</span>
+          }
+          @if (isMine()) {
+            <span class="tag tag-accent">{{ 'мой билд' | l: 'my build' }}</span>
+          }
+        </div>
+      </div>
+      <div class="row-wrap actions">
+        <button class="btn btn-primary" (click)="practice()"><app-icon name="play" /> {{ 'Тренировать' | l: 'Practice' }}</button>
+        @if (!isMine()) {
+          <button class="btn" (click)="makeMine()">{{ 'Сделать моим' | l: 'Make mine' }}</button>
+        }
+        @if (isPreset()) {
+          <button class="btn" (click)="duplicate()"><app-icon name="copy" /> {{ 'Копия для правок' | l: 'Editable copy' }}</button>
+        } @else if (!editing()) {
+          <button class="btn" (click)="startEdit()"><app-icon name="wrench" /> {{ 'Редактировать' | l: 'Edit' }}</button>
+        } @else {
+          <button class="btn btn-primary" (click)="saveEdit()">{{ 'Сохранить' | l: 'Save' }}</button>
+          <button class="btn btn-ghost" (click)="cancelEdit()">{{ 'Отмена' | l: 'Cancel' }}</button>
+        }
+        <button class="btn btn-ghost btn-icon" (click)="exportJson()" [attr.aria-label]="'Экспорт JSON' | l: 'Export JSON'" [attr.title]="'Экспорт JSON' | l: 'Export JSON'"><app-icon name="download" /></button>
+      </div>
+    </header>
+
+    @if (analysis(); as an) {
+      <section class="panel master">
+        <div class="panel-head"><app-icon name="target" class="c-accent" /><h2>Master Your Build</h2></div>
+        <div class="panel-body stack-4">
+          <p>{{ an.overview | tx }}</p>
+          <div class="grid grid-2">
+            <div>
+              <div class="upper faint">{{ 'Сильные стороны' | l: 'Strengths' }}</div>
+              <ul class="claims">
+                @for (c of an.strengths; track $index) {
+                  <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                }
+              </ul>
+            </div>
+            <div>
+              <div class="upper faint">{{ 'Риски и слабые места' | l: 'Risks and weak spots' }}</div>
+              <ul class="claims">
+                @for (c of an.risks; track $index) {
+                  <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                }
+              </ul>
+            </div>
+          </div>
+          @if (an.diff?.length) {
+            <div class="callout warn diff">
+              <app-icon name="compare" />
+              <div>
+                <b>{{ 'Отличия от оригинала / других версий' | l: 'Differences from the original / other versions' }}</b>
+                <ul class="claims">
+                  @for (c of an.diff; track $index) {
+                    <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                  }
+                </ul>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+
+    <div class="cols">
+      <section class="panel cats">
+        <div class="panel-head">
+          <h2>{{ 'Предметы по порядку' | l: 'Items in order' }}</h2>
+          <span class="spacer"></span>
+          @if (editing()) {
+            <button class="btn btn-sm" (click)="addCategory()"><app-icon name="plus" [size]="14" /> {{ 'Категория' | l: 'Category' }}</button>
+          }
+        </div>
+        @for (c of categories(); track $index; let ci = $index) {
+          <div class="cat" [class.optional]="c.optional">
+            <div class="cat-head">
+              @if (editing()) {
+                <input class="input cat-name" [value]="c.name" (input)="renameCategory(ci, $any($event.target).value)" />
+                <label class="check xsmall"><input type="checkbox" [checked]="!!c.optional" (change)="toggleOptional(ci)" /> {{ 'ситуативно' | l: 'situational' }}</label>
+                <button class="btn btn-ghost btn-icon btn-sm" (click)="removeCategory(ci)" [attr.aria-label]="'Удалить категорию' | l: 'Remove category'"><app-icon name="trash" [size]="14" /></button>
+              } @else {
+                <h3>{{ c.name }}</h3>
+                @if (c.optional) {
+                  <span class="tag">{{ 'ситуативно' | l: 'situational' }}</span>
+                }
+              }
+            </div>
+            <ul class="list items">
+              @for (i of c.items; track $index; let ii = $index) {
+                <li>
+                  <div class="irow">
+                    <button class="iopen" (click)="expanded.set(expanded() === ci + ':' + i.key ? null : ci + ':' + i.key)" [attr.aria-expanded]="expanded() === ci + ':' + i.key">
+                      <app-item-icon [key]="i.key" [size]="40" [badges]="true" [alt]="true" />
+                      <span class="grow">
+                        <b>{{ game.item(i.key)?.name | gn }}</b>
+                        <span class="xsmall faint num"> {{ game.item(i.key)?.cost }}</span>
+                        @if (i.imbue && !editing()) {
+                          <span class="imb xsmall"><app-ability-icon [key]="i.imbue" [size]="18" /> {{ game.ability(i.imbue)?.ability?.name | gn }}</span>
+                        }
+                        @if (i.note && !editing()) {
+                          <span class="note xsmall muted">«{{ i.note }}»</span>
+                        }
+                      </span>
+                      @if (!editing()) {
+                        <app-icon [name]="expanded() === ci + ':' + i.key ? 'up' : 'down'" [size]="16" />
+                      }
+                    </button>
+                    @if (editing()) {
+                      <div class="edit-tools">
+                        @if (game.item(i.key)?.imbue) {
+                          <select class="select imbue-sel" [syncValue]="i.imbue ?? ''" (change)="setImbue(ci, ii, $any($event.target).value)" [attr.aria-label]="'Imbue на способность' | l: 'Imbue target'">
+                            <option value="">{{ 'Imbue: выбрать способность' | l: 'Imbue: choose ability' }}</option>
+                            @for (a of abilityOptions(i.key); track a.key) {
+                              <option [value]="a.key">{{ a.name }}{{ a.ult ? ' (ult)' : '' }}</option>
+                            }
+                          </select>
+                        }
+                        <input class="input note-input" [value]="i.note ?? ''" (input)="setNote(ci, ii, $any($event.target).value)" [placeholder]="'Заметка' | l: 'Note'" />
+                        <button class="btn btn-ghost btn-icon btn-sm" (click)="moveItem(ci, ii, -1)" [attr.aria-label]="'Выше' | l: 'Up'"><app-icon name="up" [size]="14" /></button>
+                        <button class="btn btn-ghost btn-icon btn-sm" (click)="moveItem(ci, ii, 1)" [attr.aria-label]="'Ниже' | l: 'Down'"><app-icon name="down" [size]="14" /></button>
+                        <button class="btn btn-ghost btn-icon btn-sm" (click)="removeItem(ci, ii)" [attr.aria-label]="'Убрать' | l: 'Remove'"><app-icon name="x" [size]="14" /></button>
+                      </div>
+                    }
+                  </div>
+                  @if (!editing() && expanded() === ci + ':' + i.key) {
+                    <div class="analysis">
+                      @if (itemAnalysis(i.key); as a) {
+                        <dl class="dl">
+                          @for (f of fields; track f.key) {
+                            @if (text(a, f.key)) {
+                              <dt>{{ f.ru | l: f.en }}</dt>
+                              <dd>{{ text(a, f.key) }}</dd>
+                            }
+                          }
+                          @if (a.alternatives.length) {
+                            <dt>{{ '5. Альтернативы' | l: '5. Alternatives' }}</dt>
+                            <dd>
+                              @for (alt of a.alternatives; track alt.key) {
+                                <div class="alt"><a [routerLink]="['/items', alt.key]"><app-item-icon [key]="alt.key" [size]="22" [alt]="true" /> {{ game.item(alt.key)?.name | gn }}</a> <span class="small muted">{{ alt.when | tx }}</span></div>
+                              }
+                            </dd>
+                          }
+                          <dt>{{ '8. Что раскрывает его сильнее' | l: '8. What unlocks more of it' }}</dt>
+                          <dd>
+                            <div class="row-wrap">
+                              @for (k of a.enablers.items; track k) {
+                                <app-item-icon [key]="k" [size]="22" [title]="true" />
+                              }
+                            </div>
+                            {{ a.enablers.note | tx }}
+                          </dd>
+                          <dt>{{ '10. Сигналы пересмотреть покупку' | l: '10. Signals to reconsider' }}</dt>
+                          <dd>
+                            <ul>
+                              @for (s of a.reconsiderSignals; track $index) {
+                                <li>{{ s | tx }}</li>
+                              }
+                            </ul>
+                          </dd>
+                        </dl>
+                        <app-claim [status]="a.status" />
+                      } @else {
+                        @if (content.item(i.key); as ic) {
+                          <p><b>{{ ic.job | tx }}</b></p>
+                          @if (heroNote(i.key); as hn) {
+                            <p class="small">{{ hero()?.name | gn }}: {{ hn }}</p>
+                          }
+                          <div class="grid grid-2 small">
+                            <div><div class="upper faint">{{ 'Когда покупать' | l: 'Buy when' }}</div><ul>@for (x of ic.buyWhen; track $index) {<li>{{ x.text | tx }}</li>}</ul></div>
+                            <div><div class="upper faint">{{ 'Когда не стоит' | l: 'Skip when' }}</div><ul>@for (x of ic.skipWhen; track $index) {<li>{{ x.text | tx }}</li>}</ul></div>
+                          </div>
+                        }
+                        <a class="btn btn-ghost btn-sm" [routerLink]="['/items', i.key]">{{ 'Страница предмета' | l: 'Item page' }}</a>
+                      }
+                    </div>
+                  }
+                </li>
+              }
+            </ul>
+            @if (editing()) {
+              <div class="add-row">
+                <app-item-picker [exclude]="[]" (picked)="addItem(ci, $event)" [placeholder]="'Добавить предмет в категорию...' | l: 'Add an item to this category...'" />
+              </div>
+            }
+          </div>
+        }
+      </section>
+
+      <aside class="side stack-4">
+        @if (report(); as r) {
+          <section class="panel">
+            <div class="panel-head"><app-icon name="coins" /><h3>{{ 'Экономика' | l: 'Economy' }}</h3><span class="spacer"></span><span class="num">{{ r.totalCost }}</span></div>
+            <div class="panel-body stack-3">
+              @for (inv of r.investment; track inv.slot) {
+                <div class="inv">
+                  <div class="row small"><span [class]="'c-' + inv.slot">{{ inv.slot }}</span><span class="spacer"></span><span class="num">{{ inv.spent }}</span></div>
+                  <div class="inv-bar">
+                    <i [class]="'fill f-' + inv.slot" [style.width.%]="slotSpentPct(inv.slot, inv.spent)"></i>
+                    @for (t of thresholds(inv.slot); track t.t) {
+                      <span class="th" [style.left.%]="t.pct" [class.big]="t.t === 4800" [attr.title]="t.t"></span>
+                    }
+                  </div>
+                  <div class="xsmall faint">
+                    {{ 'Бонус вложений:' | l: 'Investment bonus:' }} <b class="num">{{ inv.bonus }}{{ inv.slot === 'spirit' ? '' : '%' }}</b>
+                    @if (inv.next) {
+                      · {{ 'следующий на' | l: 'next at' }} {{ inv.next.threshold }} ({{ inv.next.bonus }}{{ inv.slot === 'spirit' ? '' : '%' }})
+                    }
+                  </div>
+                </div>
+              }
+              <p class="xsmall faint">{{ 'Weapon: +% урона оружия, Vitality: +% здоровья, Spirit: +духовная сила. Пороги из данных клиента; ситуативные категории не считаются.' | l: 'Weapon: +% weapon damage, Vitality: +% health, Spirit: +spirit power. Thresholds from client data; situational categories excluded.' }}</p>
+            </div>
+          </section>
+
+          @if (r.issues.length) {
+            <section class="panel">
+              <div class="panel-head"><app-icon name="alert" class="c-warn" /><h3>{{ 'На что обратить внимание' | l: 'Things to check' }}</h3></div>
+              <ul class="list issues">
+                @for (x of r.issues; track $index) {
+                  <li [class.warn]="x.level === 'warn'">
+                    <span>{{ x.text | tx }}</span>
+                    @if (x.items?.length) {
+                      <div class="row-wrap">@for (k of x.items; track k) {<app-item-icon [key]="k" [size]="22" [title]="true" />}</div>
+                    }
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+
+          <section class="panel">
+            <div class="panel-head"><h3>{{ 'Покрытие задач' | l: 'Coverage' }}</h3></div>
+            <div class="panel-body stack-3">
+              <div class="row-wrap">
+                @for (rc of roleChips(); track rc.label) {
+                  <span class="tag">{{ rc.label }} · {{ rc.n }}</span>
+                }
+              </div>
+              @if (r.actives.length) {
+                <div class="small"><span class="faint">{{ 'Активки:' | l: 'Actives:' }}</span> @for (k of r.actives; track k) {<app-item-icon class="inl" [key]="k" [size]="22" [title]="true" />}</div>
+              }
+              @if (r.imbues.length) {
+                <div class="small">
+                  <span class="faint">Imbue:</span>
+                  @for (x of r.imbues; track x.item) {
+                    <div class="row imb-row"><app-item-icon [key]="x.item" [size]="22" /> → @if (x.target) {<app-ability-icon [key]="x.target" [size]="22" /> {{ game.ability(x.target)?.ability?.name | gn }}} @else {<span class="c-warn">{{ 'не выбрано' | l: 'not set' }}</span>}</div>
+                  }
+                </div>
+              }
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head"><app-icon name="repeat" /><h3>{{ 'Что если заменить?' | l: 'What if I swap?' }}</h3></div>
+            <div class="panel-body stack-3">
+              <select class="select" [syncValue]="swapFrom() ?? ''" (change)="swapFrom.set($any($event.target).value || null)" [attr.aria-label]="'Что убрать' | l: 'Remove'">
+                <option value="">{{ 'Какой предмет убрать...' | l: 'Item to remove...' }}</option>
+                @for (k of r.finalItems; track k) {
+                  <option [value]="k">{{ game.item(k)?.name | gn }}</option>
+                }
+              </select>
+              @if (swapTo(); as st) {
+                <div class="row"><app-item-icon [key]="st" [size]="28" /> <b class="grow">{{ game.item(st)?.name | gn }}</b><button class="btn btn-ghost btn-sm" (click)="swapTo.set(null)">{{ 'Сменить' | l: 'Change' }}</button></div>
+              } @else {
+                <app-item-picker (picked)="swapTo.set($event)" [placeholder]="'На что заменить...' | l: 'Replace with...'" />
+              }
+              @if (swapped(); as sw) {
+                <div class="swap small">
+                  <div>{{ 'Цена:' | l: 'Price:' }} <b class="num" [class.c-bad]="sw.cost > 0" [class.c-good]="sw.cost < 0">{{ sw.cost > 0 ? '+' : '' }}{{ sw.cost }}</b></div>
+                  @if (sw.gained.length) {
+                    <div>{{ 'Появится:' | l: 'Gains:' }} @for (g of sw.gained; track g) {<span class="tag tag-good">{{ g }}</span>}</div>
+                  }
+                  @if (sw.lost.length) {
+                    <div>{{ 'Пропадёт:' | l: 'Loses:' }} @for (g of sw.lost; track g) {<span class="tag tag-bad">{{ g }}</span>}</div>
+                  }
+                  @for (iv of sw.investment; track iv.slot) {
+                    @if (iv.before !== iv.after) {
+                      <div>{{ iv.slot }}: {{ 'бонус вложений' | l: 'investment bonus' }} {{ iv.before }} → <b>{{ iv.after }}</b></div>
+                    }
+                  }
+                </div>
+              }
+            </div>
+          </section>
+        }
+      </aside>
+    </div>
+
+    @if (report(); as r) {
+      <section class="panel tl-panel">
+        <div class="panel-head">
+          <h3>{{ 'План покупок' | l: 'Purchase timeline' }}</h3>
+          <span class="spacer"></span>
+          <select class="select cmp-sel" [syncValue]="compareId()" (change)="compareId.set($any($event.target).value)" [attr.aria-label]="'Сравнить с' | l: 'Compare with'">
+            <option value="">{{ 'Сравнить с другим билдом...' | l: 'Compare with another build...' }}</option>
+            @for (o of otherBuilds(); track o.id) {
+              <option [value]="o.id">{{ o.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="panel-body">
+          <app-build-timeline [points]="r.timeline" [compare]="compareReport()?.timeline ?? []" />
+          @if (compareBuild(); as cb) {
+            <div class="grid grid-2 cmp">
+              <div>
+                <div class="upper faint">{{ 'Только в этом билде' | l: 'Only in this build' }}</div>
+                <div class="row-wrap">@for (k of compareDiff().onlyA; track k) {<app-item-icon [key]="k" [size]="28" [title]="true" />}</div>
+              </div>
+              <div>
+                <div class="upper faint">{{ 'Только в' | l: 'Only in' }} «{{ cb.name }}»</div>
+                <div class="row-wrap">@for (k of compareDiff().onlyB; track k) {<app-item-icon [key]="k" [size]="28" [title]="true" />}</div>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+
+    @if (!isPreset() && (editing() || b.source.type === 'screenshot')) {
+      <section class="panel shot">
+        <div class="panel-head">
+          <app-icon name="image-up" /><h3>{{ 'Скриншот в помощь' | l: 'Screenshot assist' }}</h3>
+          <span class="spacer"></span>
+          <label class="small muted row">{{ 'Добавлять в' | l: 'Add to' }}
+            <select class="select cat-sel" [syncValue]="addTarget() ?? 0" (change)="addTarget.set(+$any($event.target).value)">
+              @for (c of categories(); track $index) {
+                <option [value]="$index">{{ c.name }}</option>
+              }
+            </select>
+          </label>
+        </div>
+        <div class="panel-body"><app-screenshot-assist (picked)="onShot($event)" /></div>
+      </section>
+    }
+  } @else {
+    <div class="empty">{{ 'Билд не найден.' | l: 'Build not found.' }} <a routerLink="/builds">Build Doctor</a></div>
+  }
+</div>

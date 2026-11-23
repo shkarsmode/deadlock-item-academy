@@ -1,0 +1,282 @@
+<div class="page">
+  @if (item(); as it) {
+    <a class="btn btn-ghost btn-sm back" routerLink="/items"><app-icon name="back" [size]="16" /> {{ 'Все предметы' | l: 'All items' }}</a>
+
+    <header class="head panel">
+      <app-item-icon [item]="it" [size]="112" [alt]="true" />
+      <div class="grow">
+        <h1>{{ it.name | gn }} @if (i18n.altName(it.name); as alt) {<span class="alt">{{ alt }}</span>}</h1>
+        <div class="row-wrap tags">
+          <span [class]="'tag tag-' + it.slot">{{ slotLabel() }}</span>
+          <span class="tag num">Tier {{ it.tier }} · {{ it.cost }} {{ 'душ' | l: 'souls' }}</span>
+          @if (it.isActive) {
+            <span class="tag tag-accent">{{ 'Активный' | l: 'Active' }}{{ it.cooldown ? ' · ' + it.cooldown + ' s' : '' }}</span>
+          } @else {
+            <span class="tag">{{ 'Пассивный' | l: 'Passive' }}</span>
+          }
+          @if (it.imbue) {
+            <span class="tag tag-spirit">{{ imbueLabel() }}</span>
+          }
+          @if (it.corruptible) {
+            <span class="tag" [attr.title]="'Можно испортить у The Broker: сильнее, но со случайным минусом' | l: 'Can be corrupted at The Broker: stronger, with a random downside'">Corruptible</span>
+          }
+          @if (it.mode === 'street_brawl') {
+            <span class="tag tag-warn">{{ 'Только Street Brawl' | l: 'Street Brawl only' }}</span>
+          }
+        </div>
+        @if (c(); as cc) {
+          <p class="job">{{ cc.job | tx }}</p>
+        }
+        <div class="row-wrap actions">
+          <button class="btn btn-primary" (click)="practice()"><app-icon name="play" /> {{ 'Тренировать этот предмет' | l: 'Practice this item' }}</button>
+          <a class="btn" routerLink="/compare" [queryParams]="{ a: it.key }"><app-icon name="compare" /> {{ 'Сравнить' | l: 'Compare' }}</a>
+        </div>
+      </div>
+      <div class="mastery">
+        <app-level [level]="level()" [label]="true" />
+        <ul class="dims">
+          @for (d of dims(); track d.d) {
+            <li [attr.title]="d.n + ' ' + ('ответов' | l: 'answers')">
+              <span class="xsmall muted">{{ d.name }}</span>
+              <div class="bar"><i [style.width.%]="d.v * 100"></i></div>
+            </li>
+          }
+        </ul>
+      </div>
+    </header>
+
+    @if (stale()) {
+      <div class="callout warn"><app-icon name="alert" /> {{ 'Игра изменила этот предмет после написания разбора. Объяснения ниже могут устареть: сверяйся с данными клиента.' | l: 'The game changed this item after the guide was written. Check the client data below.' }}</div>
+    }
+    @if (k()?.flagged; as f) {
+      <div class="callout info"><app-icon name="refresh" /> {{ 'После обновления игры механика изменилась (' | l: 'The mechanics changed in a game update (' }}{{ f.fields.join(', ') }}). {{ 'Знания по этому предмету вернутся на повторение.' | l: 'Your knowledge of it comes back for review.' }}</div>
+    }
+
+    <div class="cols">
+      <div class="main-col stack-4">
+        @if (c(); as cc) {
+          <section class="panel">
+            <div class="panel-head">
+              <h2>{{ 'Объяснение' | l: 'Explanation' }}</h2>
+              <span class="spacer"></span>
+              <div class="seg">
+                <button [class.on]="depth() === 'simple'" (click)="depth.set('simple')">{{ 'Просто' | l: 'Simple' }}</button>
+                <button [class.on]="depth() === 'detailed'" (click)="depth.set('detailed')">{{ 'Подробно' | l: 'Detailed' }}</button>
+                <button [class.on]="depth() === 'technical'" (click)="depth.set('technical')">{{ 'Технически' | l: 'Technical' }}</button>
+              </div>
+            </div>
+            <div class="panel-body stack-3">
+              @if (depth() === 'simple') {
+                <p>{{ cc.simple | tx }}</p>
+              } @else {
+                <p>{{ cc.detail | tx }}</p>
+              }
+              @if (depth() === 'technical') {
+                @for (s of it.sections; track $index) {
+                  <div class="sec">
+                    <div class="upper faint">{{ sectionName(s.kind) }}</div>
+                    @if (s.text) {
+                      <p class="small"><app-rt [text]="s.text | gt" /></p>
+                    }
+                    @if (s.stats.length) {
+                      <app-stats [stats]="s.stats" />
+                    }
+                  </div>
+                }
+              }
+              @if (cc.iconCue) {
+                <p class="small cue"><app-icon name="eye" [size]="14" /> {{ cc.iconCue | tx }}</p>
+              }
+              @if (cc.example) {
+                <div class="example">
+                  <div class="upper faint">{{ 'Пример из матча' | l: 'Match example' }}</div>
+                  <p>{{ cc.example | tx }}</p>
+                </div>
+              }
+            </div>
+          </section>
+
+          <div class="grid grid-2">
+            <section class="panel">
+              <div class="panel-head"><app-icon name="check" class="c-good" /><h3>{{ 'Когда покупать' | l: 'Buy when' }}</h3></div>
+              <ul class="claims panel-body">
+                @for (x of cc.buyWhen; track $index) {
+                  <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                }
+              </ul>
+            </section>
+            <section class="panel">
+              <div class="panel-head"><app-icon name="x" class="c-bad" /><h3>{{ 'Когда не стоит' | l: 'Skip when' }}</h3></div>
+              <ul class="claims panel-body">
+                @for (x of cc.skipWhen; track $index) {
+                  <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                }
+              </ul>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-head"><app-icon name="alert" class="c-warn" /><h3>{{ 'Типичные ошибки и ограничения' | l: 'Common mistakes and limits' }}</h3></div>
+            <ul class="claims panel-body">
+              @for (x of cc.mistakes; track $index) {
+                <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+              }
+              @for (x of cc.doesNotSolve ?? []; track $index) {
+                <li><b>{{ 'Не решает:' | l: 'Does not solve:' }}</b> {{ x.text | tx }} <app-claim [status]="x.status" /></li>
+              }
+            </ul>
+          </section>
+
+          @if (cc.activeUse; as au) {
+            <section class="panel">
+              <div class="panel-head"><app-icon name="zap" class="c-accent" /><h3>{{ 'Как использовать активку' | l: 'Using the active' }}</h3></div>
+              <dl class="panel-body dl">
+                <dt>{{ 'Когда нажимать' | l: 'When to press' }}</dt><dd>{{ au.when | tx }}</dd>
+                <dt>{{ 'Против чего беречь' | l: 'Save it for' }}</dt><dd>{{ au.saveFor | tx }}</dd>
+                <dt>{{ 'Слишком рано, если' | l: 'Too early when' }}</dt><dd>{{ au.tooEarly | tx }}</dd>
+              </dl>
+            </section>
+          }
+          @if (cc.imbue; as im) {
+            <section class="panel">
+              <div class="panel-head"><app-icon name="sparkles" class="c-spirit" /><h3>{{ 'На какую способность назначать' | l: 'Which ability to imbue' }}</h3></div>
+              <dl class="panel-body dl">
+                <dt>{{ 'Хорошие цели' | l: 'Good targets' }}</dt><dd>{{ im.goodTargets | tx }}</dd>
+                <dt>{{ 'Плохие цели' | l: 'Bad targets' }}</dt><dd>{{ im.badTargets | tx }}</dd>
+              </dl>
+            </section>
+          }
+        } @else {
+          <section class="panel panel-pad">
+            <p class="muted small">{{ 'Экспертного разбора для этого предмета пока нет. Ниже официальные данные клиента.' | l: 'No expert guide for this item yet. Official client data below.' }}</p>
+          </section>
+        }
+
+        @if (depth() !== 'technical' || !c()) {
+          <section class="panel">
+            <div class="panel-head"><h3>{{ 'Данные клиента' | l: 'Client data' }}</h3><span class="spacer"></span><app-claim status="data" /></div>
+            <div class="panel-body stack-3">
+              @for (s of it.sections; track $index) {
+                <div class="sec">
+                  <div class="upper faint">{{ sectionName(s.kind) }}</div>
+                  @if (s.text) {
+                    <p class="small"><app-rt [text]="s.text | gt" /></p>
+                  }
+                  @if (s.stats.length) {
+                    <app-stats [stats]="s.stats" />
+                  }
+                </div>
+              }
+            </div>
+          </section>
+        }
+      </div>
+
+      <aside class="side-col stack-4">
+        @if (it.components.length || it.upgradesInto.length) {
+          <section class="panel">
+            <div class="panel-head"><app-icon name="layers" /><h3>{{ 'Сборка' | l: 'Build path' }}</h3></div>
+            <div class="panel-body stack-3">
+              @if (it.components.length) {
+                <div>
+                  <div class="upper faint">{{ 'Собирается из' | l: 'Builds from' }}</div>
+                  @for (k of it.components; track k) {
+                    <a class="item-link" [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="32" [alt]="true" /> {{ game.item(k)?.name | gn }} <span class="faint num xsmall">{{ game.item(k)?.cost }}</span></a>
+                  }
+                  <p class="xsmall faint">{{ 'Компонент поглощается, его цена засчитывается.' | l: 'The component is consumed; its cost counts.' }}</p>
+                </div>
+              }
+              @if (it.upgradesInto.length) {
+                <div>
+                  <div class="upper faint">{{ 'Улучшается в' | l: 'Upgrades into' }}</div>
+                  @for (k of it.upgradesInto; track k) {
+                    <a class="item-link" [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="32" [alt]="true" /> {{ game.item(k)?.name | gn }} <span class="faint num xsmall">{{ game.item(k)?.cost }}</span></a>
+                  }
+                </div>
+              }
+            </div>
+          </section>
+        }
+
+        @if (c(); as cc) {
+          @if (cc.alternatives.length) {
+            <section class="panel">
+              <div class="panel-head"><app-icon name="repeat" /><h3>{{ 'Альтернативы' | l: 'Alternatives' }}</h3></div>
+              <ul class="list">
+                @for (a of cc.alternatives; track a.key) {
+                  <li class="alt-row">
+                    <a class="item-link" [routerLink]="['/items', a.key]"><app-item-icon [key]="a.key" [size]="32" [alt]="true" /> <b>{{ game.item(a.key)?.name | gn }}</b></a>
+                    <p class="small muted">{{ a.when | tx }}</p>
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+          @if (roles().length || counters().length) {
+            <section class="panel panel-pad stack-3">
+              @if (roles().length) {
+                <div>
+                  <div class="upper faint">{{ 'Назначение' | l: 'Purpose' }}</div>
+                  <div class="row-wrap mt">
+                    @for (r of roles(); track r) {
+                      <span class="tag">{{ r }}</span>
+                    }
+                  </div>
+                </div>
+              }
+              @if (counters().length) {
+                <div>
+                  <div class="upper faint">{{ 'Отвечает на угрозы' | l: 'Answers threats' }}</div>
+                  <div class="row-wrap mt">
+                    @for (t of counters(); track t) {
+                      <span class="tag tag-accent">{{ t }}</span>
+                    }
+                  </div>
+                </div>
+              }
+            </section>
+          }
+          @if (cc.synergies?.length) {
+            <section class="panel">
+              <div class="panel-head"><app-icon name="sparkles" /><h3>{{ 'Взаимодействия' | l: 'Interactions' }}</h3></div>
+              <ul class="list">
+                @for (s of synergyAbilities(); track s.with) {
+                  <li class="syn"><app-ability-icon [key]="s.with" [size]="28" /> <div><b class="small">{{ game.ability(s.with)?.ability?.name | gn }}</b> <span class="xsmall faint">{{ game.ability(s.with)?.hero?.name | gn }}</span><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                }
+                @for (s of synergyItems(); track s.with) {
+                  <li class="syn"><app-item-icon [key]="s.with" [size]="28" [alt]="true" /> <div><a class="small" [routerLink]="['/items', s.with]"><b>{{ game.item(s.with)?.name | gn }}</b></a><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                }
+                @for (s of synergyHeroes(); track s.with) {
+                  <li class="syn"><app-hero-avatar [key]="s.with" [size]="28" /> <div><b class="small">{{ game.hero(s.with)?.name | gn }}</b><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                }
+              </ul>
+            </section>
+          }
+        }
+
+        @if (popularOn().length) {
+          <section class="panel">
+            <div class="panel-head"><app-icon name="chart" /><h3>{{ 'Кто покупает' | l: 'Who buys it' }}</h3><span class="spacer"></span><app-claim status="stat" /></div>
+            <ul class="list">
+              @for (p of popularOn(); track p.hero + p.phase) {
+                <li class="pop"><app-hero-avatar [key]="p.hero" [size]="24" /> <span class="grow small">{{ game.hero(p.hero)?.name | gn }} <span class="faint">· {{ phaseName(p.phase) }}</span></span><span class="num small">{{ p.pick }}%</span><span class="num xsmall faint">WR {{ p.wr }}%</span></li>
+              }
+            </ul>
+            <p class="xsmall faint pop-note">{{ 'Частота покупки по данным клиента. Высокий win rate не доказывает, что предмет сильнее: это корреляция.' | l: 'Purchase rate from client data. A high win rate is correlation, not proof.' }}</p>
+          </section>
+        }
+
+        @if (scenarios().length) {
+          <section class="panel">
+            <div class="panel-head"><app-icon name="crosshair" /><h3>{{ 'Ситуации с этим предметом' | l: 'Situations with this item' }}</h3><span class="spacer"></span><span class="faint small num">{{ scenarios().length }}</span></div>
+            <div class="panel-body">
+              <button class="btn btn-sm btn-block" (click)="practice()">{{ 'Решить ситуации' | l: 'Solve situations' }}</button>
+            </div>
+          </section>
+        }
+      </aside>
+    </div>
+  } @else {
+    <div class="empty">{{ 'Предмет не найден в текущей версии игры.' | l: 'Item not found in the current game version.' }} <a routerLink="/items">{{ 'Все предметы' | l: 'All items' }}</a></div>
+  }
+</div>

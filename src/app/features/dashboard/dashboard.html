@@ -1,0 +1,143 @@
+<div class="page">
+  <section class="hero-card panel">
+    <div class="hc-main">
+      <app-hero-avatar [key]="profiles.settings().heroFocus" [size]="64" />
+      <div class="grow">
+        <div class="upper faint">{{ 'Что полезнее сегодня' | l: 'Best use of today' }}</div>
+        <h1>{{ 'Тренировка на' | l: 'Practice on' }} {{ heroName(profiles.settings().heroFocus) }}</h1>
+        <p class="muted small plan">{{ todayPlan() || ('Всё повторено. Можно взять новые ситуации.' | l: 'All caught up. Try new situations.') }}</p>
+      </div>
+    </div>
+    <div class="hc-actions">
+      <button class="btn btn-primary btn-lg" (click)="start(profiles.settings().sessionMinutes)">
+        <app-icon name="play" /> {{ 'Начать' | l: 'Start' }} · {{ profiles.settings().sessionMinutes }} {{ 'мин' | l: 'min' }}
+      </button>
+      <div class="quick">
+        <button class="btn btn-sm" (click)="start(3)">3 {{ 'мин' | l: 'min' }}</button>
+        <button class="btn btn-sm" (click)="start(5, 'before-match')"><app-icon name="timer" [size]="14" /> {{ 'Перед матчем' | l: 'Pre-match' }}</button>
+        <button class="btn btn-sm" (click)="start(20)">20 {{ 'мин' | l: 'min' }}</button>
+      </div>
+    </div>
+  </section>
+
+  @if (insight(); as text) {
+    <div class="callout info insight"><app-icon name="brain" /> <span>{{ text }}</span></div>
+  }
+
+  <section class="grid grid-4 kpis">
+    <div class="panel panel-pad">
+      <app-meter [label]="'Узнаёшь предметы своего билда' | l: 'Recognize your build items'" [value]="buildRecognized().value" [n]="null" />
+      <div class="xsmall faint mt">{{ buildItems().length }} {{ 'предметов в билде' | l: 'items in the build' }}</div>
+    </div>
+    <div class="panel panel-pad">
+      <app-meter [label]="'Верный выбор контрпредмета' | l: 'Correct counter-item choice'" [value]="counter().value" [n]="counter().n" />
+    </div>
+    <div class="panel panel-pad">
+      <app-meter [label]="'Ситуационные решения' | l: 'Situational decisions'" [value]="situational().value" [n]="situational().n" />
+    </div>
+    <div class="panel panel-pad">
+      <app-meter [label]="'Новые ситуации (перенос)' | l: 'New situations (transfer)'" [value]="transfer().novel.value" [n]="transfer().novel.n" />
+    </div>
+  </section>
+
+  <div class="grid cols">
+    <section class="panel">
+      <div class="panel-head">
+        <h2>{{ 'Освоение предметов' | l: 'Item mastery' }}</h2>
+        <span class="spacer"></span>
+        <a class="btn btn-ghost btn-sm" routerLink="/analytics">{{ 'Аналитика' | l: 'Analytics' }} <app-icon name="right" [size]="14" /></a>
+      </div>
+      <div class="panel-body stack-4">
+        <div class="row stats-row">
+          <div class="stat"><span class="v num">{{ wellKnown() }}<small class="faint">/{{ totalItems() }}</small></span><span class="l">{{ 'хорошо изучено' | l: 'well known' }}</span></div>
+          <div class="stat"><span class="v num">{{ due() }}</span><span class="l">{{ 'к повторению' | l: 'due' }}</span></div>
+          <div class="stat"><span class="v num" [class.c-warn]="problems().length > 0">{{ problems().length }}</span><span class="l">{{ 'проблемных' | l: 'problem items' }}</span></div>
+          <div class="stat"><span class="v num">{{ streak() }}</span><span class="l">{{ 'дней подряд' | l: 'day streak' }}</span></div>
+        </div>
+        <div>
+          <div class="dist" [attr.aria-label]="'Распределение по уровням' | l: 'Level distribution'">
+            @for (n of levelDist(); track $index) {
+              @if (n > 0) {
+                <i [class]="'lv lv' + $index" [style.flex-grow]="n" [attr.title]="'Уровень ' + $index + ': ' + n"></i>
+              }
+            }
+          </div>
+          <div class="legend xsmall faint">
+            <span><i class="lv lv0"></i>{{ 'не начато' | l: 'not started' }} {{ levelDist()[0] }}</span>
+            <span><i class="lv lv1"></i>{{ 'узнавание' | l: 'recognition' }} {{ levelDist()[1] }}</span>
+            <span><i class="lv lv2"></i>{{ 'понимание' | l: 'understanding' }} {{ levelDist()[2] }}</span>
+            <span><i class="lv lv3"></i>{{ 'применение' | l: 'application' }} {{ levelDist()[3] }}</span>
+            <span><i class="lv lv4"></i>{{ 'анализ' | l: 'analysis' }} {{ levelDist()[4] }}</span>
+            <span><i class="lv lv5"></i>{{ 'мастерство' | l: 'mastery' }} {{ levelDist()[5] }}</span>
+          </div>
+        </div>
+        @if (problems().length) {
+          <div>
+            <div class="upper faint">{{ 'Проблемные предметы' | l: 'Problem items' }}</div>
+            <div class="row-wrap mt">
+              @for (k of problems().slice(0, 12); track k) {
+                <a [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="36" [title]="true" /></a>
+              }
+            </div>
+          </div>
+        }
+        @if (weakDims().length) {
+          <div>
+            <div class="upper faint">{{ 'Слабые стороны знаний' | l: 'Weakest knowledge areas' }}</div>
+            <div class="row-wrap mt">
+              @for (w of weakDims(); track w.dim) {
+                <span class="tag tag-warn">{{ w.name }} · {{ i18n.pct(w.value) }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <div class="col side">
+      <section class="panel">
+        <div class="panel-head"><h2>{{ 'Курсы героев' | l: 'Hero paths' }}</h2></div>
+        <ul class="list">
+          @for (h of heroProgress(); track h.key) {
+            <li>
+              <a class="hero-row" [routerLink]="['/paths', h.key]">
+                <app-hero-avatar [key]="h.key" [size]="36" />
+                <div class="grow">
+                  <b>{{ h.hero?.name | gn }}</b>
+                  <div class="xsmall faint">{{ h.applied }}/{{ h.count }} {{ 'предметов на уровне применения' | l: 'items at application level' }}</div>
+                  <div class="bar mt"><i [style.width.%]="h.count ? (h.applied / h.count) * 100 : 0"></i></div>
+                </div>
+                <app-icon name="right" [size]="16" />
+              </a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>{{ 'Последние 7 дней' | l: 'Last 7 days' }}</h2></div>
+        <div class="panel-body">
+          <div class="spark" role="img" [attr.aria-label]="'Ответы по дням' | l: 'Answers per day'">
+            @for (d of week(); track d.day) {
+              <div class="sp-col" [attr.title]="i18n.date(d.day) + ': ' + d.answers">
+                <i [style.height.%]="(d.answers / weekMax()) * 100" [class.empty]="!d.answers"></i>
+                <span class="xsmall faint">{{ i18n.date(d.day, { weekday: 'short' }) }}</span>
+              </div>
+            }
+          </div>
+          @if (lastSession(); as s) {
+            <p class="small muted mt">
+              {{ 'Последняя сессия' | l: 'Last session' }}: {{ i18n.relative(s.startedAt) }} · {{ s.answered }} {{ 'ответов' | l: 'answers' }} ·
+              {{ s.answered ? i18n.pct((s.correct + s.partial * 0.5) / s.answered) : '-' }}
+            </p>
+          } @else {
+            <p class="small muted mt">{{ 'Здесь появится история твоих тренировок.' | l: 'Your practice history will appear here.' }}</p>
+          }
+          @if (openMistakes()) {
+            <a class="btn btn-sm mt" routerLink="/mistakes"><app-icon name="notebook" [size]="14" /> {{ 'Открытых ошибок:' | l: 'Open mistakes:' }} {{ openMistakes() }}</a>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

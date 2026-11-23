@@ -1,0 +1,226 @@
+.back {
+  margin-bottom: 10px;
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.name-input {
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 420px;
+}
+.meta {
+  margin-top: 4px;
+}
+.master {
+  margin-bottom: 16px;
+}
+.claims {
+  display: grid;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: var(--fs-sm);
+}
+.diff .claims {
+  margin-top: 4px;
+}
+.cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.cat + .cat {
+  border-top: 1px solid var(--border);
+}
+.cat.optional {
+  background: rgba(255, 255, 255, 0.015);
+}
+.cat-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px 4px;
+}
+.cat-head h3 {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  font-weight: 600;
+}
+.cat-name {
+  max-width: 260px;
+  height: 30px;
+}
+.irow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px 0 0;
+  flex-wrap: wrap;
+}
+.iopen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+}
+.iopen:hover {
+  background: var(--bg-2);
+}
+.imb {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  color: var(--spirit);
+}
+.note {
+  display: block;
+  margin-top: 2px;
+}
+.edit-tools {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 0 8px 16px;
+  flex-wrap: wrap;
+}
+.imbue-sel {
+  width: auto;
+  height: 30px;
+}
+.note-input {
+  width: 180px;
+  height: 30px;
+}
+.analysis {
+  padding: 4px 16px 14px 66px;
+  font-size: var(--fs-sm);
+  display: grid;
+  gap: 8px;
+}
+.dl {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 8px 14px;
+  margin: 0;
+}
+.dl dt {
+  color: var(--text-3);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-top: 2px;
+}
+.dl dd {
+  margin: 0;
+}
+.alt a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+}
+.add-row {
+  padding: 6px 16px 12px;
+}
+.inv-bar {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-3);
+  margin: 4px 0;
+}
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 4px;
+}
+.f-weapon {
+  background: var(--weapon);
+}
+.f-vitality {
+  background: var(--vitality);
+}
+.f-spirit {
+  background: var(--spirit);
+}
+.th {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+.th.big {
+  background: #fff;
+  width: 2px;
+}
+.issues li {
+  padding: 8px 16px;
+  font-size: var(--fs-sm);
+  display: grid;
+  gap: 4px;
+}
+.issues li.warn {
+  color: var(--warn);
+}
+.inl {
+  margin: 0 2px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.imb-row {
+  margin-top: 4px;
+}
+.swap {
+  display: grid;
+  gap: 6px;
+}
+.swap .tag {
+  margin: 0 3px;
+}
+.tl-panel,
+.shot {
+  margin-top: 16px;
+}
+.cmp-sel,
+.cat-sel {
+  width: auto;
+  height: 30px;
+  margin-left: 6px;
+  /* long build names must not push the page wider than the phone */
+  min-width: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.cmp {
+  margin-top: 14px;
+}
+@media (max-width: 1023px) {
+  .cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .analysis {
+    padding-left: 16px;
+  }
+  .dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .actions {
+    width: 100%;
+  }
+}

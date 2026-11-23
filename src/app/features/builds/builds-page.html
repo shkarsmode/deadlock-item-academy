@@ -1,0 +1,186 @@
+<div class="page">
+  <div class="page-head">
+    <div class="grow">
+      <h1>Build Doctor</h1>
+      <p class="sub">{{ 'Разбор, редактор и анализ билдов: что каждый предмет делает и что изменится, если его заменить.' | l: 'Analyze and edit builds: what each item does and what changes if you swap it.' }}</p>
+    </div>
+  </div>
+
+  @if (myBuild.build(); as mb) {
+    <a class="panel my-build" [routerLink]="['/builds', mb.id]">
+      <app-hero-avatar [key]="mb.heroKey" [size]="48" />
+      <div class="grow">
+        <div class="upper faint">Master Your Build</div>
+        <b>{{ mb.name }}</b>
+        <div class="row-wrap mini">
+          @for (k of itemsOf(mb); track k) {
+            <app-item-icon [key]="k" [size]="26" [title]="true" />
+          }
+        </div>
+      </div>
+      <span class="btn btn-primary">{{ 'Разбор моего билда' | l: 'My build analysis' }} <app-icon name="right" [size]="16" /></span>
+    </a>
+  }
+
+  <div class="seg tabs">
+    <button [class.on]="tab() === 'mine'" (click)="tab.set('mine')">{{ 'Билды' | l: 'Builds' }}</button>
+    <button [class.on]="tab() === 'import'" (click)="tab.set('import')">{{ 'Импорт и создание' | l: 'Import & create' }}</button>
+    <button [class.on]="tab() === 'surgery'" (click)="tab.set('surgery')">{{ 'Хирургия билда' | l: 'Build surgery' }} ({{ surgeries().length }})</button>
+  </div>
+
+  @if (tab() === 'mine') {
+    <section class="stack-4">
+      <div class="panel">
+        <div class="panel-head"><h3>{{ 'Сохранённые' | l: 'Saved' }}</h3><span class="spacer"></span><span class="faint small">{{ builds.saved().length }}</span></div>
+        <ul class="list">
+          @for (b of builds.saved(); track b.id) {
+            <li class="brow">
+              <app-hero-avatar [key]="b.heroKey" [size]="36" />
+              <a class="grow" [routerLink]="['/builds', b.id]">
+                <b>{{ b.name }}</b>
+                @if (isMine(b)) {
+                  <span class="tag tag-accent">{{ 'мой билд' | l: 'my build' }}</span>
+                }
+                <div class="row-wrap mini">
+                  @for (k of itemsOf(b); track k) {
+                    <app-item-icon [key]="k" [size]="24" />
+                  }
+                </div>
+              </a>
+              @if (!isMine(b)) {
+                <button class="btn btn-sm" (click)="makeMine(b)">{{ 'Сделать моим' | l: 'Make mine' }}</button>
+              }
+              <button class="btn btn-ghost btn-icon btn-sm" (click)="remove(b)" [attr.aria-label]="'Удалить' | l: 'Delete'"><app-icon name="trash" [size]="16" /></button>
+            </li>
+          } @empty {
+            <li class="empty small">{{ 'Пока нет своих билдов. Импортируй из файла игры или создай вручную.' | l: 'No saved builds yet. Import from the game file or create one.' }}</li>
+          }
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>{{ 'С разбором' | l: 'Analysed' }}</h3><span class="spacer"></span><span class="faint small">{{ 'найдены в твоём клиенте' | l: 'found in your client' }}</span></div>
+        <ul class="list">
+          @for (b of builds.presets(); track b.id) {
+            <li class="brow">
+              <app-hero-avatar [key]="b.heroKey" [size]="36" />
+              <a class="grow" [routerLink]="['/builds', b.id]">
+                <b>{{ b.name }}</b>
+                @if (isMine(b)) {
+                  <span class="tag tag-accent">{{ 'мой билд' | l: 'my build' }}</span>
+                }
+                <div class="xsmall faint">{{ b.source.note }}</div>
+              </a>
+              @if (!isMine(b)) {
+                <button class="btn btn-sm" (click)="makeMine(b)">{{ 'Сделать моим' | l: 'Make mine' }}</button>
+              }
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+  }
+
+  @if (tab() === 'import') {
+    <section class="grid grid-2 imports">
+      <div class="panel">
+        <div class="panel-head"><app-icon name="json" /><h3>{{ 'Из файла игры' | l: 'From the game file' }}</h3></div>
+        <div class="panel-body stack-3">
+          <p class="small muted">
+            {{ 'Игра хранит все твои билды (и неопубликованные) в файле:' | l: 'The game keeps all your builds (including unpublished) in:' }}
+          </p>
+          <code class="path">Steam\userdata\&lt;ID&gt;\1422450\remote\cfg\cached_hero_builds.kv3</code>
+          <p class="xsmall faint">{{ 'Файл читается только в браузере, никуда не отправляется.' | l: 'The file is read in your browser only, never uploaded.' }}</p>
+          <label class="btn">
+            <app-icon name="upload" /> {{ 'Выбрать cached_hero_builds.kv3' | l: 'Choose cached_hero_builds.kv3' }}
+            <input type="file" accept=".kv3" class="sr-only" (change)="onCacheFile($event)" />
+          </label>
+          @if (cacheError()) {
+            <p class="callout bad small">{{ cacheError() }}</p>
+          }
+          @if (cacheResults(); as list) {
+            <ul class="list found">
+              @for (d of list; track $index) {
+                <li>
+                  <label class="check found-row">
+                    <input type="checkbox" [checked]="d.picked" (change)="togglePick($index)" />
+                    <app-hero-avatar [key]="d.heroKey" [size]="28" />
+                    <span class="grow">
+                      <b class="small">{{ d.name }}</b>
+                      @if (d.lastUsed) {
+                        <span class="tag tag-accent">{{ 'последний использованный' | l: 'last used' }}</span>
+                      }
+                      <span class="xsmall faint"> {{ date(d.meta?.lastUpdated) }} · {{ d.categories.length }} {{ 'категорий' | l: 'categories' }}</span>
+                    </span>
+                  </label>
+                </li>
+              }
+            </ul>
+            <button class="btn btn-primary" (click)="importPicked()">{{ 'Импортировать выбранные' | l: 'Import selected' }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><app-icon name="download" /><h3>{{ 'Публичный билд по ID' | l: 'Public build by id' }}</h3></div>
+        <div class="panel-body stack-3">
+          <p class="small muted">{{ 'ID опубликованного билда (например 616630). Запрос уходит в публичный API, отправляется только номер билда.' | l: 'Id of a published build (e.g. 616630). Only the build number is sent to the public API.' }}</p>
+          <div class="row">
+            <input class="input" inputmode="numeric" [value]="buildId()" (input)="buildId.set($any($event.target).value)" placeholder="616630" [attr.aria-label]="'ID билда' | l: 'Build id'" />
+            <button class="btn btn-primary" [disabled]="busy()" (click)="importById()">{{ 'Загрузить' | l: 'Load' }}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><app-icon name="json" /><h3>JSON</h3></div>
+        <div class="panel-body stack-3">
+          <p class="small muted">{{ 'Ответ deadlock-api /v1/builds, объект hero_build или экспорт из этого приложения.' | l: 'A deadlock-api /v1/builds response, a hero_build object or an export from this app.' }}</p>
+          <textarea class="textarea" rows="4" [value]="jsonText()" (input)="jsonText.set($any($event.target).value)" [attr.aria-label]="'JSON билда' | l: 'Build JSON'"></textarea>
+          <div class="row">
+            <button class="btn" [disabled]="!jsonText().trim()" (click)="importJson()">{{ 'Импортировать' | l: 'Import' }}</button>
+            <label class="btn btn-ghost">{{ 'или файл .json' | l: 'or a .json file' }}<input type="file" accept=".json,application/json" class="sr-only" (change)="onJsonFile($event)" /></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><app-icon name="plus" /><h3>{{ 'Создать' | l: 'Create' }}</h3></div>
+        <div class="panel-body stack-3">
+          <div class="field">
+            <label for="nh">{{ 'Герой' | l: 'Hero' }}</label>
+            <select id="nh" class="select" [syncValue]="newHero()" (change)="newHero.set($any($event.target).value)">
+              @for (h of game.selectableHeroes(); track h.key) {
+                <option [value]="h.key">{{ h.name | gn }}</option>
+              }
+            </select>
+          </div>
+          <div class="row-wrap">
+            <button class="btn btn-primary" (click)="createManual()"><app-icon name="plus" /> {{ 'Собрать вручную' | l: 'Build manually' }}</button>
+            <button class="btn" (click)="createManual(true)"><app-icon name="image-up" /> {{ 'По скриншоту' | l: 'From a screenshot' }}</button>
+          </div>
+          <p class="xsmall faint">{{ 'По скриншоту: загрузишь картинку билда и выделишь иконки, приложение предложит похожие предметы. Проверяй глазами: распознавание приблизительное.' | l: 'From a screenshot: upload a build image and select icons; the app suggests similar items. Double-check: matching is approximate.' }}</p>
+        </div>
+      </div>
+    </section>
+  }
+
+  @if (tab() === 'surgery') {
+    <section class="panel">
+      <div class="panel-head"><h3>{{ 'Хирургия билда' | l: 'Build surgery' }}</h3></div>
+      <p class="panel-body small muted">{{ 'Стандартный билд и описание противников. Реши, что заменить, а приложение разберёт твои замены.' | l: 'A standard build and the enemy setup. Decide what to swap; the app reviews your choices.' }}</p>
+      <ul class="list">
+        @for (s of surgeries(); track s.id) {
+          <li>
+            <button class="srow" (click)="startSurgery(s.id)">
+              <app-hero-avatar [key]="s.hero" [size]="32" />
+              <span class="grow small">{{ s.situation | tx }}</span>
+              <span class="tag">{{ 'замен:' | l: 'swaps:' }} {{ s.swaps }}</span>
+            </button>
+          </li>
+        } @empty {
+          <li class="empty small">{{ 'Задания появятся после загрузки контента.' | l: 'Tasks appear once content is loaded.' }}</li>
+        }
+      </ul>
+    </section>
+  }
+</div>

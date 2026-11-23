@@ -1,0 +1,32 @@
+{
+ "fromVersion": 6864,
+ "toVersion": 6864,
+ "items": [],
+ "heroes": [
+  {
+   "key": "hero_drifter",
+   "name": "Drifter",
+   "kind": "changed"
+  },
+  {
+   "key": "hero_vampirebat",
+   "name": "Mina",
+   "kind": "changed"
+  },
+  {
+   "key": "hero_shiv",
+   "name": "Shiv",
+   "kind": "changed"
+  },
+  {
+   "key": "hero_chessmaster",
+   "name": "Solomon",
+   "kind": "changed"
+  },
+  {
+   "key": "hero_artist",
+   "name": "Violet",
+   "kind": "changed"
+  }
+ ]
+}

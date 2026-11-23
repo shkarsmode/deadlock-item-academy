@@ -1,0 +1,219 @@
+<div class="page page-narrow">
+  <div class="page-head">
+    <div class="grow">
+      <h1>{{ 'Настройки' | l: 'Settings' }}</h1>
+    </div>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="user" /><h2>{{ 'Профиль' | l: 'Profile' }}</h2></div>
+    <div class="panel-body stack-4">
+      <div class="field">
+        <label for="pn">{{ 'Имя' | l: 'Name' }}</label>
+        <input id="pn" class="input" [value]="profiles.current()?.name ?? ''" (change)="rename($any($event.target).value)" maxlength="40" />
+      </div>
+      <div class="field">
+        <span class="label">{{ 'Все профили на этом устройстве' | l: 'All profiles on this device' }}</span>
+        <ul class="list profiles">
+          @for (p of profiles.profiles(); track p.id) {
+            <li>
+              <app-hero-avatar [key]="p.settings.heroFocus" [size]="28" />
+              <span class="grow">{{ p.name }} @if (p.id === profiles.current()?.id) {<span class="tag tag-accent">{{ 'текущий' | l: 'current' }}</span>}</span>
+              @if (p.id !== profiles.current()?.id) {
+                <button class="btn btn-sm" (click)="profiles.switch(p.id)">{{ 'Переключиться' | l: 'Switch' }}</button>
+              }
+              <button class="btn btn-ghost btn-icon btn-sm" (click)="removeProfile(p.id, p.name)" [attr.aria-label]="'Удалить профиль' | l: 'Delete profile'"><app-icon name="trash" [size]="16" /></button>
+            </li>
+          }
+        </ul>
+        <div class="row">
+          <input class="input" [value]="newName()" (input)="newName.set($any($event.target).value)" [placeholder]="'Профиль для друга' | l: 'Profile for a friend'" maxlength="40" />
+          <button class="btn" (click)="createProfile()"><app-icon name="plus" /> {{ 'Создать' | l: 'Create' }}</button>
+        </div>
+        <p class="xsmall faint">{{ 'Профиль друга не видит твой прогресс. Регистрация не нужна: всё хранится в этом браузере.' | l: "A friend's profile does not see your progress. No account needed: everything is stored in this browser." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="settings" /><h2>{{ 'Язык и объяснения' | l: 'Language and explanations' }}</h2></div>
+    <div class="panel-body stack-4">
+      <div class="field">
+        <span class="label">{{ 'Язык интерфейса' | l: 'Interface language' }}</span>
+        <div class="seg">
+          <button [class.on]="s().lang === 'ru'" (click)="setLang('ru')">Русский</button>
+          <button [class.on]="s().lang === 'en'" (click)="setLang('en')">English</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="label">{{ 'Названия предметов' | l: 'Item names' }}</span>
+        <div class="seg">
+          <button [class.on]="s().nameLang === 'en'" (click)="setNameLang('en')">{{ 'Английские (как в клиенте)' | l: 'English (as in your client)' }}</button>
+          <button [class.on]="s().nameLang === 'ru'" (click)="setNameLang('ru')">{{ 'Русские (локализация игры)' | l: 'Russian (game localization)' }}</button>
+        </div>
+        <label class="check small"><input type="checkbox" [checked]="s().showAltNames" (change)="set('showAltNames', !s().showAltNames)" /> {{ 'Показывать второе название подсказкой' | l: 'Show the other name as a hint' }}</label>
+      </div>
+      <div class="field">
+        <span class="label">{{ 'Объяснения' | l: 'Explanations' }}</span>
+        <div class="seg">
+          <button [class.on]="s().explain === 'simple'" (click)="setExplain('simple')">{{ 'Просто (для новичка)' | l: 'Simple (new player)' }}</button>
+          <button [class.on]="s().explain === 'detailed'" (click)="setExplain('detailed')">{{ 'Подробно' | l: 'Detailed' }}</button>
+          <button [class.on]="s().explain === 'technical'" (click)="setExplain('technical')">{{ 'Технически' | l: 'Technical' }}</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="practice" /><h2>{{ 'Обучение' | l: 'Learning' }}</h2></div>
+    <div class="panel-body stack-4">
+      <div class="grid grid-2">
+        <div class="field">
+          <label for="hf">{{ 'Основной герой' | l: 'Main hero' }}</label>
+          <select id="hf" class="select" [syncValue]="s().heroFocus" (change)="set('heroFocus', $any($event.target).value)">
+            @for (h of game.selectableHeroes(); track h.key) {
+              <option [value]="h.key">{{ h.name | gn }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <label for="mb">{{ 'Мой билд для Master Your Build' | l: 'My build for Master Your Build' }}</label>
+          <select id="mb" class="select" [syncValue]="profiles.current()?.myBuildId ?? ''" (change)="setMyBuild($any($event.target).value)">
+            <option value="">{{ 'По умолчанию для героя' | l: 'Hero default' }}</option>
+            @for (b of heroBuilds(); track b.id) {
+              <option [value]="b.id">{{ b.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <span class="label">{{ 'Длительность по умолчанию' | l: 'Default length' }}</span>
+          <div class="seg">
+            @for (m of [3, 5, 10, 20]; track m) {
+              <button [class.on]="s().sessionMinutes === m" (click)="set('sessionMinutes', m)">{{ m }} {{ 'мин' | l: 'min' }}</button>
+            }
+          </div>
+        </div>
+        <div class="field">
+          <label for="np">{{ 'Новых предметов за занятие' | l: 'New items per session' }}: {{ s().newPerSession }}</label>
+          <input id="np" type="range" min="1" max="12" [value]="s().newPerSession" (input)="set('newPerSession', +$any($event.target).value)" />
+          <span class="xsmall faint">{{ 'Лучше изучить 5 предметов качественно, чем просмотреть 40.' | l: 'Better to learn 5 items well than skim 40.' }}</span>
+        </div>
+      </div>
+      <div class="field">
+        <span class="label">{{ 'Вопрос об уверенности после ответа' | l: 'Ask for confidence after answers' }}</span>
+        <div class="seg">
+          <button [class.on]="s().confidence === 'auto'" (click)="setConfidence('auto')">{{ 'Иногда (рекомендуется)' | l: 'Sometimes (recommended)' }}</button>
+          <button [class.on]="s().confidence === 'always'" (click)="setConfidence('always')">{{ 'Всегда' | l: 'Always' }}</button>
+          <button [class.on]="s().confidence === 'never'" (click)="setConfidence('never')">{{ 'Никогда' | l: 'Never' }}</button>
+        </div>
+      </div>
+      <label class="check small"><input type="checkbox" [checked]="s().timedRecall" (change)="set('timedRecall', !s().timedRecall)" /> {{ 'Вопросы на время для хорошо изученных предметов' | l: 'Timed questions for well-known items' }}</label>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="refresh" /><h2>{{ 'Данные игры' | l: 'Game data' }}</h2></div>
+    <div class="panel-body stack-3">
+      <p class="small">
+        {{ 'Клиент' | l: 'Client' }} <b class="num">{{ game.meta()?.clientVersion }}</b>
+        @if (game.meta()?.versionDate) { · {{ i18n.date(toTs(game.meta()!.versionDate!), { day: 'numeric', month: 'long', year: 'numeric' }) }} }
+        · {{ game.source() === 'live' ? ('установлено из API' | l: 'installed from the API') : ('встроено в приложение' | l: 'bundled with the app') }}
+        · {{ game.meta()?.counts?.standardItems }} {{ 'предметов' | l: 'items' }}, {{ game.meta()?.counts?.heroes }} {{ 'героев' | l: 'heroes' }}
+      </p>
+      <div class="row-wrap">
+        <button class="btn" (click)="update.check()" [disabled]="update.state() === 'checking'"><app-icon name="refresh" /> {{ 'Проверить обновление игры' | l: 'Check for a game update' }}</button>
+        @if (game.source() === 'live') {
+          <button class="btn btn-ghost" (click)="update.revert()">{{ 'Вернуть встроенные данные' | l: 'Use bundled data' }}</button>
+        }
+      </div>
+      @switch (update.state()) {
+        @case ('checking') { <p class="small muted">{{ 'Проверяю...' | l: 'Checking...' }}</p> }
+        @case ('up-to-date') { <p class="small c-good">{{ 'Данные актуальны.' | l: 'Data is up to date.' }} ({{ update.liveVersion() }})</p> }
+        @case ('error') { <p class="small c-bad">{{ update.error() }}</p> }
+        @case ('installed') { <p class="small c-good">{{ 'Установлено.' | l: 'Installed.' }}</p> }
+        @case ('ready') {
+          <div class="callout info">
+            <app-icon name="info" />
+            <div class="stack-2">
+              <b>{{ 'Новая версия клиента:' | l: 'New client version:' }} {{ update.liveVersion() }}</b>
+              <span class="small">{{ 'Изменено предметов:' | l: 'Items changed:' }} {{ update.diff()?.items?.length }}. {{ 'Учебные материалы по изменённым предметам будут помечены «нужна перепроверка», а знания вернутся на повторение.' | l: 'Learning content for changed items gets a "needs re-check" mark and your knowledge comes back for review.' }}</span>
+              <ul class="xsmall changes">
+                @for (c of update.diff()?.items?.slice(0, 20) ?? []; track c.key) {
+                  <li>{{ c.kind }} · {{ c.name }} @if (c.fields.length) {({{ c.fields.join(', ') }})}</li>
+                }
+              </ul>
+              <button class="btn btn-primary" (click)="install()">{{ 'Установить' | l: 'Install' }}</button>
+            </div>
+          </div>
+        }
+      }
+      @if (stats().stale) {
+        <p class="small c-warn">{{ 'Материалов, требующих перепроверки после патча:' | l: 'Materials needing re-check after a patch:' }} {{ stats().stale }}</p>
+      }
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="download" /><h2>{{ 'Прогресс и данные' | l: 'Progress and data' }}</h2></div>
+    <div class="panel-body stack-3">
+      <div class="row-wrap">
+        <button class="btn" (click)="exportProgress()"><app-icon name="download" /> {{ 'Экспорт прогресса (JSON)' | l: 'Export progress (JSON)' }}</button>
+        <label class="btn"><app-icon name="upload" /> {{ 'Импорт' | l: 'Import' }}<input type="file" accept=".json,application/json" class="sr-only" (change)="importProgress($event)" /></label>
+        <div class="seg">
+          <button [class.on]="importMode() === 'new'" (click)="importMode.set('new')">{{ 'в новый профиль' | l: 'as new profile' }}</button>
+          <button [class.on]="importMode() === 'replace'" (click)="importMode.set('replace')">{{ 'заменить текущий' | l: 'replace current' }}</button>
+        </div>
+      </div>
+      <p class="xsmall faint">{{ 'Так можно перенести прогресс на телефон или другой компьютер. Синхронизация через сервер пока не нужна: экспорт и импорт работают без аккаунта.' | l: 'Use this to move progress to a phone or another computer. No server sync: export/import works without an account.' }}</p>
+      <div class="row-wrap">
+        <button class="btn btn-ghost" (click)="persist()" [disabled]="persisted() === true">{{ persisted() ? ('Хранилище защищено от очистки' | l: 'Storage is persistent') : ('Попросить браузер не удалять данные' | l: 'Ask the browser to keep data') }}</button>
+        <button class="btn btn-danger" (click)="reset()"><app-icon name="trash" /> {{ 'Сбросить прогресс профиля' | l: 'Reset profile progress' }}</button>
+      </div>
+      <div class="row-wrap">
+        <button class="btn" (click)="cacheIcons()" [disabled]="!offlineReady() || iconsProgress() !== null">
+          <app-icon name="download" />
+          @if (iconsProgress(); as p) {
+            {{ 'Скачиваю иконки' | l: 'Downloading icons' }} {{ p.done }} / {{ p.total }}
+          } @else {
+            {{ 'Сохранить все иконки для офлайна (~8 МБ)' | l: 'Save all icons for offline (~8 MB)' }}
+          }
+        </button>
+      </div>
+      <p class="xsmall faint">
+        @if (offlineReady()) {
+          {{ 'Приложение и данные уже работают без сети. Иконки кэшируются по мере просмотра; кнопка выше скачает все сразу, например перед поездкой.' | l: 'The app and data already work offline. Icons are cached as you view them; the button downloads all of them at once.' }}
+        } @else {
+          {{ 'Офлайн-режим включается в установленной (production) версии: в режиме разработки service worker отключён.' | l: 'Offline mode works in the production build: the service worker is off in development.' }}
+        }
+      </p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><app-icon name="info" /><h2>{{ 'О приложении и источниках' | l: 'About and sources' }}</h2></div>
+    <div class="panel-body stack-3 small">
+      <p>
+        {{ 'Контент:' | l: 'Content:' }} {{ stats().items }} {{ 'разборов предметов' | l: 'item guides' }}, {{ stats().scenarios }} {{ 'ситуаций' | l: 'situations' }}, {{ stats().courses }} {{ 'курса героев' | l: 'hero courses' }}, {{ stats().builds }} {{ 'разбора билдов' | l: 'build analyses' }}, {{ stats().problems }} {{ 'проблем для поиска' | l: 'searchable problems' }}.
+      </p>
+      <p class="muted">{{ 'Механики берутся только из данных клиента. Каждое утверждение помечено: данные клиента, экспертная рекомендация, статистика (корреляция) или не проверено.' | l: 'Mechanics come only from client data. Every statement is labeled: client data, expert advice, statistics (correlation) or unverified.' }}</p>
+      <ul class="sources">
+        @for (src of game.meta()?.sources ?? []; track src) {
+          <li class="mono xsmall">{{ src }}</li>
+        }
+        <li class="mono xsmall">Deadlock client localization (citadel_heroes_*.txt) - ability texts missing in the API</li>
+      </ul>
+      @if (game.meta()?.patches?.length) {
+        <div>
+          <div class="upper faint">{{ 'Последние патчи' | l: 'Recent patches' }}</div>
+          <ul class="xsmall">
+            @for (p of game.meta()!.patches.slice(0, 5); track p.url) {
+              <li><a [href]="p.url" target="_blank" rel="noopener">{{ p.title }}</a> · {{ i18n.date(toTs(p.date)) }}</li>
+            }
+          </ul>
+        </div>
+      }
+      <p class="xsmall faint">{{ 'Фанатский учебный проект, не связан с Valve. Deadlock, названия и иконки предметов принадлежат Valve Corporation.' | l: 'Fan-made learning project, not affiliated with Valve. Deadlock, item names and icons belong to Valve Corporation.' }}</p>
+      <p class="xsmall"><kbd>?</kbd> {{ 'горячие клавиши' | l: 'keyboard shortcuts' }} · <a routerLink="/onboarding">{{ 'Пройти старт заново' | l: 'Redo onboarding' }}</a></p>
+    </div>
+  </section>
+</div>

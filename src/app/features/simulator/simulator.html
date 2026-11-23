@@ -1,0 +1,188 @@
+<div class="page sim-page">
+  <div class="page-head">
+    <div class="grow">
+      <h1>{{ 'Симулятор магазина' | l: 'Shop simulator' }}</h1>
+      <p class="sub">{{ 'Прочитай ситуацию, открой магазин и купи то, что решает проблему. Как в матче: бюджет ограничен.' | l: 'Read the situation, open the shop and buy what solves the problem. Budget is limited, like in a match.' }}</p>
+    </div>
+    <select class="select sel" [syncValue]="heroFilter()" (change)="heroFilter.set($any($event.target).value); next()" [attr.aria-label]="'Герой' | l: 'Hero'">
+      <option value="">{{ 'Все герои' | l: 'All heroes' }}</option>
+      @for (h of heroes(); track h!.key) {
+        <option [value]="h!.key">{{ h!.name | gn }}</option>
+      }
+    </select>
+    <div class="seg">
+      <button [class.on]="hints() === 'full'" (click)="hints.set('full')">{{ 'С подсказками' | l: 'With hints' }}</button>
+      <button [class.on]="hints() === 'none'" (click)="hints.set('none')">{{ 'Только симптомы' | l: 'Symptoms only' }}</button>
+    </div>
+    <button class="btn" (click)="next()"><app-icon name="refresh" /> {{ 'Другая ситуация' | l: 'Another situation' }}</button>
+  </div>
+
+  @if (scenario(); as s) {
+    <div class="sim">
+      <section class="panel situation">
+        <div class="panel-head"><h3>{{ 'Ситуация' | l: 'Situation' }}</h3><span class="spacer"></span><span class="faint xsmall">{{ s.id }}</span></div>
+        <div class="panel-body">
+          <app-scenario-context [s]="s" [hints]="hints()" [showProblem]="hints() === 'full' && s.kind !== 'diagnose-buy'" />
+          <p class="question"><b>{{ s.question | tx }}</b></p>
+        </div>
+      </section>
+
+      <section class="panel shop">
+        <div class="shop-head">
+          <div class="souls num"><app-icon name="coins" [size]="18" /> {{ souls() }}</div>
+          @if (!isSell()) {
+            <div class="tabs" role="tablist">
+              @for (sl of slots; track sl) {
+                <button role="tab" [class]="'tab t-' + sl" [class.on]="tab() === sl" [attr.aria-selected]="tab() === sl" (click)="tab.set(sl)">{{ sl }}</button>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="owned-row">
+          <span class="upper faint">{{ isSell() ? ('Выбери, что продать' | l: 'Choose what to sell') : ('Твои предметы' | l: 'Your items') }}</span>
+          <div class="row-wrap">
+            @for (k of (isSell() ? s.owned : owned()); track k) {
+              @if (isSell()) {
+                <button class="own sellable" [class.on]="sold().includes(k)" (click)="toggleSell(k)" [attr.aria-pressed]="sold().includes(k)" [attr.title]="game.item(k)?.name?.en">
+                  <app-item-icon [key]="k" [size]="40" [alt]="true" />
+                  <span class="xsmall">{{ game.item(k)?.name | gn }}</span>
+                </button>
+              } @else {
+                <span class="own" [class.new]="bought().includes(k)" [attr.title]="game.item(k)?.name?.en">
+                  <app-item-icon [key]="k" [size]="34" [title]="true" />
+                  @if (bought().includes(k) && !evaluated()) {
+                    <button class="undo" (click)="undo(k)" [attr.aria-label]="'Отменить покупку' | l: 'Undo purchase'"><app-icon name="x" [size]="12" /></button>
+                  }
+                </span>
+              }
+            }
+          </div>
+        </div>
+
+        @if (!isSell()) {
+          <div class="tiers">
+            @for (row of shop(); track row.tier) {
+              <div class="tier-row">
+                <div class="tier-label num">T{{ row.tier }}</div>
+                <div class="tier-items">
+                  @for (it of row.items; track it.key) {
+                    <button
+                      class="shop-item"
+                      [class.owned]="owned().includes(it.key)"
+                      [class.locked]="!owned().includes(it.key) && priceOf(it.key) > souls()"
+                      [class.sel]="inspect() === it.key"
+                      (click)="inspect.set(it.key)"
+                      [attr.title]="it.name.en"
+                    >
+                      <app-item-icon [item]="it" [size]="52" [badges]="true" [alt]="true" />
+                      <span class="price num">{{ owned().includes(it.key) ? '✓' : priceOf(it.key) }}</span>
+                    </button>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+
+        @if (inspect(); as ik) {
+          <div class="inspect panel">
+            <app-item-brief [key]="ik" [iconSize]="44" [depthOverride]="'simple'" [showCue]="false" />
+            <div class="row inspect-actions">
+              <button class="btn btn-ghost btn-sm" (click)="inspect.set(null)">{{ 'Закрыть' | l: 'Close' }}</button>
+              <span class="spacer"></span>
+              @if (game.item(ik); as it) {
+                <button class="btn btn-primary" [disabled]="!canBuy(it)" (click)="buy(ik)">
+                  <app-icon name="cart" [size]="16" /> {{ 'Купить' | l: 'Buy' }} · {{ priceOf(ik) }}
+                </button>
+              }
+            </div>
+          </div>
+        }
+
+        @if (!evaluated()) {
+          <div class="decide">
+            <span class="small muted">{{ isSell() ? (sold().length ? ('Продаёшь: ' | l: 'Selling: ') + (game.item(sold()[0])?.name?.en ?? '') : ('Выбери предмет для продажи' | l: 'Pick an item to sell')) : ('Куплено:' | l: 'Bought:') + ' ' + bought().length }}</span>
+            <button class="btn btn-primary btn-lg" [disabled]="isSell() ? !sold().length : !bought().length" (click)="decide()">{{ 'Подтвердить решение' | l: 'Confirm decision' }}</button>
+          </div>
+        }
+      </section>
+    </div>
+
+    @if (evaluated(); as ev) {
+      <section class="panel result" [class.good]="overall() >= 80" [class.warn]="overall() >= 50 && overall() < 80" [class.bad]="overall() < 50">
+        <div class="panel-head">
+          <app-icon [name]="overall() >= 80 ? 'ok' : overall() >= 50 ? 'info' : 'fail'" [size]="20" />
+          <h2>{{ overall() >= 80 ? ('Сильное решение' | l: 'Strong decision') : overall() >= 50 ? ('Рабочее, но не лучшее' | l: 'Workable, not the best') : ('Проблема не решена' | l: 'Problem not solved') }}</h2>
+          <span class="num muted">{{ overall() }}/100</span>
+          <span class="spacer"></span>
+          <button class="btn btn-primary" (click)="next()">{{ 'Следующая ситуация' | l: 'Next situation' }} <app-icon name="forward" [size]="16" /></button>
+        </div>
+        <div class="panel-body stack-4">
+          @for (e of ev; track e.key) {
+            <div class="eval">
+              <app-item-icon [key]="e.key" [size]="40" [alt]="true" />
+              <div class="grow">
+                <div class="row"><b>{{ game.item(e.key)?.name | gn }}</b> <span [class]="'verdict v-' + e.verdict">{{ verdictLabel(e.verdict) }} · {{ e.score }}</span></div>
+                <p class="small">{{ e.why | tx }}</p>
+                @if (e.betterWhen) {
+                  <p class="small muted">{{ 'Лучше, если:' | l: 'Better when:' }} {{ e.betterWhen | tx }}</p>
+                }
+              </div>
+            </div>
+          }
+
+          <div class="principle"><app-icon name="bulb" [size]="16" /> <b>{{ s.principle | tx }}</b></div>
+
+          @if (s.tree; as t) {
+            <div class="tree">
+              <div class="node"><span class="faint xsmall">{{ 'Проблема' | l: 'Problem' }}</span>{{ t.problem | tx }}</div>
+              <div class="arrow">→</div>
+              <div class="node"><span class="faint xsmall">{{ 'Возможные решения' | l: 'Solutions' }}</span>@for (x of t.solutions; track $index) {<span class="li">{{ x | tx }}</span>}</div>
+              <div class="arrow">→</div>
+              <div class="node"><span class="faint xsmall">{{ 'Ограничения' | l: 'Constraints' }}</span>@for (x of t.constraints; track $index) {<span class="li">{{ x | tx }}</span>}</div>
+              <div class="arrow">→</div>
+              <div class="node choice"><span class="faint xsmall">{{ 'Выбор' | l: 'Choice' }}</span>{{ t.choice | tx }}</div>
+              <div class="arrow">→</div>
+              <div class="node"><span class="faint xsmall">{{ 'Последствия' | l: 'Consequences' }}</span>@for (x of t.consequences; track $index) {<span class="li">{{ x | tx }}</span>}</div>
+            </div>
+          }
+
+          <div>
+            <div class="upper faint">{{ 'Разбор вариантов автора ситуации' | l: 'Analysed options' }}</div>
+            <ul class="list opts">
+              @for (o of bestOptions(); track o.item ?? $index) {
+                <li>
+                  <div class="row">
+                    @if (o.item) {
+                      <app-item-icon [key]="o.item" [size]="28" [alt]="true" />
+                      <b>{{ game.item(o.item)?.name | gn }}</b>
+                    }
+                    <span class="spacer"></span>
+                    <span [class]="'verdict v-' + o.verdict">{{ verdictLabel(o.verdict) }} · {{ o.score }}</span>
+                  </div>
+                  <p class="small">{{ o.why | tx }}</p>
+                  @if (o.betterWhen) {
+                    <p class="small muted">{{ 'Лучше, если:' | l: 'Better when:' }} {{ o.betterWhen | tx }}</p>
+                  }
+                </li>
+              }
+            </ul>
+          </div>
+          @if (s.mechanics.length) {
+            <div>
+              <div class="upper faint">{{ 'Механики' | l: 'Mechanics' }}</div>
+              <ul class="mech">
+                @for (m of s.mechanics; track $index) {
+                  <li class="small">{{ m.text | tx }} <app-claim [status]="m.status" /></li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      </section>
+    }
+  } @else {
+    <div class="empty">{{ 'Нет ситуаций для симулятора по этому герою. Выбери «Все герои».' | l: 'No simulator situations for this hero. Choose "All heroes".' }}</div>
+  }
+</div>

@@ -1,0 +1,92 @@
+.kpis,
+section + section,
+.grid + .grid {
+  margin-bottom: 16px;
+}
+section.panel {
+  margin-bottom: 0;
+}
+.grid-2 {
+  margin-top: 16px;
+}
+.chart {
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  gap: 4px;
+  height: 160px;
+  align-items: end;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+.bars {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.b {
+  width: 100%;
+  max-width: 22px;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: var(--bg-4);
+}
+.b.empty {
+  background: var(--bg-3);
+}
+.dot {
+  position: absolute;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  margin-bottom: -3.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--bg-1);
+}
+.lbl {
+  white-space: nowrap;
+}
+.diffs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  height: 110px;
+}
+.dcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.dbar {
+  flex: 1;
+  width: 24px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 3px;
+  background: var(--bg-3);
+  overflow: hidden;
+}
+.dbar i {
+  width: 100%;
+  background: var(--warn);
+}
+.hrow,
+.pair {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+}
+.foot {
+  margin-top: 12px;
+}
