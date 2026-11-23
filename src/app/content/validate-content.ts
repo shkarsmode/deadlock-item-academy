@@ -6,6 +6,7 @@ import type { GameDataBundle, GameItem } from '../core/game-data/game-data.model
 import type {
   BuildAnalysis,
   Claim,
+  GlossaryTerm,
   HeroCourse,
   ItemContent,
   ProblemEntry,
@@ -27,6 +28,7 @@ export interface Vocab {
   forbiddenChars: readonly string[];
   /** Names of items that no longer exist under that name (unless present in current data). */
   outdatedNames?: readonly string[];
+  glossaryCategories?: readonly string[];
 }
 
 export interface RawContent {
@@ -35,6 +37,7 @@ export interface RawContent {
   courses: { file: string; data: HeroCourse }[];
   builds: { file: string; data: BuildAnalysis }[];
   problems: { file: string; data: ProblemEntry[] }[];
+  glossary?: { file: string; data: GlossaryTerm[] }[];
 }
 
 export interface Issue {
@@ -449,6 +452,32 @@ export function validateContent(raw: RawContent, game: GameDataBundle, vocab: Vo
     }
   }
 
+  /* ---------------- glossary */
+  const termIds = new Set<string>();
+  const allTerms = (raw.glossary ?? []).flatMap((f) => (Array.isArray(f.data) ? f.data.map((t) => ({ file: f.file, t })) : []));
+  for (const { file, t } of allTerms) {
+    const where = `${file}:${t?.id}`;
+    if (!t?.id || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(t.id)) err(where, 'id must be kebab-case');
+    if (termIds.has(t.id)) err(where, 'duplicate term id');
+    termIds.add(t.id);
+    if (vocab.glossaryCategories && !vocab.glossaryCategories.includes(t.category)) err(where, `unknown category "${t.category}"`);
+    if (!vocab.claimStatuses.includes(t.status)) err(where, `bad status ${t.status}`);
+    const names = [t.en, ...(Array.isArray(t.ru) ? t.ru : []), ...(t.aliases ?? [])];
+    if (typeof t.en !== 'string' || !t.en.trim()) err(where, 'missing en name');
+    if (!Array.isArray(t.ru) || !t.ru.length) err(where, 'missing ru names');
+    for (const n of names) {
+      if (typeof n !== 'string' || !n.trim()) err(where, 'empty name or alias');
+      else for (const ch of vocab.forbiddenChars) if (n.includes(ch)) err(where, `forbidden dash character in "${n}"`);
+    }
+    checkText(`${where}.short`, t.short, { max: 140 });
+    checkText(`${where}.explain`, t.explain, { max: 420 });
+    checkText(`${where}.example`, t.example, { required: false, max: 420 });
+    for (const k of t.items ?? []) checkItemKey(`${where}.items`, k, `glossary:${t.id}`);
+  }
+  for (const { file, t } of allTerms) {
+    for (const r of t.related ?? []) if (!termIds.has(r)) err(`${file}:${t.id}.related`, `unknown term "${r}"`);
+  }
+
   const standard = game.items.filter((i) => i.mode === 'standard');
   const covered = standard.filter((i) => seenItems.has(i.key)).length;
   const scenarioCount = raw.scenarios.reduce((n, f) => n + (Array.isArray(f.data) ? f.data.length : 0), 0);
@@ -466,6 +495,7 @@ export function validateContent(raw: RawContent, game: GameDataBundle, vocab: Vo
       courses: raw.courses.length,
       builds: raw.builds.length,
       problems: seenProblems.size,
+      glossary: termIds.size,
     },
   };
 }

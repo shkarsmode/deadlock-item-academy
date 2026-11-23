@@ -29,7 +29,7 @@
         <div class="qa">
         <div class="ask">
           @if (qq.prompt.itemKey && qq.prompt.showIcon) {
-            <app-item-icon class="big-icon" [key]="qq.prompt.itemKey" [size]="132" [alt]="!!qq.prompt.showName" />
+            <app-item-icon class="big-icon" [key]="qq.prompt.itemKey" [size]="132" [alt]="!!qq.prompt.showName" [peek]="false" />
           }
           @if (qq.prompt.pair; as pair) {
             <div class="pair">
@@ -164,7 +164,7 @@
                   }
                 }
                 @case ('icon-name') {
-                  <app-item-icon [key]="o.itemKey" [size]="44" [alt]="true" />
+                  <app-item-icon [key]="o.itemKey" [size]="44" [alt]="true" [peek]="phase() === 'feedback' || !!qq.scenario" />
                   <span class="grow opt-name">
                     {{ game.item(o.itemKey)?.name | gn }}
                     @if (qq.scenario) {
@@ -181,7 +181,7 @@
                 }
                 @default {
                   @if (o.itemKey) {
-                    <app-item-icon [key]="o.itemKey" [size]="32" [alt]="true" />
+                    <app-item-icon [key]="o.itemKey" [size]="32" [alt]="true" [peek]="phase() === 'feedback' || !!qq.scenario" />
                   }
                   <span class="grow">{{ o.text | tx }}</span>
                 }

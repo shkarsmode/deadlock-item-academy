@@ -214,6 +214,225 @@
   "upgrade_sharpshooter": "1xpnh0rcbgg",
   "upgrade_magic_shield": "m52946qeoh"
  },
+ "glossary:active-item": {
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1"
+ },
+ "glossary:ammo": {
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_ethereal_bullets": "29d6axxgf42"
+ },
+ "glossary:anti-heal": {
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_banshee_slugs": "1805f78xoui"
+ },
+ "glossary:barrier": {
+  "upgrade_grit": "y96a5n84x2",
+  "upgrade_weapon_shielding": "1lys40ck0b8",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_vex_barrier": "2amjcp04gif"
+ },
+ "glossary:buff": {
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_glitch": "1wpbayqgbos"
+ },
+ "glossary:bullet-resist": {
+  "upgrade_improved_bullet_armor": "1eolk10in47",
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_weapon_shielding": "1lys40ck0b8"
+ },
+ "glossary:cc": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_target_stun": "1nkct8tcuvw"
+ },
+ "glossary:charges": {
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858"
+ },
+ "glossary:cleanse": {
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh",
+  "upgrade_auto_cleanse": "dhkjtu4fij",
+  "upgrade_cheat_death": "195en73xfn5"
+ },
+ "glossary:component": {
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_rapid_recharge": "1g67jx7g858",
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o"
+ },
+ "glossary:cooldown": {
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_cooldown_reduction": "2e9grwk3p6o",
+  "upgrade_transcendent_cooldown": "1puwd68ro21",
+  "upgrade_ability_power_shard": "15y3nr6p37l"
+ },
+ "glossary:debuff": {
+  "upgrade_debuff_reducer": "pco21rfn7c",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "glossary:disarm": {
+  "upgrade_greater_withering_whip": "1pdjp5t1nn1",
+  "upgrade_glitch": "1wpbayqgbos",
+  "upgrade_unstoppable": "1y5zgzmrm66"
+ },
+ "glossary:dot": {
+  "upgrade_rupture": "1hfdflsudlx",
+  "upgrade_toxic_bullets": "1ajbuy0ag86",
+  "upgrade_reduce_debuff_duration": "5wbxm2uyuh"
+ },
+ "glossary:duration": {
+  "upgrade_arcane_extension": "22ddxygzcj1",
+  "upgrade_imbued_duration_extender": "2fx1q716q2u"
+ },
+ "glossary:fire-rate": {
+  "upgrade_rapid_rounds": "1ceub92nf5f",
+  "upgrade_quick_silver": "d21w02hdl7"
+ },
+ "glossary:headshot": {
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_headhunter": "i9sijb1cpa",
+  "upgrade_banshee_slugs": "1805f78xoui"
+ },
+ "glossary:hero-build": {
+  "upgrade_quick_silver": "d21w02hdl7"
+ },
+ "glossary:imbue": {
+  "upgrade_magic_tempo": "7jrhc826wv",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_quick_silver": "d21w02hdl7",
+  "upgrade_ability_power_shard": "15y3nr6p37l"
+ },
+ "glossary:immobilize": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij"
+ },
+ "glossary:innate": {
+  "upgrade_metal_skin": "1mbdtnl8rwb",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_debuff_reducer": "pco21rfn7c"
+ },
+ "glossary:item-categories": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_healbane": "1hksz2umx6d"
+ },
+ "glossary:lifesteal": {
+  "upgrade_vampire": "27gksx1uw33",
+  "upgrade_health_stealing_magic": "qrmt7o395b",
+  "upgrade_lifestrike_gauntlets": "8n3szoopsu"
+ },
+ "glossary:max-health": {
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_chonky": "1o5agjvpja8",
+  "upgrade_colossus": "2eupse1t6ks"
+ },
+ "glossary:melee": {
+  "upgrade_lifestrike_gauntlets": "8n3szoopsu",
+  "upgrade_melee_charge": "wd3k38lsus",
+  "upgrade_acolytes_glove": "17ogiog04xl"
+ },
+ "glossary:move-speed": {
+  "upgrade_fleetfoot_boots": "21439ndd2r2",
+  "upgrade_magic_storm": "biqevnp1ug"
+ },
+ "glossary:parry": {
+  "upgrade_counterspell": "16v6sb7g772",
+  "upgrade_melee_rebuttal": "2b5y6j7rf01"
+ },
+ "glossary:passive-item": {
+  "upgrade_health": "2a3k258viz0",
+  "upgrade_headshot_booster": "2dero87czez",
+  "upgrade_extra_charge": "ubwfbbifkk",
+  "upgrade_magic_storm": "biqevnp1ug"
+ },
+ "glossary:range": {
+  "upgrade_magic_reach": "axgl70e88p",
+  "upgrade_tech_range": "1nuer0fvovk",
+  "upgrade_long_range": "16ey0s9fklq"
+ },
+ "glossary:regen": {
+  "upgrade_endurance": "1e2p02i7l49",
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_mystic_regeneration": "19n4bscaja5"
+ },
+ "glossary:resist-shred": {
+  "upgrade_bullet_resist_shredder": "z4p9pyjm0h",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9",
+  "upgrade_tech_defense_shredders": "h3vy7g22cc"
+ },
+ "glossary:silence": {
+  "upgrade_targeted_silence": "gm2kzqobgq",
+  "upgrade_containment": "m52qnga4zv",
+  "upgrade_proc_silence": "1isf0gj21ro",
+  "upgrade_glitch": "1wpbayqgbos"
+ },
+ "glossary:sleep": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij"
+ },
+ "glossary:slow": {
+  "upgrade_magic_slow": "25q563sary2",
+  "upgrade_slowing_bullets": "2aa7goexw37",
+  "upgrade_fleetfoot_boots": "21439ndd2r2"
+ },
+ "glossary:snowball": {
+  "upgrade_trophy_collector": "yhyn9z43pn"
+ },
+ "glossary:souls": {
+  "upgrade_goose_egg": "2ell97kd0xf",
+  "upgrade_trophy_collector": "yhyn9z43pn"
+ },
+ "glossary:spirit-damage": {
+  "upgrade_crackshot": "e5h2b0dalf",
+  "upgrade_healbane": "1hksz2umx6d",
+  "upgrade_magic_slow": "25q563sary2"
+ },
+ "glossary:spirit-power": {
+  "upgrade_improved_spirit": "szulgeknua",
+  "upgrade_magic_storm": "biqevnp1ug",
+  "upgrade_boundless_spirit": "biwfns4t2x"
+ },
+ "glossary:spirit-resist": {
+  "upgrade_tech_purge": "1garc1kehmv",
+  "upgrade_spirit_bubble": "1r26bwza3ic",
+  "upgrade_magic_vulnerability": "1y9ohp19sz9"
+ },
+ "glossary:sprint": {
+  "upgrade_sprint_booster": "1hzuec6oh6z",
+  "upgrade_trophy_collector": "yhyn9z43pn"
+ },
+ "glossary:stamina": {
+  "upgrade_improved_stamina": "1094hii4g6j",
+  "upgrade_superior_stamina": "4t9gdzirki"
+ },
+ "glossary:stun": {
+  "upgrade_target_stun": "1nkct8tcuvw",
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_auto_cleanse": "dhkjtu4fij"
+ },
+ "glossary:support": {
+  "upgrade_health_stimpak": "6l7afhq7ig",
+  "upgrade_rescue_beam": "d2y15aolhs"
+ },
+ "glossary:ultimate": {
+  "upgrade_ability_power_shard": "15y3nr6p37l",
+  "upgrade_diviners_kevlar": "10xnxgzql51"
+ },
+ "glossary:unstoppable": {
+  "upgrade_unstoppable": "1y5zgzmrm66",
+  "upgrade_debuff_reducer": "pco21rfn7c"
+ },
+ "glossary:weapon-damage": {
+  "upgrade_clip_size": "1miwz54f6b9",
+  "upgrade_high_velocity_mag": "1zw64m9sd1q",
+  "upgrade_long_range": "16ey0s9fklq"
+ },
  "item:upgrade_ability_power_shard": {
   "upgrade_ability_power_shard": "15y3nr6p37l"
  },

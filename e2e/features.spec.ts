@@ -15,7 +15,8 @@ test('encyclopedia: search, study mode, item page with client data', async ({ pa
   await page.goto('/items/upgrade_metal_skin');
   await expect(page.getByRole('heading', { name: /Metal Skin/ })).toBeVisible();
   await expect(page.getByText('Когда покупать')).toBeVisible();
-  await expect(page.getByText('Данные клиента').first()).toBeVisible();
+  // Term popovers keep their (hidden) text in the page: look at visible matches only.
+  await expect(page.getByText('Данные клиента').filter({ visible: true }).first()).toBeVisible();
 });
 
 test('compare two items side by side', async ({ page }) => {
@@ -99,4 +100,45 @@ test('active items and imbue page lists Vindicta abilities', async ({ page }) =>
   await page.goto('/active');
   await expect(page.getByText('Как работает imbue')).toBeVisible();
   await expect(page.locator('.ab')).toHaveCount(4);
+});
+
+test('imbue is explained on the item page and the term opens the glossary', async ({ page }) => {
+  await page.goto('/items/upgrade_magic_storm');
+  await expect(page.getByRole('heading', { name: /Imbue: этот предмет усиливает одно умение/ })).toBeVisible();
+  await expect(page.locator('app-key-stats').first()).toContainText('+28');
+  await page.locator('app-term.pill.imb').first().click();
+  const pop = page.locator('.term-pop:popover-open');
+  await expect(pop).toBeVisible();
+  await pop.getByRole('link', { name: 'Открыть в словаре' }).click();
+  await expect(page).toHaveURL(/\/glossary\?t=imbue/);
+  await expect(page.locator('#term-imbue')).toHaveClass(/hl/);
+  await page.getByRole('searchbox').fill('насичення');
+  await expect(page.locator('article.term').first()).toHaveAttribute('id', 'term-imbue');
+  await page.getByRole('searchbox').fill('керри');
+  await expect(page.locator('article.term').first()).toHaveAttribute('id', 'term-carry');
+});
+
+test('hovering an item icon shows the item card instead of a browser tooltip', async ({ page }) => {
+  await page.goto('/items/upgrade_magic_storm');
+  const icon = page.locator('a.item-link app-item-icon').first();
+  await expect(icon).not.toHaveAttribute('title', /.+/);
+  await icon.hover();
+  const card = page.locator('.peek');
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('Extra Spirit');
+  await expect(card).toContainText('Пассивный');
+  await page.mouse.move(5, 5);
+  await expect(card).toHaveCount(0);
+});
+
+test('upgrade tree shows chains per category with top-up prices', async ({ page }) => {
+  await page.goto('/upgrades?slot=spirit&item=upgrade_magic_storm');
+  const surge = page.locator('.node[data-key="upgrade_magic_storm"]');
+  await expect(surge).toHaveClass(/hl/);
+  await expect(surge).toContainText('доплата +2400');
+  await expect(surge).toContainText('+28');
+  await page.getByRole('tab', { name: /Weapon/ }).click();
+  await page.getByRole('searchbox').fill('Sharpshooter');
+  await expect(page.locator('.node[data-key="upgrade_sharpshooter"]').first()).toBeVisible();
+  await expect(page.locator('.node[data-key="upgrade_sharpshooter"]').first()).toContainText('Собирается также из');
 });

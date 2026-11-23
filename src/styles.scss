@@ -471,6 +471,16 @@ ol {
   width: 36px;
   padding: 0;
 }
+/* Long labels on narrow screens: let the text wrap instead of widening the page. */
+.btn-wrap {
+  white-space: normal;
+  height: auto;
+  min-height: 36px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  max-width: 100%;
+}
 .btn-icon.btn-sm {
   width: 30px;
 }

@@ -17,6 +17,7 @@ import { MyBuild } from '../../learning/my-build.service';
 import { Session } from '../../learning/session.service';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
+import { Term } from '../../shared/ui/term';
 import { ItemPicker } from '../../shared/ui/item-picker';
 import { AbilityIcon, ClaimBadge, HeroAvatar } from '../../shared/ui/primitives';
 import { BuildTimeline } from './build-timeline';
@@ -35,7 +36,7 @@ const ANALYSIS_FIELDS: { key: keyof BuildItemAnalysis; ru: string; en: string }[
 @Component({
   selector: 'app-build-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SyncSelectValue, RouterLink, Icon, ItemIcon, ItemPicker, AbilityIcon, ClaimBadge, HeroAvatar, BuildTimeline, ScreenshotAssist, ...I18N_PIPES],
+  imports: [SyncSelectValue, RouterLink, Icon, ItemIcon, ItemPicker, AbilityIcon, ClaimBadge, HeroAvatar, BuildTimeline, ScreenshotAssist, Term, ...I18N_PIPES],
   templateUrl: './build-detail.html',
   styleUrl: './build-detail.scss',
 })

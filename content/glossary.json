@@ -1,0 +1,3505 @@
+[
+  {
+    "id": "imbue",
+    "category": "items",
+    "en": "Imbue",
+    "ru": [
+      "Усиление",
+      "Усиливающие предметы",
+      "насыщение"
+    ],
+    "aliases": [
+      "imbued",
+      "Imbue Items",
+      "Imbue Target",
+      "Cannot be imbued",
+      "Усилено",
+      "Нельзя усилить",
+      "Насичує",
+      "насичення",
+      "насичено",
+      "вбудування"
+    ],
+    "short": {
+      "ru": "Imbue: предмет усиливает только одно умение, которое ты выбираешь при покупке, остальные бонус не получают.",
+      "en": "Imbue: the item boosts only the one ability you pick when you buy it, and your other abilities get nothing."
+    },
+    "explain": {
+      "ru": "При покупке клиент просит: Choose an ability to imbue (в русском клиенте: Выберите умение, которое хотите усилить), и бонус работает только на этом умении. У части умений написано Cannot be imbued, их выбрать нельзя. Imbue не значит активный: из 9 таких предметов обычного режима нажимать надо только Echo Shard. В магазине их показывает фильтр Imbue Items.",
+      "en": "When you buy it, the client asks: Choose an ability to imbue, and the bonus works only on that ability. Some abilities say Cannot be imbued and cannot be picked. Imbue does not mean active: of the 9 such items in standard mode, only Echo Shard is pressed. The shop filter Imbue Items shows them all."
+    },
+    "example": {
+      "ru": "Ты играешь за Vindicta и покупаешь Compress Cooldown. Клиент просит выбрать умение. Допустим, выбираешь Stake: минус 18% перезарядки получит только он, а Crow Familiar и Flight останутся как были."
+    },
+    "items": [
+      "upgrade_magic_tempo",
+      "upgrade_magic_storm",
+      "upgrade_quick_silver",
+      "upgrade_ability_power_shard"
+    ],
+    "related": [
+      "passive-item",
+      "active-item",
+      "hero-build",
+      "quickbuy",
+      "ultimate"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Shop_ImbueTooltip_Title",
+      "loc:citadel_main:Citadel_Ability_CannotImbue",
+      "loc:citadel_main:EShopFilterImbue",
+      "loc:citadel_main:item_info_imbue",
+      "item:upgrade_magic_tempo",
+      "item:upgrade_ability_power_shard"
+    ]
+  },
+  {
+    "id": "active-item",
+    "category": "items",
+    "en": "Active item",
+    "ru": [
+      "Активный предмет",
+      "Активные предметы",
+      "активка"
+    ],
+    "aliases": [
+      "active",
+      "actives",
+      "Active Items",
+      "Active Slots Full",
+      "Активні предмети",
+      "Дія",
+      "актив"
+    ],
+    "short": {
+      "ru": "Активный предмет срабатывает, только когда ты нажмёшь его клавишу, а потом уходит на перезарядку.",
+      "en": "An active item fires only when you press its key, and then it goes on cooldown."
+    },
+    "explain": {
+      "ru": "На карточке у него есть раздел Active (Активное). Одни активки срабатывают сразу на тебе (Metal Skin, Dispel Magic), другие нужно навести на врага (Knockdown, Disarming Hex). У активок свой лимит ячеек: когда он занят, клиент пишет Active Slots Full. В обычном режиме активных предметов 44 из 156.",
+      "en": "Its card has an Active section. Some actives fire on you at once (Metal Skin, Dispel Magic), others are aimed at an enemy (Knockdown, Disarming Hex). Actives have their own slot limit: when it is full, the client says Active Slots Full. In standard mode 44 of 156 items are active."
+    },
+    "example": {
+      "ru": "Graves отступает, на нём кровотечение и замедление. Dispel Magic сам не сработает: нажми его, и он снимет эффекты, кроме наложенных ультами. Под Stun или Sleep нажать его уже нельзя."
+    },
+    "items": [
+      "upgrade_metal_skin",
+      "upgrade_reduce_debuff_duration",
+      "upgrade_target_stun",
+      "upgrade_greater_withering_whip"
+    ],
+    "related": [
+      "passive-item",
+      "innate",
+      "imbue",
+      "item-slots",
+      "cooldown"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Mod_Tooltip_Active",
+      "loc:citadel_main:EShopFilterActive",
+      "loc:citadel_main:Citadel_Shop_SellMaxItemsActive_Title",
+      "item:upgrade_metal_skin",
+      "item:upgrade_reduce_debuff_duration",
+      "item:upgrade_target_stun"
+    ]
+  },
+  {
+    "id": "passive-item",
+    "category": "items",
+    "en": "Passive item",
+    "ru": [
+      "Пассивный предмет",
+      "пассивка"
+    ],
+    "aliases": [
+      "passive",
+      "Пассивное",
+      "Пасивна властивість",
+      "пасив"
+    ],
+    "short": {
+      "ru": "Пассивный предмет работает сам: нажимать ничего не нужно, бонусы действуют, пока он у тебя.",
+      "en": "A passive item works by itself: nothing to press, its bonuses apply while you own it."
+    },
+    "explain": {
+      "ru": "Таких предметов большинство: 112 из 156 в обычном режиме. У одних только постоянные цифры (Extra Health: +210 к здоровью), у других есть условие в разделе Passive: Headshot Booster усиливает следующее попадание в голову по герою, потом эффект ждёт 9 секунд. Пассивный предмет может быть и imbue: Surge of Power работает сам, но только на выбранном умении.",
+      "en": "Most items are passive: 112 of 156 in standard mode. Some only give constant numbers (Extra Health: +210 health), others have a condition in the Passive section: Headshot Booster boosts your next headshot on a hero, then waits 9 seconds. A passive item can also imbue: Surge of Power works by itself, but only on the chosen ability."
+    },
+    "example": {
+      "ru": "У Vindicta Extra Charge: ты ничего не нажимаешь, просто у Assassinate становится 3 заряда вместо 2."
+    },
+    "items": [
+      "upgrade_health",
+      "upgrade_headshot_booster",
+      "upgrade_extra_charge",
+      "upgrade_magic_storm"
+    ],
+    "related": [
+      "active-item",
+      "innate",
+      "imbue"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Mod_Tooltip_Passive",
+      "item:upgrade_health",
+      "item:upgrade_headshot_booster",
+      "item:upgrade_extra_charge",
+      "ability:citadel_ability_hornet_snipe"
+    ]
+  },
+  {
+    "id": "innate",
+    "category": "items",
+    "en": "Innate",
+    "ru": [
+      "Врождённое",
+      "постоянные бонусы предмета"
+    ],
+    "aliases": [
+      "innate stats",
+      "Вроджено",
+      "врожденное"
+    ],
+    "short": {
+      "ru": "Innate: постоянные бонусы предмета (раздел Innate на карточке), которые действуют всё время, пока он у тебя.",
+      "en": "Innate: an item's constant stats (the Innate section of its card), which apply all the time while you own it."
+    },
+    "explain": {
+      "ru": "Карточка предмета делится на части: Innate (в русском клиенте Врождённое), Passive (Пассивное) и Active (Активное). Innate - это простые цифры вроде +90 к здоровью или +7 Spirit Power, Passive - эффект с условием, Active - то, что надо нажать. Innate-бонусы есть и у активных предметов: Metal Skin даёт +12% Bullet Resist, даже когда ты его не нажимаешь.",
+      "en": "An item card has parts: Innate, Passive and Active. Innate is plain numbers like +90 health or +7 Spirit Power, Passive is an effect with a condition, Active is what you press. Active items have innate stats too: Metal Skin gives +12% Bullet Resist even when you do not press it."
+    },
+    "items": [
+      "upgrade_metal_skin",
+      "upgrade_healbane",
+      "upgrade_debuff_reducer"
+    ],
+    "related": [
+      "passive-item",
+      "active-item"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Mod_Tooltip_Innate",
+      "loc:citadel_main:Citadel_Mod_Tooltip_Passive",
+      "item:upgrade_metal_skin",
+      "item:upgrade_healbane"
+    ]
+  },
+  {
+    "id": "item-categories",
+    "category": "items",
+    "en": "Weapon, Vitality, Spirit",
+    "ru": [
+      "Категории предметов",
+      "Оружие",
+      "Живучесть",
+      "Спиритизм"
+    ],
+    "aliases": [
+      "Weapon",
+      "Vitality",
+      "Spirit",
+      "Weapon Items",
+      "Vitality Items",
+      "Spirit Items",
+      "Зброя",
+      "Життя",
+      "Дух",
+      "mods"
+    ],
+    "short": {
+      "ru": "Три категории магазина, Weapon (Оружие), Vitality (Живучесть) и Spirit (Спиритизм), и от категории зависит бонус вложений.",
+      "en": "The shop's three categories are Weapon, Vitality and Spirit, and the category decides which investment bonus an item feeds."
+    },
+    "explain": {
+      "ru": "Weapon в основном усиливает стрельбу, Vitality - здоровье, защиту и передвижение, Spirit - умения. Это не жёсткое правило: Mystic Shot из Weapon бьёт спиритическим уроном, а Healbane из Vitality даёт Spirit Power. Категория не говорит, активный предмет или пассивный. В обычном режиме Weapon 53 предмета, Vitality 54, Spirit 49.",
+      "en": "Weapon mostly boosts shooting, Vitality health, defense and movement, Spirit abilities. This is not a strict rule: Mystic Shot from Weapon deals spirit damage, and Healbane from Vitality gives Spirit Power. The category does not tell you whether an item is active or passive. Standard mode has 53 Weapon, 54 Vitality and 49 Spirit items."
+    },
+    "items": [
+      "upgrade_crackshot",
+      "upgrade_healbane"
+    ],
+    "related": [
+      "investment-bonus",
+      "tier",
+      "spirit-power"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CitadelCategoryWeapon",
+      "loc:citadel_main:CitadelCategoryArmor",
+      "loc:citadel_main:CitadelCategoryTech",
+      "item:upgrade_crackshot",
+      "item:upgrade_healbane"
+    ]
+  },
+  {
+    "id": "tier",
+    "category": "items",
+    "en": "Tier (T1-T4)",
+    "ru": [
+      "Тир",
+      "ценовая категория",
+      "Р1-Р4"
+    ],
+    "aliases": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "price tier",
+      "С1-С4",
+      "ціновий ступінь"
+    ],
+    "short": {
+      "ru": "Тир: ценовой уровень предмета, в обычном матче T1 стоит 800 душ, T2 1600, T3 3200, T4 6400.",
+      "en": "Tier: an item's price level; in a standard match T1 costs 800 souls, T2 1600, T3 3200 and T4 6400."
+    },
+    "explain": {
+      "ru": "В английском клиенте подписи T1-T4, в русском Р1-Р4, в украинском С1-С4, и магазин листается по этим ценовым категориям. Чем выше тир, тем дороже и обычно сильнее предмет. Исказить (Corrupt) у The Broker можно только предметы T3 и T4. T5 за 9999 душ в данных есть только у легендарных предметов режима Street Brawl.",
+      "en": "The English client shows T1-T4, the Russian one Р1-Р4, the Ukrainian one С1-С4, and the shop scrolls by these price tiers. A higher tier is pricier and usually stronger. Only T3 and T4 items can be corrupted at The Broker. T5 for 9999 souls exists in the data only for legendary Street Brawl items."
+    },
+    "example": {
+      "ru": "У Vindicta 3500 душ: можно купить один предмет T3 за 3200 или два T2 по 1600."
+    },
+    "related": [
+      "component",
+      "souls",
+      "investment-bonus",
+      "street-brawl"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "meta:priceTiers",
+      "loc:citadel_main:item_info_tier_tier1",
+      "loc:citadel_main:citadel_hotkeys_tooltip_shop_tier_up",
+      "loc:citadel_main:Citadel_Shop_PickCorruptItem_Desc",
+      "item:upgrade_magic_storm"
+    ]
+  },
+  {
+    "id": "component",
+    "category": "items",
+    "en": "Component",
+    "ru": [
+      "Компонент",
+      "Улучшения",
+      "сборка из компонента"
+    ],
+    "aliases": [
+      "builds from",
+      "builds into",
+      "upgrades into",
+      "Upgrades To",
+      "Used as Component",
+      "Является компонентом",
+      "складова",
+      "Покращення до"
+    ],
+    "short": {
+      "ru": "Компонент: более дешёвый предмет, который улучшается в дорогой, и его цена засчитывается в покупку.",
+      "en": "Component: a cheaper item that upgrades into a pricier one, and its cost counts toward the purchase."
+    },
+    "explain": {
+      "ru": "В карточке это строка Upgrades To (в русском клиенте Улучшения). Если компонент у тебя уже есть, при покупке улучшения он поглощается, а его стоимость вычитается из цены. Улучшение может поменять правило: Compress Cooldown (imbue, одно умение) улучшается в Superior Cooldown, который сокращает перезарядку всех твоих умений.",
+      "en": "On the card this is the Upgrades To line. If you already own the component, buying the upgrade consumes it and its cost is taken off the price. An upgrade can change the rule: Compress Cooldown (imbue, one ability) upgrades into Superior Cooldown, which cuts the cooldown of all your abilities."
+    },
+    "example": {
+      "ru": "У Vindicta есть Extra Charge за 800. Rapid Recharge стоит 3200, но тебе обойдётся в 2400: стоимость Extra Charge засчитается."
+    },
+    "items": [
+      "upgrade_extra_charge",
+      "upgrade_rapid_recharge",
+      "upgrade_magic_tempo",
+      "upgrade_cooldown_reduction"
+    ],
+    "related": [
+      "tier",
+      "imbue"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_IsComponentOf",
+      "loc:citadel_main:item_info_component_locked",
+      "item:upgrade_rapid_recharge",
+      "item:upgrade_cooldown_reduction"
+    ]
+  },
+  {
+    "id": "investment-bonus",
+    "category": "items",
+    "en": "Investment Bonus",
+    "ru": [
+      "Бонус вложений",
+      "Вложение в оружие",
+      "Вложение в живучесть",
+      "Вложение в спиритизм"
+    ],
+    "aliases": [
+      "Weapon Investment",
+      "Vitality Investment",
+      "Spirit Investment",
+      "Shop Bonuses",
+      "Покращення: зброя",
+      "Покращення: життя",
+      "Покращення: дух",
+      "4800",
+      "4.8k"
+    ],
+    "short": {
+      "ru": "Бонус вложений: чем больше душ вложено в одну категорию предметов, тем больше постоянный бонус, и на 4800 он резко растёт.",
+      "en": "Investment bonus: the more souls you put into one item category, the bigger a permanent bonus, with a big jump at 4800."
+    },
+    "explain": {
+      "ru": "Клиент считает отдельно Weapon, Vitality и Spirit Investment, пороги: 800, 1600, 2400, 3200, 4800, 6400 и дальше до 28800. Weapon даёт процент к урону оружия, Vitality процент к базовому здоровью, а Spirit не процент, а единицы Spirit Power. На 3200 это 18%, 20% и +19, а на 4800 уже 46%, 38% и +38.",
+      "en": "The client counts Weapon, Vitality and Spirit Investment separately, with thresholds 800, 1600, 2400, 3200, 4800, 6400 and on up to 28800. Weapon gives a percent of weapon damage, Vitality a percent of base health, Spirit flat Spirit Power. At 3200 that is 18%, 20% and +19; at 4800 it is already 46%, 38% and +38."
+    },
+    "example": {
+      "ru": "У Graves Spirit-предметов на 3200 душ, и вложения дают +19 Spirit Power. Ещё один Spirit-предмет за 1600 доводит сумму до 4800, и бонус становится +38."
+    },
+    "related": [
+      "item-categories",
+      "spirit-power",
+      "weapon-damage",
+      "max-health",
+      "power-spike"
+    ],
+    "status": "data",
+    "sources": [
+      "meta:investment",
+      "loc:citadel_main:Citadel_ModBonus_WeaponInvestment",
+      "loc:citadel_main:Citadel_ModBonus_ArmorInvestment",
+      "loc:citadel_main:Citadel_ModBonus_TechInvestment",
+      "loc:citadel_main:Citadel_Shop_TierBonus_Armor"
+    ]
+  },
+  {
+    "id": "quickbuy",
+    "category": "items",
+    "en": "Quick Buy",
+    "ru": [
+      "Быстрая покупка",
+      "очередь быстрой покупки",
+      "автопокупка"
+    ],
+    "aliases": [
+      "Quickbuy",
+      "auto buy",
+      "Швидка купівля"
+    ],
+    "short": {
+      "ru": "Quick Buy: очередь предметов, из которой одна клавиша у магазина покупает следующий, если хватает душ.",
+      "en": "Quick Buy: a queue of items; near a shop one key buys the next one if you have enough souls."
+    },
+    "explain": {
+      "ru": "Предмет ставят в очередь правой кнопкой мыши или перетаскиванием, а автопокупка сама купит следующий, когда ты у магазина и душ хватает. Если в сборке задан Imbue Target, Quick Buy сам выберет это умение. Если ячейки заняты, сначала продаётся предмет сборки с самым высоким приоритетом продажи (Sell Priority).",
+      "en": "You queue an item with a right click or by dragging it, and auto purchase buys the next one when you are at a shop and can afford it. If the build sets an Imbue Target, Quick Buy picks that ability itself. If your slots are full, the item with the highest Sell Priority in the build is sold first."
+    },
+    "related": [
+      "hero-build",
+      "imbue",
+      "item-slots"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Hud_Quickbuy_Tooltip",
+      "loc:citadel_main:citadel_quickbuy_auto_buy_enable_tooltip",
+      "loc:citadel_main:Citadel_HeroBuilds_ImbueTargetMessage",
+      "loc:citadel_main:Citadel_HeroBuilds_SellPriorityMessage"
+    ]
+  },
+  {
+    "id": "hero-build",
+    "category": "items",
+    "en": "Hero Build",
+    "ru": [
+      "Сборка героя",
+      "Сборки героев",
+      "билд"
+    ],
+    "aliases": [
+      "build",
+      "Hero Builds",
+      "Default Build",
+      "Ability Point Order",
+      "Збірка",
+      "Збірки для героїв"
+    ],
+    "short": {
+      "ru": "Сборка: готовый список предметов для героя по категориям, его можно взять у Valve, у игроков или сделать самому.",
+      "en": "Hero Build: a ready list of items for a hero, split into categories, from Valve, from players or made by you."
+    },
+    "explain": {
+      "ru": "Есть стандартная сборка от Valve и вкладки My Builds, Favorites и Public. Автор делит предметы на категории (например, Early, Mid, Late), оставляет комментарии, задаёт порядок прокачки умений (Ability Point Order), Imbue Target и приоритет продажи. Всю сборку можно поставить в очередь Quick Buy.",
+      "en": "There is a default build from Valve and the My Builds, Favorites and Public tabs. The author splits items into categories (for example Early, Mid, Late), adds comments, sets the Ability Point Order, the Imbue Target and the sell priority. The whole build can be queued in Quick Buy."
+    },
+    "example": {
+      "ru": "Если в сборке Vindicta у Quicksilver Reload задан Imbue Target, при покупке через Quick Buy умение выберется само, и ты не теряешь время в магазине."
+    },
+    "items": [
+      "upgrade_quick_silver"
+    ],
+    "related": [
+      "quickbuy",
+      "imbue",
+      "ability-points"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_HeroBuilds_Title",
+      "loc:citadel_main:Citadel_HeroBuilds_DefaultHeroBuildDesc",
+      "loc:citadel_main:Citadel_HeroBuilds_AbilityBuildTitle",
+      "loc:citadel_main:Citadel_HeroBuilds_SetImbueTarget",
+      "loc:citadel_main:Citadel_HeroBuilds_QueueFullBuild"
+    ]
+  },
+  {
+    "id": "item-slots",
+    "category": "items",
+    "en": "Item Slots",
+    "ru": [
+      "Ячейки предметов",
+      "Дополнительные ячейки",
+      "слоты"
+    ],
+    "aliases": [
+      "slots",
+      "Extra Slots",
+      "flex slots",
+      "Item Slots Full",
+      "Ланки предметів",
+      "Додаткові ланки"
+    ],
+    "short": {
+      "ru": "Ячейки предметов: сколько предметов ты носишь, и когда всё занято, для покупки придётся что-то продать.",
+      "en": "Item slots: how many items you can carry; when all are full, you must sell something to buy more."
+    },
+    "explain": {
+      "ru": "Когда места нет, клиент пишет Item Slots Full и просит выбрать предмет на замену, а у активных предметов свой лимит: Active Slots Full. Дополнительные ячейки открываются за уничтожение вражеских Walker: за первого, за второго и за всех. Базовое число ячеек в файлах не указано, поэтому здесь его не называем.",
+      "en": "When there is no room, the client says Item Slots Full and asks which item to replace, and active items have their own limit: Active Slots Full. Extra slots unlock for destroying enemy Walkers: the first, the second and all of them. The base number of slots is not in the files, so it is not given here."
+    },
+    "example": {
+      "ru": "Все ячейки Vindicta заняты, а ты хочешь купить Unstoppable. Клиент предложит выбрать предмет на замену, и проданный предмет вернёт половину своей цены."
+    },
+    "related": [
+      "walker",
+      "quickbuy",
+      "active-item"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Shop_SellMaxItems_Title",
+      "loc:citadel_main:Citadel_Shop_SellMaxItemsActive_Title",
+      "loc:citadel_main:Citadel_FlexSlotUnlockedSlot02",
+      "loc:citadel_main:Citadel_FlexSlotUnlockedSlot04",
+      "loc:citadel_main:Citadel_Shop_Destroy_Item_Confirm"
+    ]
+  },
+  {
+    "id": "street-brawl",
+    "category": "items",
+    "en": "Street Brawl",
+    "ru": [
+      "Уличная стычка"
+    ],
+    "aliases": [
+      "brawl",
+      "legendary items",
+      "легендарные предметы",
+      "Вулична бійка"
+    ],
+    "short": {
+      "ru": "Street Brawl: отдельный быстрый режим 4 на 4, и только в нём есть легендарные предметы T5 за 9999 душ.",
+      "en": "Street Brawl: a separate fast 4v4 mode, the only one with the legendary T5 items for 9999 souls."
+    },
+    "explain": {
+      "ru": "Матч идёт раундами до трёх побед, а предметы выбирают через драфт с перебросами (Re-Roll). Часть цифр здесь своя, в клиенте пометка Value adjusted for Street Brawl: например, Borrowed Decree у Graves наносит 115 урона в обычном режиме и 70 в Street Brawl. В данных 17 легендарных предметов, в обычных матчах их нет.",
+      "en": "The match is played in rounds to three wins, and items are picked in a draft with re-rolls. Some numbers differ here, marked Value adjusted for Street Brawl: for example, Graves's Borrowed Decree deals 115 damage in standard mode and 70 in Street Brawl. The data has 17 legendary items; normal matches have none."
+    },
+    "related": [
+      "tier"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Play_StreetBrawl_Desc",
+      "loc:citadel_main:Citadel_StreetBrawl_RoundSubtitle",
+      "loc:citadel_main:Citadel_StreetBrawl_Draft_ReRoll_Btn",
+      "loc:citadel_main:Citadel_StreetBrawl_Tooltip_Modified",
+      "loc:citadel_main:HeroTesting_LegendaryItems_Desc",
+      "meta:priceTiers",
+      "ability:ability_necro_gravestone"
+    ]
+  },
+  {
+    "id": "spirit-power",
+    "category": "stats",
+    "en": "Spirit Power",
+    "ru": [
+      "Спиритическая мощь",
+      "спирит. мощь",
+      "спирит"
+    ],
+    "aliases": [
+      "SP",
+      "spirit",
+      "Духовна сила"
+    ],
+    "short": {
+      "ru": "Spirit Power: характеристика, от которой растёт сила умений: их урон, а у части умений и другие цифры.",
+      "en": "Spirit Power: the stat that makes abilities stronger: their damage, and for some abilities other numbers too."
+    },
+    "explain": {
+      "ru": "В обучении клиента сказано: предметы со Spirit Power повышают эффективность умений. У каждого урона умения свой коэффициент, поэтому одна и та же Spirit Power даёт разным умениям разную прибавку. Источники: предметы (Extra Spirit +10), бонус вложений Spirit и imbue Surge of Power (+28 только выбранному умению).",
+      "en": "The client's guide says items with Spirit Power make your abilities more effective. Each ability damage has its own coefficient, so the same Spirit Power adds different amounts to different abilities. Sources: items (Extra Spirit +10), the Spirit investment bonus and the imbue item Surge of Power (+28 to the chosen ability only)."
+    },
+    "example": {
+      "ru": "У Vindicta Assassinate получает 0.93 урона за каждую единицу Spirit Power и ещё 2.3 к бонусу по раненым, а Stake только 0.5 за единицу."
+    },
+    "items": [
+      "upgrade_improved_spirit",
+      "upgrade_magic_storm",
+      "upgrade_boundless_spirit"
+    ],
+    "related": [
+      "scaling",
+      "spirit-damage",
+      "investment-bonus",
+      "imbue"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:TechPower_label",
+      "loc:citadel_main:guide_upgrades_buy_mods_desc",
+      "item:upgrade_improved_spirit",
+      "item:upgrade_magic_storm",
+      "ability:citadel_ability_hornet_snipe",
+      "ability:citadel_ability_hornet_chain"
+    ]
+  },
+  {
+    "id": "scaling",
+    "category": "stats",
+    "en": "Scaling",
+    "ru": [
+      "Скейлинг",
+      "масштабирование",
+      "коэффициент"
+    ],
+    "aliases": [
+      "scale",
+      "stat scale",
+      "скейл"
+    ],
+    "short": {
+      "ru": "Скейлинг: сколько умение получает от Spirit Power по формуле база + коэффициент x Spirit Power, рост линейный.",
+      "en": "Scaling: how much an ability gains from Spirit Power, by the formula base + coefficient x Spirit Power, a straight line."
+    },
+    "explain": {
+      "ru": "Коэффициенты есть в данных игры: Assassinate у Vindicta наносит 90 + 0.93 за единицу Spirit Power, а бонус по врагам ниже 50% здоровья 90 + 2.3. У Crow Familiar удар 40 + 0.744, а кровотечение (от текущего здоровья цели) от Spirit Power не растёт. У Graves от Spirit Power растёт даже длина стены Grasping Hands. Не путай со скейлом героя.",
+      "en": "The coefficients are in the game data: Vindicta's Assassinate deals 90 + 0.93 per Spirit Power, and its bonus against enemies below 50% health is 90 + 2.3. Crow Familiar's impact is 40 + 0.744, while its bleed (from the target's current health) does not grow with Spirit Power. For Graves even the Grasping Hands wall length grows with it. Do not confuse this with a late-game hero."
+    },
+    "example": {
+      "ru": "Полностью заряженный Assassinate при 100 Spirit Power: 90 + 0.93 x 100 = 183 урона. Бонус по раненой цели при этом доходит до 90 + 2.3 x 100 = 320."
+    },
+    "related": [
+      "spirit-power",
+      "spirit-damage",
+      "scaling-hero"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "ability:citadel_ability_hornet_snipe",
+      "ability:citadel_ability_hornet_sting",
+      "ability:ability_necro_zombiewall"
+    ]
+  },
+  {
+    "id": "spirit-damage",
+    "category": "stats",
+    "en": "Spirit Damage",
+    "ru": [
+      "Спиритический урон",
+      "спирит-урон"
+    ],
+    "aliases": [
+      "spirit dmg",
+      "Духовна шкода",
+      "урон умений"
+    ],
+    "short": {
+      "ru": "Spirit Damage: урон умений и многих эффектов предметов, его снижает Spirit Resist, а не Bullet Resist.",
+      "en": "Spirit Damage: damage from abilities and many item effects, reduced by Spirit Resist, not by Bullet Resist."
+    },
+    "explain": {
+      "ru": "Почти весь урон умений Vindicta и Graves в данных помечен как спиритический, а пули наносят урон оружием (Weapon Damage). Есть предметы, которые добавляют спирит-урон к выстрелу, например Mystic Shot. От типа урона зависит, какая защита врага сработает и какие предметы включатся: Healbane и Mystic Slow срабатывают именно от твоего спирит-урона.",
+      "en": "Almost all ability damage of Vindicta and Graves is marked as spirit in the data, while bullets deal weapon damage. Some items add spirit damage to a shot, like Mystic Shot. The damage type decides which enemy defense applies and which items trigger: Healbane and Mystic Slow trigger from your spirit damage."
+    },
+    "items": [
+      "upgrade_crackshot",
+      "upgrade_healbane",
+      "upgrade_magic_slow"
+    ],
+    "related": [
+      "spirit-resist",
+      "bullet-resist",
+      "weapon-damage",
+      "spirit-power"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:EShopFilterSpiritAdditionalDamage",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_crackshot",
+      "item:upgrade_healbane",
+      "item:upgrade_magic_slow"
+    ]
+  },
+  {
+    "id": "weapon-damage",
+    "category": "stats",
+    "en": "Weapon Damage",
+    "ru": [
+      "Урон от оружия",
+      "урон пуль"
+    ],
+    "aliases": [
+      "bullet damage",
+      "gun damage",
+      "Збройова шкода"
+    ],
+    "short": {
+      "ru": "Weapon Damage: процентная прибавка к урону твоего оружия, главная характеристика для стрельбы.",
+      "en": "Weapon Damage: a percent bonus to your gun's damage, the main stat for shooting."
+    },
+    "explain": {
+      "ru": "Базовый урон пули свой у каждого героя: у Vindicta 12.33, у Graves 3.6, зато у него лучевое оружие с обоймой на 40. Weapon Damage из предметов и бонус вложений Weapon увеличивают его в процентах: Extended Magazine даёт +8%. В обучении клиента сказано: чем дальше цель, тем ниже урон пуль.",
+      "en": "Base bullet damage differs per hero: Vindicta 12.33, Graves 3.6, but his is a beam weapon with a 40 round magazine. Weapon Damage from items and the Weapon investment bonus raise it by percent: Extended Magazine gives +8%. The client's guide says: the farther the target, the lower the bullet damage."
+    },
+    "items": [
+      "upgrade_clip_size",
+      "upgrade_high_velocity_mag",
+      "upgrade_long_range"
+    ],
+    "related": [
+      "fire-rate",
+      "ammo",
+      "investment-bonus",
+      "range",
+      "bullet-resist"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:WeaponPower_label",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_clip_size",
+      "loc:citadel_main:guide_basics_shoot_desc",
+      "meta:investment"
+    ]
+  },
+  {
+    "id": "fire-rate",
+    "category": "stats",
+    "en": "Fire Rate",
+    "ru": [
+      "Скорострельность"
+    ],
+    "aliases": [
+      "rate of fire",
+      "Швидкострільність",
+      "скорость стрельбы"
+    ],
+    "short": {
+      "ru": "Fire Rate: как часто ты стреляешь, и чем она выше, тем больше урона в секунду, но тем быстрее пустеет обойма.",
+      "en": "Fire Rate: how often you shoot; more of it means more damage per second, but the magazine empties faster."
+    },
+    "explain": {
+      "ru": "Бонусы идут в процентах: Rapid Rounds даёт +9%. Скорострельность дают и некоторые imbue-предметы после применения умения: Quicksilver Reload добавляет её и перезаряжает обойму. Есть и обратный эффект: часть вражеских предметов снижает твою скорострельность, в магазине для них есть фильтр Fire Rate Reduction.",
+      "en": "Bonuses are percents: Rapid Rounds gives +9%. Some imbue items also give fire rate after you use the ability: Quicksilver Reload adds it and reloads your magazine. There is the opposite effect too: some enemy items lower your fire rate, and the shop has a Fire Rate Reduction filter for them."
+    },
+    "items": [
+      "upgrade_rapid_rounds",
+      "upgrade_quick_silver"
+    ],
+    "related": [
+      "weapon-damage",
+      "ammo",
+      "dps"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:BonusFireRate_label",
+      "item:upgrade_rapid_rounds",
+      "item:upgrade_quick_silver",
+      "loc:citadel_main:EShopFilterFireRateReduction"
+    ]
+  },
+  {
+    "id": "ammo",
+    "category": "stats",
+    "en": "Ammo",
+    "ru": [
+      "Боезапас",
+      "обойма",
+      "патроны"
+    ],
+    "aliases": [
+      "clip",
+      "magazine",
+      "Max Ammo",
+      "Набої",
+      "магазин"
+    ],
+    "short": {
+      "ru": "Ammo: сколько выстрелов в обойме до перезарядки, а с пустой обоймой урона оружием нет.",
+      "en": "Ammo: how many shots your magazine holds before a reload; with an empty magazine your gun deals no damage."
+    },
+    "explain": {
+      "ru": "У Vindicta в обойме 19 патронов, у Graves 40, а Extended Magazine даёт +30% к максимальному боезапасу. По обучению клиента удар в ближнем бою приостанавливает перезарядку. Quicksilver Reload и Mercurial Magnum перезаряжают обойму, когда ты применяешь выбранное умение.",
+      "en": "Vindicta's magazine holds 19 rounds, Graves's 40, and Extended Magazine gives +30% max ammo. The client's guide says a melee hit pauses your reload. Quicksilver Reload and Mercurial Magnum reload your magazine when you use the chosen ability."
+    },
+    "items": [
+      "upgrade_clip_size",
+      "upgrade_quick_silver",
+      "upgrade_ethereal_bullets"
+    ],
+    "related": [
+      "fire-rate",
+      "weapon-damage",
+      "melee"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:BonusClipSize_label",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_clip_size",
+      "item:upgrade_quick_silver",
+      "loc:citadel_main:guide_basics_reload_desc"
+    ]
+  },
+  {
+    "id": "headshot",
+    "category": "stats",
+    "en": "Headshot",
+    "ru": [
+      "Попадание в голову",
+      "хедшот"
+    ],
+    "aliases": [
+      "head shot",
+      "headshots",
+      "Постріли в голову"
+    ],
+    "short": {
+      "ru": "Headshot: попадание пулей в голову, за которое многие предметы и умения дают бонус.",
+      "en": "Headshot: a bullet hit to the head, which many items and abilities reward with a bonus."
+    },
+    "explain": {
+      "ru": "Headshot Booster: следующее попадание в голову по герою наносит +45 урона оружием, потом эффект ждёт 9 секунд. Headhunter за такое попадание ещё лечит и ускоряет, а Crippling Headshot снижает цели Bullet Resist, Spirit Resist и получаемое лечение. У Assassinate в данных указано +20% урона при попадании в голову.",
+      "en": "Headshot Booster: your next headshot on a hero deals +45 weapon damage, then the effect waits 9 seconds. Headhunter also heals you and gives speed on such a hit, and Crippling Headshot lowers the target's Bullet Resist, Spirit Resist and incoming healing. Assassinate's data lists +20% headshot damage."
+    },
+    "items": [
+      "upgrade_headshot_booster",
+      "upgrade_headhunter",
+      "upgrade_banshee_slugs"
+    ],
+    "related": [
+      "weapon-damage",
+      "resist-shred",
+      "anti-heal"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:HeadShotBonusDamage_label",
+      "item:upgrade_headshot_booster",
+      "item:upgrade_headhunter",
+      "item:upgrade_banshee_slugs",
+      "ability:citadel_ability_hornet_snipe"
+    ]
+  },
+  {
+    "id": "bullet-resist",
+    "category": "stats",
+    "en": "Bullet Resist",
+    "ru": [
+      "Сопротивляемость пулям",
+      "сопр. пулям",
+      "пулестойкость"
+    ],
+    "aliases": [
+      "BR",
+      "Опір кулям"
+    ],
+    "short": {
+      "ru": "Bullet Resist: процент, на который снижается урон пуль по тебе, он защищает от стрельбы, но не от умений.",
+      "en": "Bullet Resist: the percent by which bullet damage to you is reduced; it guards against guns, not abilities."
+    },
+    "explain": {
+      "ru": "Его дают в основном предметы Vitality: Bullet Resilience даёт +35% и ещё +15%, когда у тебя меньше 50% здоровья. Metal Skin по нажатию на 5 секунд даёт иммунитет к пулям. От спиритического урона умений Bullet Resist не спасает, а враги могут его снижать: Crow Familiar у Vindicta снимает 6%.",
+      "en": "Mostly Vitality items give it: Bullet Resilience gives +35%, plus 15% more when you are below 50% health. Metal Skin, when pressed, makes you immune to bullets for 5 seconds. Bullet Resist does not save you from ability spirit damage, and enemies can lower it: Vindicta's Crow Familiar removes 6%."
+    },
+    "items": [
+      "upgrade_improved_bullet_armor",
+      "upgrade_metal_skin",
+      "upgrade_weapon_shielding"
+    ],
+    "related": [
+      "spirit-resist",
+      "resist-shred",
+      "weapon-damage"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:BulletArmorDamageReduction_label",
+      "item:upgrade_improved_bullet_armor",
+      "item:upgrade_metal_skin",
+      "ability:citadel_ability_hornet_sting"
+    ]
+  },
+  {
+    "id": "spirit-resist",
+    "category": "stats",
+    "en": "Spirit Resist",
+    "ru": [
+      "Сопротивляемость спиритизму",
+      "сопр. спиритизму",
+      "спирит-резист"
+    ],
+    "aliases": [
+      "SR",
+      "Духовний опір"
+    ],
+    "short": {
+      "ru": "Spirit Resist: процент, на который снижается спиритический урон по тебе, он защищает от умений, но не от пуль.",
+      "en": "Spirit Resist: the percent by which spirit damage to you is reduced; it guards against abilities, not guns."
+    },
+    "explain": {
+      "ru": "Spirit Resilience даёт +30% и ещё +15% при здоровье ниже 50%. Spirit Resist нужен, когда тебя убивают умения: взрывы, урон по времени, комбо. Снижать его умеют и враги, и ты: Mystic Vulnerability режет цели 8% после твоего спирит-урона, а Graves крадёт Spirit Resist умением Essence Theft.",
+      "en": "Spirit Resilience gives +30%, plus 15% more below 50% health. You need Spirit Resist when abilities kill you: bursts, damage over time, combos. Both enemies and you can lower it: Mystic Vulnerability cuts 8% from a target after your spirit damage, and Graves steals Spirit Resist with Essence Theft."
+    },
+    "items": [
+      "upgrade_tech_purge",
+      "upgrade_spirit_bubble",
+      "upgrade_magic_vulnerability"
+    ],
+    "related": [
+      "bullet-resist",
+      "spirit-damage",
+      "resist-shred"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:TechResist_label",
+      "item:upgrade_tech_purge",
+      "item:upgrade_magic_vulnerability",
+      "ability:ability_necro_fear"
+    ]
+  },
+  {
+    "id": "resist-shred",
+    "category": "stats",
+    "en": "Resist Shred",
+    "ru": [
+      "Снижение сопротивляемости",
+      "шред"
+    ],
+    "aliases": [
+      "shred",
+      "Bullet Resist Shred",
+      "резист-шред",
+      "зниження опору"
+    ],
+    "short": {
+      "ru": "Шред: снижение сопротивляемости врага, после которого по нему больнее бьёт вся твоя команда.",
+      "en": "Shred: lowering an enemy's resist, after which your whole team hits that target harder."
+    },
+    "explain": {
+      "ru": "В английском клиенте пишут Bullet Resist Shred, в русском просто снижение сопротивляемости. Есть шред пуль (Bullet Resist Shredder: -10% после твоего спирит-урона) и шред спирита (Mystic Vulnerability: -8%). Crow Familiar у Vindicta снимает цели по 6% Bullet Resist и Spirit Resist. Шред полезнее всего, когда враг набрал много защиты.",
+      "en": "The English client says Bullet Resist Shred; the Russian one just says lowered resistance. There is bullet shred (Bullet Resist Shredder: -10% after your spirit damage) and spirit shred (Mystic Vulnerability: -8%). Vindicta's Crow Familiar removes 6% Bullet Resist and 6% Spirit Resist. Shred is most useful when the enemy has stacked defense."
+    },
+    "items": [
+      "upgrade_bullet_resist_shredder",
+      "upgrade_magic_vulnerability",
+      "upgrade_tech_defense_shredders"
+    ],
+    "related": [
+      "bullet-resist",
+      "spirit-resist",
+      "debuff"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_heroes:ability_deadpack_flamethrower_t3_desc",
+      "item:upgrade_bullet_resist_shredder",
+      "item:upgrade_magic_vulnerability",
+      "ability:citadel_ability_hornet_sting"
+    ]
+  },
+  {
+    "id": "lifesteal",
+    "category": "stats",
+    "en": "Lifesteal",
+    "ru": [
+      "Кража здоровья",
+      "лайфстил",
+      "вампиризм"
+    ],
+    "aliases": [
+      "Bullet Lifesteal",
+      "Spirit Lifesteal",
+      "Melee Lifesteal",
+      "Вампіризм"
+    ],
+    "short": {
+      "ru": "Lifesteal: лечение на долю урона, который ты наносишь: от пуль это Bullet Lifesteal, от умений Spirit Lifesteal.",
+      "en": "Lifesteal: healing for a share of the damage you deal: Bullet Lifesteal for guns, Spirit Lifesteal for abilities."
+    },
+    "explain": {
+      "ru": "Предмет Bullet Lifesteal даёт 15% кражи здоровья от урона пуль, предмет Spirit Lifesteal даёт 15% от спирит-урона, а Melee Lifesteal лечит следующим ударом в ближнем бою. Чем больше урона ты наносишь, тем больше лечишься. Украинский клиент называет лайфстил Вампіризм.",
+      "en": "The Bullet Lifesteal item gives 15% lifesteal from bullet damage, the Spirit Lifesteal item 15% from spirit damage, and Melee Lifesteal heals you with your next melee hit. The more damage you deal, the more you heal. The Ukrainian client calls lifesteal Вампіризм."
+    },
+    "items": [
+      "upgrade_vampire",
+      "upgrade_health_stealing_magic",
+      "upgrade_lifestrike_gauntlets"
+    ],
+    "related": [
+      "anti-heal",
+      "regen",
+      "max-health"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:EShopFilterLifesteal",
+      "item:upgrade_vampire",
+      "item:upgrade_health_stealing_magic",
+      "item:upgrade_lifestrike_gauntlets"
+    ]
+  },
+  {
+    "id": "max-health",
+    "category": "stats",
+    "en": "Max Health",
+    "ru": [
+      "Макс. здоровье",
+      "максимальное здоровье",
+      "хп"
+    ],
+    "aliases": [
+      "HP",
+      "health",
+      "Bonus Health",
+      "Base Health",
+      "Макс. здоров'я"
+    ],
+    "short": {
+      "ru": "Max Health: весь твой запас здоровья, и чем он больше, тем дольше ты живёшь под любым уроном.",
+      "en": "Max Health: your whole health pool; the bigger it is, the longer you last against any damage."
+    },
+    "explain": {
+      "ru": "Предметы дают Bonus Health: Extra Health +210, многие другие понемногу в разделе Innate. Бонус вложений Vitality добавляет процент к базовому здоровью. Есть урон в процентах от здоровья цели: Toxic Bullets бьют от максимального здоровья, Decay от текущего.",
+      "en": "Items give Bonus Health: Extra Health +210, many others a little in their Innate section. The Vitality investment bonus adds a percent of base health. Some damage is a percent of the target's health: Toxic Bullets use max health, Decay uses current health."
+    },
+    "items": [
+      "upgrade_health",
+      "upgrade_chonky",
+      "upgrade_colossus"
+    ],
+    "related": [
+      "investment-bonus",
+      "regen",
+      "barrier",
+      "innate"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:MaxHealth_label",
+      "loc:citadel_attributes:BonusHealth_label",
+      "loc:citadel_main:Citadel_Shop_TierBonus_Armor",
+      "item:upgrade_health",
+      "item:upgrade_toxic_bullets",
+      "item:upgrade_rupture"
+    ]
+  },
+  {
+    "id": "regen",
+    "category": "stats",
+    "en": "Health Regen",
+    "ru": [
+      "Восстановление здоровья",
+      "Восстановление вне боя",
+      "реген"
+    ],
+    "aliases": [
+      "regen",
+      "Out of Combat Regen",
+      "Відновлення здоров'я",
+      "Відновлення поза боєм"
+    ],
+    "short": {
+      "ru": "Реген: здоровье, которое восстанавливается само каждую секунду, а часть регена работает только вне боя.",
+      "en": "Regen: health that comes back by itself every second, and some regen works only out of combat."
+    },
+    "explain": {
+      "ru": "В карточках это два разных стата: Health Regen и Out of Combat Regen (Восстановление вне боя), Extra Regen даёт 2.5 и 1.5. Healing Rite даёт восстановление и скорость бега, но снимается, если тебя бьют вражеские игроки или объекты. По обучению клиента на базе можно восстановить здоровье.",
+      "en": "Cards show two different stats: Health Regen and Out of Combat Regen, and Extra Regen gives 2.5 and 1.5. Healing Rite gives regen and sprint speed, but it is dispelled if enemy players or objectives hit you. The client's guide says you can heal up at your base."
+    },
+    "items": [
+      "upgrade_endurance",
+      "upgrade_health_stimpak",
+      "upgrade_mystic_regeneration"
+    ],
+    "related": [
+      "max-health",
+      "lifesteal",
+      "anti-heal"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:HealthRegen_label",
+      "loc:citadel_attributes:OutOfCombatHealthRegen_label",
+      "item:upgrade_endurance",
+      "item:upgrade_health_stimpak",
+      "loc:citadel_main:guide_upgrades_going_home_desc"
+    ]
+  },
+  {
+    "id": "barrier",
+    "category": "stats",
+    "en": "Barrier",
+    "ru": [
+      "Барьер",
+      "щит"
+    ],
+    "aliases": [
+      "shield",
+      "Barrier Absorb",
+      "Бар'єр"
+    ],
+    "short": {
+      "ru": "Barrier: временная защита, которая поглощает урон, пока не сломается или не истечёт.",
+      "en": "Barrier: temporary protection that absorbs damage until it breaks or runs out."
+    },
+    "explain": {
+      "ru": "В статистике матча это Barrier Absorb, а Grit по нажатию даёт барьер 200 на 4 секунды. Weapon Shielding и Spirit Shielding сами дают барьер 300, когда за короткое время по тебе прошло много урона оружием или спирит-урона от героев. Reactive Barrier даёт барьер, когда тебя оглушили, сковали, обездвижили, усыпили или наложили безмолвие.",
+      "en": "Match stats call it Barrier Absorb, and Grit, when pressed, gives a 200 barrier for 4 seconds. Weapon Shielding and Spirit Shielding give a 300 barrier on their own when heroes deal a lot of weapon or spirit damage to you in a short time. Reactive Barrier gives a barrier when you are stunned, chained, immobilized, slept or silenced."
+    },
+    "items": [
+      "upgrade_grit",
+      "upgrade_weapon_shielding",
+      "upgrade_spirit_bubble",
+      "upgrade_vex_barrier"
+    ],
+    "related": [
+      "max-health",
+      "cc",
+      "unstoppable"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:EShopFilterBarrier",
+      "loc:citadel_main:Citadel_MatchDetails_PlayerBarriering",
+      "item:upgrade_grit",
+      "item:upgrade_weapon_shielding",
+      "item:upgrade_vex_barrier"
+    ]
+  },
+  {
+    "id": "cooldown",
+    "category": "stats",
+    "en": "Cooldown",
+    "ru": [
+      "Перезарядка",
+      "кулдаун",
+      "КД"
+    ],
+    "aliases": [
+      "CD",
+      "cooldown reduction",
+      "Зарядка"
+    ],
+    "short": {
+      "ru": "Cooldown: время, через которое умение или активный предмет можно применить снова.",
+      "en": "Cooldown: the time until an ability or active item can be used again."
+    },
+    "explain": {
+      "ru": "В русском клиенте слово Перезарядка значит и кулдаун умения, и перезарядку оружия, а в украинском это разные слова: Зарядка и Перезаряджання. У Vindicta Stake перезаряжается 40 с, Assassinate 55 с, у Graves Borrowed Decree 140 с. Снижают перезарядку Compress Cooldown (-18% одному умению) и Superior Cooldown (-20% всем умениям).",
+      "en": "In the Russian client the word Перезарядка means both ability cooldown and weapon reload, while the Ukrainian client uses two words: Зарядка and Перезаряджання. Vindicta's Stake has a 40 s cooldown, Assassinate 55 s, Graves's Borrowed Decree 140 s. Compress Cooldown (-18% to one ability) and Superior Cooldown (-20% to all) lower it."
+    },
+    "items": [
+      "upgrade_magic_tempo",
+      "upgrade_cooldown_reduction",
+      "upgrade_transcendent_cooldown",
+      "upgrade_ability_power_shard"
+    ],
+    "related": [
+      "duration",
+      "charges",
+      "imbue",
+      "active-item"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:AbilityCooldown_label",
+      "loc:citadel_main:guide_basics_reload_header",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_magic_tempo",
+      "item:upgrade_cooldown_reduction"
+    ]
+  },
+  {
+    "id": "duration",
+    "category": "stats",
+    "en": "Duration",
+    "ru": [
+      "Длительность",
+      "время действия"
+    ],
+    "aliases": [
+      "Час дії"
+    ],
+    "short": {
+      "ru": "Duration: сколько секунд действует эффект умения или предмета.",
+      "en": "Duration: how many seconds an ability or item effect lasts."
+    },
+    "explain": {
+      "ru": "Например, Flight у Vindicta длится 13 с, а эффект Unstoppable 5.5 с. Duration Extender увеличивает длительность одного выбранного умения на 22%, Superior Duration добавляет 28% всем умениям и предметам. Длительность важна для контроля, баффов и урона по времени: эффект держится дольше.",
+      "en": "For example, Vindicta's Flight lasts 13 s and the Unstoppable effect 5.5 s. Duration Extender adds 22% duration to one chosen ability, Superior Duration adds 28% to all abilities and items. Duration matters for control, buffs and damage over time: the effect stays longer."
+    },
+    "items": [
+      "upgrade_arcane_extension",
+      "upgrade_imbued_duration_extender"
+    ],
+    "related": [
+      "cooldown",
+      "imbue",
+      "dot",
+      "buff"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:AbilityDuration_label",
+      "hero:hero_hornet",
+      "item:upgrade_unstoppable",
+      "item:upgrade_arcane_extension",
+      "item:upgrade_imbued_duration_extender"
+    ]
+  },
+  {
+    "id": "range",
+    "category": "stats",
+    "en": "Range",
+    "ru": [
+      "Дальность",
+      "Дальность применения",
+      "дистанция"
+    ],
+    "aliases": [
+      "Cast Range",
+      "Ability Range",
+      "falloff",
+      "Weapon Fall-off Range",
+      "Дальність"
+    ],
+    "short": {
+      "ru": "Range: на каком расстоянии работает умение, предмет или оружие, причём урон пуль падает с расстоянием.",
+      "en": "Range: how far an ability, item or gun works, and bullet damage drops with distance."
+    },
+    "explain": {
+      "ru": "Есть дальность применения (Cast Range), дальность умений (Ability Range) и спад урона оружия. У Vindicta оружие с меткой Long Range, спад урона идёт от 20 до 64 м, а у Graves лучевое оружие Close Range: от 7.6 до 17 м, это самая короткая дистанция в данных. Mystic Expansion даёт +20% дальности одному умению.",
+      "en": "There is cast range, ability range and weapon damage falloff. Vindicta's gun is tagged Long Range and its falloff goes from 20 to 64 m, while Graves has a Close Range beam weapon: 7.6 to 17 m, the shortest in the data. Mystic Expansion gives +20% range to one ability."
+    },
+    "items": [
+      "upgrade_magic_reach",
+      "upgrade_tech_range",
+      "upgrade_long_range"
+    ],
+    "related": [
+      "weapon-damage",
+      "poke",
+      "kite",
+      "imbue"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:AbilityCastRange_label",
+      "loc:citadel_main:guide_basics_shoot_desc",
+      "loc:citadel_attributes:Attribute_EWeaponAttribute_LongRange",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_magic_reach"
+    ]
+  },
+  {
+    "id": "charges",
+    "category": "stats",
+    "en": "Charges",
+    "ru": [
+      "Заряды"
+    ],
+    "aliases": [
+      "ability charges",
+      "Charge Delay",
+      "Заряди"
+    ],
+    "short": {
+      "ru": "Заряды: сколько раз подряд можно применить умение, прежде чем ждать перезарядку.",
+      "en": "Charges: how many times in a row an ability can be used before you wait for the cooldown."
+    },
+    "explain": {
+      "ru": "У Assassinate в данных 2 заряда и пауза 2.5 с между выстрелами (Charge Delay). Extra Charge даёт умениям с зарядами +1 заряд, Rapid Recharge +2 и ускоряет их восстановление. У Graves в Jar of Dead 4 заряда, а пассивная часть умения собирает смерть, когда кто-то умирает рядом. Как с этим работает Extra Charge, в данных не описано.",
+      "en": "Assassinate has 2 charges in the data and a 2.5 s Charge Delay between shots. Extra Charge gives charged abilities +1 charge, Rapid Recharge +2 and faster recharge. Graves's Jar of Dead has 4 charges, and its passive part collects death when something dies nearby. How Extra Charge works with that is not described in the data."
+    },
+    "items": [
+      "upgrade_extra_charge",
+      "upgrade_rapid_recharge"
+    ],
+    "related": [
+      "cooldown",
+      "spirit-power"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:AbilityCharges_label",
+      "ability:citadel_ability_hornet_snipe",
+      "ability:ability_necro_hauntingskull",
+      "item:upgrade_extra_charge",
+      "item:upgrade_rapid_recharge"
+    ]
+  },
+  {
+    "id": "stamina",
+    "category": "stats",
+    "en": "Stamina",
+    "ru": [
+      "Выносливость",
+      "стамина"
+    ],
+    "aliases": [
+      "Stamina Recovery",
+      "dash",
+      "Out of Stamina",
+      "Витривалість"
+    ],
+    "short": {
+      "ru": "Stamina: запас для рывков и двойного прыжка, полоска под прицелом, и когда она пуста, рывков нет.",
+      "en": "Stamina: the pool for dashes and double jumps, the bar under your crosshair; when it is empty, you cannot dash."
+    },
+    "explain": {
+      "ru": "По обучению клиента рывок (Dash), рывок в воздухе и двойной прыжок тратят выносливость, а когда её нет, клиент пишет Out of Stamina. Extra Stamina даёт +1 к выносливости и +12% к её восстановлению. Некоторые умения врага запрещают тратить выносливость, и тогда уйти рывком не выйдет.",
+      "en": "The client's guide says dash, air dash and double jump use stamina, and when it is gone the client says Out of Stamina. Extra Stamina gives +1 stamina and +12% stamina recovery. Some enemy abilities stop you from using stamina, and then you cannot dash away."
+    },
+    "items": [
+      "upgrade_improved_stamina",
+      "upgrade_superior_stamina"
+    ],
+    "related": [
+      "move-speed",
+      "sprint",
+      "kite"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_movement_dodge_desc",
+      "loc:citadel_main:guide_movement_double_jump_desc",
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_OUT_OF_STAMINA",
+      "item:upgrade_improved_stamina"
+    ]
+  },
+  {
+    "id": "move-speed",
+    "category": "stats",
+    "en": "Move Speed",
+    "ru": [
+      "Скорость передвижения",
+      "мувспид"
+    ],
+    "aliases": [
+      "movement speed",
+      "MS",
+      "Швидкість руху"
+    ],
+    "short": {
+      "ru": "Move Speed: как быстро герой ходит, в метрах в секунду, и именно её снижают замедления.",
+      "en": "Move Speed: how fast your hero moves, in meters per second, and it is what slows reduce."
+    },
+    "explain": {
+      "ru": "Бонусы обычно в метрах: Surge of Power после применения выбранного умения даёт +1.75 м/с на 8 с. Fleetfoot по нажатию даёт скорость и 40% Slow Resist на 5 с, а пассивно убирает штраф к скорости при стрельбе. Sprint Speed - отдельный стат, он ускоряет только бег.",
+      "en": "Bonuses are usually in meters: Surge of Power gives +1.75 m/s for 8 s after you use the chosen ability. Fleetfoot, when pressed, gives speed and 40% Slow Resist for 5 s, and passively removes the speed penalty while shooting. Sprint Speed is a separate stat that only speeds up sprinting."
+    },
+    "items": [
+      "upgrade_fleetfoot_boots",
+      "upgrade_magic_storm"
+    ],
+    "related": [
+      "sprint",
+      "slow",
+      "stamina"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:BonusMoveSpeed_label",
+      "loc:citadel_attributes:StatDesc_RunSpeed_postfix",
+      "item:upgrade_fleetfoot_boots",
+      "item:upgrade_magic_storm"
+    ]
+  },
+  {
+    "id": "sprint",
+    "category": "stats",
+    "en": "Sprint",
+    "ru": [
+      "Бег",
+      "Скорость бега",
+      "спринт"
+    ],
+    "aliases": [
+      "Sprint Speed",
+      "Біг",
+      "Швидкість бігу"
+    ],
+    "short": {
+      "ru": "Sprint: бег, во время которого герой убирает оружие, и Sprint Speed ускоряет только его.",
+      "en": "Sprint: running with your weapon put away, and Sprint Speed speeds up only that."
+    },
+    "explain": {
+      "ru": "Когда начинается бег, клиент показывает Holstering Weapon, а при выходе из него Unholstering Weapon. Значит, во время бега оружие убрано, и бег нужен для перемещения. Sprint Boots дают +2 м/с к бегу, а Trophy Collector копит скорость бега за убийства и помощь.",
+      "en": "When a sprint starts the client shows Holstering Weapon, and when it ends Unholstering Weapon. So your gun is put away while sprinting, and sprint is for moving around. Sprint Boots give +2 m/s sprint speed, and Trophy Collector stacks sprint speed for kills and assists."
+    },
+    "items": [
+      "upgrade_sprint_booster",
+      "upgrade_trophy_collector"
+    ],
+    "related": [
+      "move-speed",
+      "stamina"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:modifier_citadel_sprint_start",
+      "loc:citadel_main:modifier_citadel_sprint_end",
+      "loc:citadel_attributes:BonusSprintSpeed_label",
+      "item:upgrade_sprint_booster",
+      "item:upgrade_trophy_collector"
+    ]
+  },
+  {
+    "id": "cc",
+    "category": "combat",
+    "en": "CC (Crowd Control)",
+    "ru": [
+      "Контроль групп",
+      "Против контроля",
+      "контроль",
+      "КК"
+    ],
+    "aliases": [
+      "crowd control",
+      "Anti-CC",
+      "Контроль груп",
+      "Захист від контролю"
+    ],
+    "short": {
+      "ru": "Контроль (CC): эффекты, которые отнимают у врага действия: оглушение, сон, безмолвие, обездвиживание и другие.",
+      "en": "Crowd Control (CC): effects that take actions away from an enemy: stun, sleep, silence, immobilize and more."
+    },
+    "explain": {
+      "ru": "В клиенте есть тег сборок Crowd Control и фильтр магазина Anti-CC (защита от контроля). Unstoppable даёт иммунитет к Stun, Silence, Sleep, Root и Disarm. Под контролем враг не может стрелять, уйти или применить умения, смотря какой эффект, поэтому контроль решает драки. Против него есть очищение и предметы вроде Indomitable.",
+      "en": "The client has a Crowd Control build tag and an Anti-CC shop filter. Unstoppable gives immunity to Stun, Silence, Sleep, Root and Disarm. Under control an enemy cannot shoot, escape or use abilities, depending on the effect, so control decides fights. Against it there is cleansing and items such as Indomitable."
+    },
+    "example": {
+      "ru": "Graves ставит Grasping Hands на пути врага: тот обездвижен и не может уйти, пока вы его добиваете."
+    },
+    "items": [
+      "upgrade_unstoppable",
+      "upgrade_auto_cleanse",
+      "upgrade_target_stun"
+    ],
+    "related": [
+      "stun",
+      "silence",
+      "sleep",
+      "immobilize",
+      "disarm",
+      "slow",
+      "cleanse",
+      "unstoppable"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:citadel_build_tag_crowd_control",
+      "loc:citadel_main:EShopFilterAntiCC",
+      "item:upgrade_unstoppable",
+      "item:upgrade_auto_cleanse",
+      "ability:ability_necro_zombiewall"
+    ]
+  },
+  {
+    "id": "stun",
+    "category": "combat",
+    "en": "Stun",
+    "ru": [
+      "Оглушение",
+      "стан"
+    ],
+    "aliases": [
+      "stunned",
+      "Приголомшення"
+    ],
+    "short": {
+      "ru": "Stun: оглушённый герой ничего не может делать: ни стрелять, ни ходить, ни применять умения и предметы.",
+      "en": "Stun: a stunned hero can do nothing: no shooting, moving, abilities or items."
+    },
+    "explain": {
+      "ru": "Клиент пишет: Stunned - Can't Take Action. Под оглушением нельзя нажать даже Dispel Magic и Unstoppable, поэтому их нажимают заранее. Knockdown оглушает цель через 2 секунды после применения, а парирование оглушает врага, который ударил тебя в ближнем бою.",
+      "en": "The client says: Stunned - Can't Take Action. While stunned you cannot press even Dispel Magic or Unstoppable, so they are pressed in advance. Knockdown stuns the target 2 seconds after you use it, and a parry stuns the enemy who hit you in melee."
+    },
+    "items": [
+      "upgrade_target_stun",
+      "upgrade_unstoppable",
+      "upgrade_auto_cleanse"
+    ],
+    "related": [
+      "cc",
+      "sleep",
+      "unstoppable",
+      "parry"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_STUNNED",
+      "item:upgrade_target_stun",
+      "item:upgrade_unstoppable",
+      "item:upgrade_reduce_debuff_duration",
+      "loc:citadel_main:guide_advanced_parry_desc"
+    ]
+  },
+  {
+    "id": "silence",
+    "category": "combat",
+    "en": "Silence",
+    "ru": [
+      "Безмолвие",
+      "сайленс",
+      "немота"
+    ],
+    "aliases": [
+      "silenced",
+      "Abilities Disabled",
+      "Знемовлення"
+    ],
+    "short": {
+      "ru": "Silence: безмолвие отключает умения героя, клиент пишет Abilities Disabled.",
+      "en": "Silence: it turns off a hero's abilities, and the client shows Abilities Disabled."
+    },
+    "explain": {
+      "ru": "Silence Wave накладывает безмолвие волной, но подготавливаемые умения (channeling) не прерывает. Slowing Hex отключает только умения и предметы передвижения, а Silencer копит безмолвие от твоих пуль, после чего цель 10 с к нему невосприимчива. Cursed Relic кроме безмолвия ещё обезоруживает и запрещает предметы.",
+      "en": "Silence Wave silences in a wave, but it does not interrupt channeled abilities. Slowing Hex turns off only movement abilities and items, and Silencer builds up a silence from your bullets, after which the target is immune to it for 10 s. Cursed Relic also disarms and blocks items on top of the silence."
+    },
+    "items": [
+      "upgrade_targeted_silence",
+      "upgrade_containment",
+      "upgrade_proc_silence",
+      "upgrade_glitch"
+    ],
+    "related": [
+      "cc",
+      "disarm",
+      "unstoppable"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_SILENCED",
+      "item:upgrade_targeted_silence",
+      "item:upgrade_containment",
+      "item:upgrade_proc_silence",
+      "item:upgrade_glitch"
+    ]
+  },
+  {
+    "id": "sleep",
+    "category": "combat",
+    "en": "Sleep",
+    "ru": [
+      "Сон",
+      "усыпление",
+      "слип"
+    ],
+    "aliases": [
+      "asleep",
+      "slept",
+      "У сні"
+    ],
+    "short": {
+      "ru": "Sleep: спящий герой ничего не может делать, как при оглушении, но просыпается вскоре после получения урона.",
+      "en": "Sleep: a sleeping hero can do nothing, like a stun, but wakes up shortly after taking damage."
+    },
+    "explain": {
+      "ru": "Клиент пишет: Asleep - Can't Take Action. Усыпляют, например, Sleep Dagger у Haze и Naptime у Rem, и по описанию Sleep Dagger спящая цель просыпается вскоре после урона. Под сном нельзя нажать Unstoppable и Dispel Magic. Indomitable снимает сон сам, а Unstoppable даёт к нему иммунитет, если нажат заранее.",
+      "en": "The client says: Asleep - Can't Take Action. Haze's Sleep Dagger and Rem's Naptime put enemies to sleep, and the Sleep Dagger text says a sleeping target wakes up shortly after damage. While asleep you cannot press Unstoppable or Dispel Magic. Indomitable removes sleep by itself, and Unstoppable makes you immune if pressed in advance."
+    },
+    "items": [
+      "upgrade_unstoppable",
+      "upgrade_auto_cleanse"
+    ],
+    "related": [
+      "stun",
+      "cc",
+      "unstoppable"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_ASLEEP",
+      "ability:ability_sleep_dagger",
+      "ability:ability_familiar_ability01",
+      "item:upgrade_unstoppable",
+      "item:upgrade_auto_cleanse"
+    ]
+  },
+  {
+    "id": "disarm",
+    "category": "combat",
+    "en": "Disarm",
+    "ru": [
+      "Обезоруживание",
+      "дизарм",
+      "разоружение"
+    ],
+    "aliases": [
+      "disarmed",
+      "Gun Disabled",
+      "Роззброєння"
+    ],
+    "short": {
+      "ru": "Disarm: обезоруживание отключает оружие героя, клиент пишет Gun Disabled.",
+      "en": "Disarm: it turns off a hero's gun, and the client shows Gun Disabled."
+    },
+    "explain": {
+      "ru": "Disarming Hex обезоруживает выбранного врага на 4.25 с и снижает ему Bullet Resist на 13%. Это сильно бьёт по героям, чей урон идёт от оружия. Cursed Relic тоже обезоруживает, а защищает от Disarm предмет Unstoppable.",
+      "en": "Disarming Hex disarms the chosen enemy for 4.25 s and lowers their Bullet Resist by 13%. It hurts heroes whose damage comes from their gun. Cursed Relic disarms too, and the Unstoppable item protects you from Disarm."
+    },
+    "items": [
+      "upgrade_greater_withering_whip",
+      "upgrade_glitch",
+      "upgrade_unstoppable"
+    ],
+    "related": [
+      "cc",
+      "silence",
+      "weapon-damage"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_DISARMED",
+      "item:upgrade_greater_withering_whip",
+      "item:upgrade_glitch",
+      "item:upgrade_unstoppable"
+    ]
+  },
+  {
+    "id": "immobilize",
+    "category": "combat",
+    "en": "Immobilize",
+    "ru": [
+      "Обездвиживание",
+      "Приковывание",
+      "рут"
+    ],
+    "aliases": [
+      "root",
+      "rooted",
+      "tether",
+      "Tethered",
+      "Знерухомлення",
+      "Прив'язь"
+    ],
+    "short": {
+      "ru": "Immobilize: обездвиженный герой не может передвигаться и применять умения передвижения.",
+      "en": "Immobilize: an immobilized hero cannot move or use movement abilities."
+    },
+    "explain": {
+      "ru": "Клиент пишет: Movement Abilities Disabled. Grasping Hands у Graves обездвиживают всех, кто проходит через руки. Stake у Vindicta похож, но в клиенте это привязь (Tether): цель может двигаться только в пределах длины привязи. Unstoppable даёт иммунитет к Root, а Indomitable снимает обездвиживание.",
+      "en": "The client says: Movement Abilities Disabled. Graves's Grasping Hands immobilize everyone who walks through the hands. Vindicta's Stake is similar, but the client calls it a Tether: the target can move only within the tether length. Unstoppable gives immunity to Root, and Indomitable removes immobilize."
+    },
+    "example": {
+      "ru": "Vindicta бросает Stake во врага у стены: он привязан к месту падения кола на 1.75 с, и есть время выстрелить из Assassinate."
+    },
+    "items": [
+      "upgrade_unstoppable",
+      "upgrade_auto_cleanse"
+    ],
+    "related": [
+      "cc",
+      "slow",
+      "stun"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:MODIFIER_STATE_ROOTED",
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_ROOTED",
+      "loc:citadel_attributes:Citadel_StatusEffectTethered",
+      "ability:ability_necro_zombiewall",
+      "ability:citadel_ability_hornet_chain",
+      "item:upgrade_unstoppable"
+    ]
+  },
+  {
+    "id": "slow",
+    "category": "combat",
+    "en": "Slow",
+    "ru": [
+      "Замедление",
+      "слоу"
+    ],
+    "aliases": [
+      "slowed",
+      "Slow Resist",
+      "Сповільнення"
+    ],
+    "short": {
+      "ru": "Slow: замедление снижает скорость передвижения, а часто и дальность рывка, так что двигаться можно, но медленнее.",
+      "en": "Slow: it lowers move speed and often dash distance, so you can still move, just slower."
+    },
+    "explain": {
+      "ru": "Mystic Slow замедляет цель на 24% на 2 с после твоего спирит-урона и укорачивает ей рывок на 12%. Slowing Bullets копят замедление от пуль, а второе улучшение Jar of Dead у Graves даёт замедление 24% на 1 с при попадании. Против замедлений есть Slow Resist, например у Fleetfoot.",
+      "en": "Mystic Slow slows a target by 24% for 2 s after your spirit damage and shortens their dash by 12%. Slowing Bullets build up a slow from your bullets, and Graves's second Jar of Dead upgrade adds a 24% slow for 1 s on hit. Slow Resist works against slows, for example on Fleetfoot."
+    },
+    "items": [
+      "upgrade_magic_slow",
+      "upgrade_slowing_bullets",
+      "upgrade_fleetfoot_boots"
+    ],
+    "related": [
+      "cc",
+      "move-speed",
+      "kite",
+      "immobilize"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:EShopFilterMobilityReduction",
+      "item:upgrade_magic_slow",
+      "item:upgrade_slowing_bullets",
+      "ability:ability_necro_hauntingskull",
+      "item:upgrade_fleetfoot_boots"
+    ]
+  },
+  {
+    "id": "debuff",
+    "category": "combat",
+    "en": "Debuff",
+    "ru": [
+      "Отрицательный эффект",
+      "дебафф"
+    ],
+    "aliases": [
+      "debuffs",
+      "Debuff Resist",
+      "Отрицательные эффекты",
+      "Ослаблення"
+    ],
+    "short": {
+      "ru": "Дебафф: любой вредный эффект на герое, например замедление, кровотечение, снижение резистов или контроль.",
+      "en": "Debuff: any harmful effect on a hero, such as a slow, a bleed, lowered resists or crowd control."
+    },
+    "explain": {
+      "ru": "В клиенте это Debuffs (Отрицательные эффекты), а Debuff Resist сокращает их длительность: Debuff Reducer даёт 25%. Crow Familiar вешает на цель сразу несколько дебаффов: кровотечение и снижение резистов. Dispel Magic снимает все дебаффы, кроме наложенных ультами.",
+      "en": "The client calls them Debuffs, and Debuff Resist shortens them: Debuff Reducer gives 25%. Crow Familiar puts several debuffs on a target at once: a bleed and lowered resists. Dispel Magic removes all debuffs except those from ultimates."
+    },
+    "items": [
+      "upgrade_debuff_reducer",
+      "upgrade_reduce_debuff_duration"
+    ],
+    "related": [
+      "buff",
+      "cleanse",
+      "cc",
+      "dot"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:CitadelComponentGroup_EDebuffs",
+      "item:upgrade_debuff_reducer",
+      "item:upgrade_reduce_debuff_duration",
+      "ability:citadel_ability_hornet_sting"
+    ]
+  },
+  {
+    "id": "buff",
+    "category": "combat",
+    "en": "Buff",
+    "ru": [
+      "Положительный эффект",
+      "бафф"
+    ],
+    "aliases": [
+      "buffs",
+      "Посилення"
+    ],
+    "short": {
+      "ru": "Бафф: полезный временный эффект на герое, например скорость, барьер или бонус к урону.",
+      "en": "Buff: a helpful temporary effect on a hero, such as speed, a barrier or bonus damage."
+    },
+    "explain": {
+      "ru": "Баффы дают умения и предметы: Surge of Power после применения выбранного умения ускоряет тебя на 8 с, Counterspell после удачного парирования даёт лечение, скорость и Spirit Power. Враг может снять твои баффы: Cursed Relic убирает все, кроме наложенных ультами. В украинском клиенте баффы называются Посилення.",
+      "en": "Abilities and items give buffs: Surge of Power speeds you up for 8 s after you use the chosen ability, Counterspell gives healing, speed and Spirit Power after a successful parry. An enemy can remove your buffs: Cursed Relic removes all except those from ultimates. The Ukrainian client calls buffs Посилення."
+    },
+    "items": [
+      "upgrade_magic_storm",
+      "upgrade_counterspell",
+      "upgrade_glitch"
+    ],
+    "related": [
+      "debuff",
+      "duration"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_CombatLog_Modifiers",
+      "item:upgrade_magic_storm",
+      "item:upgrade_counterspell",
+      "item:upgrade_glitch"
+    ]
+  },
+  {
+    "id": "cleanse",
+    "category": "combat",
+    "en": "Cleanse",
+    "ru": [
+      "Снятие эффектов",
+      "очищение",
+      "диспел"
+    ],
+    "aliases": [
+      "purge",
+      "dispel",
+      "очищення"
+    ],
+    "short": {
+      "ru": "Очищение: снятие вредных эффектов с героя, обычно всех, кроме эффектов ультов.",
+      "en": "Cleanse: removing harmful effects from a hero, usually all except ultimate effects."
+    },
+    "explain": {
+      "ru": "Dispel Magic по нажатию снимает все дебаффы, кроме эффектов ультов, а если что-то снял, лечит и ускоряет. Indomitable сам снимает следующий Stun, сковывание, обездвиживание, сон, безмолвие или страх и даёт барьер. Cheat Death при смертельном уроне снимает все дебаффы, кроме оглушения.",
+      "en": "Dispel Magic, when pressed, removes all debuffs except ultimate effects, and if it removed something it heals you and gives speed. Indomitable removes your next stun, chain, immobilize, sleep, silence or fear by itself and gives a barrier. Cheat Death, on lethal damage, removes all debuffs except stuns."
+    },
+    "items": [
+      "upgrade_reduce_debuff_duration",
+      "upgrade_auto_cleanse",
+      "upgrade_cheat_death"
+    ],
+    "related": [
+      "debuff",
+      "cc",
+      "unstoppable",
+      "ultimate"
+    ],
+    "status": "data",
+    "sources": [
+      "item:upgrade_reduce_debuff_duration",
+      "item:upgrade_auto_cleanse",
+      "item:upgrade_cheat_death"
+    ]
+  },
+  {
+    "id": "anti-heal",
+    "category": "combat",
+    "en": "Anti-Healing",
+    "ru": [
+      "Против лечения",
+      "антихил",
+      "снижение лечения"
+    ],
+    "aliases": [
+      "antiheal",
+      "anti-heal",
+      "Incoming Healing",
+      "Блокування лікування",
+      "Проти лікування"
+    ],
+    "short": {
+      "ru": "Антихил: эффект, который снижает получаемое врагом лечение, нужен против героев, которые много лечатся.",
+      "en": "Anti-heal: an effect that cuts an enemy's incoming healing, needed against heroes who heal a lot."
+    },
+    "explain": {
+      "ru": "В магазине есть фильтр Anti-Healing. Healbane режет лечение на 35% через твой спирит-урон, Toxic Bullets на 40% через пули, Decay на 55%, Crippling Headshot на 40%, а первое улучшение Crow Familiar у Vindicta на 35%. Как складываются разные источники, в данных не описано.",
+      "en": "The shop has an Anti-Healing filter. Healbane cuts healing by 35% through your spirit damage, Toxic Bullets by 40% through bullets, Decay by 55%, Crippling Headshot by 40%, and Vindicta's first Crow Familiar upgrade by 35%. How different sources stack is not described in the data."
+    },
+    "example": {
+      "ru": "Враг постоянно лечится через Healing Rite и лайфстил. Vindicta берёт первое улучшение Crow Familiar: после удара ворона цель получает на 35% меньше лечения."
+    },
+    "items": [
+      "upgrade_healbane",
+      "upgrade_toxic_bullets",
+      "upgrade_rupture",
+      "upgrade_banshee_slugs"
+    ],
+    "related": [
+      "lifesteal",
+      "regen",
+      "debuff"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:EShopFilterAntiHeal",
+      "item:upgrade_healbane",
+      "item:upgrade_toxic_bullets",
+      "item:upgrade_rupture",
+      "item:upgrade_banshee_slugs",
+      "ability:citadel_ability_hornet_sting"
+    ]
+  },
+  {
+    "id": "unstoppable",
+    "category": "combat",
+    "en": "Unstoppable",
+    "ru": [
+      "Неудержимость"
+    ],
+    "aliases": [
+      "Нестримність"
+    ],
+    "short": {
+      "ru": "Unstoppable: пока эффект действует, на тебя не работают оглушение, сон, безмолвие, обездвиживание и обезоруживание.",
+      "en": "Unstoppable: while it lasts, stun, sleep, silence, root and disarm do not work on you."
+    },
+    "explain": {
+      "ru": "Это и статус, и предмет: Unstoppable (Vitality T4, 6400 душ) по нажатию на 5.5 с подавляет вредные эффекты и даёт иммунитет к Stun, Silence, Sleep, Root и Disarm. Перезарядка 60 с. Главное ограничение: под Stun или Sleep нажать нельзя, поэтому жми его до контроля, например перед входом в драку.",
+      "en": "It is both a status and an item: Unstoppable (Vitality T4, 6400 souls), when pressed, suppresses negative effects for 5.5 s and gives immunity to Stun, Silence, Sleep, Root and Disarm. Cooldown 60 s. The key limit: you cannot press it while stunned or asleep, so press it before the control, for example as you enter a fight."
+    },
+    "items": [
+      "upgrade_unstoppable",
+      "upgrade_debuff_reducer"
+    ],
+    "related": [
+      "cc",
+      "stun",
+      "sleep",
+      "cleanse"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:Citadel_StatusEffectUnstoppable",
+      "item:upgrade_unstoppable",
+      "item:upgrade_debuff_reducer"
+    ]
+  },
+  {
+    "id": "burst",
+    "category": "combat",
+    "en": "Burst",
+    "ru": [
+      "Бурст",
+      "взрывной урон"
+    ],
+    "aliases": [
+      "burst damage",
+      "Burst Damage",
+      "бурст-урон"
+    ],
+    "short": {
+      "ru": "Бурст (сленг игроков): много урона за очень короткое время, часто комбо из нескольких умений.",
+      "en": "Burst (player slang): a lot of damage in a very short time, often a combo of several abilities."
+    },
+    "explain": {
+      "ru": "Бурст убивает раньше, чем цель успеет нажать защиту или убежать. В клиенте такое слово есть только как тег героя Burst Damage (у Calico и Pocket). Против бурста помогают резисты, барьер и запас здоровья, а не лечение по времени. Это сленг игроков, а не механика.",
+      "en": "Burst kills before the target can press a defense or run. In the client the word appears only as the hero tag Burst Damage (Calico and Pocket). Resists, barriers and a big health pool help against burst, not healing over time. This is player slang, not a mechanic."
+    },
+    "example": {
+      "ru": "Vindicta бросает Crow Familiar и сразу стреляет из Assassinate: ворон снижает цели резисты, а выстрел бьёт по раненой цели с бонусом. Это бурст."
+    },
+    "related": [
+      "dps",
+      "focus",
+      "picker",
+      "spirit-damage"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_nano",
+      "hero:hero_synth",
+      "ability:citadel_ability_hornet_sting",
+      "ability:citadel_ability_hornet_snipe"
+    ]
+  },
+  {
+    "id": "dps",
+    "category": "combat",
+    "en": "DPS (Damage Per Second)",
+    "ru": [
+      "Урон в секунду",
+      "ДПС"
+    ],
+    "aliases": [
+      "damage per second",
+      "шкода за секунду"
+    ],
+    "short": {
+      "ru": "DPS: урон в секунду, то есть сколько урона ты наносишь в долгом бою.",
+      "en": "DPS: damage per second, that is how much damage you deal over a longer fight."
+    },
+    "explain": {
+      "ru": "В клиенте это Damage Per Second (Урон в секунду). DPS оружия растёт от Weapon Damage и Fire Rate, а во время перезарядки обоймы падает до нуля. В отличие от бурста, DPS важен в долгой драке. Игроки ещё зовут ДПС героя, который наносит основной урон, но это уже сленг.",
+      "en": "The client calls it Damage Per Second. Gun DPS grows with Weapon Damage and Fire Rate, and drops to zero while you reload. Unlike burst, DPS matters in a long fight. Players also call the main damage hero the DPS, but that is slang."
+    },
+    "related": [
+      "burst",
+      "fire-rate",
+      "weapon-damage",
+      "carry"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:StatDesc_DPS",
+      "item:upgrade_spirit_burn"
+    ]
+  },
+  {
+    "id": "dot",
+    "category": "combat",
+    "en": "DoT (Damage over Time)",
+    "ru": [
+      "Постепенный урон",
+      "урон по времени",
+      "дот"
+    ],
+    "aliases": [
+      "damage over time",
+      "bleed",
+      "Кровотечение",
+      "Кровотеча",
+      "періодична шкода"
+    ],
+    "short": {
+      "ru": "DoT: урон, который наносится частями несколько секунд подряд, например кровотечение или поджог.",
+      "en": "DoT: damage dealt in small pieces over several seconds, like a bleed or a burn."
+    },
+    "explain": {
+      "ru": "В русском клиенте это постепенный урон, в английском damage over time. Crow Familiar у Vindicta вешает кровотечение от текущего здоровья цели, а Decay бьёт по времени от текущего здоровья, но не может убить. DoT продолжает бить, даже когда бой для тебя уже закончился, и Dispel Magic его снимает, если он не от ульта.",
+      "en": "The Russian client says постепенный урон, the English one damage over time. Vindicta's Crow Familiar applies a bleed based on the target's current health, and Decay deals damage over time from current health but cannot kill. A DoT keeps ticking after you walk away, and Dispel Magic removes it if it is not from an ultimate."
+    },
+    "items": [
+      "upgrade_rupture",
+      "upgrade_toxic_bullets",
+      "upgrade_reduce_debuff_duration"
+    ],
+    "related": [
+      "debuff",
+      "cleanse",
+      "duration"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_attributes:InlineAttribute_SpiritDPS",
+      "ability:citadel_ability_hornet_sting",
+      "item:upgrade_rupture",
+      "item:upgrade_reduce_debuff_duration"
+    ]
+  },
+  {
+    "id": "melee",
+    "category": "combat",
+    "en": "Melee",
+    "ru": [
+      "Ближний бой",
+      "Лёгкий удар",
+      "Тяжёлый удар",
+      "мили"
+    ],
+    "aliases": [
+      "Light Melee",
+      "Heavy Melee",
+      "Ближній бій",
+      "хэви"
+    ],
+    "short": {
+      "ru": "Melee: удар в ближнем бою, короткое нажатие даёт лёгкий удар, а удержание тяжёлый.",
+      "en": "Melee: a close-range hit; a tap gives a light melee and holding gives a heavy melee."
+    },
+    "explain": {
+      "ru": "Так сказано в обучении клиента, и там же: удар в ближнем бою приостанавливает перезарядку оружия. Тяжёлым ударом забирают Rejuvenator, а надгробие Borrowed Decree у Graves враги ломают двумя тяжёлыми ударами. Есть предметы на урон в ближнем бою и Melee Resist для защиты от него.",
+      "en": "This is how the client's guide puts it, and it adds that a melee hit pauses your weapon reload. You claim the Rejuvenator with a heavy melee, and enemies break Graves's Borrowed Decree gravestone with two heavy melees. There are items for melee damage and Melee Resist to defend against it."
+    },
+    "items": [
+      "upgrade_lifestrike_gauntlets",
+      "upgrade_melee_charge",
+      "upgrade_acolytes_glove"
+    ],
+    "related": [
+      "parry",
+      "rejuvenator",
+      "ammo"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_basics_melee_desc",
+      "loc:citadel_main:guide_basics_reload_desc",
+      "loc:citadel_main:AbilityButtonHint_MeleeRejuvinator",
+      "ability:ability_necro_gravestone"
+    ]
+  },
+  {
+    "id": "parry",
+    "category": "combat",
+    "en": "Parry",
+    "ru": [
+      "Парирование",
+      "парри"
+    ],
+    "aliases": [
+      "Парирування"
+    ],
+    "short": {
+      "ru": "Parry: отражение вражеского удара в ближнем бою отдельной кнопкой, после чего враг оглушён и получает больше урона от ударов.",
+      "en": "Parry: a separate button that blocks an enemy melee hit, leaving the attacker stunned and taking more melee damage."
+    },
+    "explain": {
+      "ru": "Так сказано в обучении клиента: обычное парирование работает против ударов ближнего боя. Counterspell расширяет его: следующее парирование защищает от урона и эффектов вражеских умений и предметов. Rebuttal при удачном парировании лечит тебя на парированный урон и возвращает его врагу.",
+      "en": "This is how the client's guide puts it: a normal parry works against melee hits. Counterspell extends it: your next parry protects you from the damage and effects of enemy abilities and items. Rebuttal, on a successful parry, heals you for the parried damage and returns it to the enemy."
+    },
+    "items": [
+      "upgrade_counterspell",
+      "upgrade_melee_rebuttal"
+    ],
+    "related": [
+      "melee",
+      "stun",
+      "urn"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_advanced_parry_desc",
+      "item:upgrade_counterspell",
+      "item:upgrade_melee_rebuttal"
+    ]
+  },
+  {
+    "id": "ultimate",
+    "category": "combat",
+    "en": "Ultimate",
+    "ru": [
+      "Ульт",
+      "ультимейт",
+      "ультимативное умение"
+    ],
+    "aliases": [
+      "ult",
+      "ульта",
+      "ultimate ability",
+      "ультимативне вміння"
+    ],
+    "short": {
+      "ru": "Ульт: четвёртое и самое сильное умение героя, оно открывается отдельно и обычно долго перезаряжается.",
+      "en": "Ultimate: a hero's fourth and strongest ability, which unlocks separately and usually has a long cooldown."
+    },
+    "explain": {
+      "ru": "У Vindicta ульт Assassinate (55 с), у Graves Borrowed Decree (140 с), и когда ульт становится доступен, клиент пишет Ultimate Unlocked. Многие эффекты делят умения на ульты и остальные: Echo Shard нельзя назначить на ульт, Dispel Magic не снимает эффекты ультов, Cursed Relic не снимает баффы от ультов.",
+      "en": "Vindicta's ultimate is Assassinate (55 s), Graves's is Borrowed Decree (140 s), and when it becomes available the client says Ultimate Unlocked. Many effects split abilities into ultimates and the rest: Echo Shard cannot target an ultimate, Dispel Magic does not remove ultimate effects, Cursed Relic does not remove ultimate buffs."
+    },
+    "items": [
+      "upgrade_ability_power_shard",
+      "upgrade_diviners_kevlar"
+    ],
+    "related": [
+      "imbue",
+      "cleanse",
+      "cooldown",
+      "power-spike"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_HUD_LevelUpUltimateAbilityUnlocked",
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "item:upgrade_ability_power_shard",
+      "item:upgrade_reduce_debuff_duration",
+      "item:upgrade_glitch"
+    ]
+  },
+  {
+    "id": "kite",
+    "category": "combat",
+    "en": "Kite",
+    "ru": [
+      "Кайт",
+      "кайтить"
+    ],
+    "aliases": [
+      "kiting",
+      "кайтинг"
+    ],
+    "short": {
+      "ru": "Кайт (сленг игроков): бить врага, держа дистанцию и отступая, чтобы он не мог до тебя дотянуться.",
+      "en": "Kite (player slang): hit an enemy while keeping distance and backing off, so they cannot reach you."
+    },
+    "explain": {
+      "ru": "Кайтят обычно герои с дальним оружием или умениями против героев ближнего боя. Помогают замедления, скорость и выносливость для рывков. Если враг тебя догнал или обездвижил, кайт сорван. Это сленг игроков, не термин клиента.",
+      "en": "Heroes with long-range guns or abilities usually kite melee heroes. Slows, speed and stamina for dashes help. If the enemy catches or roots you, the kite is over. This is player slang, not a client term."
+    },
+    "example": {
+      "ru": "Abrams бежит на Vindicta. Она стреляет, отходя назад, и бросает Stake, когда он подходит близко. Пока Abrams привязан, она снова держит дистанцию."
+    },
+    "related": [
+      "range",
+      "slow",
+      "dive",
+      "stamina"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_atlas",
+      "ability:citadel_ability_hornet_chain"
+    ]
+  },
+  {
+    "id": "dive",
+    "category": "combat",
+    "en": "Dive",
+    "ru": [
+      "Дайв",
+      "дайвить",
+      "нырнуть"
+    ],
+    "aliases": [
+      "diving",
+      "dive in"
+    ],
+    "short": {
+      "ru": "Дайв (сленг игроков): резко ворваться к врагу, часто за его линию защиты, чтобы убить важную цель.",
+      "en": "Dive (player slang): charge onto an enemy, often past their defenders, to kill an important target."
+    },
+    "explain": {
+      "ru": "Дайвят мобильные герои с контролем или бурстом, и слово встречается в описаниях героев в клиенте: роль Lash звучит как Dives down to stomp his foes. Дайв рискованный: если цель выжила или ей помогли, ты оказываешься один среди врагов. От дайва защищают контроль и peel.",
+      "en": "Mobile heroes with control or burst dive, and the word appears in hero descriptions in the client: Lash's role reads Dives down to stomp his foes. A dive is risky: if the target survives or gets help, you are alone among enemies. Control and peel protect against dives."
+    },
+    "related": [
+      "engage",
+      "peel",
+      "kite",
+      "initiator"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_lash",
+      "loc:citadel_heroes:hero_shiv_playstyle"
+    ]
+  },
+  {
+    "id": "poke",
+    "category": "combat",
+    "en": "Poke",
+    "ru": [
+      "Поук",
+      "пок",
+      "харасс"
+    ],
+    "aliases": [
+      "poking",
+      "harass",
+      "харас"
+    ],
+    "short": {
+      "ru": "Поук (сленг игроков): понемногу бить врага издалека, не вступая в полный бой, чтобы он ушёл лечиться.",
+      "en": "Poke (player slang): chip at an enemy from range without a full fight, so they have to leave and heal."
+    },
+    "explain": {
+      "ru": "Поукают умения и оружие с большой дальностью. У Vindicta оружие с меткой Long Range, и спад урона у неё заканчивается только на 64 м, это одна из самых длинных дистанций в данных. Поук хорош на ветке: раненый враг хуже фармит и легче умирает при атаке.",
+      "en": "Long-range abilities and guns poke. Vindicta's gun is tagged Long Range, and her damage falloff ends only at 64 m, one of the longest in the data. Poke is good in lane: a hurt enemy farms worse and dies more easily to an attack."
+    },
+    "related": [
+      "trade",
+      "laning",
+      "range"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_hornet",
+      "loc:citadel_attributes:Attribute_EWeaponAttribute_LongRange"
+    ]
+  },
+  {
+    "id": "trade",
+    "category": "combat",
+    "en": "Trade",
+    "ru": [
+      "Размен",
+      "трейд"
+    ],
+    "aliases": [
+      "trading",
+      "разменяться"
+    ],
+    "short": {
+      "ru": "Размен (сленг игроков): обмен уроном с врагом, выгодный, если отнимаешь больше здоровья, чем теряешь.",
+      "en": "Trade (player slang): an exchange of damage with an enemy, good if you took more health than you lost."
+    },
+    "explain": {
+      "ru": "Размен оценивают не только по здоровью, но и по потраченным умениям: если враг потратил ключевое умение, а ты нет, следующий размен твой. На ветке выгодно разменяться, когда у врага умения на перезарядке или пустая обойма. Это сленг игроков.",
+      "en": "A trade is judged not only by health but by spent abilities: if the enemy used a key ability and you did not, the next trade is yours. In lane it pays to trade when the enemy has abilities on cooldown or an empty magazine. This is player slang."
+    },
+    "related": [
+      "poke",
+      "laning",
+      "cooldown"
+    ],
+    "status": "expert"
+  },
+  {
+    "id": "focus",
+    "category": "combat",
+    "en": "Focus",
+    "ru": [
+      "Фокус",
+      "фокусить"
+    ],
+    "aliases": [
+      "focus fire",
+      "фокус огня"
+    ],
+    "short": {
+      "ru": "Фокус (сленг игроков): вся команда бьёт одну цель, чтобы убить её как можно быстрее.",
+      "en": "Focus (player slang): the whole team hits one target to kill it as fast as possible."
+    },
+    "explain": {
+      "ru": "Обычно фокусят опасного керри или хрупкую цель, которую можно убить, пока она не включила защиту. В колесе чата клиента есть команда Attack с именем героя, ей удобно отметить цель. Если фокусят тебя, пора включать защиту или отступать.",
+      "en": "Teams usually focus a dangerous carry or a fragile target that can die before it uses a defense. The client's chat wheel has an Attack command with a hero's name, handy to mark the target. If you are the focus, it is time to use a defense or back off."
+    },
+    "related": [
+      "burst",
+      "carry",
+      "peel",
+      "engage"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:citadel_chatwheel_label_Attack_Hero"
+    ]
+  },
+  {
+    "id": "engage",
+    "category": "combat",
+    "en": "Engage",
+    "ru": [
+      "Энгейдж",
+      "инициация",
+      "заход"
+    ],
+    "aliases": [
+      "engagement",
+      "initiate"
+    ],
+    "short": {
+      "ru": "Энгейдж (сленг игроков): начать драку первым, обычно контролем по нескольким врагам.",
+      "en": "Engage (player slang): start the fight first, usually with control on several enemies."
+    },
+    "explain": {
+      "ru": "Хороший энгейдж даёт команде несколько секунд, пока враги под контролем или разбросаны, а плохой оставляет начавшего одного. Слово есть в описании Vindicta в клиенте: её мобильность позволяет вступать в бой, когда ей удобно. Это сленг игроков.",
+      "en": "A good engage gives your team a few seconds while enemies are controlled or split, and a bad one leaves the starter alone. The word appears in Vindicta's client description: her mobility lets her engage when it suits her. This is player slang."
+    },
+    "related": [
+      "initiator",
+      "dive",
+      "cc",
+      "focus"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_hornet"
+    ]
+  },
+  {
+    "id": "peel",
+    "category": "combat",
+    "en": "Peel",
+    "ru": [
+      "Пил",
+      "защита керри"
+    ],
+    "aliases": [
+      "peeling"
+    ],
+    "short": {
+      "ru": "Пил (сленг игроков): защитить союзника, обычно керри, от врагов, которые на него напали.",
+      "en": "Peel (player slang): protect an ally, usually your carry, from enemies who jumped on them."
+    },
+    "explain": {
+      "ru": "Пилят контролем, замедлением, лечением и барьерами: оглушить или замедлить того, кто нырнул к твоему стрелку. Это ответ на дайв, и хороший пил позволяет керри продолжать стрелять. Это сленг игроков, не термин клиента.",
+      "en": "You peel with control, slows, healing and barriers: stun or slow whoever dived your shooter. It is the answer to a dive, and good peel lets your carry keep shooting. This is player slang, not a client term."
+    },
+    "related": [
+      "dive",
+      "carry",
+      "support",
+      "cc"
+    ],
+    "status": "expert"
+  },
+  {
+    "id": "carry",
+    "category": "roles",
+    "en": "Carry",
+    "ru": [
+      "Керри",
+      "кэрри"
+    ],
+    "aliases": [
+      "hard carry",
+      "кэри",
+      "керрі"
+    ],
+    "short": {
+      "ru": "Керри (сленг игроков): герой, который с предметами становится главной силой команды и выигрывает поздние бои.",
+      "en": "Carry (player slang): a hero who becomes the team's main force with items and wins the late fights."
+    },
+    "explain": {
+      "ru": "Керри нужно много душ, поэтому он много фармит, а команда часто его защищает (peel). Пока предметов мало, керри слабее. В клиенте Deadlock такой роли нет: так говорят игроки, чаще всего про стрелков, чей урон сильно растёт от дорогих предметов.",
+      "en": "A carry needs a lot of souls, so they farm a lot and the team often protects them (peel). With few items a carry is weaker. The Deadlock client has no such role: players say it, most often about shooters whose damage grows a lot with expensive items."
+    },
+    "example": {
+      "ru": "Если Vindicta в твоей команде набрала больше всех душ, её часто считают керри: в поздней драке её выстрелы решают исход."
+    },
+    "related": [
+      "farm",
+      "peel",
+      "scaling-hero",
+      "power-spike",
+      "net-worth"
+    ],
+    "core": true,
+    "status": "expert"
+  },
+  {
+    "id": "picker",
+    "category": "roles",
+    "en": "Picker",
+    "ru": [
+      "Пикер",
+      "делать пики"
+    ],
+    "aliases": [
+      "pick",
+      "pick-off",
+      "picking",
+      "пик",
+      "пікер"
+    ],
+    "short": {
+      "ru": "Пикер (сленг игроков): герой, который ловит и убивает одиночных врагов до общей драки, то есть делает пики.",
+      "en": "Picker (player slang): a hero who catches and kills lone enemies before a big fight, making picks."
+    },
+    "explain": {
+      "ru": "Пик - это убийство отбившегося врага, после которого команда дерётся в большинстве. Не путай с пиком героя, то есть с выбором героя перед матчем. В описании Vindicta в клиенте сказано, что раненые враги на любой дистанции должны бояться, что она их добьёт: это и есть пикер, Stake ловит, Assassinate добивает.",
+      "en": "A pick is a kill on an enemy who strayed, after which your team fights with a numbers advantage. Do not confuse it with a hero pick, the choice of hero before the match. Vindicta's client description says hurt enemies at any distance should fear being picked off by her: that is a picker, Stake catches and Assassinate finishes."
+    },
+    "example": {
+      "ru": "Враг на 40% здоровья идёт один через центр. Vindicta привязывает его Stake и добивает Assassinate с бонусом по цели ниже 50% здоровья. Это пик: в следующей драке врагов на одного меньше."
+    },
+    "related": [
+      "ganker",
+      "burst",
+      "focus",
+      "carry"
+    ],
+    "core": true,
+    "status": "expert",
+    "sources": [
+      "hero:hero_hornet",
+      "ability:citadel_ability_hornet_chain",
+      "ability:citadel_ability_hornet_snipe"
+    ]
+  },
+  {
+    "id": "support",
+    "category": "roles",
+    "en": "Support",
+    "ru": [
+      "Поддержка",
+      "саппорт",
+      "сап"
+    ],
+    "aliases": [
+      "supp",
+      "Підтримка",
+      "healer"
+    ],
+    "short": {
+      "ru": "Саппорт (сленг игроков): герой, который помогает команде лечением, барьерами и контролем, а не только уроном.",
+      "en": "Support (player slang): a hero who helps the team with heals, barriers and control, not only with damage."
+    },
+    "explain": {
+      "ru": "В клиенте слово Support есть как тег героя (у McGinnis), а в данных есть тип героя healer: Dynamo, Ivy, Kelvin, Nurse Harrow, Paige и Rem. Саппорт часто берёт предметы для команды: Healing Rite даёт союзнику восстановление, Rescue Beam лечит союзника и тебя. Роль саппорта - понятие игроков, не правило игры.",
+      "en": "In the client Support exists as a hero tag (McGinnis), and the data has the healer hero type: Dynamo, Ivy, Kelvin, Nurse Harrow, Paige and Rem. A support often buys items for the team: Healing Rite gives an ally regen, Rescue Beam heals an ally and you. The support role is a player idea, not a game rule."
+    },
+    "items": [
+      "upgrade_health_stimpak",
+      "upgrade_rescue_beam"
+    ],
+    "related": [
+      "hero-type",
+      "peel",
+      "tank",
+      "carry"
+    ],
+    "core": true,
+    "status": "expert",
+    "sources": [
+      "hero:hero_forge",
+      "hero:hero_dynamo",
+      "item:upgrade_health_stimpak",
+      "item:upgrade_rescue_beam"
+    ]
+  },
+  {
+    "id": "tank",
+    "category": "roles",
+    "en": "Tank",
+    "ru": [
+      "Танк"
+    ],
+    "aliases": [
+      "tanky",
+      "танковать"
+    ],
+    "short": {
+      "ru": "Танк (сленг игроков): живучий герой, который принимает на себя урон и контроль, чтобы команда стреляла спокойно.",
+      "en": "Tank (player slang): a tough hero who soaks damage and control so the team can shoot in peace."
+    },
+    "explain": {
+      "ru": "Танку нужны здоровье, резисты и барьеры, то есть Vitality, а в клиенте слово Tank есть как тег героя у Abrams. Танк обычно стоит впереди (фронтлайн) и часто начинает драку. Одной живучести мало: танк полезен, только если враг вынужден его бить.",
+      "en": "A tank needs health, resists and barriers, that is Vitality, and in the client Tank is a hero tag of Abrams. A tank usually stands in front (frontline) and often starts the fight. Toughness alone is not enough: a tank helps only if the enemy is forced to hit them."
+    },
+    "related": [
+      "frontline",
+      "initiator",
+      "max-health",
+      "bullet-resist"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_atlas"
+    ]
+  },
+  {
+    "id": "frontline",
+    "category": "roles",
+    "en": "Frontline",
+    "ru": [
+      "Фронтлайн",
+      "передняя линия"
+    ],
+    "aliases": [
+      "front line",
+      "backline",
+      "бэклайн"
+    ],
+    "short": {
+      "ru": "Фронтлайн (сленг игроков): герои, которые стоят ближе всех к врагу и держат позицию.",
+      "en": "Frontline (player slang): the heroes who stand closest to the enemy and hold the position."
+    },
+    "explain": {
+      "ru": "Обычно это танки и бойцы ближнего боя: они принимают урон и мешают врагу дойти до стрелков. Сзади стоит бэклайн, то есть стрелки и маги, и в клиенте роль Pocket звучит как Infiltrates and disrupts the backline. Без фронтлайна враг легко ныряет к твоему керри.",
+      "en": "Usually tanks and melee fighters: they take damage and keep the enemy away from your shooters. Behind them is the backline, the shooters and casters, and in the client Pocket's role reads Infiltrates and disrupts the backline. Without a frontline the enemy easily dives your carry."
+    },
+    "related": [
+      "tank",
+      "dive",
+      "peel"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_synth"
+    ]
+  },
+  {
+    "id": "initiator",
+    "category": "roles",
+    "en": "Initiator",
+    "ru": [
+      "Инициатор"
+    ],
+    "aliases": [
+      "Ініціатор",
+      "инициация"
+    ],
+    "short": {
+      "ru": "Инициатор: герой, который начинает драку, обычно контролем по нескольким врагам.",
+      "en": "Initiator: a hero who starts the fight, usually with control on several enemies."
+    },
+    "explain": {
+      "ru": "В клиенте это официальный тег героя: Initiator есть у Dynamo, Lash, Mo & Krill и Warden. Сама роль - понятие игроков: инициатор входит первым, а команда должна сразу поддержать. Если ты не готов, в колесе чата есть фраза I'm not ready for a teamfight.",
+      "en": "In the client this is an official hero tag: Dynamo, Lash, Mo & Krill and Warden have Initiator. The role itself is a player idea: the initiator goes in first, and the team must follow at once. If you are not ready, the chat wheel has I'm not ready for a teamfight."
+    },
+    "related": [
+      "engage",
+      "dive",
+      "cc",
+      "tank"
+    ],
+    "status": "expert",
+    "sources": [
+      "hero:hero_dynamo",
+      "hero:hero_lash",
+      "hero:hero_krill",
+      "hero:hero_warden",
+      "loc:citadel_main:citadel_chatwheel_message_no_teamfight"
+    ]
+  },
+  {
+    "id": "ganker",
+    "category": "roles",
+    "en": "Ganker",
+    "ru": [
+      "Ганкер",
+      "ганк",
+      "налёт на другую ветку"
+    ],
+    "aliases": [
+      "gank",
+      "ganking",
+      "Going to Gank",
+      "ганкать"
+    ],
+    "short": {
+      "ru": "Ганкер (сленг игроков): герой, который уходит со своей ветки, чтобы внезапно убить врага на другой.",
+      "en": "Ganker (player slang): a hero who leaves their lane to surprise and kill an enemy in another lane."
+    },
+    "explain": {
+      "ru": "Ганк - внезапная атака на чужой ветке, обычно вдвоём на одного. В колесе чата клиента есть фраза Going to Gank, в русском клиенте она переведена как Иду в налёт на другую ветку. Ганкеру нужны скорость, контроль и бурст, а пока он ушёл, его ветка теряет души.",
+      "en": "A gank is a surprise attack in another lane, often two on one. The client's chat wheel has Going to Gank, and the Russian client renders it as going on a raid to another lane. A ganker needs speed, control and burst, and while they are away their own lane loses souls."
+    },
+    "related": [
+      "picker",
+      "lane",
+      "zipline",
+      "burst"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:citadel_chatwheel_message_gank"
+    ]
+  },
+  {
+    "id": "split-push",
+    "category": "roles",
+    "en": "Split Push",
+    "ru": [
+      "Сплит-пуш"
+    ],
+    "aliases": [
+      "split",
+      "splitpush",
+      "Сплітпуш"
+    ],
+    "short": {
+      "ru": "Сплит-пуш (сленг игроков): давить одну ветку отдельно от команды, чтобы враг разделился или потерял объекты.",
+      "en": "Split push (player slang): push one lane apart from your team, so the enemy must split up or lose objectives."
+    },
+    "explain": {
+      "ru": "В колесе чата клиента есть фраза Split Push (Сплит-пуш). Пока ты давишь ветку с солдатами, враг должен послать кого-то защищать Guardian или Walker, и твоей команде проще драться в другом месте. Риск: тебя одного легко поймать.",
+      "en": "The client's chat wheel has Split Push. While you push a lane with troopers, the enemy must send someone to defend the Guardian or Walker, and your team has an easier fight elsewhere. The risk: you are alone and easy to catch."
+    },
+    "related": [
+      "lane",
+      "troopers",
+      "objective",
+      "picker"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:citadel_chatwheel_label_split_push"
+    ]
+  },
+  {
+    "id": "hero-type",
+    "category": "roles",
+    "en": "Hero Type",
+    "ru": [
+      "Тип героя",
+      "Дебошир",
+      "Ассассин",
+      "Мистик",
+      "Меткий стрелок"
+    ],
+    "aliases": [
+      "brawler",
+      "assassin",
+      "mystic",
+      "marksman",
+      "healer",
+      "Бешкетник",
+      "Асасин",
+      "Містик",
+      "Влучний стрілець"
+    ],
+    "short": {
+      "ru": "Тип героя: группа из данных игры, у Vindicta это marksman, у Graves mystic, а всего типов пять.",
+      "en": "Hero type: a group from the game data; Vindicta is marksman, Graves is mystic, and there are five types."
+    },
+    "explain": {
+      "ru": "В данных 5 типов: brawler (10 героев), assassin (9), mystic (13), marksman (6) и healer (6). В списке героев клиента есть подписи для четырёх: Brawler (Дебошир), Assassin (Ассассин), Mystic (Мистик), Marksman (Меткий стрелок), а для healer подписи в локализации нет. Тип подсказывает стиль, но не задаёт роль в матче.",
+      "en": "The data has 5 types: brawler (10 heroes), assassin (9), mystic (13), marksman (6) and healer (6). The client's hero list has labels for four: Brawler, Assassin, Mystic and Marksman, and the localization has no label for healer. The type hints at a style but does not set your role in a match."
+    },
+    "related": [
+      "support",
+      "carry",
+      "tank"
+    ],
+    "status": "data",
+    "sources": [
+      "hero:hero_hornet",
+      "hero:hero_necro",
+      "loc:citadel_main:Citadel_HeroGrid_Marksman",
+      "loc:citadel_main:Citadel_HeroGrid_Mystic",
+      "loc:citadel_main:Citadel_HeroGrid_Brawler",
+      "loc:citadel_main:Citadel_HeroGrid_Assassin"
+    ]
+  },
+  {
+    "id": "power-spike",
+    "category": "roles",
+    "en": "Power Spike",
+    "ru": [
+      "Пик силы",
+      "спайк",
+      "тайминг"
+    ],
+    "aliases": [
+      "spike",
+      "powerspike"
+    ],
+    "short": {
+      "ru": "Пик силы (сленг игроков): момент, когда герой резко становится сильнее от предмета, ульта или порога вложений.",
+      "en": "Power spike (player slang): a moment a hero suddenly gets stronger from an item, the ultimate or an investment threshold."
+    },
+    "explain": {
+      "ru": "Удобно драться сразу после своего пика силы и до пика врага. Есть и пик прямо из данных: бонус вложений Spirit на 4800 душ прыгает с +19 до +38 Spirit Power, а Weapon с 18% до 46%. Открытие ульта и покупка ключевого предмета T3 тоже резко меняют силу.",
+      "en": "It is good to fight right after your power spike and before the enemy's. There is a spike straight from the data: the Spirit investment bonus at 4800 souls jumps from +19 to +38 Spirit Power, and Weapon from 18% to 46%. Unlocking the ultimate and buying a key T3 item also change your power sharply."
+    },
+    "related": [
+      "investment-bonus",
+      "ultimate",
+      "snowball",
+      "scaling-hero"
+    ],
+    "status": "expert",
+    "sources": [
+      "meta:investment",
+      "loc:citadel_main:Citadel_HUD_LevelUpUltimateAbilityUnlocked"
+    ]
+  },
+  {
+    "id": "scaling-hero",
+    "category": "roles",
+    "en": "Late-game hero",
+    "ru": [
+      "Лейтовый герой",
+      "герой поздней игры",
+      "ранний герой"
+    ],
+    "aliases": [
+      "late game",
+      "scaler",
+      "лейт",
+      "early game hero"
+    ],
+    "short": {
+      "ru": "Лейтовый герой (сленг игроков): слаб в начале, но с предметами к концу матча становится очень сильным.",
+      "en": "Late-game hero (player slang): weak early, but very strong by the end of the match with items."
+    },
+    "explain": {
+      "ru": "Противоположность - ранний герой: силён на ветке в начале, но к концу его обгоняют. Лейтовому герою нужно пережить начало и набрать души, раннему - давить, пока у него преимущество. Не путай со скейлингом умения: это коэффициент от Spirit Power в данных, а деление героев на ранних и поздних - мнение игроков.",
+      "en": "The opposite is an early game hero: strong in lane at the start, but overtaken by the end. A late-game hero must survive the early game and gather souls; an early hero must press while ahead. Do not confuse it with ability scaling, the Spirit Power coefficient in the data; splitting heroes into early and late is a player opinion."
+    },
+    "related": [
+      "carry",
+      "scaling",
+      "power-spike",
+      "snowball"
+    ],
+    "status": "expert"
+  },
+  {
+    "id": "snowball",
+    "category": "roles",
+    "en": "Snowball",
+    "ru": [
+      "Сноуболл",
+      "снежный ком"
+    ],
+    "aliases": [
+      "snowballing",
+      "сноубол"
+    ],
+    "short": {
+      "ru": "Сноуболл (сленг игроков): перевес растёт сам, ведь убийства дают души, души предметы, а предметы новые убийства.",
+      "en": "Snowball (player slang): a lead that grows by itself, since kills give souls, souls buy items and items win kills."
+    },
+    "explain": {
+      "ru": "Чем раньше команда получила перевес, тем легче его наращивать: враг слабее, ему труднее фармить и защищать объекты. Чтобы остановить сноуболл, отстающие избегают невыгодных драк и забирают безопасный фарм. Бывает и сноуболл предмета: Trophy Collector копит бонусы за убийства и помощь и не теряет их после смерти.",
+      "en": "The earlier a team gets ahead, the easier it is to grow the lead: the enemy is weaker and finds it harder to farm and defend objectives. To stop a snowball, the team behind avoids bad fights and takes safe farm. Items can snowball too: Trophy Collector stacks bonuses for kills and assists and keeps them through death."
+    },
+    "items": [
+      "upgrade_trophy_collector"
+    ],
+    "related": [
+      "power-spike",
+      "souls",
+      "net-worth"
+    ],
+    "status": "expert",
+    "sources": [
+      "item:upgrade_trophy_collector"
+    ]
+  },
+  {
+    "id": "souls",
+    "category": "economy",
+    "en": "Souls",
+    "ru": [
+      "Души"
+    ],
+    "aliases": [
+      "soul",
+      "Soul Orbs",
+      "Душі"
+    ],
+    "short": {
+      "ru": "Души: валюта Deadlock, на которую покупают предметы, а их накопление ещё и даёт очки умений.",
+      "en": "Souls: Deadlock's currency, which buys items, and collecting them also grants ability points."
+    },
+    "explain": {
+      "ru": "По обучению клиента души дают за убийство солдат, героев и нейтралов, и они делятся между союзниками рядом. После смерти врага появляется шар с дополнительными душами: его надо забрать, иначе его может украсть враг. Ещё души дают Soul Urn и некоторые предметы, например Golden Goose Egg.",
+      "en": "The client's guide says souls come from killing troopers, heroes and neutrals, and they are shared with allies nearby. When an enemy dies, an orb with extra souls appears: take it, or an enemy may steal it. The Soul Urn and some items, like Golden Goose Egg, give souls too."
+    },
+    "example": {
+      "ru": "Vindicta копит 3200 душ на первый T3. Если враг первым выстрелит в шар, который должен был достаться ей, он заберёт эти души себе."
+    },
+    "items": [
+      "upgrade_goose_egg",
+      "upgrade_trophy_collector"
+    ],
+    "related": [
+      "last-hit",
+      "deny",
+      "farm",
+      "net-worth",
+      "ability-points",
+      "tier"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_upgrades_last_hit_desc",
+      "loc:citadel_main:guide_upgrades_yellow_orbs_desc",
+      "loc:citadel_main:guide_upgrades_deny_desc",
+      "loc:citadel_main:guide_upgrades_killing_guardians_desc",
+      "loc:citadel_main:Citadel_Graph_Souls_Treasure",
+      "item:upgrade_goose_egg"
+    ]
+  },
+  {
+    "id": "last-hit",
+    "category": "economy",
+    "en": "Last Hit",
+    "ru": [
+      "Добивания",
+      "сбор душ",
+      "ласт-хит"
+    ],
+    "aliases": [
+      "last hits",
+      "Last Hits",
+      "Securing Souls",
+      "Останні удари",
+      "ластхит"
+    ],
+    "short": {
+      "ru": "Добивание: убить солдата и забрать его души, а дополнительные души из шара гарантирует выстрел в него.",
+      "en": "Last hit: kill a trooper and take its souls; shooting the soul orb guarantees the extra souls."
+    },
+    "explain": {
+      "ru": "В статистике ветки есть Last Hits (Добивания). По обучению клиента (Securing Souls) после смерти появляются дополнительные души в синем шаре, и выстрел в него, как прямо сказано в русском клиенте, даёт их гарантированно. Если просто дать шару улететь, враг может украсть его выстрелом.",
+      "en": "Lane stats list Last Hits. The client's guide (Securing Souls) says extra souls appear in a blue orb after a death, and shooting it, as the Russian client says outright, guarantees them. If you just let it float away, an enemy can steal it with a shot."
+    },
+    "related": [
+      "souls",
+      "deny",
+      "farm",
+      "troopers",
+      "laning"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_LaneStats_LastHits",
+      "loc:citadel_main:guide_upgrades_yellow_orbs_header",
+      "loc:citadel_main:guide_upgrades_yellow_orbs_desc",
+      "loc:citadel_main:guide_upgrades_deny_desc"
+    ]
+  },
+  {
+    "id": "deny",
+    "category": "economy",
+    "en": "Deny",
+    "ru": [
+      "Кража душ",
+      "Укр. шаров",
+      "денай"
+    ],
+    "aliases": [
+      "denies",
+      "denied",
+      "Stealing Souls",
+      "Украден",
+      "Перехоплення",
+      "Перехоплено",
+      "Добивання"
+    ],
+    "short": {
+      "ru": "Денай: выстрелить в оранжевый шар с душами врага раньше него и забрать эти души себе.",
+      "en": "Deny: shoot the enemy's orange soul orb before they do and take those souls yourself."
+    },
+    "explain": {
+      "ru": "В обучении клиента это Stealing Souls (Кража душ): враг получает оранжевые шары, если они улетят или он сам в них выстрелит, а ты можешь выстрелить первым. В статистике это Denies, в русском клиенте Укр. шаров. Осторожно: в статистике ветки украинского клиента Denies переведено как Добивання.",
+      "en": "The client's guide calls it Stealing Souls: the enemy gets the orange orbs if they float away or if they shoot them, and you can shoot them first. Stats call it Denies. Careful: the Ukrainian client's lane stats translate Denies as Добивання, which looks like the Russian word for last hits."
+    },
+    "related": [
+      "last-hit",
+      "souls",
+      "laning"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_upgrades_deny_desc",
+      "loc:citadel_main:Citadel_LaneStats_Denies",
+      "loc:citadel_main:Citadel_Hud_Denied",
+      "loc:citadel_main:Citadel_Graph_Souls_Denies"
+    ]
+  },
+  {
+    "id": "farm",
+    "category": "economy",
+    "en": "Farm",
+    "ru": [
+      "Фарм",
+      "фармить"
+    ],
+    "aliases": [
+      "farming",
+      "Going to farm"
+    ],
+    "short": {
+      "ru": "Фарм (сленг игроков): сбор душ с солдат, нейтралов и других источников без драки с героями.",
+      "en": "Farm (player slang): collecting souls from troopers, neutrals and other sources without fighting heroes."
+    },
+    "explain": {
+      "ru": "Слово есть даже в колесе чата клиента: Going to farm (в русском клиенте Иду за душами) и Let's steal their farm. Фарм даёт предметы, а предметы - силу, поэтому керри фармят больше всех. Но если только фармить, команда может проиграть драки без тебя.",
+      "en": "The word is even in the client's chat wheel: Going to farm and Let's steal their farm. Farm gives items and items give power, so carries farm the most. But if you only farm, your team may lose fights without you."
+    },
+    "related": [
+      "souls",
+      "jungle",
+      "last-hit",
+      "carry"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:citadel_chatwheel_label_going_farm",
+      "loc:citadel_main:citadel_chatwheel_label_steal_farm"
+    ]
+  },
+  {
+    "id": "jungle",
+    "category": "economy",
+    "en": "Jungle (Haunts)",
+    "ru": [
+      "Нейтралы",
+      "лес",
+      "лагеря нейтралов",
+      "джангл"
+    ],
+    "aliases": [
+      "jungle",
+      "Haunts",
+      "haunt camps",
+      "neutrals",
+      "Примари"
+    ],
+    "short": {
+      "ru": "Лес (сленг игроков): нейтральные существа по всей карте, за которых дают души, в английском клиенте это Haunts.",
+      "en": "Jungle (player slang): neutral creatures around the map that give souls, called Haunts in the English client."
+    },
+    "explain": {
+      "ru": "Само слово лес (jungle) - сленг игроков, а в клиенте это Haunts в английском, Нейтралы в русском и Примари в украинском. По обучению клиента нейтральных существ на карте много, и за победу над ними дают души. Иногда в центре карты появляется могущественное существо: это Mid-Boss.",
+      "en": "The word jungle itself is player slang; the client says Haunts in English, Нейтралы in Russian and Примари in Ukrainian. The client's guide says there are many neutral creatures on the map and beating them gives souls. Sometimes a powerful creature appears in the middle of the map: the Mid-Boss."
+    },
+    "related": [
+      "farm",
+      "souls",
+      "mid-boss"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:guide_neutrals_header",
+      "loc:citadel_main:guide_neutrals_desc",
+      "loc:citadel_main:Citadel_TeamName_Neutral"
+    ]
+  },
+  {
+    "id": "net-worth",
+    "category": "economy",
+    "en": "Networth",
+    "ru": [
+      "Общая ценность",
+      "Всего душ",
+      "нетворс"
+    ],
+    "aliases": [
+      "net worth",
+      "NW",
+      "Total Souls",
+      "Souls Collected",
+      "Капітал"
+    ],
+    "short": {
+      "ru": "Networth: сколько всего душ собрал герой или команда, по нему видно, кто впереди по ресурсам.",
+      "en": "Networth: how many souls a hero or team has collected in total, showing who is ahead on resources."
+    },
+    "explain": {
+      "ru": "В итогах матча это Networth (в русском клиенте Общая ценность, в украинском Капітал), в подробностях матча Total Souls (Всего душ), а на графике Souls Collected и разница в собранных душах. Наверху экрана в матче души игроков показаны в тысячах: 12.5k в английском клиенте, 12,5 т. в русском.",
+      "en": "In the match results it is Networth, in match details Total Souls, and on the graph Souls Collected and the difference in souls collected. At the top of the screen during a match, players' souls are shown in thousands, like 12.5k."
+    },
+    "related": [
+      "souls",
+      "snowball",
+      "carry"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_Post_Game_Networth",
+      "loc:citadel_main:Citadel_MatchDetails_NetWorth",
+      "loc:citadel_main:Citadel_GraphType_NetWorth",
+      "loc:citadel_main:Citadel_Hud_TopbarPlayerNetworthPlayerMed"
+    ]
+  },
+  {
+    "id": "ability-points",
+    "category": "economy",
+    "en": "Ability Points (AP)",
+    "ru": [
+      "Очки умений",
+      "ОУ",
+      "прокачка умений"
+    ],
+    "aliases": [
+      "AP",
+      "ability point",
+      "Ability Unlock",
+      "Очки вмінь",
+      "ОВ"
+    ],
+    "short": {
+      "ru": "Очки умений (AP): даются по мере сбора душ и тратятся на открытие и улучшение умений.",
+      "en": "Ability Points (AP): you get them as you collect souls and spend them to unlock and upgrade abilities."
+    },
+    "explain": {
+      "ru": "По обучению клиента очки умений даются за накопление душ, тратятся в меню улучшений, и у каждого умения три улучшения. На новом уровне клиент даёт Ability Unlock (открыть умение) или AP, а в сборке автор может задать порядок прокачки (Ability Point Order). Пример: первое улучшение Crow Familiar у Vindicta снижает получаемое врагом лечение на 35%.",
+      "en": "The client's guide says you get ability points for collecting souls and spend them in the upgrade menu, and each ability has three upgrades. On a new level the client gives either an Ability Unlock or AP, and a build author can set the Ability Point Order. Example: Vindicta's first Crow Familiar upgrade cuts the enemy's incoming healing by 35%."
+    },
+    "related": [
+      "souls",
+      "hero-build",
+      "ultimate"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_upgrades_killing_guardians_desc",
+      "loc:citadel_main:guide_upgrades_upgrade_abilities_desc",
+      "loc:citadel_main:Citadel_Player_Level_AP_Rewards",
+      "loc:citadel_main:Citadel_HeroBuilds_AbilityBuildTitle",
+      "ability:citadel_ability_hornet_sting"
+    ]
+  },
+  {
+    "id": "lane",
+    "category": "map",
+    "en": "Lane",
+    "ru": [
+      "Ветка",
+      "линия",
+      "лайн"
+    ],
+    "aliases": [
+      "lanes",
+      "York",
+      "Broadway",
+      "Greenwich",
+      "Лінія",
+      "Йорк",
+      "Бродвей",
+      "Гринвич"
+    ],
+    "short": {
+      "ru": "Ветка (lane): дорога между базами, по которой идут солдаты, в русском клиенте линии называются ветками.",
+      "en": "Lane: a road between the bases that troopers walk along, each with its own zipline."
+    },
+    "explain": {
+      "ru": "По обучению клиента веток три, и на каждой есть зиплайн для быстрого перемещения. Названия: York (жёлтая), Broadway (синяя), Greenwich (зелёная), и на каждой стоят Guardian и Walker. Игра сама распределяет игроков по веткам, а поменяться можно с союзником.",
+      "en": "The client's guide says there are three lanes, each with a zipline for fast travel. Names: York (yellow), Broadway (blue), Greenwich (green), and each has a Guardian and a Walker. The game assigns players to lanes, and you can swap with an ally."
+    },
+    "related": [
+      "laning",
+      "troopers",
+      "zipline",
+      "guardian",
+      "walker"
+    ],
+    "core": true,
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_lanes_desc",
+      "loc:citadel_main:Citadel_LaneNameYellow",
+      "loc:citadel_main:Citadel_LaneNameBlue",
+      "loc:citadel_main:Citadel_LaneNameGreen",
+      "loc:citadel_main:Citadel_LanePreference_Balanced_Desc",
+      "loc:citadel_main:Citadel_Ranked_Overview_Hero_Bullet2"
+    ]
+  },
+  {
+    "id": "laning",
+    "category": "map",
+    "en": "Laning",
+    "ru": [
+      "Лайнинг",
+      "Этап на ветках",
+      "стадия линий"
+    ],
+    "aliases": [
+      "laning phase",
+      "lane phase",
+      "Гра на лініях"
+    ],
+    "short": {
+      "ru": "Лайнинг (сленг игроков): начало матча, когда герои стоят на своих ветках, добивают солдат и разменивают урон.",
+      "en": "Laning (player slang): the start of the match, when heroes stay in their lanes, last-hit troopers and trade damage."
+    },
+    "explain": {
+      "ru": "В сборках героев клиента есть категория Lane (в русском клиенте Этап на ветках) с предметами на это время. Здесь решают добивания, денай и размены. Обычно лайнинг заканчивается, когда падают первые Guardian и герои начинают ходить по карте.",
+      "en": "Hero builds in the client have a Lane category with items for this stage. Last hits, denies and trades decide it. Laning usually ends when the first Guardians fall and heroes start roaming the map."
+    },
+    "related": [
+      "lane",
+      "last-hit",
+      "deny",
+      "trade",
+      "poke"
+    ],
+    "status": "expert",
+    "sources": [
+      "loc:citadel_main:Citadel_HeroBuilds_Lane"
+    ]
+  },
+  {
+    "id": "troopers",
+    "category": "map",
+    "en": "Troopers",
+    "ru": [
+      "Солдаты",
+      "крипы"
+    ],
+    "aliases": [
+      "trooper",
+      "creeps",
+      "Вояки"
+    ],
+    "short": {
+      "ru": "Солдаты (Troopers): бойцы под управлением игры, которые идут по веткам и сражаются, а за их убийство дают души.",
+      "en": "Troopers: game-controlled fighters who walk down the lanes and fight, and killing them gives souls."
+    },
+    "explain": {
+      "ru": "По обучению клиента солдаты периодически появляются на базе, идут по ветке и бьются со всеми встречными врагами. С ними удобно давить Guardian, потому что его атаки очень сильные. Слово крипы - сленг из других игр, а в клиенте это Troopers (в русском Солдаты, в украинском Вояки).",
+      "en": "The client's guide says troopers spawn at the base from time to time, walk down a lane and fight every enemy they meet. Push the Guardian with them, because its attacks are very strong. Creeps is slang from other games; the client says Troopers."
+    },
+    "related": [
+      "lane",
+      "last-hit",
+      "guardian",
+      "split-push"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_troopers_desc",
+      "loc:citadel_main:guide_the_map_guardians_desc",
+      "loc:citadel_main:guide_upgrades_last_hit_desc"
+    ]
+  },
+  {
+    "id": "guardian",
+    "category": "map",
+    "en": "Guardian",
+    "ru": [
+      "Страж",
+      "башня"
+    ],
+    "aliases": [
+      "Guardians",
+      "tower",
+      "Вартовий"
+    ],
+    "short": {
+      "ru": "Guardian: первая линия обороны на каждой ветке, бьёт очень сильно, поэтому на него идут вместе с солдатами.",
+      "en": "Guardian: the first line of defense in each lane; it hits very hard, so push it together with troopers."
+    },
+    "explain": {
+      "ru": "Так описано в обучении клиента, и там же сказано, что возле каждого Guardian есть магазин, пока Guardian не разрушен. В файлах клиента Guardian - это Tier 1, Walker - Tier 2, а Patron - Tier 3. В русском клиенте это Страж, в украинском Вартовий, а слово башня - сленг из других игр.",
+      "en": "This is how the client's guide describes it, and it adds that next to each Guardian there is a shop until the Guardian is destroyed. In the client files the Guardian is Tier 1, the Walker Tier 2 and the Patron Tier 3. Tower is slang from other games."
+    },
+    "related": [
+      "walker",
+      "troopers",
+      "objective",
+      "lane"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_guardians_desc",
+      "loc:citadel_main:guide_upgrades_going_home_desc",
+      "loc:citadel_main:HeroTesting_NPC_SpawnT1",
+      "loc:citadel_main:HeroTesting_NPC_SpawnT2",
+      "loc:citadel_main:Objective_Friendly_T3"
+    ]
+  },
+  {
+    "id": "walker",
+    "category": "map",
+    "en": "Walker",
+    "ru": [
+      "Шагоход"
+    ],
+    "aliases": [
+      "Walkers",
+      "Крокер"
+    ],
+    "short": {
+      "ru": "Walker: защитник дальше по ветке, за Guardian, и за уничтожение вражеских Walker даются дополнительные ячейки.",
+      "en": "Walker: a defender deeper in the lane, behind the Guardian, and destroying enemy Walkers unlocks extra item slots."
+    },
+    "explain": {
+      "ru": "По обучению клиента Walker стоит глубже на ветке и владеет арсеналом оборонительных приёмов. Дополнительная ячейка предметов открывается за первого, за второго и за всех вражеских Walker. В русском клиенте это Шагоход, в украинском Крокер.",
+      "en": "The client's guide says Walkers stand deeper in the lanes and have an arsenal of defensive moves. An extra item slot unlocks for the first, the second and all enemy Walkers."
+    },
+    "related": [
+      "guardian",
+      "item-slots",
+      "base-guardian",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_walkers_desc",
+      "loc:citadel_main:Citadel_FlexSlotUnlockedSlot02",
+      "loc:citadel_main:Citadel_FlexSlotUnlockedSlot03",
+      "loc:citadel_main:Citadel_FlexSlotUnlockedSlot04"
+    ]
+  },
+  {
+    "id": "base-guardian",
+    "category": "map",
+    "en": "Base Guardian",
+    "ru": [
+      "Страж базы"
+    ],
+    "aliases": [
+      "Base Guardians",
+      "Shrine Guardians",
+      "Вартовий штабу"
+    ],
+    "short": {
+      "ru": "Base Guardian: страж на базе врага, свой для каждой ветки, клиент называет их по веткам, например York Base Guardian.",
+      "en": "Base Guardian: a guardian at the enemy base, one per lane, named after the lane, like the York Base Guardian."
+    },
+    "explain": {
+      "ru": "В колесе чата есть команды вроде Push the York Base Guardian и Defend the Base Guardian. В статистике ветки клиент считает его после Tier 1 и Tier 2, то есть после Guardian и Walker, а в списке атакующих он подписан как Shrine Guardians. В русском клиенте Страж базы, в украинском Вартовий штабу.",
+      "en": "The chat wheel has commands like Push the York Base Guardian and Defend the Base Guardian. Lane stats list it after Tier 1 and Tier 2, that is after the Guardian and the Walker, and in the attacker list it is labeled Shrine Guardians."
+    },
+    "related": [
+      "walker",
+      "shrine",
+      "patron",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:boss_barracks_unit",
+      "loc:citadel_main:citadel_chatwheel_message_push_base_guardian_yellow",
+      "loc:citadel_main:Citadel_LaneStats_Guardians",
+      "loc:citadel_main:Citadel_AttackerClass_CLASS_BOSS_BARRACKS"
+    ]
+  },
+  {
+    "id": "shrine",
+    "category": "map",
+    "en": "Shrine",
+    "ru": [
+      "Святилище"
+    ],
+    "aliases": [
+      "Shrines",
+      "ShieldGenerator"
+    ],
+    "short": {
+      "ru": "Shrine (Святилище): сооружение на базе команды, которое можно разрушить, в колесе чата есть Push Shrine и Defend Shrine.",
+      "en": "Shrine: a structure in a team's base that can be destroyed, and the chat wheel has Push Shrine and Defend Shrine."
+    },
+    "explain": {
+      "ru": "У каждой команды свои святилища: Amber Shrine и Sapphire Shrine. По обучению клиента для победы нужно разбить оборону вражеской базы и уничтожить Patron. Внутреннее имя святилища в файлах ShieldGenerator, но как именно оно связано с Patron, в текстах клиента не расписано.",
+      "en": "Each team has its own shrines: Amber Shrine and Sapphire Shrine. The client's guide says that to win you break the enemy base defenses and destroy the Patron. The shrine's internal name in the files is ShieldGenerator, but the client texts do not spell out how it relates to the Patron."
+    },
+    "related": [
+      "patron",
+      "base-guardian",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:shrine_unit",
+      "loc:citadel_main:Objective_Team1_ShieldGenerator",
+      "loc:citadel_main:Objective_Team2_ShieldGenerator",
+      "loc:citadel_main:citadel_chatwheel_label_push_shrine",
+      "loc:citadel_main:guide_the_map_core_alt_desc"
+    ]
+  },
+  {
+    "id": "patron",
+    "category": "map",
+    "en": "Patron",
+    "ru": [
+      "Покровитель"
+    ],
+    "aliases": [
+      "Patrons",
+      "Amber Patron",
+      "Sapphire Patron"
+    ],
+    "short": {
+      "ru": "Patron: главная цель матча на базе врага, и уничтожение вражеского Patron приносит победу.",
+      "en": "Patron: the main target of the match, in the enemy base, and destroying the enemy Patron wins the game."
+    },
+    "explain": {
+      "ru": "По обучению клиента нужно осадить базу врага, разбить её оборону, чтобы добраться до Patron, и уничтожить его. У Patron есть фазы: в клиенте есть подписи first phase и final phase и сообщение The Patron is Transforming. У команд свои покровители: Amber и Sapphire.",
+      "en": "The client's guide says: besiege the enemy base, break its defenses to reach the Patron, and destroy it. The Patron has phases: the client has first phase and final phase labels and the message The Patron is Transforming. Each team has its own Patron: Amber and Sapphire."
+    },
+    "related": [
+      "shrine",
+      "base-guardian",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_core_alt_desc",
+      "loc:citadel_main:Objective_Enemy_T3_FirstPhase",
+      "loc:citadel_main:Objective_Enemy_T3_Final",
+      "loc:citadel_main:Objective_Message_Patron_Transforming"
+    ]
+  },
+  {
+    "id": "mid-boss",
+    "category": "map",
+    "en": "Mid-Boss",
+    "ru": [
+      "Центральный босс",
+      "Босс храма",
+      "мидбосс"
+    ],
+    "aliases": [
+      "MidBoss",
+      "Mid Boss",
+      "Temple Boss",
+      "Страж центру",
+      "Ватажок храму"
+    ],
+    "short": {
+      "ru": "Mid-Boss: сильный нейтральный босс в центре карты, после смерти которого команды борются за Rejuvenator.",
+      "en": "Mid-Boss: a strong neutral boss in the middle of the map, and after it dies the teams fight over the Rejuvenator."
+    },
+    "explain": {
+      "ru": "В обучении клиента он назван Temple Boss (Босс храма): команда, которая его убьёт, мгновенно возрождается при следующих смертях. Награду, Rejuvenator, забирают тяжёлым ударом, и враг может её украсть. Mid-Boss появляется снова, клиент показывает время до его возрождения, а в русском клиенте он Центральный босс, в украинском Страж центру.",
+      "en": "The client's guide calls it the Temple Boss: the team that kills it respawns instantly on its next deaths. The reward, the Rejuvenator, is claimed with a heavy melee, and the enemy can steal it. The Mid-Boss comes back, and the client shows the time until it respawns."
+    },
+    "related": [
+      "rejuvenator",
+      "objective",
+      "jungle",
+      "melee"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Objective_MidBoss",
+      "loc:citadel_main:guide_the_map_midboss_desc",
+      "loc:citadel_main:citadel_rejuvenator_hud_hint",
+      "loc:citadel_main:AbilityButtonHint_MeleeRejuvinator"
+    ]
+  },
+  {
+    "id": "rejuvenator",
+    "category": "map",
+    "en": "Rejuvenator",
+    "ru": [
+      "Воодушевитель",
+      "реджув"
+    ],
+    "aliases": [
+      "rejuv",
+      "Омолоджувач"
+    ],
+    "short": {
+      "ru": "Rejuvenator: награда после Mid-Boss, которую забирают тяжёлым ударом и которая на время даёт команде большое преимущество.",
+      "en": "Rejuvenator: the reward after the Mid-Boss, claimed with a heavy melee, that gives the team a big edge for a while."
+    },
+    "explain": {
+      "ru": "Клиент пишет Heavy Melee to claim Rejuvenator: враг может его украсть, а если у тебя он уже есть, он уйдёт союзнику. Он действует ограниченное время с таймером, а в конце звучит, что смерть снова имеет последствия. По обучению клиента команда, убившая босса, мгновенно возрождается при следующих смертях.",
+      "en": "The client says Heavy Melee to claim Rejuvenator: the enemy can steal it, and if you already have one it goes to an ally. It lasts a limited time with a timer, and when it ends the announcer says death has consequences again. The client's guide says the team that killed the boss respawns instantly on its next deaths."
+    },
+    "example": {
+      "ru": "Команда Graves забрала Rejuvenator. Клиент сам подсказывает: There's still time to push with the Rejuvenator. Самое время давить Walker или базу: погибшие быстро вернутся."
+    },
+    "related": [
+      "mid-boss",
+      "melee",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Item_Rejuvenator",
+      "loc:citadel_main:AbilityButtonHint_MeleeRejuvinator",
+      "loc:citadel_main:Citadel_HUD_RejuvStolen",
+      "loc:citadel_main:AbilityButtonHint_RejuvenatorOwned",
+      "loc:citadel_main:citadel_rejuvenator_hud_hint",
+      "loc:citadel_main:guide_the_map_midboss_desc",
+      "loc:citadel_generated_vo:patron_female_ally_rejuvinator_almost_expired_03_announcer"
+    ]
+  },
+  {
+    "id": "urn",
+    "category": "map",
+    "en": "Soul Urn",
+    "ru": [
+      "Урна душ",
+      "урна"
+    ],
+    "aliases": [
+      "Urn",
+      "Урна з душею"
+    ],
+    "short": {
+      "ru": "Soul Urn: урна, которую подбирают и доставляют, в графике душ клиента она отдельный источник душ.",
+      "en": "Soul Urn: an urn you pick up and deliver, listed as its own soul source in the client's soul graph."
+    },
+    "explain": {
+      "ru": "Пока ты несёшь урну, умения отключены (Carrying Urn - Abilities Disabled), а враги тебя видят (Visible to Enemies). Урну можно бросить клавишей парирования, а иногда её нельзя поднять (Urn Timeout). Носитель урны уязвим, поэтому его стоит прикрывать.",
+      "en": "While you carry the urn your abilities are disabled and enemies can see you (Visible to Enemies). You can throw the urn with the parry key, and sometimes you cannot pick it up (Urn Timeout). The carrier is vulnerable, so cover them."
+    },
+    "related": [
+      "souls",
+      "parry",
+      "objective"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:ability_golden_idol",
+      "loc:citadel_main:modifier_citadel_holding_golden_idol",
+      "loc:citadel_main:CITADEL_ABILITY_INVALID_SILENCED_IDOL",
+      "loc:citadel_main:modifier_citadel_holding_golden_idol_visible",
+      "loc:citadel_main:citadel_hotkeys_tooltip_held_item",
+      "loc:citadel_main:Citadel_Graph_Souls_Treasure"
+    ]
+  },
+  {
+    "id": "zipline",
+    "category": "map",
+    "en": "Zipline",
+    "ru": [
+      "Зиплайн",
+      "транзитная линия",
+      "трос"
+    ],
+    "aliases": [
+      "ziplines",
+      "hyperline",
+      "Підвісний шлях",
+      "транзитний шлях"
+    ],
+    "short": {
+      "ru": "Зиплайн: трос вдоль ветки для быстрого перемещения, по которому едут, удерживая клавишу зиплайна.",
+      "en": "Zipline: a line along each lane for fast travel, which you ride by holding the zipline key."
+    },
+    "explain": {
+      "ru": "По обучению клиента на каждой из трёх веток есть зиплайн, а чтобы спрыгнуть, нужно нажать прыжок. С зиплайна могут сбить (Knocked off Zipline), а некоторые бонусы ускоряют езду по нему (Zipline Boost). Зиплайн помогает быстро вернуться на ветку после магазина или прийти на помощь.",
+      "en": "The client's guide says each of the three lanes has a zipline, and you press jump to get off. You can be knocked off it (Knocked off Zipline), and some bonuses speed up the ride (Zipline Boost). A zipline helps you get back to your lane after shopping or come to help fast."
+    },
+    "related": [
+      "lane",
+      "ganker"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:guide_the_map_lanes_desc",
+      "loc:citadel_main:guide_movement_zipline_desc",
+      "loc:citadel_main:citadel_ability_zip_line",
+      "loc:citadel_main:Citadel_ZiplineBoostDesc"
+    ]
+  },
+  {
+    "id": "objective",
+    "category": "map",
+    "en": "Objective",
+    "ru": [
+      "Ключевые цели",
+      "объекты",
+      "обжективы"
+    ],
+    "aliases": [
+      "Objectives",
+      "obj",
+      "Ключові цілі"
+    ],
+    "short": {
+      "ru": "Objective: крупная цель на карте, то есть Guardian, Walker, Base Guardian, Shrine, Patron или Mid-Boss.",
+      "en": "Objective: a major target on the map, that is a Guardian, Walker, Base Guardian, Shrine, Patron or Mid-Boss."
+    },
+    "explain": {
+      "ru": "В клиенте это Objectives (Ключевые цели), и в графиках матча урон и души по ним считаются отдельно от солдат и нейтралов. На мини-карте вражеские цели окрашены в цвет вражеских зиплайнов. Победа тоже связана с целью: нужно уничтожить вражеский Patron.",
+      "en": "The client calls them Objectives, and match graphs count damage and souls from them separately from troopers and neutrals. On the minimap enemy objectives use the enemy zipline color. Victory is an objective too: destroy the enemy Patron."
+    },
+    "related": [
+      "guardian",
+      "walker",
+      "base-guardian",
+      "shrine",
+      "patron",
+      "mid-boss"
+    ],
+    "status": "data",
+    "sources": [
+      "loc:citadel_main:Citadel_MatchDetails_Objectives",
+      "loc:citadel_main:Citadel_Graph_Souls_Boss",
+      "loc:citadel_main:Citadel_Graph_Damage_Boss",
+      "loc:citadel_main:citadel_settings_enemy_zipline_color_tooltip",
+      "loc:citadel_main:guide_the_map_core_alt_desc"
+    ]
+  }
+]

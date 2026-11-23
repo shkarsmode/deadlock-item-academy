@@ -14,6 +14,9 @@ export async function onboardAndSkip(page: Page): Promise<void> {
 /** Answers the current question with the first option (handles the confidence step and two-step questions). */
 export async function answerFirst(page: Page): Promise<void> {
   const diag = page.getByText('Шаг 1 из 2');
+  const recallField = page.locator('input.recall-input');
+  // Wait until the question has rendered before deciding what kind it is.
+  await expect(diag.or(page.locator('.options .opt').first()).or(recallField).or(page.locator('.surgery')).first()).toBeVisible();
   if (await diag.isVisible().catch(() => false)) {
     await page.keyboard.press('1');
     await page.getByRole('button', { name: /Шаг 2/ }).click();

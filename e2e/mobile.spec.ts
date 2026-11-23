@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { answerFirst, onboardAndSkip } from './helpers';
 
-const pages = ['/', '/practice', '/items', '/items/upgrade_counterspell', '/scenarios', '/simulator', '/builds', '/builds/preset:vindicta-current', '/builds/preset:graves-current', '/paths', '/paths/hero_hornet', '/analytics', '/mistakes', '/problems', '/reflect', '/settings', '/active', '/compare?a=upgrade_metal_skin&b=upgrade_tech_purge'];
+const pages = ['/', '/practice', '/items', '/items/upgrade_counterspell', '/scenarios', '/simulator', '/builds', '/builds/preset:vindicta-current', '/builds/preset:graves-current', '/paths', '/paths/hero_hornet', '/analytics', '/mistakes', '/problems', '/reflect', '/settings', '/active', '/compare?a=upgrade_metal_skin&b=upgrade_tech_purge', '/glossary', '/upgrades', '/upgrades?slot=spirit', '/items/upgrade_magic_storm'];
 
 test('no horizontal scroll on any screen at phone widths (390 and 360)', async ({ page }) => {
   await onboardAndSkip(page);

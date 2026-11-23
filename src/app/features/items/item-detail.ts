@@ -2,21 +2,25 @@ import { ChangeDetectionStrategy, Component, computed, inject, input, signal } f
 import { Router, RouterLink } from '@angular/router';
 import type { Dimension } from '../../content/content.model';
 import { Content } from '../../content/content.service';
-import { IMBUE_LABELS, ROLE_LABELS, SLOT_LABELS, THREAT_LABELS } from '../../content/labels';
+import { ROLE_LABELS, SLOT_LABELS, THREAT_LABELS } from '../../content/labels';
 import { GameData } from '../../core/game-data/game-data.service';
 import { I18N_PIPES, I18n } from '../../core/i18n/i18n';
 import { Profiles } from '../../core/profile/profile.service';
+import { Builds } from '../../domain/builds/builds.service';
 import { Knowledge } from '../../learning/knowledge.service';
 import { DIM_NAMES, dimStrength } from '../../learning/mastery';
 import { Session } from '../../learning/session.service';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
+import { ItemType } from '../../shared/ui/item-type';
+import { KeyStats } from '../../shared/ui/key-stats';
+import { Term } from '../../shared/ui/term';
 import { AbilityIcon, ClaimBadge, HeroAvatar, LevelPips, RichText, StatLines } from '../../shared/ui/primitives';
 
 @Component({
   selector: 'app-item-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, AbilityIcon, HeroAvatar, ClaimBadge, LevelPips, RichText, StatLines, ...I18N_PIPES],
+  imports: [RouterLink, Icon, ItemIcon, ItemType, KeyStats, Term, AbilityIcon, HeroAvatar, ClaimBadge, LevelPips, RichText, StatLines, ...I18N_PIPES],
   templateUrl: './item-detail.html',
   styleUrl: './item-detail.scss',
 })
@@ -29,6 +33,7 @@ export class ItemDetailPage {
   private readonly profiles = inject(Profiles);
   private readonly session = inject(Session);
   private readonly router = inject(Router);
+  private readonly builds = inject(Builds);
 
   protected readonly depth = signal<'simple' | 'detailed' | 'technical'>(this.profiles.settings().explain);
   protected readonly item = computed(() => this.game.item(this.key()));
@@ -49,9 +54,28 @@ export class ItemDetailPage {
     const s = this.item()?.slot;
     return s ? this.i18n.l(SLOT_LABELS[s].ru, SLOT_LABELS[s].en) : '';
   });
-  protected readonly imbueLabel = computed(() => {
-    const i = this.item()?.imbue;
-    return i ? this.i18n.l(IMBUE_LABELS[i].ru, IMBUE_LABELS[i].en) : '';
+  /** Official description, used to say what the imbued ability gets. */
+  protected readonly officialText = computed(() =>
+    (this.item()?.sections ?? [])
+      .map((s) => (s.text ? this.i18n.game(s.text) : ''))
+      .filter(Boolean)
+      .join('\n'),
+  );
+  /** Abilities this item is imbued on in saved and bundled builds (the build author's choice). */
+  protected readonly imbueTargets = computed(() => {
+    const key = this.key();
+    const byAbility = new Map<string, string[]>();
+    for (const b of this.builds.all()) {
+      for (const c of b.categories) {
+        for (const ref of c.items) {
+          if (ref.key !== key || !ref.imbue) continue;
+          const names = byAbility.get(ref.imbue) ?? [];
+          if (!names.includes(b.name)) names.push(b.name);
+          byAbility.set(ref.imbue, names);
+        }
+      }
+    }
+    return [...byAbility.entries()].map(([ability, builds]) => ({ ability, builds })).filter((t) => this.game.ability(t.ability));
   });
   protected readonly roles = computed(() => (this.c()?.roles ?? []).map((r) => this.i18n.l(ROLE_LABELS[r].ru, ROLE_LABELS[r].en)));
   protected readonly counters = computed(() => (this.c()?.counters ?? []).map((t) => this.i18n.l(THREAT_LABELS[t].ru, THREAT_LABELS[t].en)));

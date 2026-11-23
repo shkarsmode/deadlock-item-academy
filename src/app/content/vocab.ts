@@ -160,6 +160,9 @@ export const VERDICT_MIN_SCORE: Record<(typeof VERDICTS)[number], number> = {
 
 export const CONTENT_STATUSES = ['expert', 'needs-review'] as const;
 
+/** Sections of the glossary page. */
+export const GLOSSARY_CATEGORIES = ['items', 'stats', 'combat', 'roles', 'economy', 'map'] as const;
+
 /** Characters the project never uses in authored text (style rule). */
 export const FORBIDDEN_CHARS = ['\u2014', '\u2013'];
 

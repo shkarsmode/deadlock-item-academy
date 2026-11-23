@@ -1,5 +1,5 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
-import type { BuildAnalysis, ContentBundle, HeroCourse, ItemContent, ProblemEntry, Scenario } from './content.model';
+import type { BuildAnalysis, ContentBundle, GlossaryTerm, HeroCourse, ItemContent, ProblemEntry, Scenario } from './content.model';
 import { GameData } from '../core/game-data/game-data.service';
 
 /** Hand-authored learning content (validated at build time by scripts/validate-content.ts). */
@@ -15,6 +15,8 @@ export class Content {
   readonly courses = computed<HeroCourse[]>(() => this.bundle()?.courses ?? []);
   readonly builds = computed<BuildAnalysis[]>(() => this.bundle()?.builds ?? []);
   readonly problems = computed<ProblemEntry[]>(() => this.bundle()?.problems ?? []);
+  readonly glossary = computed<GlossaryTerm[]>(() => this.bundle()?.glossary ?? []);
+  readonly termMap = computed(() => new Map(this.glossary().map((t) => [t.id, t])));
   readonly needsReview = computed(() => new Set(this.bundle()?.needsReview ?? []));
 
   /** Content whose pinned item data no longer matches the live game data (runtime check). */
@@ -83,6 +85,10 @@ export class Content {
 
   item(key: string): ItemContent | undefined {
     return this.items()[key];
+  }
+
+  term(id: string | null | undefined): GlossaryTerm | undefined {
+    return id ? this.termMap().get(id) : undefined;
   }
 
   course(heroKey: string): HeroCourse | undefined {

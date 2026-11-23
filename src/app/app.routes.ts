@@ -16,6 +16,8 @@ export const routes: Routes = [
   { path: 'practice/run', loadComponent: () => import('./features/practice/runner').then((m) => m.PracticeRunner), title: 'Тренировка' },
   { path: 'items', loadComponent: () => import('./features/items/items-page').then((m) => m.ItemsPage), title: 'Предметы' },
   { path: 'items/:key', loadComponent: () => import('./features/items/item-detail').then((m) => m.ItemDetailPage), title: 'Предмет' },
+  { path: 'upgrades', loadComponent: () => import('./features/items/upgrade-tree').then((m) => m.UpgradeTreePage), title: 'Дерево улучшений' },
+  { path: 'glossary', loadComponent: () => import('./features/glossary/glossary-page').then((m) => m.GlossaryPage), title: 'Словарь' },
   { path: 'compare', loadComponent: () => import('./features/items/compare').then((m) => m.ComparePage), title: 'Сравнение' },
   { path: 'scenarios', canActivate: [onboarded], loadComponent: () => import('./features/scenarios/scenarios-page').then((m) => m.ScenariosPage), title: 'Ситуации' },
   { path: 'simulator', canActivate: [onboarded], loadComponent: () => import('./features/simulator/simulator').then((m) => m.SimulatorPage), title: 'Симулятор магазина' },

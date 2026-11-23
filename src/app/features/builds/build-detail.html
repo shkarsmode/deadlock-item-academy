@@ -216,7 +216,7 @@
                     }
                   </div>
                   <div class="xsmall faint">
-                    {{ 'Бонус вложений:' | l: 'Investment bonus:' }} <b class="num">{{ inv.bonus }}{{ inv.slot === 'spirit' ? '' : '%' }}</b>
+                    <app-term key="investment-bonus">{{ 'Бонус вложений' | l: 'Investment bonus' }}</app-term>: <b class="num">{{ inv.bonus }}{{ inv.slot === 'spirit' ? '' : '%' }}</b>
                     @if (inv.next) {
                       · {{ 'следующий на' | l: 'next at' }} {{ inv.next.threshold }} ({{ inv.next.bonus }}{{ inv.slot === 'spirit' ? '' : '%' }})
                     }

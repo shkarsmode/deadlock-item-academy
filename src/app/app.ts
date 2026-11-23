@@ -9,6 +9,7 @@ import { Profiles } from './core/profile/profile.service';
 import { Hotkeys } from './core/ui/hotkeys.service';
 import { Toasts } from './core/ui/toast.service';
 import { Icon, IconName } from './shared/ui/icon';
+import { ItemPeekHost } from './shared/ui/item-peek';
 import { HeroAvatar } from './shared/ui/primitives';
 
 interface NavItem {
@@ -50,6 +51,8 @@ const NAV: NavGroup[] = [
     en: 'Reference',
     items: [
       { path: '/items', icon: 'book', ru: 'Предметы', en: 'Items' },
+      { path: '/upgrades', icon: 'tree', ru: 'Дерево улучшений', en: 'Upgrade tree' },
+      { path: '/glossary', icon: 'glossary', ru: 'Словарь', en: 'Glossary' },
       { path: '/problems', icon: 'search', ru: 'Поиск по проблеме', en: 'Search by problem' },
       { path: '/compare', icon: 'compare', ru: 'Сравнение', en: 'Compare' },
     ],
@@ -75,7 +78,7 @@ const TABS: NavItem[] = [
 @Component({
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, Icon, HeroAvatar, ...I18N_PIPES],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Icon, HeroAvatar, ItemPeekHost, ...I18N_PIPES],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

@@ -95,6 +95,22 @@
     </section>
 
     <div class="col side">
+      <section class="panel basics">
+        <div class="panel-head"><h2>{{ 'Основы' | l: 'Basics' }}</h2></div>
+        <div class="panel-body basics-links">
+          <a class="basic-link" routerLink="/glossary">
+            <app-icon name="glossary" />
+            <span class="grow"><b>{{ 'Словарь' | l: 'Glossary' }}</b><span class="xsmall faint">{{ 'Imbue, керри, пикер, скейлинг и другие слова' | l: 'Imbue, carry, picker, scaling and more' }}</span></span>
+            <app-icon name="right" [size]="16" />
+          </a>
+          <a class="basic-link" routerLink="/upgrades">
+            <app-icon name="tree" />
+            <span class="grow"><b>{{ 'Дерево улучшений' | l: 'Upgrade tree' }}</b><span class="xsmall faint">{{ 'Что во что улучшается и что даёт' | l: 'What upgrades into what, and what it gives' }}</span></span>
+            <app-icon name="right" [size]="16" />
+          </a>
+        </div>
+      </section>
+
       <section class="panel">
         <div class="panel-head"><h2>{{ 'Курсы героев' | l: 'Hero paths' }}</h2></div>
         <ul class="list">

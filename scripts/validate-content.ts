@@ -20,6 +20,7 @@ import {
   CONTENT_STATUSES,
   DIMENSIONS,
   FORBIDDEN_CHARS,
+  GLOSSARY_CATEGORIES,
   ITEM_ROLES,
   OUTDATED_ITEM_NAMES,
   PHASES,
@@ -54,6 +55,7 @@ const vocab: Vocab = {
   contentStatuses: CONTENT_STATUSES,
   forbiddenChars: FORBIDDEN_CHARS,
   outdatedNames: OUTDATED_ITEM_NAMES,
+  glossaryCategories: GLOSSARY_CATEGORIES,
 };
 
 function loadGame(): GameDataBundle {
@@ -88,6 +90,19 @@ function readDir<T>(sub: string): { file: string; data: T }[] {
     });
 }
 
+/** A single content file at the top level of content/ (e.g. glossary.json). */
+function readFile<T>(name: string): { file: string; data: T }[] {
+  const path = join(CONTENT, name);
+  const file = relative(ROOT, path).replace(/\\/g, '/');
+  if (!existsSync(path) || (ONLY && !file.includes(ONLY))) return [];
+  try {
+    return [{ file, data: JSON.parse(readFileSync(path, 'utf8')) as T }];
+  } catch (e) {
+    parseErrors.push(`${file}: invalid JSON - ${(e as Error).message}`);
+    return [];
+  }
+}
+
 function main(): void {
   const game = loadGame();
   const raw: RawContent = {
@@ -96,6 +111,7 @@ function main(): void {
     courses: readDir('heroes'),
     builds: readDir('builds'),
     problems: readDir('problems'),
+    glossary: readFile('glossary.json'),
   };
   if (parseErrors.length) {
     for (const e of parseErrors) console.error('ERROR', e);
@@ -161,6 +177,7 @@ function main(): void {
     courses: raw.courses.map((f) => f.data),
     builds: raw.builds.map((f) => f.data),
     problems: raw.problems.flatMap((f) => f.data),
+    glossary: (raw.glossary ?? []).flatMap((f) => f.data),
     needsReview,
   };
   mkdirSync(dirname(OUT), { recursive: true });

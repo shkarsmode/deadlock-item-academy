@@ -135,3 +135,51 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.key {
+  margin-top: 12px;
+}
+.imbue-how {
+  border-color: rgba(157, 126, 227, 0.45);
+}
+.imbue-how .panel-head h2 {
+  font-size: var(--fs-lg);
+}
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.steps li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.steps .n {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--spirit-bg);
+  color: var(--spirit);
+  font: 700 var(--fs-sm) / 1 var(--mono);
+}
+.steps p {
+  margin: 2px 0 0;
+}
+.targets {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.targets li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

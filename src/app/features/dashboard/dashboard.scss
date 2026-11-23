@@ -166,3 +166,29 @@
     flex: 1;
   }
 }
+
+.basics-links {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+}
+.basic-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  color: inherit;
+  text-decoration: none;
+}
+.basic-link:hover {
+  background: var(--bg-2);
+}
+.basic-link .grow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.basic-link > app-icon:first-child {
+  color: var(--accent);
+}

@@ -68,5 +68,5 @@ test('mistake notebook collects a confident wrong answer', async ({ page }) => {
     await page.keyboard.press('Enter');
   }
   await page.goto('/mistakes');
-  await expect(page.getByText('Тетрадь ошибок')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Тетрадь ошибок' })).toBeVisible();
 });

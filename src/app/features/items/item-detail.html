@@ -3,20 +3,13 @@
     <a class="btn btn-ghost btn-sm back" routerLink="/items"><app-icon name="back" [size]="16" /> {{ 'Все предметы' | l: 'All items' }}</a>
 
     <header class="head panel">
-      <app-item-icon [item]="it" [size]="112" [alt]="true" />
+      <app-item-icon [item]="it" [size]="112" [alt]="true" [peek]="false" />
       <div class="grow">
         <h1>{{ it.name | gn }} @if (i18n.altName(it.name); as alt) {<span class="alt">{{ alt }}</span>}</h1>
         <div class="row-wrap tags">
           <span [class]="'tag tag-' + it.slot">{{ slotLabel() }}</span>
           <span class="tag num">Tier {{ it.tier }} · {{ it.cost }} {{ 'душ' | l: 'souls' }}</span>
-          @if (it.isActive) {
-            <span class="tag tag-accent">{{ 'Активный' | l: 'Active' }}{{ it.cooldown ? ' · ' + it.cooldown + ' s' : '' }}</span>
-          } @else {
-            <span class="tag">{{ 'Пассивный' | l: 'Passive' }}</span>
-          }
-          @if (it.imbue) {
-            <span class="tag tag-spirit">{{ imbueLabel() }}</span>
-          }
+          <app-item-type [item]="it" [long]="true" />
           @if (it.corruptible) {
             <span class="tag" [attr.title]="'Можно испортить у The Broker: сильнее, но со случайным минусом' | l: 'Can be corrupted at The Broker: stronger, with a random downside'">Corruptible</span>
           }
@@ -27,6 +20,7 @@
         @if (c(); as cc) {
           <p class="job">{{ cc.job | tx }}</p>
         }
+        <app-key-stats class="key" [item]="it" [max]="5" />
         <div class="row-wrap actions">
           <button class="btn btn-primary" (click)="practice()"><app-icon name="play" /> {{ 'Тренировать этот предмет' | l: 'Practice this item' }}</button>
           <a class="btn" routerLink="/compare" [queryParams]="{ a: it.key }"><app-icon name="compare" /> {{ 'Сравнить' | l: 'Compare' }}</a>
@@ -54,6 +48,64 @@
 
     <div class="cols">
       <div class="main-col stack-4">
+        @if (it.imbue) {
+          <section class="panel imbue-how">
+            <div class="panel-head">
+              <app-icon name="link" class="c-spirit" />
+              <h2>{{ 'Imbue: этот предмет усиливает одно умение' | l: 'Imbue: this item boosts one ability' }}</h2>
+            </div>
+            <div class="panel-body stack-3">
+              <ol class="steps">
+                <li>
+                  <span class="n">1</span>
+                  <div>
+                    <b>{{ 'Покупаешь, и игра просит выбрать умение' | l: 'You buy it and the game asks for an ability' }}</b>
+                    <p class="small muted">{{ 'Окно «Choose an ability to imbue» (в русском клиенте «Выберите умение, которое хотите усилить»).' | l: 'The "Choose an ability to imbue" window.' }} <app-claim status="data" /></p>
+                  </div>
+                </li>
+                <li>
+                  <span class="n">2</span>
+                  <div>
+                    <b>{{ 'Бонус получает только это умение' | l: 'Only that ability gets the bonus' }}</b>
+                    <p class="small muted"><app-rt [text]="officialText()" /> <app-claim status="data" /></p>
+                  </div>
+                </li>
+                <li>
+                  <span class="n">3</span>
+                  <div>
+                    <b>{{ 'Подходит не каждое умение' | l: 'Not every ability qualifies' }}</b>
+                    <p class="small muted">
+                      {{ 'На неподходящих игра пишет «Cannot be imbued».' | l: 'Unsuitable ones show "Cannot be imbued".' }}
+                      @if (it.imbue === 'imbue_active_non_ult') {
+                        {{ 'Этот предмет не ставится на ультимейт.' | l: 'This item cannot go on the ultimate.' }}
+                      }
+                      {{ 'В билде можно заранее задать цель (Imbue Target): быстрая покупка выберет её сама.' | l: 'A build can set the Imbue Target in advance: Quickbuy picks it automatically.' }}
+                      <app-claim status="data" />
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              @if (imbueTargets().length) {
+                <div>
+                  <div class="upper faint">{{ 'На что ставят в билдах' | l: 'Targets in builds' }}</div>
+                  <ul class="targets">
+                    @for (t of imbueTargets(); track t.ability) {
+                      <li>
+                        <app-ability-icon [key]="t.ability" [size]="34" [showSlot]="true" />
+                        <div>
+                          <b class="small">{{ game.ability(t.ability)?.ability?.name | gn }}</b>
+                          <span class="xsmall faint"> · {{ game.ability(t.ability)?.hero?.name | gn }}</span>
+                          <div class="xsmall muted">{{ t.builds.join(', ') }}</div>
+                        </div>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              }
+              <p class="small"><app-term key="imbue">{{ 'Что такое imbue, коротко' | l: 'What imbue means, briefly' }}</app-term></p>
+            </div>
+          </section>
+        }
         @if (c(); as cc) {
           <section class="panel">
             <div class="panel-head">
@@ -194,6 +246,7 @@
                   }
                 </div>
               }
+              <a class="small" routerLink="/upgrades" [queryParams]="{ slot: it.slot, item: it.key }"><app-icon name="tree" [size]="14" /> {{ 'Вся цепочка в дереве улучшений' | l: 'See the chain in the upgrade tree' }}</a>
             </div>
           </section>
         }

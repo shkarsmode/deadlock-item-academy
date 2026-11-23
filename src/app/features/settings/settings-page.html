@@ -170,7 +170,7 @@
         <button class="btn btn-danger" (click)="reset()"><app-icon name="trash" /> {{ 'Сбросить прогресс профиля' | l: 'Reset profile progress' }}</button>
       </div>
       <div class="row-wrap">
-        <button class="btn" (click)="cacheIcons()" [disabled]="!offlineReady() || iconsProgress() !== null">
+        <button class="btn btn-wrap" (click)="cacheIcons()" [disabled]="!offlineReady() || iconsProgress() !== null">
           <app-icon name="download" />
           @if (iconsProgress(); as p) {
             {{ 'Скачиваю иконки' | l: 'Downloading icons' }} {{ p.done }} / {{ p.total }}

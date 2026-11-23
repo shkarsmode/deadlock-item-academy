@@ -9,6 +9,7 @@ import type {
   CLAIM_STATUSES,
   CONTENT_STATUSES,
   DIMENSIONS,
+  GLOSSARY_CATEGORIES,
   ITEM_ROLES,
   PHASES,
   SCENARIO_KINDS,
@@ -16,6 +17,7 @@ import type {
   VERDICTS,
 } from './vocab';
 
+export type GlossaryCategory = (typeof GLOSSARY_CATEGORIES)[number];
 export type ItemRole = (typeof ITEM_ROLES)[number];
 export type Threat = (typeof THREATS)[number];
 export type Dimension = (typeof DIMENSIONS)[number];
@@ -259,6 +261,35 @@ export interface ProblemEntry {
   caveats: Claim[];
 }
 
+/**
+ * A basic term (imbue, carry, picker, spirit power...). `short` is shown in popovers next to the
+ * word, the rest on the glossary page. Status says whether it comes from client data or is
+ * player knowledge and slang.
+ */
+export interface GlossaryTerm {
+  id: string;
+  category: GlossaryCategory;
+  /** Name in the English client or English community slang. */
+  en: string;
+  /** Russian names: client localization first, then slang. */
+  ru: string[];
+  /** Extra search words: other spellings, the Ukrainian client word, abbreviations. */
+  aliases?: string[];
+  /** One sentence for the popover. */
+  short: Text;
+  explain: Text;
+  example?: Text;
+  /** Items that illustrate the term. */
+  items?: string[];
+  /** Ids of related terms. */
+  related?: string[];
+  /** One of the first terms a beginner needs. */
+  core?: boolean;
+  status: ClaimStatus;
+  /** Where the definition was checked, e.g. `loc:citadel_main:Citadel_Shop_ImbueTooltip_Title`. */
+  sources?: string[];
+}
+
 /** Merged, validated content as shipped to the app. */
 export interface ContentBundle {
   schema: number;
@@ -269,6 +300,8 @@ export interface ContentBundle {
   courses: HeroCourse[];
   builds: BuildAnalysis[];
   problems: ProblemEntry[];
+  /** Missing in bundles built before the glossary existed. */
+  glossary?: GlossaryTerm[];
   /** Content ids whose pinned item data changed since authoring. */
   needsReview: string[];
 }
