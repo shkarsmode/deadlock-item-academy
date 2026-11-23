@@ -18,7 +18,7 @@
           }
         </div>
         @if (c(); as cc) {
-          <p class="job">{{ cc.job | tx }}</p>
+          <p class="job"><app-tt [text]="cc.job | tx" /></p>
         }
         <app-key-stats class="key" [item]="it" [max]="5" />
         <div class="row-wrap actions">
@@ -119,9 +119,9 @@
             </div>
             <div class="panel-body stack-3">
               @if (depth() === 'simple') {
-                <p>{{ cc.simple | tx }}</p>
+                <p><app-tt [text]="cc.simple | tx" /></p>
               } @else {
-                <p>{{ cc.detail | tx }}</p>
+                <p><app-tt [text]="cc.detail | tx" /></p>
               }
               @if (depth() === 'technical') {
                 @for (s of it.sections; track $index) {
@@ -142,7 +142,7 @@
               @if (cc.example) {
                 <div class="example">
                   <div class="upper faint">{{ 'Пример из матча' | l: 'Match example' }}</div>
-                  <p>{{ cc.example | tx }}</p>
+                  <p><app-tt [text]="cc.example | tx" /></p>
                 </div>
               }
             </div>
@@ -153,7 +153,7 @@
               <div class="panel-head"><app-icon name="check" class="c-good" /><h3>{{ 'Когда покупать' | l: 'Buy when' }}</h3></div>
               <ul class="claims panel-body">
                 @for (x of cc.buyWhen; track $index) {
-                  <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                  <li><app-tt [text]="x.text | tx" /> <app-claim [status]="x.status" /></li>
                 }
               </ul>
             </section>
@@ -161,7 +161,7 @@
               <div class="panel-head"><app-icon name="x" class="c-bad" /><h3>{{ 'Когда не стоит' | l: 'Skip when' }}</h3></div>
               <ul class="claims panel-body">
                 @for (x of cc.skipWhen; track $index) {
-                  <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                  <li><app-tt [text]="x.text | tx" /> <app-claim [status]="x.status" /></li>
                 }
               </ul>
             </section>
@@ -171,10 +171,10 @@
             <div class="panel-head"><app-icon name="alert" class="c-warn" /><h3>{{ 'Типичные ошибки и ограничения' | l: 'Common mistakes and limits' }}</h3></div>
             <ul class="claims panel-body">
               @for (x of cc.mistakes; track $index) {
-                <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                <li><app-tt [text]="x.text | tx" /> <app-claim [status]="x.status" /></li>
               }
               @for (x of cc.doesNotSolve ?? []; track $index) {
-                <li><b>{{ 'Не решает:' | l: 'Does not solve:' }}</b> {{ x.text | tx }} <app-claim [status]="x.status" /></li>
+                <li><b>{{ 'Не решает:' | l: 'Does not solve:' }}</b> <app-tt [text]="x.text | tx" /> <app-claim [status]="x.status" /></li>
               }
             </ul>
           </section>
@@ -183,9 +183,9 @@
             <section class="panel">
               <div class="panel-head"><app-icon name="zap" class="c-accent" /><h3>{{ 'Как использовать активку' | l: 'Using the active' }}</h3></div>
               <dl class="panel-body dl">
-                <dt>{{ 'Когда нажимать' | l: 'When to press' }}</dt><dd>{{ au.when | tx }}</dd>
-                <dt>{{ 'Против чего беречь' | l: 'Save it for' }}</dt><dd>{{ au.saveFor | tx }}</dd>
-                <dt>{{ 'Слишком рано, если' | l: 'Too early when' }}</dt><dd>{{ au.tooEarly | tx }}</dd>
+                <dt>{{ 'Когда нажимать' | l: 'When to press' }}</dt><dd><app-tt [text]="au.when | tx" /></dd>
+                <dt>{{ 'Против чего беречь' | l: 'Save it for' }}</dt><dd><app-tt [text]="au.saveFor | tx" /></dd>
+                <dt>{{ 'Слишком рано, если' | l: 'Too early when' }}</dt><dd><app-tt [text]="au.tooEarly | tx" /></dd>
               </dl>
             </section>
           }
@@ -193,8 +193,8 @@
             <section class="panel">
               <div class="panel-head"><app-icon name="sparkles" class="c-spirit" /><h3>{{ 'На какую способность назначать' | l: 'Which ability to imbue' }}</h3></div>
               <dl class="panel-body dl">
-                <dt>{{ 'Хорошие цели' | l: 'Good targets' }}</dt><dd>{{ im.goodTargets | tx }}</dd>
-                <dt>{{ 'Плохие цели' | l: 'Bad targets' }}</dt><dd>{{ im.badTargets | tx }}</dd>
+                <dt>{{ 'Хорошие цели' | l: 'Good targets' }}</dt><dd><app-tt [text]="im.goodTargets | tx" /></dd>
+                <dt>{{ 'Плохие цели' | l: 'Bad targets' }}</dt><dd><app-tt [text]="im.badTargets | tx" /></dd>
               </dl>
             </section>
           }
@@ -234,6 +234,25 @@
                   <div class="upper faint">{{ 'Собирается из' | l: 'Builds from' }}</div>
                   @for (k of it.components; track k) {
                     <a class="item-link" [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="32" [alt]="true" /> {{ game.item(k)?.name | gn }} <span class="faint num xsmall">{{ game.item(k)?.cost }}</span></a>
+                    @if (game.item(k); as comp) {
+                      @let d = diff(it, comp);
+                      @if (d.kept.length) {
+                        <p class="carry xsmall">
+                          <span class="lbl-kept">{{ 'Есть и у' | l: 'Also in' }} {{ it.name | gn }}:</span>
+                          @for (x of d.kept; track x.stat.prop; let last = $last) {
+                            <span><b class="num">{{ x.to }}</b> {{ label(x.stat) }}@if (!x.same) {<span class="faint"> ({{ 'было' | l: 'was' }} {{ x.from }})</span>}@if (!last) {,}</span>
+                          }
+                        </p>
+                      }
+                      @if (d.missing.length) {
+                        <p class="carry xsmall">
+                          <span class="lbl-missing">{{ 'Нет у' | l: 'Not in' }} {{ it.name | gn }}:</span>
+                          @for (x of d.missing; track x.prop; let last = $last) {
+                            <s><b class="num">{{ fmt(x) }}</b> {{ label(x) }}</s>@if (!last) {<span>,</span>}
+                          }
+                        </p>
+                      }
+                    }
                   }
                   <p class="xsmall faint">{{ 'Компонент поглощается, его цена засчитывается.' | l: 'The component is consumed; its cost counts.' }}</p>
                 </div>
@@ -259,7 +278,7 @@
                 @for (a of cc.alternatives; track a.key) {
                   <li class="alt-row">
                     <a class="item-link" [routerLink]="['/items', a.key]"><app-item-icon [key]="a.key" [size]="32" [alt]="true" /> <b>{{ game.item(a.key)?.name | gn }}</b></a>
-                    <p class="small muted">{{ a.when | tx }}</p>
+                    <p class="small muted"><app-tt [text]="a.when | tx" /></p>
                   </li>
                 }
               </ul>
@@ -294,13 +313,13 @@
               <div class="panel-head"><app-icon name="sparkles" /><h3>{{ 'Взаимодействия' | l: 'Interactions' }}</h3></div>
               <ul class="list">
                 @for (s of synergyAbilities(); track s.with) {
-                  <li class="syn"><app-ability-icon [key]="s.with" [size]="28" /> <div><b class="small">{{ game.ability(s.with)?.ability?.name | gn }}</b> <span class="xsmall faint">{{ game.ability(s.with)?.hero?.name | gn }}</span><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                  <li class="syn"><app-ability-icon [key]="s.with" [size]="28" /> <div><b class="small">{{ game.ability(s.with)?.ability?.name | gn }}</b> <span class="xsmall faint">{{ game.ability(s.with)?.hero?.name | gn }}</span><p class="small muted"><app-tt [text]="s.note | tx" /> <app-claim [status]="s.status" /></p></div></li>
                 }
                 @for (s of synergyItems(); track s.with) {
-                  <li class="syn"><app-item-icon [key]="s.with" [size]="28" [alt]="true" /> <div><a class="small" [routerLink]="['/items', s.with]"><b>{{ game.item(s.with)?.name | gn }}</b></a><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                  <li class="syn"><app-item-icon [key]="s.with" [size]="28" [alt]="true" /> <div><a class="small" [routerLink]="['/items', s.with]"><b>{{ game.item(s.with)?.name | gn }}</b></a><p class="small muted"><app-tt [text]="s.note | tx" /> <app-claim [status]="s.status" /></p></div></li>
                 }
                 @for (s of synergyHeroes(); track s.with) {
-                  <li class="syn"><app-hero-avatar [key]="s.with" [size]="28" /> <div><b class="small">{{ game.hero(s.with)?.name | gn }}</b><p class="small muted">{{ s.note | tx }} <app-claim [status]="s.status" /></p></div></li>
+                  <li class="syn"><app-hero-avatar [key]="s.with" [size]="28" /> <div><b class="small">{{ game.hero(s.with)?.name | gn }}</b><p class="small muted"><app-tt [text]="s.note | tx" /> <app-claim [status]="s.status" /></p></div></li>
                 }
               </ul>
             </section>

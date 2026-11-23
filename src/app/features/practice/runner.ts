@@ -12,6 +12,7 @@ import { ItemIcon } from '../../shared/ui/item-icon';
 import { AbilityIcon, ClaimBadge, StatLines } from '../../shared/ui/primitives';
 import { ScenarioContext } from './scenario-context';
 import { SessionSummary } from './summary';
+import { TermText } from '../../shared/ui/term-text';
 
 const VERDICT_LABEL: Record<string, { ru: string; en: string }> = {
   best: { ru: 'Лучший', en: 'Best' },
@@ -24,7 +25,7 @@ const VERDICT_LABEL: Record<string, { ru: string; en: string }> = {
 @Component({
   selector: 'app-practice-runner',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, ItemBrief, AbilityIcon, ClaimBadge, StatLines, ScenarioContext, SessionSummary, ...I18N_PIPES],
+  imports: [TermText, RouterLink, Icon, ItemIcon, ItemBrief, AbilityIcon, ClaimBadge, StatLines, ScenarioContext, SessionSummary, ...I18N_PIPES],
   templateUrl: './runner.html',
   styleUrl: './runner.scss',
 })

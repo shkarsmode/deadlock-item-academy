@@ -7,6 +7,9 @@ import { GameData } from '../../core/game-data/game-data.service';
 import { I18N_PIPES, I18n } from '../../core/i18n/i18n';
 import { Profiles } from '../../core/profile/profile.service';
 import { Builds } from '../../domain/builds/builds.service';
+import { componentDiff, type ComponentDiff } from '../../domain/items/component-diff';
+import { formatStat } from '../../domain/items/key-stats';
+import type { GameItem, StatLine } from '../../core/game-data/game-data.model';
 import { Knowledge } from '../../learning/knowledge.service';
 import { DIM_NAMES, dimStrength } from '../../learning/mastery';
 import { Session } from '../../learning/session.service';
@@ -16,11 +19,12 @@ import { ItemType } from '../../shared/ui/item-type';
 import { KeyStats } from '../../shared/ui/key-stats';
 import { Term } from '../../shared/ui/term';
 import { AbilityIcon, ClaimBadge, HeroAvatar, LevelPips, RichText, StatLines } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 @Component({
   selector: 'app-item-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, ItemType, KeyStats, Term, AbilityIcon, HeroAvatar, ClaimBadge, LevelPips, RichText, StatLines, ...I18N_PIPES],
+  imports: [TermText, RouterLink, Icon, ItemIcon, ItemType, KeyStats, Term, AbilityIcon, HeroAvatar, ClaimBadge, LevelPips, RichText, StatLines, ...I18N_PIPES],
   templateUrl: './item-detail.html',
   styleUrl: './item-detail.scss',
 })
@@ -98,6 +102,19 @@ export class ItemDetailPage {
   protected readonly synergyAbilities = computed(() => (this.c()?.synergies ?? []).filter((s) => s.kind === 'ability'));
   protected readonly synergyItems = computed(() => (this.c()?.synergies ?? []).filter((s) => s.kind === 'item'));
   protected readonly synergyHeroes = computed(() => (this.c()?.synergies ?? []).filter((s) => s.kind === 'hero'));
+
+  /** What the upgrade lists compared with its component (client data). */
+  protected diff(item: GameItem, component: GameItem): ComponentDiff {
+    return componentDiff(item, component);
+  }
+
+  protected label(s: StatLine): string {
+    return this.i18n.game(s.label);
+  }
+
+  protected fmt(s: StatLine): string {
+    return formatStat(s);
+  }
 
   practice(): void {
     const n = this.session.start({ mode: 'mixed', minutes: 5, filters: { itemKeys: [this.key()] } });

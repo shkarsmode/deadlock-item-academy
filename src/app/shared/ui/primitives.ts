@@ -11,18 +11,8 @@ import { LEVEL_NAMES } from '../../learning/mastery';
 @Component({
   selector: 'app-rt',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `@for (line of lines(); track $index; let last = $last) {
-    @for (part of line; track $index) {
-      @if (part.b) {
-        <strong>{{ part.t }}</strong>
-      } @else {
-        {{ part.t }}
-      }
-    }
-    @if (!last) {
-      <br />
-    }
-  }`,
+  // One line on purpose: whitespace between the pieces would show up as a space before punctuation.
+  template: `@for (line of lines(); track $index; let last = $last) {@for (part of line; track $index) {@if (part.b) {<strong>{{ part.t }}</strong>} @else {<ng-container>{{ part.t }}</ng-container>}}@if (!last) {<br />}}`,
   host: { class: 'rt' },
 })
 export class RichText {

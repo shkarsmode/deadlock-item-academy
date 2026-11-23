@@ -31,7 +31,7 @@ const KIND_ICON: Record<StatKind, IconName> = {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [Icon],
   template: `
-    @for (s of stats(); track s.prop) {
+    @for (s of shown(); track s.prop) {
       <div class="ks" [class.cond]="s.conditional">
         <app-icon class="ic" [name]="icon(s)" [size]="compact() ? 13 : 15" />
         <b class="v num">{{ fmt(s) }}</b>
@@ -73,7 +73,11 @@ export class KeyStats {
   readonly item = input<GameItem | null | undefined>(null);
   readonly max = input(4);
   readonly compact = input(false);
-  protected readonly stats = computed(() => {
+  /** Show these stats instead of the item's key numbers (the item still sets the color). */
+  readonly stats = input<StatLine[] | null>(null);
+  protected readonly shown = computed(() => {
+    const given = this.stats();
+    if (given) return given.slice(0, this.max());
     const it = this.item();
     return it ? keyStats(it, this.max()) : [];
   });

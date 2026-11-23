@@ -11,11 +11,12 @@ import { Session } from '../../learning/session.service';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { AbilityIcon, ClaimBadge, HeroAvatar, RichText } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 @Component({
   selector: 'app-active-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SyncSelectValue, RouterLink, Icon, ItemIcon, AbilityIcon, ClaimBadge, HeroAvatar, RichText, ...I18N_PIPES],
+  imports: [TermText, SyncSelectValue, RouterLink, Icon, ItemIcon, AbilityIcon, ClaimBadge, HeroAvatar, RichText, ...I18N_PIPES],
   template: `
     <div class="page">
       <div class="page-head">
@@ -78,7 +79,7 @@ import { AbilityIcon, ClaimBadge, HeroAvatar, RichText } from '../../shared/ui/p
                           <a [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="30" [title]="true" /></a>
                         }
                       </div>
-                      <p class="small">{{ n.imbue.note | tx }}</p>
+                      <p class="small"><app-tt [text]="n.imbue.note | tx" /></p>
                     </div>
                   }
                 }
@@ -115,9 +116,9 @@ import { AbilityIcon, ClaimBadge, HeroAvatar, RichText } from '../../shared/ui/p
               </div>
               @if (content.item(it.key)?.activeUse; as au) {
                 <div class="grid grid-3 au small">
-                  <div><span class="upper faint">{{ 'Нажимай' | l: 'Press' }}</span><p>{{ au.when | tx }}</p></div>
-                  <div><span class="upper faint">{{ 'Береги для' | l: 'Save for' }}</span><p>{{ au.saveFor | tx }}</p></div>
-                  <div><span class="upper faint">{{ 'Рано, если' | l: 'Too early' }}</span><p>{{ au.tooEarly | tx }}</p></div>
+                  <div><span class="upper faint">{{ 'Нажимай' | l: 'Press' }}</span><p><app-tt [text]="au.when | tx" /></p></div>
+                  <div><span class="upper faint">{{ 'Береги для' | l: 'Save for' }}</span><p><app-tt [text]="au.saveFor | tx" /></p></div>
+                  <div><span class="upper faint">{{ 'Рано, если' | l: 'Too early' }}</span><p><app-tt [text]="au.tooEarly | tx" /></p></div>
                 </div>
               }
             </li>

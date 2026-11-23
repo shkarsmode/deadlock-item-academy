@@ -10,11 +10,12 @@ import { normalizeAnswer } from '../../learning/questions/fuzzy';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { ClaimBadge } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 @Component({
   selector: 'app-problems-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, ClaimBadge, ...I18N_PIPES],
+  imports: [TermText, RouterLink, Icon, ItemIcon, ClaimBadge, ...I18N_PIPES],
   template: `
     <div class="page">
       <div class="page-head">
@@ -44,7 +45,7 @@ import { ClaimBadge } from '../../shared/ui/primitives';
           <article class="panel detail">
             <div class="panel-head"><h2>{{ p.title | tx }}</h2></div>
             <div class="panel-body stack-4">
-              <p>{{ p.explanation | tx }}</p>
+              <p><app-tt [text]="p.explanation | tx" /></p>
               @if (p.threats.length) {
                 <div class="row-wrap">
                   @for (t of p.threats; track t) {
@@ -55,7 +56,7 @@ import { ClaimBadge } from '../../shared/ui/primitives';
               @for (s of p.solutions; track $index) {
                 <div class="sol">
                   <h3>{{ s.title | tx }}</h3>
-                  <p class="small muted">{{ s.note | tx }}</p>
+                  <p class="small muted"><app-tt [text]="s.note | tx" /></p>
                   <div class="row-wrap">
                     @for (k of s.items; track k) {
                       <a class="it" [routerLink]="['/items', k]">
@@ -72,7 +73,7 @@ import { ClaimBadge } from '../../shared/ui/primitives';
                   <app-icon name="alert" />
                   <ul class="small">
                     @for (c of p.caveats; track $index) {
-                      <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                      <li><app-tt [text]="c.text | tx" /> <app-claim [status]="c.status" /></li>
                     }
                   </ul>
                 </div>

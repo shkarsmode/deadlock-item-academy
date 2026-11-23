@@ -8,6 +8,7 @@ import { I18N_PIPES, I18n } from '../../core/i18n/i18n';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { ClaimBadge } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 type Filter = 'core' | 'all' | GlossaryCategory;
 
@@ -15,7 +16,7 @@ type Filter = 'core' | 'all' | GlossaryCategory;
 @Component({
   selector: 'app-glossary-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, ClaimBadge, ...I18N_PIPES],
+  imports: [TermText, RouterLink, Icon, ItemIcon, ClaimBadge, ...I18N_PIPES],
   template: `
     <div class="page">
       <header class="page-head">
@@ -69,9 +70,9 @@ type Filter = 'core' | 'all' | GlossaryCategory;
                   <p class="t-short">{{ t.short | tx }}</p>
                   <details class="t-more" [open]="t.id === focus()">
                     <summary>{{ 'Подробнее и пример' | l: 'Details and example' }}</summary>
-                    <p class="t-explain">{{ t.explain | tx }}</p>
+                    <p class="t-explain"><app-tt [text]="t.explain | tx" [skip]="t.id" /></p>
                     @if (t.example) {
-                      <div class="t-example"><app-icon name="crosshair" [size]="14" /> <span>{{ t.example | tx }}</span></div>
+                      <div class="t-example"><app-icon name="crosshair" [size]="14" /> <span><app-tt [text]="t.example | tx" [skip]="t.id" /></span></div>
                     }
                   </details>
                   @if (t.items?.length) {

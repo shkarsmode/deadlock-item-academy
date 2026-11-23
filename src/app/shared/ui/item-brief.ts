@@ -10,6 +10,7 @@ import { ItemIcon } from './item-icon';
 import { ItemType } from './item-type';
 import { KeyStats } from './key-stats';
 import { RichText, StatLines } from './primitives';
+import { TermText } from './term-text';
 
 /**
  * Compact explanation of an item, built to be read in a few seconds: what it is for (one line),
@@ -19,7 +20,7 @@ import { RichText, StatLines } from './primitives';
 @Component({
   selector: 'app-item-brief',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, ItemIcon, ItemType, KeyStats, RichText, StatLines, RouterLink, ...I18N_PIPES],
+  imports: [TermText, Icon, ItemIcon, ItemType, KeyStats, RichText, StatLines, RouterLink, ...I18N_PIPES],
   template: `
     @if (item(); as it) {
       <div class="head">
@@ -42,7 +43,7 @@ import { RichText, StatLines } from './primitives';
         </div>
       </div>
       @if (c(); as cc) {
-        <p class="job">{{ cc.job | tx }}</p>
+        <p class="job"><app-tt [text]="cc.job | tx" /></p>
       } @else {
         <p class="job official"><app-rt [text]="officialText()" /></p>
       }
@@ -57,7 +58,7 @@ import { RichText, StatLines } from './primitives';
         <summary>{{ 'Подробнее' | l: 'More' }}</summary>
         <div class="more-body">
           @if (c(); as cc) {
-            <p>{{ (depth() === 'simple' ? cc.simple : cc.detail) | tx }}</p>
+            <p><app-tt [text]="(depth() === 'simple' ? cc.simple : cc.detail) | tx" /></p>
             <p class="official small"><app-rt [text]="officialText()" /></p>
           }
           @for (s of it.sections; track $index) {

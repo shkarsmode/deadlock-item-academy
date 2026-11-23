@@ -41,13 +41,13 @@
       <section class="panel master">
         <div class="panel-head"><app-icon name="target" class="c-accent" /><h2>Master Your Build</h2></div>
         <div class="panel-body stack-4">
-          <p>{{ an.overview | tx }}</p>
+          <p><app-tt [text]="an.overview | tx" /></p>
           <div class="grid grid-2">
             <div>
               <div class="upper faint">{{ 'Сильные стороны' | l: 'Strengths' }}</div>
               <ul class="claims">
                 @for (c of an.strengths; track $index) {
-                  <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                  <li><app-tt [text]="c.text | tx" /> <app-claim [status]="c.status" /></li>
                 }
               </ul>
             </div>
@@ -55,7 +55,7 @@
               <div class="upper faint">{{ 'Риски и слабые места' | l: 'Risks and weak spots' }}</div>
               <ul class="claims">
                 @for (c of an.risks; track $index) {
-                  <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                  <li><app-tt [text]="c.text | tx" /> <app-claim [status]="c.status" /></li>
                 }
               </ul>
             </div>
@@ -67,7 +67,7 @@
                 <b>{{ 'Отличия от оригинала / других версий' | l: 'Differences from the original / other versions' }}</b>
                 <ul class="claims">
                   @for (c of an.diff; track $index) {
-                    <li>{{ c.text | tx }} <app-claim [status]="c.status" /></li>
+                    <li><app-tt [text]="c.text | tx" /> <app-claim [status]="c.status" /></li>
                   }
                 </ul>
               </div>
@@ -144,7 +144,7 @@
                           @for (f of fields; track f.key) {
                             @if (text(a, f.key)) {
                               <dt>{{ f.ru | l: f.en }}</dt>
-                              <dd>{{ text(a, f.key) }}</dd>
+                              <dd><app-tt [text]="text(a, f.key)" /></dd>
                             }
                           }
                           @if (a.alternatives.length) {
@@ -162,7 +162,7 @@
                                 <app-item-icon [key]="k" [size]="22" [title]="true" />
                               }
                             </div>
-                            {{ a.enablers.note | tx }}
+                            <app-tt [text]="a.enablers.note | tx" />
                           </dd>
                           <dt>{{ '10. Сигналы пересмотреть покупку' | l: '10. Signals to reconsider' }}</dt>
                           <dd>
@@ -176,7 +176,7 @@
                         <app-claim [status]="a.status" />
                       } @else {
                         @if (content.item(i.key); as ic) {
-                          <p><b>{{ ic.job | tx }}</b></p>
+                          <p><b><app-tt [text]="ic.job | tx" /></b></p>
                           @if (heroNote(i.key); as hn) {
                             <p class="small">{{ hero()?.name | gn }}: {{ hn }}</p>
                           }
@@ -233,7 +233,7 @@
               <ul class="list issues">
                 @for (x of r.issues; track $index) {
                   <li [class.warn]="x.level === 'warn'">
-                    <span>{{ x.text | tx }}</span>
+                    <span><app-tt [text]="x.text | tx" /></span>
                     @if (x.items?.length) {
                       <div class="row-wrap">@for (k of x.items; track k) {<app-item-icon [key]="k" [size]="22" [title]="true" />}</div>
                     }

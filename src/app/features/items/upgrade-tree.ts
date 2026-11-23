@@ -5,7 +5,11 @@ import { SLOT_LABELS } from '../../content/labels';
 import type { GameItem, Slot } from '../../core/game-data/game-data.model';
 import { GameData } from '../../core/game-data/game-data.service';
 import { I18N_PIPES, I18n } from '../../core/i18n/i18n';
+import { carryStats, componentDiff, type ComponentDiff } from '../../domain/items/component-diff';
 import { buildUpgradeMap, type ItemFamily } from '../../domain/items/families';
+import { formatStat } from '../../domain/items/key-stats';
+import type { StatLine } from '../../core/game-data/game-data.model';
+import { ClaimBadge } from '../../shared/ui/primitives';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { KeyStats } from '../../shared/ui/key-stats';
@@ -17,7 +21,7 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
 @Component({
   selector: 'app-upgrade-tree',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgTemplateOutlet, RouterLink, Icon, ItemIcon, KeyStats, Term, ...I18N_PIPES],
+  imports: [NgTemplateOutlet, RouterLink, Icon, ItemIcon, KeyStats, Term, ClaimBadge, ...I18N_PIPES],
   template: `
     <div class="page">
       <header class="page-head">
@@ -32,7 +36,19 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
             <app-icon name="right" [size]="14" class="faint" />
           }
         }
-        <span class="small muted tier-note">{{ 'Купленный компонент поглощается, его цена засчитывается: улучшение обходится дешевле на эту сумму (на карточке это «доплата»).' | l: 'An owned component is consumed and its cost counts, so the upgrade costs that much less (shown as "top-up").' }}</span>
+      </div>
+
+      <div class="legend panel">
+        <div class="lg"><span class="topup num">{{ 'доплата +800' | l: 'top-up +800' }}</span><span class="small muted">{{ 'столько доплатить, если компонент уже куплен: его цена засчитывается' | l: 'what you pay when you own the component: its cost counts' }}</span></div>
+        <div class="lg"><span class="lbl-kept xsmall">{{ 'От компонента' | l: 'From the component' }}</span><span class="small muted">{{ 'бонусы компонента, которые улучшение указывает у себя' | l: 'component bonuses the upgrade lists as its own' }}</span></div>
+        <div class="lg"><span class="lbl-missing xsmall"><s>{{ 'Нет в улучшении' | l: 'Not in the upgrade' }}</s></span><span class="small muted">{{ 'бонус компонента, которого у улучшения нет' | l: 'a component bonus the upgrade does not have' }}</span></div>
+        <details class="why small">
+          <summary>{{ 'Складывается ли бонус компонента с улучшением?' | l: 'Does the component bonus stack with the upgrade?' }}</summary>
+          <p class="muted">
+            {{ 'Похоже, что нет: улучшение заменяет компонент, и его цифры уже итоговые. В данных в {full} из {total} пар улучшение повторяет все бонусы компонента, например Arcane Surge сам даёт +1 к выносливости, как Extra Stamina. Прямо клиент это правило не пишет: проверить можно по числу делений выносливости до и после улучшения.' | l: 'Most likely not: the upgrade replaces the component and its numbers are the total. In the data {full} of {total} pairs repeat every component bonus, for example Arcane Surge itself gives +1 Stamina like Extra Stamina. The client does not state the rule: you can check it by counting stamina pips before and after the upgrade.' : carry() }}
+            <app-claim status="unverified" />
+          </p>
+        </details>
       </div>
 
       <div class="toolbar">
@@ -84,7 +100,7 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
       }
     </div>
 
-    <ng-template #nodeTpl let-n>
+    <ng-template #nodeTpl let-n let-parent="parent">
       <div class="branch">
         <a class="node" [routerLink]="['/items', n.item.key]" [class.hl]="isMatch(n.item)" [attr.data-key]="n.item.key">
           <app-item-icon [item]="n.item" [size]="44" [alt]="true" />
@@ -105,7 +121,30 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
                 <span class="flag imb">imbue</span>
               }
             </div>
-            <app-key-stats [item]="n.item" [max]="3" [compact]="true" />
+            @if (parent) {
+              @let d = diff(n.item, parent);
+              @if (d.added.length) {
+                <app-key-stats [item]="n.item" [stats]="d.added" [max]="3" [compact]="true" />
+              }
+              @if (d.kept.length) {
+                <div class="carry xsmall">
+                  <span class="lbl-kept">{{ 'От' | l: 'From' }} {{ parent.name | gn }}</span>
+                  @for (k of d.kept; track k.stat.prop; let last = $last) {
+                    <span><b class="num">{{ k.to }}</b> {{ label(k.stat) }}@if (!k.same) {<span class="faint"> ({{ 'было' | l: 'was' }} {{ k.from }})</span>}@if (!last) {,}</span>
+                  }
+                </div>
+              }
+              @if (d.missing.length) {
+                <div class="carry missing xsmall">
+                  <span class="lbl-missing">{{ 'Нет в улучшении' | l: 'Not in the upgrade' }}</span>
+                  @for (m of d.missing; track m.prop; let last = $last) {
+                    <s><b class="num">{{ fmt(m) }}</b> {{ label(m) }}</s>@if (!last) {<span>,</span>}
+                  }
+                </div>
+              }
+            } @else {
+              <app-key-stats [item]="n.item" [max]="3" [compact]="true" />
+            }
             @if (n.alsoFrom.length) {
               <div class="also xsmall muted">{{ 'Собирается также из:' | l: 'Also builds from:' }} {{ names(n.alsoFrom) }}</div>
             }
@@ -114,7 +153,7 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
         @if (n.children.length) {
           <div class="kids">
             @for (k of n.children; track k.item.key) {
-              <ng-container *ngTemplateOutlet="nodeTpl; context: { $implicit: k }" />
+              <ng-container *ngTemplateOutlet="nodeTpl; context: { $implicit: k, parent: n.item }" />
             }
           </div>
         }
@@ -127,7 +166,17 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
       .tiers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-bottom: 14px; }
       :host .tier-chip { text-decoration: none; }
       .tier-chip { display: inline-flex; gap: 6px; padding: 3px 9px; border-radius: 999px; background: var(--bg-3); border: 1px solid var(--border); font-size: var(--fs-sm); }
-      .tier-note { flex: 1 1 320px; min-width: 0; }
+      .legend { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 12px 14px; margin-bottom: 14px; }
+      .lg { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; min-width: 0; }
+      .lg > span:first-child { flex: none; min-width: 130px; }
+      .lg > span:last-child { min-width: 0; flex: 1 1 200px; }
+      .why summary { cursor: pointer; color: var(--text-2); }
+      .why p { margin: 6px 0 0; line-height: 1.5; }
+      .lbl-kept { color: var(--good); font-weight: 600; }
+      .lbl-missing { color: var(--bad); font-weight: 600; }
+      .carry { display: flex; flex-wrap: wrap; gap: 2px 6px; align-items: baseline; color: var(--text-2); line-height: 1.45; }
+      .carry .lbl-kept, .carry .lbl-missing { margin-right: 2px; }
+      .carry.missing s { color: var(--text-3); }
       .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
       .slots button.on.on-weapon { color: var(--weapon); }
       .slots button.on.on-vitality { color: var(--vitality); }
@@ -258,6 +307,28 @@ export class UpgradeTreePage {
   protected isMatch(it: GameItem): boolean {
     const q = this.q();
     return q ? this.matches(it, q) : it.key === this.itemParam();
+  }
+
+  protected readonly carry = computed(() => carryStats(this.game.items()));
+  private readonly diffs = new Map<string, ComponentDiff>();
+
+  /** Cached: the template asks for it on every render. */
+  protected diff(item: GameItem, parent: GameItem): ComponentDiff {
+    const id = `${parent.key}>${item.key}:${item.hash}`;
+    let d = this.diffs.get(id);
+    if (!d) {
+      d = componentDiff(item, parent);
+      this.diffs.set(id, d);
+    }
+    return d;
+  }
+
+  protected label(s: StatLine): string {
+    return this.i18n.game(s.label);
+  }
+
+  protected fmt(s: StatLine): string {
+    return formatStat(s);
   }
 
   protected slotName(s: Slot): string {

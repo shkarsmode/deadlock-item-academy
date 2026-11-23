@@ -1,4 +1,5 @@
 import { ITEMS, STANDARD, item } from '../../testing/fixtures';
+import { carryStats, componentDiff } from './component-diff';
 import { buildUpgradeMap } from './families';
 import { formatStat, keyStats, statKind } from './key-stats';
 
@@ -76,5 +77,35 @@ describe('buildUpgradeMap', () => {
     const sharp = nodes.filter((n) => n.key === 'upgrade_sharpshooter');
     expect(sharp.length).toBeGreaterThanOrEqual(2);
     expect(sharp.every((n) => n.also.length === 1)).toBe(true);
+  });
+});
+
+describe('componentDiff', () => {
+  it('shows that Arcane Surge keeps the stamina of Extra Stamina', () => {
+    const d = componentDiff(item('upgrade_arcane_surge'), item('upgrade_improved_stamina'));
+    expect(d.missing).toEqual([]);
+    expect(d.kept.map((k) => k.stat.prop).sort()).toEqual(['Stamina', 'StaminaCooldownReduction']);
+    expect(d.kept.every((k) => k.same)).toBe(true);
+    expect(d.added.some((s) => s.prop === 'SpiritPower')).toBe(true);
+  });
+
+  it('shows bigger values when the upgrade improves a component stat', () => {
+    const d = componentDiff(item('upgrade_sharpshooter'), item('upgrade_high_velocity_mag'));
+    const speed = d.kept.find((k) => k.stat.prop === 'BonusBulletSpeedPercent');
+    expect(speed?.from).toBe('+45%');
+    expect(speed?.to).toBe('+60%');
+    expect(speed?.same).toBe(false);
+    expect(d.missing).toEqual([]);
+  });
+
+  it('lists component stats the upgrade does not have', () => {
+    const d = componentDiff(item('upgrade_magic_storm'), item('upgrade_improved_spirit'));
+    expect(d.missing.map((s) => s.prop)).toEqual(['TechPower']);
+  });
+
+  it('counts the pairs that repeat every component stat', () => {
+    const c = carryStats(ITEMS);
+    expect(c.total).toBeGreaterThan(50);
+    expect(c.full / c.total).toBeGreaterThan(0.6);
   });
 });

@@ -6,12 +6,13 @@ import { I18N_PIPES, I18n } from '../../core/i18n/i18n';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { HeroAvatar } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 /** The match situation: your hero, souls, owned items, enemies, what is happening. */
 @Component({
   selector: 'app-scenario-context',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [HeroAvatar, ItemIcon, Icon, ...I18N_PIPES],
+  imports: [TermText, HeroAvatar, ItemIcon, Icon, ...I18N_PIPES],
   template: `
     @if (s(); as sc) {
       <div class="ctx">
@@ -44,7 +45,7 @@ import { HeroAvatar } from '../../shared/ui/primitives';
                 <div class="grow">
                   <span class="en-name">{{ heroOf(e.hero) }}</span>
                   @if (e.note) {
-                    <span class="small muted"> · {{ e.note | tx }}</span>
+                    <span class="small muted"> · <app-tt [text]="e.note | tx" /></span>
                   }
                 </div>
                 @if (e.items?.length) {
@@ -71,15 +72,15 @@ import { HeroAvatar } from '../../shared/ui/primitives';
             <div class="upper faint">{{ 'Что ты замечаешь' | l: 'What you notice' }}</div>
             <ul>
               @for (x of sc.symptoms; track $index) {
-                <li>{{ x | tx }}</li>
+                <li><app-tt [text]="x | tx" /></li>
               }
             </ul>
           } @else {
-            <p>{{ sc.situation | tx }}</p>
+            <p><app-tt [text]="sc.situation | tx" /></p>
             @if (hints() === 'full' && sc.symptoms?.length) {
               <ul class="small muted">
                 @for (x of sc.symptoms; track $index) {
-                  <li>{{ x | tx }}</li>
+                  <li><app-tt [text]="x | tx" /></li>
                 }
               </ul>
             }

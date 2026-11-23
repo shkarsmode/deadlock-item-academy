@@ -82,11 +82,11 @@
           <app-icon [name]="diagnosisPicked()?.correct ? 'ok' : 'fail'" />
           <div>
             <b>{{ diagnosisPicked()?.correct ? ('Проблема определена верно' | l: 'Correct diagnosis') : ('Проблема в другом' | l: 'The problem is elsewhere') }}</b>
-            <p>{{ diagnosisPicked()?.why | tx }}</p>
+            <p><app-tt [text]="diagnosisPicked()?.why | tx" /></p>
             @if (!diagnosisPicked()?.correct) {
               @for (d of diagnosis()?.options ?? []; track d.id) {
                 @if (d.correct) {
-                  <p class="small"><b>{{ 'Главная проблема:' | l: 'Main problem:' }}</b> {{ d.text | tx }}. {{ d.why | tx }}</p>
+                  <p class="small"><b>{{ 'Главная проблема:' | l: 'Main problem:' }}</b> <app-tt [text]="d.text | tx" />. <app-tt [text]="d.why | tx" /></p>
                 }
               }
             }
@@ -246,13 +246,13 @@
             @if (r.chosen?.why) {
               <div class="chosen-why">
                 <div class="upper faint">{{ 'Твой выбор' | l: 'Your choice' }}</div>
-                <p>{{ r.chosen?.why | tx }}</p>
+                <p><app-tt [text]="r.chosen?.why | tx" /></p>
                 @if (r.chosen?.betterWhen) {
-                  <p class="small muted"><b>{{ 'Был бы лучше, если:' | l: 'Better when:' }}</b> {{ r.chosen?.betterWhen | tx }}</p>
+                  <p class="small muted"><b>{{ 'Был бы лучше, если:' | l: 'Better when:' }}</b> <app-tt [text]="r.chosen?.betterWhen | tx" /></p>
                 }
               </div>
             }
-            <div class="principle"><app-icon name="bulb" [size]="16" /> <b>{{ sc.principle | tx }}</b></div>
+            <div class="principle"><app-icon name="bulb" [size]="16" /> <b><app-tt [text]="sc.principle | tx" /></b></div>
             <button class="btn btn-ghost btn-sm" (click)="showAllOptions.set(!showAllOptions())" [attr.aria-expanded]="showAllOptions()">
               <app-icon [name]="showAllOptions() ? 'up' : 'down'" [size]="16" /> {{ 'Разбор всех вариантов' | l: 'All options explained' }}
             </button>
@@ -273,9 +273,9 @@
                       <span class="spacer"></span>
                       <span class="verdict" [class]="'verdict v-' + o.verdict">{{ verdictLabel(o.verdict) }} · {{ o.score }}</span>
                     </div>
-                    <p class="small">{{ o.why | tx }}</p>
+                    <p class="small"><app-tt [text]="o.why | tx" /></p>
                     @if (o.betterWhen) {
-                      <p class="small muted">{{ 'Лучше, если:' | l: 'Better when:' }} {{ o.betterWhen | tx }}</p>
+                      <p class="small muted">{{ 'Лучше, если:' | l: 'Better when:' }} <app-tt [text]="o.betterWhen | tx" /></p>
                     }
                   </li>
                 }
@@ -285,7 +285,7 @@
                   <div class="upper faint">{{ 'Механики' | l: 'Mechanics' }}</div>
                   <ul>
                     @for (m of sc.mechanics; track $index) {
-                      <li>{{ m.text | tx }} <app-claim [status]="m.status" /></li>
+                      <li><app-tt [text]="m.text | tx" /> <app-claim [status]="m.status" /></li>
                     }
                   </ul>
                 </div>
@@ -294,10 +294,10 @@
                 <details class="tree">
                   <summary>{{ 'Дерево решения' | l: 'Decision tree' }}</summary>
                   <ol class="tree-steps">
-                    <li><span class="faint">{{ 'Проблема' | l: 'Problem' }}</span> {{ t.problem | tx }}</li>
+                    <li><span class="faint">{{ 'Проблема' | l: 'Problem' }}</span> <app-tt [text]="t.problem | tx" /></li>
                     <li><span class="faint">{{ 'Возможные решения' | l: 'Possible solutions' }}</span> @for (x of t.solutions; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
                     <li><span class="faint">{{ 'Ограничения' | l: 'Constraints' }}</span> @for (x of t.constraints; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
-                    <li><span class="faint">{{ 'Выбор' | l: 'Choice' }}</span> <b>{{ t.choice | tx }}</b></li>
+                    <li><span class="faint">{{ 'Выбор' | l: 'Choice' }}</span> <b><app-tt [text]="t.choice | tx" /></b></li>
                     <li><span class="faint">{{ 'Последствия' | l: 'Consequences' }}</span> @for (x of t.consequences; track $index) {<span class="tag">{{ x | tx }}</span>}</li>
                   </ol>
                 </details>
@@ -313,10 +313,10 @@
               }
             </div>
             @for (line of qq.explain.lines; track $index) {
-              <p class="small">{{ line | tx }}</p>
+              <p class="small"><app-tt [text]="line | tx" /></p>
             }
             @if (qq.explain.rule) {
-              <div class="principle"><app-icon name="bulb" [size]="16" /> <b>{{ qq.explain.rule | tx }}</b></div>
+              <div class="principle"><app-icon name="bulb" [size]="16" /> <b><app-tt [text]="qq.explain.rule | tx" /></b></div>
             }
           }
 

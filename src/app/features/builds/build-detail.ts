@@ -22,6 +22,7 @@ import { ItemPicker } from '../../shared/ui/item-picker';
 import { AbilityIcon, ClaimBadge, HeroAvatar } from '../../shared/ui/primitives';
 import { BuildTimeline } from './build-timeline';
 import { ScreenshotAssist } from './screenshot-assist';
+import { TermText } from '../../shared/ui/term-text';
 
 const ANALYSIS_FIELDS: { key: keyof BuildItemAnalysis; ru: string; en: string }[] = [
   { key: 'why', ru: '1. Зачем он в билде', en: '1. Why it is in the build' },
@@ -36,7 +37,7 @@ const ANALYSIS_FIELDS: { key: keyof BuildItemAnalysis; ru: string; en: string }[
 @Component({
   selector: 'app-build-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SyncSelectValue, RouterLink, Icon, ItemIcon, ItemPicker, AbilityIcon, ClaimBadge, HeroAvatar, BuildTimeline, ScreenshotAssist, Term, ...I18N_PIPES],
+  imports: [TermText, SyncSelectValue, RouterLink, Icon, ItemIcon, ItemPicker, AbilityIcon, ClaimBadge, HeroAvatar, BuildTimeline, ScreenshotAssist, Term, ...I18N_PIPES],
   templateUrl: './build-detail.html',
   styleUrl: './build-detail.scss',
 })

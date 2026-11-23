@@ -11,11 +11,12 @@ import { Session } from '../../learning/session.service';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
 import { AbilityIcon, ClaimBadge, HeroAvatar, LevelPips, RichText } from '../../shared/ui/primitives';
+import { TermText } from '../../shared/ui/term-text';
 
 @Component({
   selector: 'app-hero-path',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Icon, ItemIcon, AbilityIcon, ClaimBadge, HeroAvatar, LevelPips, RichText, ...I18N_PIPES],
+  imports: [TermText, RouterLink, Icon, ItemIcon, AbilityIcon, ClaimBadge, HeroAvatar, LevelPips, RichText, ...I18N_PIPES],
   templateUrl: './hero-path.html',
   styleUrl: './hero-path.scss',
 })

@@ -14,7 +14,7 @@
         </div>
         <p class="muted small">{{ hero.role | gt }} · {{ hero.tags.join(', ') }}</p>
         @if (course(); as c) {
-          <p class="summary">{{ c.summary | tx }}</p>
+          <p class="summary"><app-tt [text]="c.summary | tx" /></p>
         } @else if (hero.playstyle) {
           <p class="summary">{{ hero.playstyle | gt }}</p>
         }
@@ -47,7 +47,7 @@
             @if (course(); as c) {
               @for (n of c.abilityNotes; track n.ability) {
                 @if (n.ability === a.key) {
-                  <p class="small role">{{ n.role | tx }}</p>
+                  <p class="small role"><app-tt [text]="n.role | tx" /></p>
                   @if (n.itemSynergy.length) {
                     <ul class="syn">
                       @for (s of n.itemSynergy; track s.item) {
@@ -79,7 +79,7 @@
             @for (ar of c.archetypes; track ar.id) {
               <div class="arch">
                 <b>{{ ar.name | tx }}</b>
-                <p class="small muted">{{ ar.idea | tx }}</p>
+                <p class="small muted"><app-tt [text]="ar.idea | tx" /></p>
                 <div class="row-wrap">
                   @for (k of ar.coreItems; track k) {
                     <a [routerLink]="['/items', k]"><app-item-icon [key]="k" [size]="30" [title]="true" /></a>
@@ -111,7 +111,7 @@
             @if (open() === m.id) {
               <div class="mod-body stack-3">
                 @for (p of m.lesson; track $index) {
-                  <p>{{ p | tx }}</p>
+                  <p><app-tt [text]="p | tx" /></p>
                 }
                 @if (m.keyPoints.length) {
                   <div class="keys">
@@ -148,7 +148,7 @@
           <div class="panel-head"><app-icon name="alert" class="c-warn" /><h2>{{ 'Типичные ошибки' | l: 'Common mistakes' }}</h2></div>
           <ul class="panel-body claims">
             @for (x of c.commonMistakes; track $index) {
-              <li>{{ x.text | tx }} <app-claim [status]="x.status" /></li>
+              <li><app-tt [text]="x.text | tx" /> <app-claim [status]="x.status" /></li>
             }
           </ul>
         </section>
