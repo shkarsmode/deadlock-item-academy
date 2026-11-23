@@ -1,4 +1,34 @@
-import type { GameItem, StatLine } from '../../core/game-data/game-data.model';
+import type { GameItem, SectionKind, StatLine } from '../../core/game-data/game-data.model';
+
+/**
+ * A stat with the tooltip section it comes from. `innate` numbers always apply while you own the
+ * item; `passive` and `other` numbers belong to the item's effect (its text says when they work);
+ * `active` numbers work only after you press the item.
+ */
+export interface KeyStat extends StatLine {
+  section: SectionKind;
+}
+
+/** How long a number applies, as shown on the chips. */
+export type StatScope = 'always' | 'effect' | 'active';
+
+export function statScope(section: SectionKind): StatScope {
+  return section === 'innate' ? 'always' : section === 'active' ? 'active' : 'effect';
+}
+
+/** Every stat of the item once, with its section (first section wins for repeated props). */
+export function itemStats(item: GameItem, skip: ReadonlySet<string> = new Set()): KeyStat[] {
+  const seen = new Set<string>(skip);
+  const out: KeyStat[] = [];
+  for (const s of item.sections) {
+    for (const st of s.stats) {
+      if (seen.has(st.prop)) continue;
+      seen.add(st.prop);
+      out.push({ ...st, section: s.kind });
+    }
+  }
+  return out;
+}
 
 /** Visual group of a stat, used to pick an icon. Derived from the client property name only. */
 export type StatKind =
@@ -52,21 +82,21 @@ export function statKind(prop: string): StatKind {
  * the shop tooltip (`important`), then always-on bonuses, then the rest. Cooldown is left out
  * because the item type badge already shows it. Conditional stats come last.
  */
-export function keyStats(item: GameItem, max = 4): StatLine[] {
-  const all = item.sections.flatMap((s) => s.stats.map((st) => ({ st, innate: s.kind === 'innate' })));
-  const seen = new Set<string>(['AbilityCooldown']);
-  const out: StatLine[] = [];
-  const take = (pred: (x: { st: StatLine; innate: boolean }) => boolean) => {
-    for (const x of all) {
+export function keyStats(item: GameItem, max = 4): KeyStat[] {
+  const all = itemStats(item, new Set(['AbilityCooldown']));
+  const picked = new Set<string>();
+  const out: KeyStat[] = [];
+  const take = (pred: (s: KeyStat) => boolean) => {
+    for (const s of all) {
       if (out.length >= max) return;
-      if (seen.has(x.st.prop) || !pred(x)) continue;
-      seen.add(x.st.prop);
-      out.push(x.st);
+      if (picked.has(s.prop) || !pred(s)) continue;
+      picked.add(s.prop);
+      out.push(s);
     }
   };
-  take((x) => x.st.important && !x.st.conditional);
-  take((x) => x.innate && !x.st.conditional);
-  take((x) => !x.st.conditional);
+  take((s) => s.important && !s.conditional);
+  take((s) => s.section === 'innate' && !s.conditional);
+  take((s) => !s.conditional);
   take(() => true);
   return out;
 }

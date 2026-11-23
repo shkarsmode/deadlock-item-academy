@@ -1,7 +1,7 @@
 import { ITEMS, STANDARD, item } from '../../testing/fixtures';
 import { carryStats, componentDiff } from './component-diff';
 import { buildUpgradeMap } from './families';
-import { formatStat, keyStats, statKind } from './key-stats';
+import { formatStat, itemStats, keyStats, statKind, statScope } from './key-stats';
 
 describe('keyStats', () => {
   it('starts with the stats the client highlights and skips the cooldown', () => {
@@ -107,5 +107,22 @@ describe('componentDiff', () => {
     const c = carryStats(ITEMS);
     expect(c.total).toBeGreaterThan(50);
     expect(c.full / c.total).toBeGreaterThan(0.6);
+  });
+});
+
+describe('stat scope', () => {
+  it('tells always-on numbers from effect and active ones', () => {
+    const express = itemStats(item('upgrade_express_shot'));
+    const scopeOf = (prop: string) => statScope(express.find((s) => s.prop === prop)!.section);
+    expect(scopeOf('BonusBulletSpeedPercent')).toBe('always');
+    expect(scopeOf('ProcBulletVelocity')).toBe('effect');
+    const rite = keyStats(item('upgrade_health_stimpak'));
+    expect(rite.every((s) => statScope(s.section) === 'active')).toBe(true);
+  });
+
+  it('keeps the section on key numbers and on what an upgrade carries over', () => {
+    expect(keyStats(item('upgrade_improved_spirit'))[0].section).toBe('innate');
+    const d = componentDiff(item('upgrade_sharpshooter'), item('upgrade_high_velocity_mag'));
+    expect(d.kept.every((k) => k.stat.section === 'innate')).toBe(true);
   });
 });

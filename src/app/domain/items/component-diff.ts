@@ -1,8 +1,8 @@
-import type { GameItem, StatLine } from '../../core/game-data/game-data.model';
-import { formatStat } from './key-stats';
+import type { GameItem } from '../../core/game-data/game-data.model';
+import { formatStat, itemStats, type KeyStat } from './key-stats';
 
 export interface StatCarry {
-  stat: StatLine;
+  stat: KeyStat;
   /** The component's value, as the client shows it. */
   from: string;
   /** The upgrade's value. */
@@ -15,24 +15,15 @@ export interface ComponentDiff {
   /** Component stats the upgrade lists too (often with a bigger value). */
   kept: StatCarry[];
   /** Stats only the upgrade has, highlighted ones first. */
-  added: StatLine[];
+  added: KeyStat[];
   /** Component stats the upgrade does not list. */
-  missing: StatLine[];
+  missing: KeyStat[];
 }
 
 const IGNORED = new Set(['AbilityCooldown']);
 
-function statsOf(item: GameItem): StatLine[] {
-  const seen = new Set<string>();
-  const out: StatLine[] = [];
-  for (const s of item.sections) {
-    for (const st of s.stats) {
-      if (IGNORED.has(st.prop) || seen.has(st.prop)) continue;
-      seen.add(st.prop);
-      out.push(st);
-    }
-  }
-  return out;
+function statsOf(item: GameItem): KeyStat[] {
+  return itemStats(item, IGNORED);
 }
 
 export function componentDiff(upgrade: GameItem, component: GameItem): ComponentDiff {
@@ -41,7 +32,7 @@ export function componentDiff(upgrade: GameItem, component: GameItem): Component
   const upByProp = new Map(up.map((s) => [s.prop, s]));
   const compProps = new Set(comp.map((s) => s.prop));
   const kept: StatCarry[] = [];
-  const missing: StatLine[] = [];
+  const missing: KeyStat[] = [];
   for (const c of comp) {
     const u = upByProp.get(c.prop);
     if (!u) {

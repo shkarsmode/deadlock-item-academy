@@ -12,7 +12,8 @@ import type { StatLine } from '../../core/game-data/game-data.model';
 import { ClaimBadge } from '../../shared/ui/primitives';
 import { Icon } from '../../shared/ui/icon';
 import { ItemIcon } from '../../shared/ui/item-icon';
-import { KeyStats } from '../../shared/ui/key-stats';
+import { KeyStats, SCOPE_LABELS } from '../../shared/ui/key-stats';
+import { statScope, type KeyStat } from '../../domain/items/key-stats';
 import { Term } from '../../shared/ui/term';
 
 const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
@@ -42,6 +43,10 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
         <div class="lg"><span class="topup num">{{ 'доплата +800' | l: 'top-up +800' }}</span><span class="small muted">{{ 'столько доплатить, если компонент уже куплен: его цена засчитывается' | l: 'what you pay when you own the component: its cost counts' }}</span></div>
         <div class="lg"><span class="lbl-kept xsmall">{{ 'От компонента' | l: 'From the component' }}</span><span class="small muted">{{ 'бонусы компонента, которые улучшение указывает у себя' | l: 'component bonuses the upgrade lists as its own' }}</span></div>
         <div class="lg"><span class="lbl-missing xsmall"><s>{{ 'Нет в улучшении' | l: 'Not in the upgrade' }}</s></span><span class="small muted">{{ 'бонус компонента, которого у улучшения нет' | l: 'a component bonus the upgrade does not have' }}</span></div>
+        <div class="lg">
+          <span class="scopes"><span class="sc">{{ 'всегда' | l: 'always' }}</span><span class="sc sc-effect">{{ 'эффект' | l: 'effect' }}</span><span class="sc sc-active">{{ 'активка' | l: 'active' }}</span></span>
+          <span class="small muted">{{ 'пометки на цифрах: постоянный бонус, часть эффекта (когда работает, сказано в описании предмета) или только после нажатия' | l: 'tags on numbers: always on, part of the effect (the item text says when) or only after you press the item' }}</span>
+        </div>
         <details class="why small">
           <summary>{{ 'Складывается ли бонус компонента с улучшением?' | l: 'Does the component bonus stack with the upgrade?' }}</summary>
           <p class="muted">
@@ -129,8 +134,11 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
               @if (d.kept.length) {
                 <div class="carry xsmall">
                   <span class="lbl-kept">{{ 'От' | l: 'From' }} {{ parent.name | gn }}</span>
-                  @for (k of d.kept; track k.stat.prop; let last = $last) {
-                    <span><b class="num">{{ k.to }}</b> {{ label(k.stat) }}@if (!k.same) {<span class="faint"> ({{ 'было' | l: 'was' }} {{ k.from }})</span>}@if (!last) {,}</span>
+                  @for (row of keptRows(d); track row.k.stat.prop; let last = $last) {
+                    @if (row.tag) {
+                      <span [class]="'sc sc-' + row.scope">{{ row.tag }}</span>
+                    }
+                    <span><b class="num">{{ row.k.to }}</b> {{ label(row.k.stat) }}@if (!row.k.same) {<span class="faint"> ({{ 'было' | l: 'was' }} {{ row.k.from }})</span>}@if (!last) {,}</span>
                   }
                 </div>
               }
@@ -172,6 +180,14 @@ const SLOTS: Slot[] = ['weapon', 'vitality', 'spirit'];
       .lg > span:last-child { min-width: 0; flex: 1 1 200px; }
       .why summary { cursor: pointer; color: var(--text-2); }
       .why p { margin: 6px 0 0; line-height: 1.5; }
+      .scopes { display: inline-flex; gap: 4px; }
+      .sc {
+        display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 999px; white-space: nowrap; vertical-align: 1px;
+        font-size: 10px; font-weight: 650; line-height: 1.5; color: var(--text-3); background: var(--bg-2); border: 1px solid var(--border);
+      }
+      .scopes .sc { margin-left: 0; }
+      .sc-effect { color: var(--warn); background: var(--warn-bg); border-color: rgba(217, 164, 65, 0.35); }
+      .sc-active { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-line); }
       .lbl-kept { color: var(--good); font-weight: 600; }
       .lbl-missing { color: var(--bad); font-weight: 600; }
       .carry { display: flex; flex-wrap: wrap; gap: 2px 6px; align-items: baseline; color: var(--text-2); line-height: 1.45; }
@@ -298,8 +314,12 @@ export class UpgradeTreePage {
       const el = document.querySelector(`[data-key="${CSS.escape(key)}"]`);
       if (el) {
         scrolled = true;
-        // After the router's own scroll-to-top on navigation.
+        // After the router's own scroll-to-top on navigation; once more after images settle.
         setTimeout(() => el.scrollIntoView({ block: 'center' }), 80);
+        setTimeout(() => {
+          const r = el.getBoundingClientRect();
+          if (r.top < 0 || r.bottom > innerHeight) el.scrollIntoView({ block: 'center' });
+        }, 500);
       }
     });
   }
@@ -321,6 +341,25 @@ export class UpgradeTreePage {
       this.diffs.set(id, d);
     }
     return d;
+  }
+
+  /** Kept stats, always-on first; effect and active groups get one tag each. */
+  protected keptRows(d: ComponentDiff): { k: ComponentDiff['kept'][number]; scope: string; tag: string | null }[] {
+    const order = { always: 0, effect: 1, active: 2 } as const;
+    const rows = [...d.kept].sort((a, b) => order[statScope(a.stat.section)] - order[statScope(b.stat.section)]);
+    let prev = 'always';
+    return rows.map((k) => {
+      const scope = statScope(k.stat.section);
+      const l = SCOPE_LABELS[scope];
+      const tag = scope !== prev && scope !== 'always' ? this.i18n.l(l.ru, l.en) : null;
+      prev = scope;
+      return { k, scope, tag };
+    });
+  }
+
+  protected scopeHint(s: KeyStat): string {
+    const l = SCOPE_LABELS[statScope(s.section)];
+    return this.i18n.l(l.hintRu, l.hintEn);
   }
 
   protected label(s: StatLine): string {
